@@ -43,7 +43,7 @@ alias mmdisplay='java -Xmx300m -jar $HOME/mmdisplay.jar'
 alias domdisplay='java -Xmx300m -jar $HOME/domdisplay.jar'
 alias currentTester='java -Xmx300m -jar $HOME/currentTester.jar'
 alias stf="echo REMEMBER: DO NOT RUN ON ALL T even or ALL U odd DOMs at THE SAME TIME;echo 0 > /proc/driver/domhub/blocking;java icecube.daq.stf.STF"
-alias pow="domhub all quickstatus | dye_icl.pl”
+alias pow='domhub all quickstatus | dye_icl.pl'
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
