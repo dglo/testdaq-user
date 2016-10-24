@@ -25,6 +25,9 @@ PATH=$PATH:$HOME/hutil:$HOME/python
 
 # added May 20 2015 for hawc-hub machine
 PATH=${PATH}:$HOME/omicron-tools
+# Added for domhub-tools-python
+PATH=${PATH}:$HOME/.local/bin
+
 # point to pdaq stuff for PATH, PYTHONPATH, CLASSPATH, also define pdaq environment variables
 source ${HOME}/daq.setup
 # allow use of RunConfig packages and abscal packages
@@ -40,6 +43,7 @@ alias mmdisplay='java -Xmx300m -jar $HOME/mmdisplay.jar'
 alias domdisplay='java -Xmx300m -jar $HOME/domdisplay.jar'
 alias currentTester='java -Xmx300m -jar $HOME/currentTester.jar'
 alias stf="echo REMEMBER: DO NOT RUN ON ALL T even or ALL U odd DOMs at THE SAME TIME;echo 0 > /proc/driver/domhub/blocking;java icecube.daq.stf.STF"
+alias pow="domhub all quickstatus | dye_icl.pl”
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
