@@ -1,0 +1,924 @@
+#!/usr/bin/perl
+#
+##############################################################################
+#                      Icecube System Software
+# This software is intended for use on the icecube systems.
+# http://www.icecube.wisc.edu/
+#
+##############################################################################
+#
+# Coded by Victor Bittorf & Mark Krasberg
+# vbittorf@icecube.wisc.edu
+# krasberg@icecube.wisc.edu
+#
+# SVN Manged Source Code
+# $LastChangedRevision: 4309 $
+# $LastChangedDate: 2009-06-17 16:22:46 -0500 (Wed, 17 Jun 2009) $
+# $HeadURL: http://code.icecube.wisc.edu/daq/sandbox/SystemMonitoring/trunk/status.pl $
+#
+# Last Updated by;
+# $LastChangedBy: vbittorf $
+my $VERSION = '$LastChangedRevision: 4309 $';
+$VERSION =~ s/[^\d]//g;
+
+# status quick!
+
+my $VERSION               = 3.8;
+my $HOME                  = $ENV{HOME};
+my $CONFIG_FILE           = "$HOME/hubConfig.dat";
+my $mode                  = $ARGV[0];
+my $HI_CURRENT_CONFIG     = 70;
+my %HIGH_CARDS            = ();
+my @Warnings              = ();
+my $dbflag                = 0;
+my $itflag                = 0;
+my $EXPECTED_COMM_DOMS    = ();
+my $EXPECTED_DOR_CARDS    = ();
+my $EXPECTED_NUM_QUADS    = ();
+my @EXPECTION_CARDPAIRS   = ();
+my $CURRENT_RECORD_FILE   = "$HOME/status_currents.dat";
+my $CURRENT_RECORD_STRING = "";
+my $CURRENT_TOL           = 3;
+my %DOM_CurrentHash       = ();
+my $CURRENT_CHANGED_DOMS  = 0;
+my $TOTAL_REPORTED_SAME = 0;
+my $QS_IB_txt = "$HOME/quickstatus.txt";
+my %MainBoards = (); # Main board ID hahs; used to make sure ids are unique
+my $ExpectedDOMsCut = 2; # # of doms to drop before page.
+
+# domhash hash table for doms!
+# POSITION => (ID# QUAD STR-POSITION NAME)
+# eg. 00A => [0000000 Q1 43-1 DomName]
+my %domhash = ();
+
+$domhub = `hostname -s | awk '{print toupper(\$1)}'`;
+chomp $domhub;
+
+if ( $ARGV[1] eq "-watchCurrents" ) {
+
+	# A Hash of Arr Refs
+	print "Loading old currents.\n";
+	my $cat = `cat $CURRENT_RECORD_FILE`;
+	my @lst = split( "\n", $cat );
+	$str = join( "", @lst );
+	@lst = split( " ", $str );
+	print "\@lst = (@lst)\n";
+	while ( $#lst > -1 ) {
+
+		my $temp = shift(@lst);
+		$DOM_CurrentHash{$temp} = shift(@lst);
+	}
+}
+
+if ( $mode eq '-info' ) {
+	print "IceCube DOMHub status program; version: $VERSION\n";
+	exit();
+}
+my $lc_name = lc($domhub);
+updateExpectations();
+
+if ( $ARGV[0] eq '-warn' ) {
+	my ( $comm_doms, $dor_cards, $ib_doms ) = ( 0, 0, 0 );
+	my $quads    = 0;
+	my $cardNum  = 0;
+	my $card_dir = "/proc/driver/domhub/card$cardNum";
+	while ( $cardNum <= 7 ) {
+		if ( -d $card_dir ) {
+			$dor_cards++;
+			for ( 0 .. 3 ) {
+				my @used = ();
+				if ( not -d "$card_dir/pair$_" ) { next }
+				my $grep =
+`grep "Card $cardNum pair $_" /proc/driver/domhub/card*/pair*/pwr_check`;
+				if ( $grep =~ /ERR/ ) {
+					$grep =~ /(Card.+)/;
+					my $err = $1;
+					$grep =~
+/Card (\d+) pair (\d+) pwr check: plugged\((.+)\) current\((.+),(.+)\) voltage\((.+),(.+)\)/;
+					my ( $c, $p ) = ( $1, $2 );
+					my $skip = 0;
+					foreach (@EXPECTION_CARDPAIRS) {
+						if ( not /c$c p$p/x ) { next }
+						$_ =~ /p\((.+)\)-c\((.+),(.+)\)-v\((.+),(.+)\)/i;
+						my ( $plug, $cur0, $cur1, $vol0, $vol1 ) =
+						  ( $1, $2, $3, $4, $5, $6, $7 );
+
+						$bool = $grep =~ /plugged\(.*$plug.*\)/i;
+						$bool =
+						  $bool && $grep =~ /current\(.*$cur0.*,.*$cur1.*\)/i;
+						$bool =
+						  $bool && $grep =~ /voltage\(.*$vol0.*,.*$vol1.*\)/i;
+						$skip = $bool;
+						push( @used, $_ );
+						last;
+					}
+					push( @Warnings, ">>> $lc_name : $err" ) if not $skip;
+				}
+
+				foreach (@EXPECTION_CARDPAIRS) {
+					my $bool = 0;
+					my $str  = $_;
+					foreach (@used) {
+						if ( $_ eq $str ) {
+							$boo = 1;
+						}
+					}
+					if ($boo) { next }
+					$str =~
+					  /c(\d+)p(\d+)-p\((.+)\)-c\((.+),(.+)\)-v\((.+),(.+)\)/i;
+					my ( $crd, $pr, $plug, $cur0, $cur1, $vol0, $vol1 ) =
+					  ( $1, $2, $3, $4, $5, $6, $7, $8, $9 );
+					if ( $grep =~ /(Card $crd pair $pr.+)/ ) {
+						my $tempgrep = $1;
+						$bool = $tempgrep =~ /plugged\(.*$plug.*\)/i;
+						$bool = $bool
+						  && $tempgrep =~ /current\(.*$cur0.*,.*$cur1.*\)/i;
+						$bool = $bool
+						  && $tempgrep =~ /voltage\(.*$vol0.*,.*$vol1.*\)/i;
+						push( @Warnings,
+							">>> $lc_name : $tempgrep ; see hubConfig.dat" )
+						  if !$boo;
+					}
+				}
+
+				my $str = `cat $card_dir/pair$_/domA/is-communicating`;
+				if ( $str =~ /is comm/ ) {
+					$comm_doms++;
+				}
+				$str = `cat $card_dir/pair$_/domB/is-communicating`;
+				if ( $str =~ /is comm/ ) {
+					$comm_doms++;
+				}
+				$str = `cat $card_dir/pair$_/is-plugged`;
+				if ( not $str =~ /NOT/i ) {
+					$quads++;
+				}
+			}
+		}
+		$cardNum++;
+		$card_dir = "/proc/driver/domhub/card$cardNum";
+	}
+	$quads /= 2;
+	my $expected_comm = $EXPECTED_COMM_DOMS;
+	if ( ( $expected_comm ne $comm_doms ) ) {
+		my $str = "$lc_name : Unexpected # of communicating DOMs: expected $expected_comm; found $comm_doms.";
+		# handle the situation where the # doms should page vs email.
+		if (abs($expected_comm - $comm_doms) < $ExpectedDOMsCut) {
+			$str = "::: " . $str;
+		} else {
+			$str = ">>> " . $str;
+		}
+		push( @Warnings,$str );
+	}
+	if ( $dor_cards ne $EXPECTED_DOR_CARDS ) {
+		push( @Warnings,
+">>> $lc_name : Unexpected # of DOR cards: expected $EXPECTED_DOR_CARDS; found $dor_cards."
+		);
+	}
+	if ( $quads ne $EXPECTED_NUM_QUADS ) {
+		push( @Warnings,
+">>> $lc_name : Unexpected # of Quads plugged in: expected $EXPECTED_NUM_QUADS; found $quads."
+		);
+	}
+	if ( !defined($EXPECTED_NUM_QUADS) ) {
+		push( @Warnings,
+			">>> $lc_name : Not found in config file; ~/hubConfig.dat" );
+	}
+
+	if ( $#Warnings > -1 ) {
+		print "\n";
+	}
+	foreach (@Warnings) {
+		print "$_\n";
+	}
+	if ( $#Warnings > -1 ) {
+		print "\n";
+	}
+	exit(0);
+}
+
+# for printing a problem...
+
+printf(
+"-------------------------------------------------------------------------------\n"
+);
+printf("$domhub SUMMARY:\n\n");
+
+if ( ( $mode eq "DB" ) || ( $mode eq "db" ) ) {
+	$dbflag = 1;
+}
+if ( $dbflag == 1 ) {
+	open( OUT, ">$ENV{HOME}/dbinsertion.sql" );
+	print OUT "use fat;\n";
+}
+
+#print "\n";
+#print "DOR comm     id \n";
+$card = 0;
+
+$commdoms    = 0;
+$iceboots    = 0;
+$configboots = 0;
+$busies      = 0;
+$stfservs    = 0;
+
+open( IN, "$ENV{HOME}/nicknames.txt" );
+@nicknames = (<IN>);
+close(IN);
+
+( $sec, $min, $hour, $mday, $mon, $year, $wday, $yday, $isdat ) =
+  localtime( time() );
+$str = "$year" . "$mon" . "$mday" . "$hour" . "$min" . "$sec";
+
+system("ps -efl > /tmp/processes.$str.txt");
+open( IN, "/tmp/processes.$str.txt" );
+@processes = (<IN>);
+close(IN);
+system("rm /tmp/processes.$str.txt");
+if ( $mode ne "-quick" ) {
+	system("domstate all > /tmp/domstate.$str.txt");
+	open( IN, "/tmp/domstate.$str.txt" );
+	@domstates = (<IN>);
+	close(IN);
+	system("rm /tmp/domstate.$str.txt");
+}
+else {
+	@domstates = ();
+}
+
+$headerflag = 0;
+while ( $card < 8 ) {
+	if ( -e "/proc/driver/domhub/card$card" ) {
+		$pair = 0;
+		while ( $pair < 4 ) {
+			$dom = 1;
+			while ( $dom < 3 ) {
+				if ( $dom == 1 ) {
+					$DOM = "B";
+				}
+				$port = 5000 + 8 * $card + 2 * $pair + $dom;
+				$quad = 2 + $card * 2 + int( $pair / 2 );
+				if ( $quad < 10 ) { $quad = "_" . "$quad" }
+				if ( $dom == 2 ) {
+					$DOM = "A";
+				}
+				$commstring    = "    ";
+				$idstring      = "            ";
+				$currentstring = "     ";
+
+				$domstate = "";
+				foreach (@domstates) {
+					$line = $_;
+					if (/$card$pair$DOM/) {
+						chop $line;
+						( $junk, $domstate ) =
+						  split( "$card$pair$DOM ", $line );
+						if (/iceboot/) {
+							$iceboots = $iceboots + 1;
+						}
+						if (/configboot/) {
+							$configboots = $configboots + 1;
+						}
+						if (/busy/) {
+							$busies = $busies + 1;
+						}
+						if (/stfserv/) {
+							$stfservs = $stfservs + 1;
+						}
+
+						last;
+					}
+
+				}
+				if ( -e "/proc/driver/domhub/card$card/pair$pair/pwr" ) {
+
+					#open( IN, "/proc/driver/domhub/card$card/pair$pair/pwr" );
+					@page = cat("/proc/driver/domhub/card$card/pair$pair/pwr");
+
+					#@page = (<IN>);
+					#close(IN);
+					$poweroff = 0;
+					foreach (@page) {
+						if (/is off/) {
+							$poweroff = 1;
+						}
+					}
+				}
+
+				if ( $poweroff == 0 ) {
+					if (
+						-e "/proc/driver/domhub/card$card/pair$pair/dom$DOM/is-communicating"
+					  )
+					{
+
+						#open( IN,
+						@page =
+						  cat(
+"/proc/driver/domhub/card$card/pair$pair/dom$DOM/is-communicating"
+						  );
+
+						#);
+						#@page = (<IN>);
+						#close(IN);
+						foreach (@page) {
+							if (/is communicating/) {
+								$commstring = "COMM";
+								$commdoms   = $commdoms + 1;
+
+							}
+							else {
+								$commstring = "    ";
+							}
+						}
+					}
+
+					#print "got through is-comm\n";
+					if ( -e "/proc/driver/domhub/card$card/pair$pair/dom$DOM/id"
+						&& $commstring =~ /COMM/ )
+					{
+
+						select(undef, undef, undef, 0.005);
+						#open( IN,
+						@page =
+						  cat(
+							"/proc/driver/domhub/card$card/pair$pair/dom$DOM/id"
+						  );
+                                                select(undef, undef, undef, 0.005);
+                                                
+
+						#@page = (<IN>);
+						#close(IN);
+						foreach (@page) {
+							$line = $_;
+							chop $line;
+							if (/ID is/) {
+								( $junk, $idstring ) = split( "ID is ", $line );
+							}
+							else {
+								$idstring = "            ";
+							}
+						}
+					}
+					else {
+						$idstring = "            ";
+					}
+					
+					# Check mainboard ID to make sure it is unique.
+					# If it is not unqiue, we may have GPS problems.
+					if ($idstring =~ /^\s*$/) {
+						# ignore this one
+					} elsif ($idstring =~ /^0+$/) {
+						# all zeros are acceptable, ignore this one too
+					} else {
+						# we have an actual number!
+						if (defined $MainBoards{$idstring}) {
+						    if ($TOTAL_REPORTED_SAME>=10) {
+						    } else {
+							# we already came across this id!
+							push(@Warnings, ">>> $lc_name : Duplicate doms w/ MBID=$idstring; GPS/DSB Problem? The dom is: card $card pair $pair dom $DOM");
+							
+							$TOTAL_REPORTED_SAME++;
+							if ($TOTAL_REPORTED_SAME == 10) {
+							  push(@Warnings, ">>> $lc_name : No more identical mainboard ids will be reported for this hub");  
+							}
+						    }
+						}
+						$MainBoards{$idstring} = 1;
+					}
+					
+
+					#print "got through id\n";
+
+					#open( IN, "/proc/driver/domhub/card$card/test-log" );
+					#@page = (<IN>);
+					#close(IN);
+					@page = cat("/proc/driver/domhub/card$card/test-log");
+					$serialstring = "    ";
+
+					foreach (@page) {
+						$line = $_;
+						chop $line;
+						if (/Serial number/) {
+							( $junk, $serialstring ) =
+							  split( "Serial number: ", $line );
+							last;
+						}
+					}
+
+					if ( -e "/proc/driver/domhub/card$card/pair$pair/current" )
+					{
+
+						#open( IN,
+						#	"/proc/driver/domhub/card$card/pair$pair/current" );
+						#@page = (<IN>);
+						#close(IN);
+						@page =
+						  cat(
+							"/proc/driver/domhub/card$card/pair$pair/current");
+						foreach (@page) {
+							$line = $_;
+							chop $line;
+							if (/current is/) {
+								( $junk, $currentstring ) =
+								  split( "current is ", $line );
+								chop $currentstring;
+								( $current, $junk ) =
+								  split( " mA", $currentstring );
+								if ( $current < 3 ) { $currentstring = "    " }
+							}
+							else {
+								$currentstring = "    ";
+							}
+						}
+					}
+					if ( -e "/proc/driver/domhub/card$card/pair$pair/voltage" )
+					{
+
+						#open( IN,
+						#	"/proc/driver/domhub/card$card/pair$pair/voltage" );
+						#@page = (<IN>);
+						#close(IN);
+						@page =
+						  cat(
+							"/proc/driver/domhub/card$card/pair$pair/voltage");
+						foreach (@page) {
+							$line = $_;
+							chop $line;
+							if (/voltage is/) {
+								( $junk, $voltagestring ) =
+								  split( "voltage is ", $line );
+								chop $voltagestring;
+								( $voltage, $junk ) =
+								  split( " Volts", $voltagestring );
+							}
+							else {
+								$voltagestring = "    ";
+							}
+							24;
+						}
+					}
+
+					#print "got through current\n";
+
+					$domidstring    = "    ";
+					$namestring     = "    ";
+					$locationstring = "  ";
+					$matchfound     = 0;
+					foreach (@nicknames) {
+
+						#    print $_;
+						$line = $_;
+						chop $line;
+
+						#    if (/$idstring/) {
+						@id             = split( "\t", $line );
+						$mbidstring     = $id[0];
+						$domidstring    = $id[1];
+						$namestring     = $id[2];
+						$locationstring = $id[3];
+
+						#       print "$idstring,$domidstring\n";
+						if ( $idstring eq $mbidstring ) {
+							$matchfound = 1;
+							last;
+						}
+
+						#       last;
+						#    }
+					}
+					if ( $matchfound == 0 ) {
+						$domidstring    = "";
+						$namestring     = "";
+						$locationstring = "";
+					}
+
+					if ( $headerflag == 0 ) {
+						$headerflag = 1;
+						if ( $mode eq "-quick" ) {
+							print
+"DOR Port Qud DORserial# Stat Pos      NAME                       MBID      DOMID    Curr  Volts\n";
+						}
+						elsif ( $mode ne "short" ) {
+							print
+"DOR Port Qud DORserial# Stat Pos      NAME                       MBID      DOMID    Curr  Volts    State\n";
+						}
+					}
+					my $grep =
+`grep "Card $card pair $pair" /proc/driver/domhub/card*/pair*/pwr_check`;
+					if ( $grep =~ /cur\S+ERR/ ) {
+						$commstring = "CERR";
+					}
+					elsif ( $grep =~ /vol\S+ERR/ ) {
+						$commstring = "VERR";
+					}
+					if ( defined( $HIGH_CARDS{"$card$pair"} ) ) {
+						## do nothing?
+					}
+					my $ref_current = int $currentstring;
+					if (
+						$mode ne "-quick"
+						&& ( int($ref_current) > $HI_CURRENT_CONFIG
+							&& $domstate eq "configboot" )
+						|| ( $mode eq "-iceboot"
+							&& int($ref_current) >= 90 )
+						&& !$HIGH_CARDS{"$card$pair"}
+					  )
+					{
+						if ( $mode eq "-iceboot" ) {
+							push( @Warnings,
+">>> $lc_name : < Card $card Pair $pair > current draw is too high: current = $ref_current mA; expect a current under 90 mA"
+							);
+						}
+						else {
+							push( @Warnings,
+">>> $lc_name : < Card $card Pair $pair > current draw is too high: current = $ref_current mA; expect a current under $HI_CURRENT_CONFIG mA"
+							);
+						}
+					}
+					if ($commstring =~ /comm/i) {
+						$domhash{"$card$pair$DOM"} =
+					  	 [ $idstring, "Q$quad", $locationstring, $namestring ];
+					}
+					if ( $mode eq "-quick" ) {
+						$CURRENT_RECORD_STRING =
+						  $CURRENT_RECORD_STRING . "$card$pair$DOM $current \n";
+						if ( $ARGV[1] eq "-watchCurrents" ) {
+							my $dom = "$card$pair$DOM";
+							my $old = $DOM_CurrentHash{$dom};
+							if ( abs( $old - $current ) > $CURRENT_TOL ) {
+								$CURRENT_CHANGED_DOMS++;
+								if ( $CURRENT_CHANGED_DOMS < 6 ) {
+									push( @Warnings,
+">>> $lc_name : The DOM < $dom > has changed current levels: (old=$old now=$current)."
+									);
+								}
+							}
+						}
+						printf(
+"%s%s%s %4s Q%2.2s %10s %4s %-8.8s %-22.22s %12s %8s %6s %3dV\n",
+							$card,                  $pair,
+							$DOM,                   $port,
+							$quad,                  $serialstring,
+							$commstring,            $locationstring,
+							$namestring,            $idstring,
+							$domidstring,           $currentstring,
+							$voltagestring
+						);
+					}
+					elsif ( $mode ne "short" ) {
+						printf(
+"%s%s%s %4s Q%2.2s %10s %4s %-8.8s %-22.22s %12s %8s %6s %3dV %10s\n",
+							$card,                  $pair,
+							$DOM,                   $port,
+							$quad,                  $serialstring,
+							$commstring,            $locationstring,
+							$namestring,            $idstring,
+							$domidstring,           $currentstring,
+							$voltagestring,
+							$domstate
+						);
+					}
+					$position = $port - 5000;
+					if ( $position < 10 ) { $position = "0" . "$position" }
+					$string = $domhub;
+					( $hubtype, $string ) = split( "HUB", $string );
+					$location = "$string" . "-" . "$position";
+					if ( $dbflag == 1 ) {
+						if ( $idstring ne "            " ) {
+							if ( $itflag == 0 ) {
+								print OUT
+"update domtune set string='$string' where mbid='$idstring';\n";
+								print OUT
+"update domtune set stringposition='$position' where mbid='$idstring';\n";
+								print OUT
+"update domtune set location='$location' where mbid='$idstring';\n";
+							}
+							print OUT
+"update domtune set card='$card' where mbid='$idstring';\n";
+							print OUT
+"update domtune set pair='$pair' where mbid='$idstring';\n";
+							print OUT
+"update domtune set ab='$DOM' where mbid='$idstring';\n";
+							print OUT
+"update domtune set domhub='$domhub' where mbid='$idstring';\n";
+							print OUT
+"update domtune set dor='$domhub.$card$pair$DOM' where mbid='$idstring';\n";
+							if ( $itflag == 0 ) {
+								if ( $position == 1 ) {
+									print OUT
+"update domtune set lcmode=3 where mbid='$idstring';\n";
+								}
+								if ( $position == 60 ) {
+									print OUT
+"update domtune set lcmode=2 where mbid='$idstring';\n";
+								}
+							}
+						}
+					}
+				}
+
+				$dom = $dom + 1;
+			}
+			$pair = $pair + 1;
+		}
+	}
+	$card = $card + 1;
+}
+
+if ( ( $hubtype eq "SPS-IC" ) && ( $dbflag == 1 ) ) {
+	print "\n performing the DB insertion !!! \n";
+	print
+	  "  doing: cat dbinsertion.sql | mysql -u tester -p -h testdaq01 \n";
+	system(
+"cat $ENV{HOME}/dbinsertion.sql | mysql -u tester -pSouthPoleUser -h testdaq01 "
+	);
+
+	#  system ("make-nicknames-file");
+	#  system ("make-domnames-file");
+}
+
+$dtsxs          = 0;
+$domcalrunning  = 0;
+$moat14s        = 0;
+$shortmoats     = 0;
+$quadtools      = 0;
+$stfs           = 0;
+$multimons      = 0;
+$automates      = 0;
+$domhubapps     = 0;
+$domservs       = 0;
+$omicrons       = 0;
+$currenttests   = 0;
+$lcchains       = 0;
+$moats          = 0;
+$domhubservices = 0;
+
+foreach (@processes) {
+
+	#   print $_;
+	if (/dtsx/) {
+		$dtsxs = $dtsxs + 1;
+	}
+	if (/java icecube.daq.domcal.DOMCal/) {
+		$domcalrunning = $domcalrunning + 1;
+	}
+	if (/moat14/) {
+		initializeCurren $moat14s = $moat14s + 1;
+	}
+	if (/shortmoat/) {
+		$shortmoats = $shortmoats + 1;
+	}
+	if (/quadtool/) {
+		$quadtools = $quadtools + 1;
+	}
+	if (/java icecube.daq.stf.STF/) {
+		$stfs = $stfs + 1;
+	}
+	if (/multimon/) {
+		$multimons = $multimons + 1;
+	}
+	if (/automate/) {
+		$automates = $automates + 1;
+	}
+	if (/domhub-app/) {
+		$domhubapps = $domhubapps + 1;
+	}
+	if (/domserv/) {
+		$domservs = $domservs + 1;
+	}
+	if (/omicron/) {
+		$omicrons = $omicrons + 1;
+	}
+	if (/current-test/) {
+		$currenttests = $currenttests + 1;
+	}
+	if (/lcchain/) {
+		$lcchains = $lcchains + 1;
+	}
+	if (/moat/) {
+		$moats = $moats + 1;
+	}
+	if (/domhub-services/) {
+		$domhubservices = $domhubservices + 1;
+	}
+
+	#   print $_;
+}
+
+print "\n";
+$message = "";
+if ( $dtsxs > 0 )         { $message = $message . "$dtsxs dtsxs;" }
+if ( $domcalrunning > 0 ) { $message = $message . " $domcalrunning domcals;" }
+if ( $moat14s > 0 )       { $message = $message . " $moat14s moat14s;" }
+if ( $shortmoats > 0 )    { $message = $message . " $shortmoats shortmoats;" }
+if ( $quadtools > 0 )     { $message = $message . " $quadtools quadtools;" }
+if ( $stfs > 0 )          { $message = $message . " $stfs stfs;" }
+if ( $multimons > 0 )     { $message = $message . " $multimons multimons;" }
+if ( $automates > 0 )     { $message = $message . " $automates automates;" }
+if ( $domhubapps > 0 )    { $message = $message . " $domhubapps domhubapps;" }
+if ( $domservs > 0 )      { $message = $message . " $domservs domservs;" }
+if ( $omicrons > 0 )      { $message = $message . " $omicrons omicrons;" }
+if ( $currenttests > 0 )  {
+	$message = $message . " $currenttests current-tests;";
+}
+if ( $lcchains > 0 ) { $message = $message . " $lcchains lcchains;" }
+if ( $moats > 0 )    { $message = $message . " $moats moats;" }
+
+#if ( $domhubservices == 0 ) {
+#	$message = $message . " domhub-services is NOT running;";
+#}
+
+print "communicating $commdoms DOMs; ";
+if ( $commdoms == 0 ) {
+	$plugged =
+	  system(
+"grep -i 'is plugged in' /proc/driver/domhub/card*/pair*/is-plugged > /tmp/plugged.$str.txt"
+	  );
+	open( IN, "/tmp/plugged.$str.txt" );
+	@plugged = (<IN>);
+	close(IN);
+	system("rm /tmp/plugged.$str.txt");
+	$pluggeds = 0;
+	foreach (@plugged) {
+		$pluggeds = $pluggeds + 1;
+	}
+	$quads = $pluggeds / 2;
+	print " $quads Quads are plugged in; ";
+}
+if ( $configboots > 0 ) { print "configboot $configboots DOMs; " }
+if ( $iceboots > 0 )    { print "iceboot $iceboots DOMs; " }
+if ( $busies > 0 )      { print "busy $busies DOMs; " }
+if ( $stfservs > 0 )    { print "stfserv $stfservs DOMs; " }
+
+print "\n";
+
+if ( $message ne "" ) {
+	print "software: $message \n\n";
+}
+
+if ( $dbflag == 1 ) {
+	close(OUT);
+}
+
+@Warnings = ( @Warnings, split( "\n", `status -warn` ) );
+if (not -e "$QS_IB_txt") {
+	push(@Warnings, ">>> $lc_name : File \$HOME/quickstatus.txt does not exist. Unable to check DOMs.");
+}
+# # # #
+# Read in the file; popluate a hash table for it.
+#  00B 5001 Q_2 R1B0577D04 COMM 53-01  Segusiavi              728392828573 UP7Y4550  76 mA  77 mA  89V
+if ( -e "$QS_IB_txt" && $commdoms ne 0) {
+	open( QSIB, "$QS_IB_txt" );
+	my %qsice = ();    # Quick Status ICEboot = QSICE
+	for (<QSIB>) {
+		if (
+			/(\d\d\w)\s+\d+\s+(Q.?\d+)\s+[\w\d]+\s+COMM\s+(\S+\-\d+)\s+([\w\d]+)\s+([\w\d]+)/
+		  )
+		{
+			$qsice{$1} = [ $5, $2, $3, $4 ];
+		}
+		elsif (/(\d\d\w)\s+\d+\s+(Q.?\d+)\s+[\w\d]+\s+COMM\s+([\w\d]+)/) {
+			$qsice{$1} = [ $3, $2, "     ", "" ];
+		}
+	}
+	close(QSIB);
+	
+	my @kes = keys %qsice;
+	if ($#kes + 1 ne $EXPECTED_COMM_DOMS) {
+	    push (@Warnings, ">>> $lc_name : There is a mismatch between \$HOME/quickstatus.txt and \$HOME/hubConfig.dat");
+        }
+	
+	# quick test:
+	for ( keys %qsice ) {
+	    # remove doms that appear in both!
+	    my ( $temp0, $temp1 ) = ( $domhash{$_}, $qsice{$_} );
+	    if ( $temp0 && $temp1 ) {
+		if ( $temp0->[0] eq $temp1->[0] && $temp0->[0] ) {
+		    delete $domhash{$_};
+		    delete $qsice{$_};
+		}
+	    }
+	}
+
+	my @temp0 = sort { cal($a) cmp cal($b) } keys(%qsice);
+	my @temp1 = sort { cal($a) cmp cal($b) } keys(%domhash);
+	if ( $temp0[0]) {
+	    push(@Warnings, ">>> $lc_name : There are " . ($#temp0 + 1) . " Missing DOMs.");
+	    my $n = $#temp0 > 9 ? 9 : $#temp0;
+	    for (0 .. $n) {
+		my $key = $temp0[$_];
+		my $entry = $qsice{$key};
+		my $str = $entry->[3] =~ /\w/ ? $entry->[3] : $entry->[0];
+		push(@Warnings, ">>> $lc_name : Missing DOM: $key $entry->[2] \"$str\"");
+	    }
+	    if ($#temp0 > 9) {
+		push (@Warnings, ">>> $lc_name : Only the first 10 Missing DOMs are reported.");
+	    }
+	}
+	if ( $temp1[0] ) {
+	    push(@Warnings, ">>> $lc_name : There are " . ($#temp1 + 1) . " Unexpected DOMs.");
+	    my $n = $#temp1 > 9 ? 9 : $#temp1;
+	    for (0 .. $n) {
+		my $key = $temp1[$_];
+		my $entry = $domhash{$key};
+		my $str = $entry->[3] =~ /\w/ ? $entry->[3] : $entry->[0];
+		push(@Warnings, ">>> $lc_name : Unexpected DOM: $key $entry->[2] \"$str\"");
+	    }
+	    if ($#temp1 > 9) {
+		push (@Warnings, ">>> $lc_name : Only the first 10 Unexpected DOMs are reported.");
+	    }
+	}
+}
+
+
+if ( $CURRENT_CHANGED_DOMS > 5 ) {
+	print
+push(@Warnings, ">>> $lc_name : There are $CURRENT_CHANGED_DOMS that have changed currents.\nOnly displaying the first 5.");
+}
+elsif ( $CURRENT_CHANGED_DOMS > 0 ) {
+	print
+push(@Warnings, "$lc_name : There are $CURRENT_CHANGED_DOMS that have changed currents.");
+}
+if ( $#Warnings > -1 ) {
+	print "\n";
+}
+foreach (@Warnings) {
+	print "$_\n";
+}
+if ( $#Warnings > -1 ) {
+	print "\n";
+}
+
+printf(
+"-------------------------------------------------------------------------------\n"
+);
+
+if ( $ARGV[1] eq "-initializeCurrentInfo" ) {
+	print "Current data saved.\n";
+	open( CUR, ">$CURRENT_RECORD_FILE" );
+	print "Print to $CURRENT_RECORD_FILE: $CURRENT_RECORD_STRING\n";
+	print CUR $CURRENT_RECORD_STRING, "\n";
+	close(CUR);
+}
+
+# complex current codes !
+
+sub updateExpectations {
+	if ( -e $CONFIG_FILE ) {
+		my $foundit = 0;
+		open( CONFIG, "$CONFIG_FILE" );
+		if ( $stfs > 0 ) { $message = $message . " $stfs stfs;" }
+		my @page = (<CONFIG>);
+		close(CONFIG);
+		foreach (@page) {
+			if ( not /$lc_name/ ) { next }
+			if (/^\s*\#/)         {
+				next;
+			}
+			$foundit = 1;
+
+# sorry this is very - very messy
+# this regex will fit:
+# sps-hubetc ##### ##### ##### ####  #### ##,##,##,##... c#p#-p(word)-c(word,word)-v(word,word),...
+			if (
+/(\S+)\s+(\d+)\s+(\d+)\s+(\d+)\s+\d+\s*([\d\d,]*)\s*([c\dp\d\-p\(\w+?\)\-c\(\w+?,\w+?\)\-v\(\w+?,\w+?\);]*)/i
+			  )
+			{
+				my ( $name, $dor, $quads, $comm ) = ( $1, $2, $3, $4 );
+				$EXPECTED_COMM_DOMS = $comm;
+				$EXPECTED_DOR_CARDS = $dor;
+				$EXPECTED_NUM_QUADS = $quads;
+				my $hiCardStr = $5;
+				my @hiCards = split( ",", $hiCardStr );
+				foreach (@hiCards) {
+					$HIGH_CARDS{$_} = 1;
+				}
+				my $exceptions = $6;
+				@EXPECTION_CARDPAIRS = split( ";", $exceptions );
+				last;
+			}
+		}
+		if ( !$foundit ) {
+			push( @Warnings,
+				">>> $lc_name : Cannot be located in $CONFIG_FILE." );
+		}
+	}
+	else {
+	}
+}
+
+sub cat {
+	my $file = shift;
+	open( IN, "$file" );
+	my @page = (<IN>);
+	close(IN);
+	return @page;
+}
+
+sub cal {
+	my $str = shift;
+	$str =~ /(\d\d)([AB])/;
+	return $1;
+}
+
+

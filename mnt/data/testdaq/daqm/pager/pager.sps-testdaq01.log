@@ -1,0 +1,2554 @@
+Mon Jul 21 04:38:01 2008     --tick * paging #0 to prime
+Mon Jul 21 04:40:13 2008     --tick * paging #1 to prime
+Mon Jul 21 04:41:46 2008     --tick * paging #2 to prime
+Tue Jul 22 03:23:01 2008     --tick * paging #3 to prime
+Tue Jul 22 03:38:02 2008     --tick * paging #4 to prime
+Tue Jul 22 03:53:01 2008     --tick * paging #5 to both
+Tue Jul 22 04:01:28 2008  --respond   pager disabled for 0.25 hours; reables at Tue Jul 22 04:16:28 2008
+Tue Jul 22 04:08:01 2008     --tick * paging #6 to prime
+Tue Jul 22 04:23:01 2008     --tick   auto-emable (disable time period over)
+Tue Jul 22 15:47:20 2008  --disable   pager disabled for 3 hours; reables at Tue Jul 22 18:47:20 2008
+Tue Jul 22 15:53:01 2008     --tick * paging #7 to prime
+Tue Jul 22 18:53:01 2008     --tick   auto-emable (disable time period over)
+Tue Jul 22 18:53:01 2008     --tick * paging #8 to prime
+Tue Jul 22 18:59:13 2008  --disable   pager disabled for 0.25 hours; reables at Tue Jul 22 19:14:13 2008
+Tue Jul 22 19:00:52 2008  --disable   pager disabled for 3 hours; reables at Tue Jul 22 22:00:52 2008
+Tue Jul 22 19:53:01 2008     --tick * paging #9 to prime
+Tue Jul 22 22:08:01 2008     --tick   auto-emable (disable time period over)
+Thu Aug  7 22:23:48 2008     --tick * paging #10 to prime
+Thu Aug  7 22:38:02 2008     --tick * paging #11 to prime
+Thu Aug  7 22:42:43 2008     --tick * paging #12 to both
+Thu Aug  7 22:45:05 2008     --tick * paging #13 to both
+Wed Aug 13 04:53:02 2008     --tick * paging #0 to prime
+Wed Aug 13 05:02:39 2008  --respond   pager disabled for 0.25 hours; reables at Wed Aug 13 05:17:39 2008
+Wed Aug 13 05:02:59 2008  --disable   pager disabled for 2 hours; reables at Wed Aug 13 07:02:59 2008
+Wed Aug 13 06:38:01 2008     --tick * paging #1 to prime
+Wed Aug 13 06:53:02 2008     --tick * paging #2 to prime
+Wed Aug 13 07:08:01 2008     --tick   auto-emable (disable time period over)
+Wed Aug 13 07:17:38 2008  --disable   pager disabled for 1 hours; reables at Wed Aug 13 08:17:38 2008
+Wed Aug 13 08:08:01 2008     --tick * paging #3 to prime
+Wed Aug 13 08:23:02 2008     --tick   auto-emable (disable time period over)
+Wed Aug 13 08:38:02 2008  --disable   pager disabled for 1 hours; reables at Wed Aug 13 09:38:02 2008
+Wed Aug 13 09:08:02 2008     --tick * paging #4 to prime
+Wed Aug 13 09:15:30 2008  --disable   pager disabled for 1 hours; reables at Wed Aug 13 10:15:30 2008
+Wed Aug 13 09:23:01 2008     --tick * paging #5 to prime
+Wed Aug 13 10:23:01 2008     --tick   auto-emable (disable time period over)
+Wed Aug 13 10:23:01 2008     --tick * paging #6 to prime
+Wed Aug 13 10:31:06 2008  --respond   pager disabled for 0.25 hours; reables at Wed Aug 13 10:46:06 2008
+Wed Aug 13 10:31:36 2008  --disable   pager disabled for 9 hours; reables at Wed Aug 13 19:31:36 2008
+Wed Aug 13 13:08:01 2008     --tick * paging #7 to prime
+Wed Aug 13 15:08:02 2008     --tick * paging #8 to prime
+Wed Aug 13 16:08:01 2008     --tick * paging #9 to prime
+Wed Aug 13 19:38:01 2008     --tick   auto-emable (disable time period over)
+Sun Aug 17 22:23:01 2008     --tick * paging #10 to prime
+Sun Aug 17 22:26:07 2008  --respond   pager disabled for 0.25 hours; reables at Sun Aug 17 22:41:07 2008
+Sun Aug 17 22:53:01 2008     --tick   auto-emable (disable time period over)
+Sun Aug 17 22:53:02 2008     --tick * paging #11 to prime
+Sun Aug 17 22:57:40 2008  --disable   pager disabled for 2 hours; reables at Mon Aug 18 00:57:40 2008
+Sun Aug 17 23:38:01 2008     --tick * paging #12 to prime
+Mon Aug 18 01:08:01 2008     --tick   auto-emable (disable time period over)
+Mon Aug 18 02:23:01 2008     --tick * paging #13 to prime
+Mon Aug 18 02:26:43 2008  --respond   pager disabled for 0.25 hours; reables at Mon Aug 18 02:41:43 2008
+Mon Aug 18 02:53:01 2008     --tick   auto-emable (disable time period over)
+Mon Aug 18 02:53:01 2008     --tick * paging #14 to prime
+Mon Aug 18 02:54:12 2008  --respond   pager disabled for 0.25 hours; reables at Mon Aug 18 03:09:12 2008
+Mon Aug 18 03:23:01 2008     --tick   auto-emable (disable time period over)
+Mon Aug 18 03:23:01 2008     --tick * paging #15 to prime
+Mon Aug 18 03:31:55 2008  --respond   pager disabled for 0.25 hours; reables at Mon Aug 18 03:46:55 2008
+Mon Aug 18 03:32:00 2008  --disable   pager disabled for 2 hours; reables at Mon Aug 18 05:32:00 2008
+Mon Aug 18 03:53:01 2008     --tick * paging #16 to prime
+Mon Aug 18 05:38:02 2008     --tick   auto-emable (disable time period over)
+Mon Aug 18 11:38:01 2008     --tick * paging #17 to prime
+Mon Aug 18 11:45:13 2008  --respond   pager disabled for 0.25 hours; reables at Mon Aug 18 12:00:13 2008
+Mon Aug 18 12:08:01 2008     --tick   auto-emable (disable time period over)
+Wed Aug 20 22:38:01 2008     --tick * paging #18 to prime
+Wed Aug 20 22:41:20 2008  --respond   pager disabled for 0.25 hours; reables at Wed Aug 20 22:56:20 2008
+Wed Aug 20 22:53:01 2008     --tick * paging #19 to prime
+Wed Aug 20 23:08:01 2008     --tick   auto-emable (disable time period over)
+Thu Aug 21 01:53:01 2008     --tick * paging #20 to prime
+Thu Aug 21 02:08:01 2008     --tick * paging #21 to prime
+Thu Aug 21 02:23:01 2008     --tick * paging #22 to both
+Thu Aug 21 02:27:16 2008  --respond   pager disabled for 0.25 hours; reables at Thu Aug 21 02:42:16 2008
+Thu Aug 21 02:53:01 2008     --tick   auto-emable (disable time period over)
+Thu Aug 21 02:53:01 2008     --tick * paging #23 to prime
+Thu Aug 21 02:54:06 2008  --disable   pager disabled for 4 hours; reables at Thu Aug 21 06:54:06 2008
+Thu Aug 21 04:08:01 2008     --tick * paging #24 to prime
+Thu Aug 21 04:23:01 2008     --tick * paging #25 to prime
+Thu Aug 21 07:08:01 2008     --tick   auto-emable (disable time period over)
+Thu Aug 28 22:53:01 2008     --tick * paging #26 to prime
+Thu Aug 28 23:08:01 2008     --tick * paging #27 to prime
+Sat Aug 30 23:38:01 2008     --tick * paging #28 to prime
+Sat Aug 30 23:42:44 2008  --respond   pager disabled for 0.25 hours; reables at Sat Aug 30 23:57:44 2008
+Sun Aug 31 00:08:02 2008     --tick   auto-emable (disable time period over)
+Wed Sep  3 19:54:32 2008     --tick * paging #29 to prime
+Wed Sep  3 19:55:03 2008     --tick * paging #30 to prime
+Wed Sep  3 19:55:33 2008     --tick * paging #31 to prime
+Mon Sep  8 00:23:01 2008     --tick * paging #32 to prime
+Mon Sep  8 00:33:42 2008 --backup-takeover   backup-takeover
+Mon Sep  8 00:36:44 2008  --respond   pager disabled for 0.25 hours; reables at Mon Sep  8 00:51:44 2008
+Mon Sep  8 00:53:01 2008     --tick   auto-emable (disable time period over)
+Mon Sep  8 00:53:01 2008     --tick * paging #33 to prime
+Mon Sep  8 00:58:17 2008  --disable   pager disabled for 1 hours; reables at Mon Sep  8 01:58:17 2008
+Mon Sep  8 01:53:02 2008     --tick * paging #34 to prime
+Mon Sep  8 02:08:01 2008     --tick   auto-emable (disable time period over)
+Mon Sep  8 09:57:49 2008 --backup-takeover   backup-takeover
+Mon Sep  8 19:53:01 2008     --tick * paging #35 to prime
+Mon Sep  8 19:58:29 2008  --respond   pager disabled for 0.25 hours; reables at Mon Sep  8 20:13:29 2008
+Mon Sep  8 20:08:02 2008     --tick * paging #36 to prime
+Mon Sep  8 20:23:01 2008     --tick   auto-emable (disable time period over)
+Fri Sep 19 03:23:01 2008     --tick * paging #37 to prime
+Fri Sep 19 03:28:14 2008  --respond   pager disabled for 0.25 hours; reables at Fri Sep 19 03:43:14 2008
+Fri Sep 19 03:53:01 2008     --tick   auto-emable (disable time period over)
+Sun Sep 21 20:08:01 2008     --tick * paging #38 to prime
+Sun Sep 21 20:12:49 2008  --respond   pager disabled for 0.25 hours; reables at Sun Sep 21 20:27:49 2008
+Sun Sep 21 20:38:02 2008     --tick   auto-emable (disable time period over)
+Mon Sep 22 23:53:02 2008     --tick * paging #39 to prime
+Mon Sep 22 23:55:36 2008  --respond   pager disabled for 0.25 hours; reables at Tue Sep 23 00:10:36 2008
+Tue Sep 23 00:08:02 2008     --tick * paging #40 to prime
+Tue Sep 23 00:23:02 2008     --tick   auto-emable (disable time period over)
+Sun Sep 28 20:08:02 2008     --tick * paging #41 to prime
+Sun Sep 28 20:23:02 2008     --tick * paging #42 to prime
+Sun Sep 28 20:38:02 2008     --tick * paging #43 to both
+Sun Sep 28 20:51:35 2008  --respond   pager disabled for 0.25 hours; reables at Sun Sep 28 21:06:35 2008
+Sun Sep 28 21:08:01 2008     --tick   auto-emable (disable time period over)
+Fri Oct  3 14:53:01 2008     --tick * paging #44 to prime
+Fri Oct  3 15:08:01 2008     --tick * paging #45 to prime
+Fri Oct  3 15:23:01 2008     --tick * paging #46 to both
+Fri Oct  3 15:38:01 2008     --tick * paging #47 to both
+Fri Oct  3 15:47:35 2008  --respond   pager disabled for 0.25 hours; reables at Fri Oct  3 16:02:35 2008
+Fri Oct  3 16:03:13 2008  --disable   pager disabled for  hours; reables at Fri Oct  3 16:03:13 2008
+Fri Oct  3 16:03:21 2008  --disable   pager disabled for 5 hours; reables at Fri Oct  3 21:03:21 2008
+Fri Oct  3 16:03:26 2008  --disable   pager disabled for 1 hours; reables at Fri Oct  3 17:03:26 2008
+Fri Oct  3 16:06:01 2008     --tick * paging #48 to prime
+Fri Oct  3 17:08:01 2008     --tick   auto-emable (disable time period over)
+Fri Oct  3 23:23:02 2008     --tick * paging #49 to prime
+Fri Oct  3 23:30:13 2008  --respond   pager disabled for 0.25 hours; reables at Fri Oct  3 23:45:13 2008
+Fri Oct  3 23:53:01 2008     --tick   auto-emable (disable time period over)
+Fri Oct  3 23:53:01 2008     --tick * paging #50 to prime
+Fri Oct  3 23:54:21 2008  --disable   pager disabled for 6 hours; reables at Sat Oct  4 05:54:21 2008
+Sat Oct  4 06:08:01 2008     --tick   auto-emable (disable time period over)
+Sat Oct  4 06:08:01 2008     --tick * paging #51 to prime
+Sat Oct  4 06:15:56 2008  --respond   pager disabled for 0.25 hours; reables at Sat Oct  4 06:30:56 2008
+Sat Oct  4 06:16:03 2008  --disable   pager disabled for 16 hours; reables at Sat Oct  4 22:16:03 2008
+Sat Oct  4 08:38:01 2008     --tick * paging #52 to prime
+Sat Oct  4 08:45:55 2008   --enable   manual enable
+Sat Oct  4 08:53:02 2008     --tick * paging #53 to prime
+Sat Oct  4 08:56:36 2008  --respond   pager disabled for 0.25 hours; reables at Sat Oct  4 09:11:36 2008
+Sat Oct  4 09:23:01 2008     --tick   auto-emable (disable time period over)
+Sat Oct  4 09:23:02 2008     --tick * paging #54 to prime
+Sat Oct  4 09:25:49 2008  --respond   pager disabled for 0.25 hours; reables at Sat Oct  4 09:40:49 2008
+Sat Oct  4 09:25:54 2008  --disable   pager disabled for 18 hours; reables at Sun Oct  5 03:25:54 2008
+Sat Oct  4 10:08:02 2008     --tick * paging #55 to prime
+Sun Oct  5 03:38:01 2008     --tick   auto-emable (disable time period over)
+Sat Oct 18 20:08:01 2008     --tick * paging #56 to prime
+Sat Oct 18 20:23:01 2008     --tick * paging #57 to prime
+Sat Oct 18 20:38:01 2008     --tick * paging #58 to both
+Sat Oct 18 20:43:31 2008  --respond   pager disabled for 0.25 hours; reables at Sat Oct 18 20:58:31 2008
+Sat Oct 18 20:53:01 2008     --tick * paging #59 to prime
+Sat Oct 18 21:08:01 2008     --tick   auto-emable (disable time period over)
+Thu Oct 23 18:38:01 2008     --tick * paging #60 to prime
+Thu Oct 23 18:44:34 2008  --respond   pager disabled for 0.25 hours; reables at Thu Oct 23 18:59:34 2008
+Thu Oct 23 18:50:34 2008  --disable   pager disabled for 1 hours; reables at Thu Oct 23 19:50:34 2008
+Thu Oct 23 19:23:01 2008     --tick * paging #61 to prime
+Thu Oct 23 19:53:01 2008     --tick   auto-emable (disable time period over)
+Fri Oct 24 12:23:01 2008     --tick * paging #62 to prime
+Fri Oct 24 12:28:37 2008  --respond   pager disabled for 0.25 hours; reables at Fri Oct 24 12:43:37 2008
+Fri Oct 24 12:28:46 2008  --disable   pager disabled for 1 hours; reables at Fri Oct 24 13:28:46 2008
+Fri Oct 24 13:38:01 2008     --tick   auto-emable (disable time period over)
+Fri Oct 24 13:38:01 2008     --tick * paging #63 to prime
+Fri Oct 24 13:43:15 2008  --respond   pager disabled for 0.25 hours; reables at Fri Oct 24 13:58:15 2008
+Fri Oct 24 13:43:19 2008  --disable   pager disabled for 1 hours; reables at Fri Oct 24 14:43:19 2008
+Fri Oct 24 14:29:10 2008  --disable   pager disabled for 4 hours; reables at Fri Oct 24 18:29:10 2008
+Fri Oct 24 14:53:02 2008     --tick * paging #64 to prime
+Fri Oct 24 15:08:02 2008     --tick * paging #65 to prime
+Fri Oct 24 15:23:02 2008     --tick * paging #66 to prime
+Fri Oct 24 15:38:02 2008     --tick * paging #67 to prime
+Fri Oct 24 15:53:02 2008     --tick * paging #68 to prime
+Fri Oct 24 16:38:02 2008     --tick * paging #69 to prime
+Fri Oct 24 18:38:01 2008     --tick   auto-emable (disable time period over)
+Fri Oct 31 08:53:02 2008     --tick * paging #70 to prime
+Fri Oct 31 09:08:02 2008     --tick * paging #71 to prime
+Fri Oct 31 09:23:02 2008     --tick * paging #72 to prime
+Mon Nov 10 03:53:04 2008     --tick * paging #73 to prime
+Mon Nov 10 04:08:01 2008     --tick * paging #74 to prime
+Mon Nov 10 04:23:01 2008     --tick * paging #75 to both
+Mon Nov 10 04:26:03 2008  --respond   pager disabled for 0.25 hours; reables at Mon Nov 10 04:41:03 2008
+Mon Nov 10 04:38:01 2008     --tick * paging #76 to prime
+Mon Nov 10 04:53:01 2008     --tick   auto-emable (disable time period over)
+Tue Nov 11 01:23:02 2008     --tick * paging #77 to prime
+Tue Nov 11 01:38:02 2008     --tick * paging #78 to prime
+Tue Nov 11 01:43:46 2008  --respond   pager disabled for 0.25 hours; reables at Tue Nov 11 01:58:46 2008
+Tue Nov 11 01:43:53 2008  --disable   pager disabled for 1 hours; reables at Tue Nov 11 02:43:53 2008
+Tue Nov 11 01:53:01 2008     --tick * paging #79 to prime
+Tue Nov 11 02:08:01 2008     --tick * paging #80 to prime
+Tue Nov 11 02:23:01 2008     --tick * paging #81 to prime
+Tue Nov 11 02:38:01 2008     --tick * paging #82 to prime
+Tue Nov 11 02:53:01 2008     --tick   auto-emable (disable time period over)
+Thu Nov 13 04:23:02 2008     --tick * paging #83 to prime
+Thu Nov 13 04:31:28 2008  --respond   pager disabled for 0.25 hours; reables at Thu Nov 13 04:46:28 2008
+Thu Nov 13 04:31:33 2008  --disable   pager disabled for 1 hours; reables at Thu Nov 13 05:31:33 2008
+Thu Nov 13 04:53:01 2008     --tick * paging #84 to prime
+Thu Nov 13 04:57:54 2008  --disable   pager disabled for 1 hours; reables at Thu Nov 13 05:57:54 2008
+Thu Nov 13 05:08:02 2008     --tick * paging #85 to prime
+Thu Nov 13 05:23:02 2008     --tick * paging #86 to prime
+Thu Nov 13 05:38:02 2008     --tick * paging #87 to prime
+Thu Nov 13 06:08:01 2008     --tick   auto-emable (disable time period over)
+Thu Nov 13 06:08:02 2008     --tick * paging #88 to prime
+Thu Nov 13 06:23:02 2008     --tick * paging #89 to prime
+Thu Nov 13 06:38:02 2008     --tick * paging #90 to both
+Thu Nov 13 06:40:06 2008  --disable   pager disabled for  hours; reables at Thu Nov 13 06:40:06 2008
+Thu Nov 13 06:53:01 2008     --tick   auto-emable (disable time period over)
+Thu Nov 13 06:53:01 2008     --tick * paging #91 to prime
+Thu Nov 13 07:08:01 2008     --tick * paging #92 to prime
+Thu Nov 13 07:23:01 2008     --tick * paging #93 to both
+Thu Nov 13 07:29:25 2008  --respond   pager disabled for 0.25 hours; reables at Thu Nov 13 07:44:25 2008
+Thu Nov 13 07:29:30 2008  --disable   pager disabled for 1 hours; reables at Thu Nov 13 08:29:30 2008
+Thu Nov 13 07:53:01 2008     --tick * paging #94 to prime
+Thu Nov 13 08:23:01 2008     --tick * paging #95 to prime
+Thu Nov 13 08:38:02 2008     --tick   auto-emable (disable time period over)
+Sun Nov 16 15:08:01 2008     --tick * paging #96 to prime
+Sun Nov 16 15:23:01 2008     --tick * paging #97 to prime
+Sun Nov 16 15:30:47 2008  --respond   pager disabled for 0.25 hours; reables at Sun Nov 16 15:45:47 2008
+Sun Nov 16 15:32:59 2008  --disable   pager disabled for 1 hours; reables at Sun Nov 16 16:32:59 2008
+Sun Nov 16 16:23:02 2008     --tick * paging #98 to prime
+Sun Nov 16 16:26:03 2008  --disable   pager disabled for 1 hours; reables at Sun Nov 16 17:26:03 2008
+Sun Nov 16 17:08:02 2008     --tick * paging #99 to prime
+Sun Nov 16 17:22:06 2008  --disable   pager disabled for 1 hours; reables at Sun Nov 16 18:22:06 2008
+Sun Nov 16 17:23:01 2008     --tick * paging #100 to prime
+Sun Nov 16 18:23:01 2008     --tick   auto-emable (disable time period over)
+Sun Nov 16 18:23:01 2008     --tick * paging #101 to prime
+Sun Nov 16 18:38:01 2008     --tick * paging #102 to prime
+Mon Nov 17 01:53:12 2008     --tick * paging #103 to prime
+Mon Nov 17 02:02:50 2008  --respond   pager disabled for 0.25 hours; reables at Mon Nov 17 02:17:50 2008
+Mon Nov 17 02:08:01 2008     --tick * paging #104 to prime
+Mon Nov 17 02:23:01 2008     --tick   auto-emable (disable time period over)
+Mon Nov 17 02:23:01 2008     --tick * paging #105 to prime
+Mon Nov 17 02:29:05 2008  --respond   pager disabled for 0.25 hours; reables at Mon Nov 17 02:44:05 2008
+Mon Nov 17 02:29:27 2008  --disable   pager disabled for 1 hours; reables at Mon Nov 17 03:29:27 2008
+Mon Nov 17 03:08:01 2008     --tick * paging #106 to prime
+Mon Nov 17 03:38:01 2008     --tick   auto-emable (disable time period over)
+Mon Nov 17 04:08:02 2008     --tick * paging #107 to prime
+Mon Nov 17 04:14:43 2008  --respond   pager disabled for 0.25 hours; reables at Mon Nov 17 04:29:43 2008
+Mon Nov 17 04:14:51 2008  --disable   pager disabled for 1 hours; reables at Mon Nov 17 05:14:51 2008
+Mon Nov 17 04:38:01 2008     --tick * paging #108 to prime
+Mon Nov 17 05:23:01 2008     --tick   auto-emable (disable time period over)
+Mon Nov 17 17:53:01 2008     --tick * paging #109 to prime
+Mon Nov 17 17:59:42 2008  --respond   pager disabled for 0.25 hours; reables at Mon Nov 17 18:14:42 2008
+Mon Nov 17 18:23:01 2008     --tick   auto-emable (disable time period over)
+Sat Nov 22 08:08:02 2008     --tick * paging #110 to prime
+Sat Nov 22 08:16:38 2008  --respond   pager disabled for 0.25 hours; reables at Sat Nov 22 08:31:38 2008
+Sat Nov 22 08:38:01 2008     --tick   auto-emable (disable time period over)
+Sat Nov 22 08:38:02 2008     --tick * paging #111 to prime
+Sat Nov 22 08:53:02 2008     --tick * paging #112 to prime
+Sat Nov 22 08:59:37 2008  --respond   pager disabled for 0.25 hours; reables at Sat Nov 22 09:14:37 2008
+Sat Nov 22 09:23:02 2008     --tick   auto-emable (disable time period over)
+Mon Nov 24 03:23:02 2008     --tick * paging #113 to prime
+Mon Nov 24 03:29:28 2008  --respond   pager disabled for 0.25 hours; reables at Mon Nov 24 03:44:28 2008
+Mon Nov 24 03:32:46 2008  --disable   pager disabled for 1 hours; reables at Mon Nov 24 04:32:46 2008
+Mon Nov 24 03:53:02 2008     --tick * paging #114 to prime
+Mon Nov 24 04:38:01 2008     --tick   auto-emable (disable time period over)
+Mon Nov 24 20:08:01 2008     --tick * paging #115 to prime
+Mon Nov 24 20:12:04 2008  --respond   pager disabled for 0.25 hours; reables at Mon Nov 24 20:27:04 2008
+Mon Nov 24 20:38:01 2008     --tick   auto-emable (disable time period over)
+Mon Nov 24 20:38:01 2008     --tick * paging #116 to prime
+Mon Nov 24 20:43:59 2008  --respond   pager disabled for 0.25 hours; reables at Mon Nov 24 20:58:59 2008
+Mon Nov 24 20:44:13 2008  --disable   pager disabled for 1 hours; reables at Mon Nov 24 21:44:13 2008
+Mon Nov 24 20:53:01 2008     --tick * paging #117 to prime
+Mon Nov 24 21:23:01 2008     --tick * paging #118 to prime
+Mon Nov 24 21:53:01 2008     --tick   auto-emable (disable time period over)
+Thu Nov 27 00:08:02 2008     --tick * paging #119 to prime
+Thu Nov 27 00:23:01 2008     --tick * paging #120 to prime
+Thu Nov 27 00:38:01 2008     --tick * paging #121 to both
+Thu Nov 27 00:44:09 2008  --respond   pager disabled for 0.25 hours; reables at Thu Nov 27 00:59:09 2008
+Thu Nov 27 00:46:58 2008 --backup-takeover   backup-takeover
+Thu Nov 27 01:08:01 2008     --tick   auto-emable (disable time period over)
+Thu Nov 27 01:08:01 2008     --tick * paging #122 to prime
+Thu Nov 27 01:23:01 2008     --tick * paging #123 to prime
+Thu Nov 27 01:38:01 2008     --tick * paging #124 to both
+Thu Nov 27 01:44:52 2008  --respond   pager disabled for 0.25 hours; reables at Thu Nov 27 01:59:52 2008
+Thu Nov 27 02:08:01 2008     --tick   auto-emable (disable time period over)
+Thu Nov 27 03:11:29 2008 --backup-takeover   backup-takeover
+Fri Nov 28 03:38:01 2008     --tick * paging #125 to prime
+Fri Nov 28 03:40:56 2008  --respond   pager disabled for 0.25 hours; reables at Fri Nov 28 03:55:56 2008
+Fri Nov 28 03:41:07 2008  --disable   pager disabled for 1 hours; reables at Fri Nov 28 04:41:07 2008
+Fri Nov 28 03:53:01 2008     --tick * paging #126 to prime
+Fri Nov 28 04:53:01 2008     --tick   auto-emable (disable time period over)
+Mon Dec  1 02:53:01 2008     --tick * paging #127 to prime
+Mon Dec  1 03:00:21 2008  --disable   pager disabled for 1 hours; reables at Mon Dec  1 04:00:21 2008
+Mon Dec  1 03:38:01 2008     --tick * paging #128 to prime
+Mon Dec  1 04:08:01 2008     --tick   auto-emable (disable time period over)
+Mon Dec  1 22:23:02 2008     --tick * paging #129 to prime
+Mon Dec  1 22:27:38 2008  --disable   pager disabled for 1 hours; reables at Mon Dec  1 23:27:38 2008
+Mon Dec  1 23:38:01 2008     --tick   auto-emable (disable time period over)
+Mon Dec  1 23:38:01 2008     --tick * paging #130 to prime
+Mon Dec  1 23:53:01 2008     --tick * paging #131 to prime
+Tue Dec  2 00:08:01 2008     --tick * paging #132 to both
+Tue Dec  2 00:11:19 2008  --disable   pager disabled for 1 hours; reables at Tue Dec  2 01:11:19 2008
+Tue Dec  2 01:23:02 2008     --tick   auto-emable (disable time period over)
+Tue Dec  2 01:23:02 2008     --tick * paging #133 to prime
+Tue Dec  2 01:38:01 2008     --tick * paging #134 to prime
+Tue Dec  2 01:53:02 2008     --tick * paging #135 to both
+Tue Dec  2 01:56:37 2008  --disable   pager disabled for 1 hours; reables at Tue Dec  2 02:56:37 2008
+Tue Dec  2 02:23:02 2008     --tick * paging #136 to prime
+Tue Dec  2 02:38:02 2008     --tick * paging #137 to prime
+Tue Dec  2 02:57:56 2008  --disable   pager disabled for 1 hours; reables at Tue Dec  2 03:57:56 2008
+Tue Dec  2 04:08:01 2008     --tick   auto-emable (disable time period over)
+Tue Dec  2 04:08:02 2008     --tick * paging #138 to prime
+Tue Dec  2 04:10:56 2008  --disable   pager disabled for 2 hours; reables at Tue Dec  2 06:10:56 2008
+Tue Dec  2 04:38:02 2008     --tick * paging #139 to prime
+Tue Dec  2 04:53:01 2008     --tick * paging #140 to prime
+Tue Dec  2 05:08:01 2008     --tick * paging #141 to prime
+Tue Dec  2 06:23:01 2008     --tick   auto-emable (disable time period over)
+Tue Dec  2 06:23:01 2008     --tick * paging #142 to prime
+Tue Dec  2 06:26:15 2008  --respond   pager disabled for 0.25 hours; reables at Tue Dec  2 06:41:15 2008
+Tue Dec  2 06:53:01 2008     --tick   auto-emable (disable time period over)
+Tue Dec  2 07:24:35 2008 --shiftChange   shift change
+Tue Dec  2 12:53:02 2008     --tick * paging #143 to prime
+Tue Dec  2 13:08:02 2008     --tick * paging #144 to prime
+Tue Dec  2 13:10:12 2008  --disable   pager disabled for 10 hours; reables at Tue Dec  2 23:10:12 2008
+Tue Dec  2 14:38:02 2008     --tick * paging #145 to prime
+Tue Dec  2 14:53:02 2008     --tick * paging #146 to prime
+Tue Dec  2 20:23:02 2008     --tick * paging #147 to prime
+Tue Dec  2 20:55:56 2008 --shiftChange   shift change
+Tue Dec  2 21:23:02 2008     --tick * paging #148 to prime
+Tue Dec  2 21:38:02 2008     --tick * paging #149 to prime
+Tue Dec  2 23:23:01 2008     --tick   auto-emable (disable time period over)
+Wed Dec  3 03:23:01 2008     --tick * paging #150 to prime
+Wed Dec  3 03:32:09 2008  --respond   pager disabled for 0.25 hours; reables at Wed Dec  3 03:47:09 2008
+Wed Dec  3 03:32:41 2008  --disable   pager disabled for 1 hours; reables at Wed Dec  3 04:32:41 2008
+Wed Dec  3 04:38:01 2008     --tick   auto-emable (disable time period over)
+Wed Dec  3 04:53:01 2008     --tick   auto-emable (disable time period over)
+Wed Dec  3 05:08:01 2008     --tick   auto-emable (disable time period over)
+Wed Dec  3 05:23:01 2008     --tick   auto-emable (disable time period over)
+Wed Dec  3 05:38:01 2008     --tick   auto-emable (disable time period over)
+Wed Dec  3 05:49:17 2008     --tick   auto-emable (disable time period over)
+Wed Dec  3 05:50:16 2008     --tick   auto-emable (disable time period over)
+Wed Dec  3 05:53:01 2008     --tick   auto-emable (disable time period over)
+Wed Dec  3 05:58:13 2008  --disable   pager disabled for 1 hours; reables at Wed Dec  3 06:58:13 2008
+Wed Dec  3 05:58:45 2008   --enable   manual enable
+Wed Dec  3 09:23:01 2008     --tick * paging #151 to prime
+Wed Dec  3 09:24:45 2008  --respond   pager disabled for 0.25 hours; reables at Wed Dec  3 09:39:45 2008
+Wed Dec  3 09:38:02 2008     --tick * paging #152 to prime
+Wed Dec  3 09:53:01 2008     --tick   auto-emable (disable time period over)
+Wed Dec  3 15:53:05 2008     --tick * paging #153 to prime
+Wed Dec  3 15:57:49 2008  --respond   pager disabled for 0.25 hours; reables at Wed Dec  3 16:12:49 2008
+Wed Dec  3 16:23:01 2008     --tick   auto-emable (disable time period over)
+Wed Dec  3 23:08:01 2008     --tick * paging #154 to prime
+Wed Dec  3 23:23:01 2008     --tick * paging #155 to prime
+Wed Dec  3 23:38:01 2008     --tick * paging #156 to prime
+Thu Dec  4 01:08:01 2008     --tick * paging #157 to prime
+Thu Dec  4 01:13:40 2008  --respond   pager disabled for 0.25 hours; reables at Thu Dec  4 01:28:40 2008
+Thu Dec  4 01:23:01 2008     --tick * paging #158 to prime
+Thu Dec  4 01:38:01 2008     --tick   auto-emable (disable time period over)
+Thu Dec  4 23:53:02 2008     --tick * paging #159 to prime
+Fri Dec  5 00:08:01 2008     --tick * paging #160 to prime
+Fri Dec  5 00:23:02 2008     --tick * paging #161 to both
+Fri Dec  5 00:38:02 2008     --tick * paging #162 to both
+Fri Dec  5 00:53:01 2008     --tick * paging #163 to both
+Fri Dec  5 00:56:12 2008  --disable   pager disabled for 4 hours; reables at Fri Dec  5 04:56:12 2008
+Fri Dec  5 05:08:01 2008     --tick   auto-emable (disable time period over)
+Fri Dec  5 05:08:02 2008     --tick * paging #164 to prime
+Fri Dec  5 05:23:02 2008     --tick * paging #165 to prime
+Fri Dec  5 05:32:27 2008  --respond   pager disabled for 0.25 hours; reables at Fri Dec  5 05:47:27 2008
+Fri Dec  5 05:33:04 2008  --disable   pager disabled for 4 hours; reables at Fri Dec  5 09:33:04 2008
+Fri Dec  5 09:38:01 2008     --tick   auto-emable (disable time period over)
+Fri Dec  5 09:38:01 2008     --tick * paging #166 to prime
+Fri Dec  5 09:53:01 2008     --tick * paging #167 to prime
+Fri Dec  5 10:02:05 2008  --respond   pager disabled for 0.25 hours; reables at Fri Dec  5 10:17:05 2008
+Fri Dec  5 10:02:26 2008  --disable   pager disabled for 9 hours; reables at Fri Dec  5 19:02:26 2008
+Fri Dec  5 10:16:04 2008  --disable   pager disabled for 9 hours; reables at Fri Dec  5 19:16:04 2008
+Fri Dec  5 19:23:02 2008     --tick   auto-emable (disable time period over)
+Fri Dec  5 19:23:02 2008     --tick * paging #168 to prime
+Fri Dec  5 19:33:08 2008  --disable   pager disabled for 8 hours; reables at Sat Dec  6 03:33:08 2008
+Fri Dec  5 20:38:02 2008     --tick * paging #169 to prime
+Fri Dec  5 20:53:02 2008     --tick * paging #170 to prime
+Fri Dec  5 23:49:19 2008 --backup-takeover   backup-takeover
+Sat Dec  6 03:38:01 2008     --tick   auto-emable (disable time period over)
+Sat Dec  6 04:05:49 2008 --backup-takeover   backup-takeover
+Mon Dec  8 20:08:02 2008     --tick * paging #171 to prime
+Mon Dec  8 20:18:55 2008  --respond   pager disabled for 0.25 hours; reables at Mon Dec  8 20:33:55 2008
+Mon Dec  8 20:19:54 2008  --disable   pager disabled for 1 hours; reables at Mon Dec  8 21:19:54 2008
+Mon Dec  8 20:23:01 2008     --tick * paging #172 to prime
+Mon Dec  8 21:23:01 2008     --tick   auto-emable (disable time period over)
+Tue Dec  9 04:38:01 2008     --tick * paging #173 to prime
+Tue Dec  9 04:53:01 2008     --tick * paging #174 to prime
+Tue Dec  9 05:08:01 2008     --tick * paging #175 to prime
+Tue Dec  9 09:08:01 2008     --tick * paging #176 to prime
+Tue Dec  9 09:08:58 2008  --respond   pager disabled for 0.25 hours; reables at Tue Dec  9 09:23:58 2008
+Tue Dec  9 09:09:12 2008  --disable   pager disabled for 2 hours; reables at Tue Dec  9 11:09:12 2008
+Tue Dec  9 09:38:01 2008     --tick * paging #177 to prime
+Tue Dec  9 11:23:01 2008     --tick   auto-emable (disable time period over)
+Wed Dec 10 13:41:48 2008 --backup-takeover   backup-takeover
+Wed Dec 10 18:24:46 2008 --backup-takeover   backup-takeover
+Thu Dec 11 16:38:01 2008     --tick * paging #178 to prime
+Thu Dec 11 16:49:14 2008  --respond   pager disabled for 0.25 hours; reables at Thu Dec 11 17:04:14 2008
+Thu Dec 11 17:08:02 2008     --tick   auto-emable (disable time period over)
+Fri Dec 12 09:08:01 2008     --tick * paging #179 to prime
+Fri Dec 12 09:14:36 2008  --respond   pager disabled for 0.25 hours; reables at Fri Dec 12 09:29:36 2008
+Fri Dec 12 09:14:50 2008  --disable   pager disabled for 1 hours; reables at Fri Dec 12 10:14:50 2008
+Fri Dec 12 09:53:01 2008     --tick * paging #180 to prime
+Fri Dec 12 10:23:01 2008     --tick   auto-emable (disable time period over)
+Sat Dec 13 17:08:01 2008     --tick * paging #181 to prime
+Sat Dec 13 17:14:32 2008  --respond   pager disabled for 0.25 hours; reables at Sat Dec 13 17:29:32 2008
+Sat Dec 13 17:23:02 2008     --tick * paging #182 to prime
+Sat Dec 13 17:38:01 2008     --tick   auto-emable (disable time period over)
+Sun Dec 14 23:08:02 2008     --tick * paging #183 to prime
+Sun Dec 14 23:23:01 2008     --tick * paging #184 to prime
+Sun Dec 14 23:34:26 2008  --respond   pager disabled for 0.25 hours; reables at Sun Dec 14 23:49:26 2008
+Sun Dec 14 23:38:01 2008     --tick * paging #185 to prime
+Sun Dec 14 23:50:07 2008 --backup-takeover   backup-takeover
+Sun Dec 14 23:53:01 2008     --tick   auto-emable (disable time period over)
+Mon Dec 15 09:34:21 2008 --backup-takeover   backup-takeover
+Wed Dec 17 12:02:13 2008 --backup-takeover   backup-takeover
+Thu Dec 18 01:55:03 2008 --backup-takeover   backup-takeover
+Thu Dec 18 16:08:01 2008     --tick * paging #186 to prime
+Thu Dec 18 16:13:54 2008  --respond   pager disabled for 0.25 hours; reables at Thu Dec 18 16:28:54 2008
+Thu Dec 18 16:19:57 2008  --disable   pager disabled for 2 hours; reables at Thu Dec 18 18:19:57 2008
+Thu Dec 18 16:23:01 2008     --tick * paging #187 to prime
+Thu Dec 18 18:23:01 2008     --tick   auto-emable (disable time period over)
+Thu Dec 18 19:53:02 2008     --tick * paging #188 to prime
+Thu Dec 18 19:56:57 2008  --respond   pager disabled for 0.25 hours; reables at Thu Dec 18 20:11:57 2008
+Thu Dec 18 19:57:09 2008  --disable   pager disabled for 1 hours; reables at Thu Dec 18 20:57:09 2008
+Thu Dec 18 20:08:01 2008     --tick * paging #189 to prime
+Thu Dec 18 20:23:01 2008     --tick * paging #190 to prime
+Thu Dec 18 21:08:01 2008     --tick   auto-emable (disable time period over)
+Fri Dec 19 19:11:57 2008 --backup-takeover   backup-takeover
+Sun Dec 21 06:06:08 2008 --backup-takeover   backup-takeover
+Mon Dec 22 13:16:42 2008 --backup-takeover   backup-takeover
+Mon Dec 22 18:00:09 2008 --backup-takeover   backup-takeover
+Wed Dec 24 22:56:03 2008 --backup-takeover   backup-takeover
+Thu Dec 25 13:15:22 2008 --backup-takeover   backup-takeover
+Mon Dec 29 11:24:23 2008     --tick * paging #191 to prime
+Mon Dec 29 11:37:35 2008  --respond   pager disabled for 0.25 hours; reables at Mon Dec 29 11:52:35 2008
+Mon Dec 29 11:40:31 2008     --tick * paging #192 to prime
+Mon Dec 29 11:45:28 2008  --disable   pager disabled for 1 hours; reables at Mon Dec 29 12:45:28 2008
+Mon Dec 29 11:53:23 2008     --tick * paging #193 to prime
+Mon Dec 29 12:08:22 2008     --tick * paging #194 to prime
+Mon Dec 29 12:41:45 2008     --tick * paging #195 to prime
+Mon Dec 29 12:53:33 2008     --tick   auto-emable (disable time period over)
+Mon Dec 29 12:53:42 2008     --tick * paging #196 to prime
+Mon Dec 29 12:55:07 2008  --respond   pager disabled for 0.25 hours; reables at Mon Dec 29 13:10:07 2008
+Mon Dec 29 13:08:07 2008     --tick * paging #197 to prime
+Mon Dec 29 13:23:01 2008     --tick   auto-emable (disable time period over)
+Mon Dec 29 13:23:02 2008     --tick * paging #198 to prime
+Mon Dec 29 13:29:25 2008  --respond   pager disabled for 0.25 hours; reables at Mon Dec 29 13:44:25 2008
+Mon Dec 29 13:53:01 2008     --tick   auto-emable (disable time period over)
+Mon Dec 29 13:53:01 2008     --tick * paging #199 to prime
+Mon Dec 29 14:05:12 2008  --respond   pager disabled for 0.25 hours; reables at Mon Dec 29 14:20:12 2008
+Mon Dec 29 14:23:01 2008     --tick   auto-emable (disable time period over)
+Mon Dec 29 15:53:01 2008     --tick * paging #200 to prime
+Mon Dec 29 16:00:28 2008  --respond   pager disabled for 0.25 hours; reables at Mon Dec 29 16:15:28 2008
+Mon Dec 29 16:23:02 2008     --tick   auto-emable (disable time period over)
+Mon Dec 29 16:23:02 2008     --tick * paging #201 to prime
+Mon Dec 29 16:23:44 2008  --respond   pager disabled for 0.25 hours; reables at Mon Dec 29 16:38:44 2008
+Mon Dec 29 16:23:57 2008  --disable   pager disabled for 2 hours; reables at Mon Dec 29 18:23:57 2008
+Mon Dec 29 17:08:02 2008     --tick * paging #202 to prime
+Mon Dec 29 17:23:02 2008     --tick * paging #203 to prime
+Mon Dec 29 17:38:02 2008     --tick * paging #204 to prime
+Mon Dec 29 18:38:01 2008     --tick   auto-emable (disable time period over)
+Mon Dec 29 18:38:01 2008     --tick * paging #205 to prime
+Mon Dec 29 18:53:01 2008     --tick * paging #206 to prime
+Mon Dec 29 19:08:01 2008     --tick * paging #207 to both
+Mon Dec 29 19:45:24 2008  --disable   pager disabled for 6 hours; reables at Tue Dec 30 01:45:24 2008
+Mon Dec 29 19:45:31 2008  --disable   pager disabled for 12 hours; reables at Tue Dec 30 07:45:31 2008
+Mon Dec 29 19:53:02 2008     --tick * paging #208 to prime
+Mon Dec 29 20:38:01 2008     --tick * paging #208 to prime
+Mon Dec 29 20:53:01 2008     --tick * paging #208 to prime
+Mon Dec 29 21:08:01 2008     --tick * paging #209 to prime
+Mon Dec 29 21:38:01 2008     --tick * paging #210 to prime
+Mon Dec 29 21:53:01 2008     --tick * paging #211 to prime
+Mon Dec 29 22:38:02 2008     --tick * paging #212 to prime
+Tue Dec 30 07:53:01 2008     --tick   auto-emable (disable time period over)
+Tue Dec 30 07:53:02 2008     --tick * paging #213 to prime
+Tue Dec 30 07:59:40 2008  --disable   pager disabled for 12 hours; reables at Tue Dec 30 19:59:40 2008
+Tue Dec 30 13:23:01 2008     --tick * paging #214 to prime
+Tue Dec 30 13:38:02 2008     --tick * paging #215 to prime
+Tue Dec 30 20:08:01 2008     --tick   auto-emable (disable time period over)
+Wed Dec 31 10:15:58 2008 --backup-takeover   backup-takeover
+Thu Jan  1 14:08:02 2009     --tick * paging #216 to prime
+Thu Jan  1 14:11:39 2009  --respond   pager disabled for 0.25 hours; reables at Thu Jan  1 14:26:39 2009
+Thu Jan  1 14:11:53 2009  --disable   pager disabled for 1 hours; reables at Thu Jan  1 15:11:53 2009
+Thu Jan  1 14:23:01 2009     --tick * paging #217 to prime
+Thu Jan  1 14:38:02 2009     --tick * paging #218 to prime
+Thu Jan  1 14:53:02 2009     --tick * paging #219 to prime
+Thu Jan  1 15:23:01 2009     --tick   auto-emable (disable time period over)
+Thu Jan  1 15:23:02 2009     --tick * paging #220 to prime
+Thu Jan  1 15:25:47 2009  --respond   pager disabled for 0.25 hours; reables at Thu Jan  1 15:40:47 2009
+Thu Jan  1 15:25:49 2009  --disable   pager disabled for 1 hours; reables at Thu Jan  1 16:25:49 2009
+Thu Jan  1 16:38:01 2009     --tick   auto-emable (disable time period over)
+Fri Jan  2 05:37:04 2009 --backup-takeover   backup-takeover
+Sat Jan  3 07:19:12 2009 --backup-takeover   backup-takeover
+Sat Jan  3 11:33:37 2009 --backup-takeover   backup-takeover
+Sun Jan  4 06:23:48 2009 --backup-takeover   backup-takeover
+Sun Jan  4 16:23:02 2009     --tick * paging #221 to prime
+Sun Jan  4 16:26:23 2009  --respond   pager disabled for 0.25 hours; reables at Sun Jan  4 16:41:23 2009
+Sun Jan  4 16:26:30 2009  --disable   pager disabled for 1 hours; reables at Sun Jan  4 17:26:30 2009
+Sun Jan  4 17:38:01 2009     --tick   auto-emable (disable time period over)
+Sun Jan  4 20:38:01 2009     --tick * paging #222 to prime
+Sun Jan  4 20:50:42 2009  --respond   pager disabled for 0.25 hours; reables at Sun Jan  4 21:05:42 2009
+Sun Jan  4 20:53:01 2009     --tick * paging #223 to prime
+Sun Jan  4 21:08:01 2009     --tick   auto-emable (disable time period over)
+Sun Jan  4 21:08:02 2009     --tick * paging #224 to prime
+Sun Jan  4 21:09:39 2009  --respond   pager disabled for 0.25 hours; reables at Sun Jan  4 21:24:39 2009
+Mon Jan  5 06:43:45 2009 --backup-takeover   backup-takeover
+Mon Jan  5 16:25:14 2009 --backup-takeover   backup-takeover
+Mon Jan  5 21:01:14 2009 --backup-takeover   backup-takeover
+Tue Jan  6 09:20:14 2009 --backup-takeover   backup-takeover
+Wed Jan  7 00:52:34 2009 --backup-takeover   backup-takeover
+Wed Jan  7 05:53:02 2009     --tick * paging #225 to prime
+Wed Jan  7 06:53:02 2009     --tick * paging #226 to prime
+Wed Jan  7 18:53:02 2009     --tick * paging #227 to prime
+Thu Jan  8 09:01:37 2009 --backup-takeover   backup-takeover
+Thu Jan  8 16:08:02 2009     --tick * paging #228 to prime
+Thu Jan  8 16:38:02 2009     --tick * paging #229 to prime
+Thu Jan  8 16:40:55 2009  --disable   pager disabled for 1 hours; reables at Thu Jan  8 17:40:55 2009
+Thu Jan  8 17:53:01 2009     --tick   auto-emable (disable time period over)
+Thu Jan  8 17:53:01 2009     --tick * paging #230 to prime
+Thu Jan  8 17:54:05 2009  --respond   pager disabled for 0.25 hours; reables at Thu Jan  8 18:09:05 2009
+Thu Jan  8 18:23:01 2009     --tick   auto-emable (disable time period over)
+Thu Jan  8 18:23:01 2009     --tick * paging #231 to prime
+Thu Jan  8 18:26:46 2009  --respond   pager disabled for 0.25 hours; reables at Thu Jan  8 18:41:46 2009
+Thu Jan  8 18:53:01 2009     --tick   auto-emable (disable time period over)
+Thu Jan  8 18:53:01 2009     --tick * paging #232 to prime
+Thu Jan  8 18:56:16 2009  --respond   pager disabled for 0.25 hours; reables at Thu Jan  8 19:11:16 2009
+Thu Jan  8 18:57:10 2009  --disable   pager disabled for 2 hours; reables at Thu Jan  8 20:57:10 2009
+Thu Jan  8 20:41:58 2009 --backup-takeover   backup-takeover
+Thu Jan  8 21:08:01 2009     --tick   auto-emable (disable time period over)
+Thu Jan  8 21:53:01 2009     --tick * paging #233 to prime
+Thu Jan  8 21:59:42 2009  --respond   pager disabled for 0.25 hours; reables at Thu Jan  8 22:14:42 2009
+Thu Jan  8 21:59:49 2009  --disable   pager disabled for 4 hours; reables at Fri Jan  9 01:59:49 2009
+Thu Jan  8 22:04:18 2009  --disable   pager disabled for 4 hours; reables at Fri Jan  9 02:04:18 2009
+Thu Jan  8 22:26:53 2009   --enable   manual enable
+Fri Jan  9 06:38:09 2009 --backup-takeover   backup-takeover
+Fri Jan  9 20:11:06 2009 --backup-takeover   backup-takeover
+Fri Jan  9 22:38:01 2009     --tick * paging #234 to prime
+Sat Jan 10 12:38:28 2009 --backup-takeover   backup-takeover
+Sat Jan 10 18:27:55 2009 --backup-takeover   backup-takeover
+Sun Jan 11 05:32:48 2009 --backup-takeover   backup-takeover
+Sun Jan 11 21:15:11 2009 --backup-takeover   backup-takeover
+Mon Jan 12 03:08:02 2009     --tick * paging #235 to prime
+Mon Jan 12 03:12:31 2009  --respond   pager disabled for 0.25 hours; reables at Mon Jan 12 03:27:31 2009
+Mon Jan 12 03:38:01 2009     --tick   auto-emable (disable time period over)
+Mon Jan 12 09:30:53 2009 --backup-takeover   backup-takeover
+Wed Jan 14 14:23:02 2009     --tick * paging #236 to prime
+Wed Jan 14 14:38:02 2009     --tick * paging #237 to prime
+Wed Jan 14 14:53:01 2009     --tick * paging #238 to both
+Wed Jan 14 15:06:44 2009  --respond   pager disabled for 0.25 hours; reables at Wed Jan 14 15:21:44 2009
+Wed Jan 14 15:23:01 2009     --tick   auto-emable (disable time period over)
+Wed Jan 14 15:23:01 2009     --tick * paging #239 to prime
+Wed Jan 14 15:31:43 2009  --disable   pager disabled for 1 hours; reables at Wed Jan 14 16:31:43 2009
+Wed Jan 14 16:08:01 2009     --tick * paging #240 to prime
+Wed Jan 14 16:23:01 2009     --tick * paging #241 to prime
+Wed Jan 14 16:38:01 2009     --tick   auto-emable (disable time period over)
+Wed Jan 14 16:38:01 2009     --tick * paging #242 to prime
+Wed Jan 14 17:53:02 2009     --tick * paging #243 to prime
+Wed Jan 14 17:56:47 2009  --respond   pager disabled for 0.25 hours; reables at Wed Jan 14 18:11:47 2009
+Wed Jan 14 17:56:52 2009  --disable   pager disabled for  hours; reables at Wed Jan 14 17:56:52 2009
+Wed Jan 14 17:56:58 2009  --disable   pager disabled for 1 hours; reables at Wed Jan 14 18:56:58 2009
+Wed Jan 14 18:53:02 2009     --tick * paging #244 to prime
+Wed Jan 14 19:08:01 2009     --tick   auto-emable (disable time period over)
+Thu Jan 15 03:08:01 2009     --tick * paging #245 to prime
+Mon Jan 19 09:09:22 2009     --tick * paging #246 to prime
+Mon Jan 19 09:12:44 2009  --respond   pager disabled for 0.25 hours; reables at Mon Jan 19 09:27:44 2009
+Mon Jan 19 09:16:23 2009  --disable   pager disabled for 3 hours; reables at Mon Jan 19 12:16:23 2009
+Mon Jan 19 12:23:01 2009     --tick   auto-emable (disable time period over)
+Tue Jan 20 00:17:05 2009 --backup-takeover   backup-takeover
+Tue Jan 20 02:23:02 2009     --tick * paging #247 to prime
+Tue Jan 20 02:24:54 2009  --respond   pager disabled for 0.25 hours; reables at Tue Jan 20 02:39:54 2009
+Tue Jan 20 02:46:55 2009     --tick   auto-emable (disable time period over)
+Tue Jan 20 02:46:55 2009     --tick * paging #248 to prime
+Tue Jan 20 02:53:01 2009     --tick * paging #249 to prime
+Tue Jan 20 02:57:00 2009     --tick * paging #250 to both
+Tue Jan 20 03:08:01 2009     --tick * paging #251 to both
+Tue Jan 20 03:23:01 2009     --tick * paging #252 to both
+Tue Jan 20 03:38:01 2009     --tick * paging #253 to both
+Tue Jan 20 03:41:45 2009  --respond   pager disabled for 0.25 hours; reables at Tue Jan 20 03:56:45 2009
+Thu Jan 22 05:38:32 2009 --backup-takeover   backup-takeover
+Thu Jan 22 13:53:02 2009     --tick * paging #254 to prime
+Thu Jan 22 14:38:01 2009     --tick * paging #255 to prime
+Thu Jan 22 21:35:06 2009 --backup-takeover   backup-takeover
+Fri Jan 23 10:32:14 2009  --disable   pager disabled for 8 hours; reables at Fri Jan 23 18:32:14 2009
+Fri Jan 23 12:29:32 2009   --enable   manual enable
+Fri Jan 23 23:53:02 2009     --tick * paging #256 to prime
+Fri Jan 23 23:55:28 2009  --respond   pager disabled for 0.25 hours; reables at Sat Jan 24 00:10:28 2009
+Sat Jan 24 00:23:02 2009     --tick   auto-emable (disable time period over)
+Sat Jan 24 00:23:02 2009     --tick * paging #257 to prime
+Sat Jan 24 00:34:27 2009  --respond   pager disabled for 0.25 hours; reables at Sat Jan 24 00:49:27 2009
+Sat Jan 24 00:34:34 2009  --disable   pager disabled for 1 hours; reables at Sat Jan 24 01:34:34 2009
+Sat Jan 24 01:38:01 2009     --tick   auto-emable (disable time period over)
+Sat Jan 24 10:53:02 2009     --tick * paging #258 to prime
+Sat Jan 24 10:59:39 2009  --respond   pager disabled for 0.25 hours; reables at Sat Jan 24 11:14:39 2009
+Sat Jan 24 23:08:01 2009     --tick * paging #259 to prime
+Sat Jan 24 23:11:07 2009  --respond   pager disabled for 0.25 hours; reables at Sat Jan 24 23:26:07 2009
+Sat Jan 24 23:38:01 2009     --tick   auto-emable (disable time period over)
+Sun Jan 25 14:08:02 2009     --tick * paging #260 to prime
+Sun Jan 25 18:23:05 2009     --tick * paging #261 to prime
+Mon Jan 26 10:53:01 2009     --tick * paging #262 to prime
+Mon Jan 26 10:59:19 2009  --disable   pager disabled for 10 hours; reables at Mon Jan 26 20:59:19 2009
+Mon Jan 26 11:53:02 2009     --tick * paging #263 to prime
+Mon Jan 26 12:38:02 2009     --tick * paging #264 to prime
+Mon Jan 26 12:53:01 2009     --tick * paging #265 to prime
+Mon Jan 26 13:08:01 2009     --tick * paging #266 to both
+Mon Jan 26 13:23:01 2009     --tick * paging #267 to both
+Mon Jan 26 13:38:02 2009     --tick * paging #268 to both
+Mon Jan 26 13:53:02 2009     --tick * paging #269 to both
+Mon Jan 26 14:08:02 2009     --tick * paging #270 to both
+Mon Jan 26 14:23:02 2009     --tick * paging #271 to both
+Mon Jan 26 14:23:47 2009  --respond   pager disabled for 0.25 hours; reables at Mon Jan 26 14:38:47 2009
+Mon Jan 26 14:23:57 2009  --disable   pager disabled for 70 hours; reables at Thu Jan 29 12:23:57 2009
+Mon Jan 26 14:38:01 2009     --tick * paging #272 to prime
+Mon Jan 26 18:38:02 2009     --tick * paging #273 to prime
+Tue Jan 27 20:38:02 2009     --tick * paging #274 to prime
+Tue Jan 27 22:08:01 2009     --tick * paging #275 to prime
+Tue Jan 27 22:23:01 2009     --tick * paging #276 to prime
+Tue Jan 27 23:08:02 2009     --tick * paging #277 to prime
+Tue Jan 27 23:10:42 2009  --disable   pager disabled for 3 hours; reables at Wed Jan 28 02:10:42 2009
+Tue Jan 27 23:23:01 2009     --tick * paging #278 to prime
+Tue Jan 27 23:53:02 2009     --tick * paging #279 to prime
+Wed Jan 28 00:08:01 2009     --tick * paging #280 to prime
+Wed Jan 28 00:23:01 2009     --tick * paging #281 to prime
+Wed Jan 28 00:38:01 2009     --tick * paging #282 to prime
+Wed Jan 28 04:38:02 2009     --tick * paging #283 to prime
+Wed Jan 28 04:53:02 2009     --tick * paging #284 to prime
+Wed Jan 28 05:08:02 2009     --tick * paging #285 to both
+Wed Jan 28 12:21:23 2009 --backup-takeover   backup-takeover
+Wed Jan 28 13:38:01 2009     --tick * paging #286 to prime
+Wed Jan 28 14:38:01 2009     --tick * paging #287 to prime
+Wed Jan 28 20:42:54 2009 --backup-takeover   backup-takeover
+Thu Jan 29 03:23:02 2009     --tick * paging #288 to prime
+Thu Jan 29 03:38:02 2009     --tick * paging #289 to prime
+Thu Jan 29 03:48:31 2009 --backup-takeover   backup-takeover
+Thu Jan 29 03:53:02 2009     --tick * paging #290 to both
+Thu Jan 29 03:55:20 2009  --respond   pager disabled for 0.25 hours; reables at Thu Jan 29 04:10:20 2009
+Thu Jan 29 04:23:01 2009     --tick   auto-emable (disable time period over)
+Thu Jan 29 09:23:02 2009     --tick * paging #291 to prime
+Thu Jan 29 11:08:02 2009     --tick * paging #292 to prime
+Thu Jan 29 11:08:46 2009  --respond   pager disabled for 0.25 hours; reables at Thu Jan 29 11:23:46 2009
+Thu Jan 29 11:08:52 2009  --disable   pager disabled for 1 hours; reables at Thu Jan 29 12:08:52 2009
+Thu Jan 29 12:23:01 2009     --tick   auto-emable (disable time period over)
+Thu Jan 29 15:23:01 2009     --tick * paging #293 to prime
+Thu Jan 29 19:15:19 2009 --backup-takeover   backup-takeover
+Fri Jan 30 00:53:02 2009     --tick * paging #294 to prime
+Fri Jan 30 01:03:35 2009  --respond   pager disabled for 0.25 hours; reables at Fri Jan 30 01:18:35 2009
+Fri Jan 30 01:23:01 2009     --tick   auto-emable (disable time period over)
+Fri Jan 30 01:23:01 2009     --tick * paging #295 to prime
+Fri Jan 30 01:26:59 2009  --respond   pager disabled for 0.25 hours; reables at Fri Jan 30 01:41:59 2009
+Fri Jan 30 01:53:01 2009     --tick   auto-emable (disable time period over)
+Fri Jan 30 01:53:01 2009     --tick * paging #296 to prime
+Fri Jan 30 02:02:48 2009  --respond   pager disabled for 0.25 hours; reables at Fri Jan 30 02:17:48 2009
+Fri Jan 30 02:02:53 2009  --disable   pager disabled for 1 hours; reables at Fri Jan 30 03:02:53 2009
+Fri Jan 30 03:08:01 2009     --tick   auto-emable (disable time period over)
+Fri Jan 30 14:23:02 2009     --tick * paging #297 to prime
+Fri Jan 30 14:38:01 2009     --tick * paging #298 to prime
+Fri Jan 30 14:41:10 2009  --respond   pager disabled for 0.25 hours; reables at Fri Jan 30 14:56:10 2009
+Fri Jan 30 15:53:01 2009     --tick * paging #299 to prime
+Fri Jan 30 21:03:06 2009 --backup-takeover   backup-takeover
+Sat Jan 31 18:08:01 2009     --tick * paging #300 to prime
+Sat Jan 31 18:17:41 2009  --respond   pager disabled for 0.25 hours; reables at Sat Jan 31 18:32:41 2009
+Sat Jan 31 21:11:31 2009 --backup-takeover   backup-takeover
+Sun Feb  1 00:43:23 2009 --backup-takeover   backup-takeover
+Sun Feb  1 09:41:26 2009  --disable   pager disabled for 3 hours; reables at Sun Feb  1 12:41:26 2009
+Sun Feb  1 12:23:02 2009     --tick * paging #301 to prime
+Sun Feb  1 12:53:01 2009     --tick   auto-emable (disable time period over)
+Sun Feb  1 13:07:37 2009 --backup-takeover   backup-takeover
+Sun Feb  1 18:38:01 2009     --tick * paging #302 to prime
+Sun Feb  1 21:53:02 2009     --tick * paging #303 to prime
+Sun Feb  1 21:58:48 2009  --respond   pager disabled for 0.25 hours; reables at Sun Feb  1 22:13:48 2009
+Sun Feb  1 21:58:59 2009  --disable   pager disabled for 6 hours; reables at Mon Feb  2 03:58:59 2009
+Mon Feb  2 04:08:01 2009     --tick   auto-emable (disable time period over)
+Mon Feb  2 07:53:02 2009     --tick * paging #304 to prime
+Mon Feb  2 08:53:02 2009     --tick * paging #305 to prime
+Mon Feb  2 09:08:02 2009     --tick * paging #306 to prime
+Mon Feb  2 22:56:38 2009 --backup-takeover   backup-takeover
+Tue Feb  3 09:50:31 2009 --backup-takeover   backup-takeover
+Tue Feb  3 15:23:01 2009     --tick * paging #307 to prime
+Tue Feb  3 16:23:01 2009     --tick * paging #308 to prime
+Tue Feb  3 16:38:01 2009     --tick * paging #309 to prime
+Tue Feb  3 16:53:01 2009     --tick * paging #310 to both
+Tue Feb  3 17:08:01 2009     --tick * paging #311 to both
+Tue Feb  3 17:27:02 2009  --disable   pager disabled for  hours; reables at Tue Feb  3 17:27:02 2009
+Tue Feb  3 17:38:01 2009     --tick   auto-emable (disable time period over)
+Tue Feb  3 21:08:01 2009     --tick * paging #312 to prime
+Tue Feb  3 21:23:02 2009     --tick * paging #313 to prime
+Tue Feb  3 21:38:02 2009     --tick * paging #314 to both
+Tue Feb  3 21:53:02 2009     --tick * paging #315 to both
+Tue Feb  3 21:56:17 2009  --respond   pager disabled for 0.25 hours; reables at Tue Feb  3 22:11:17 2009
+Tue Feb  3 21:56:24 2009  --disable   pager disabled for 2 hours; reables at Tue Feb  3 23:56:24 2009
+Wed Feb  4 00:08:01 2009     --tick   auto-emable (disable time period over)
+Wed Feb  4 00:44:22 2009 --backup-takeover   backup-takeover
+Wed Feb  4 04:53:04 2009     --tick * paging #316 to prime
+Wed Feb  4 05:05:23 2009  --respond   pager disabled for 0.25 hours; reables at Wed Feb  4 05:20:23 2009
+Wed Feb  4 05:23:02 2009     --tick   auto-emable (disable time period over)
+Wed Feb  4 05:23:05 2009     --tick * paging #317 to prime
+Wed Feb  4 05:38:04 2009     --tick * paging #318 to prime
+Wed Feb  4 05:43:19 2009  --respond   pager disabled for 0.25 hours; reables at Wed Feb  4 05:58:19 2009
+Wed Feb  4 05:43:27 2009  --disable   pager disabled for 1 hours; reables at Wed Feb  4 06:43:27 2009
+Wed Feb  4 06:08:01 2009     --tick * paging #319 to prime
+Wed Feb  4 06:38:02 2009     --tick * paging #320 to prime
+Wed Feb  4 06:53:02 2009     --tick   auto-emable (disable time period over)
+Wed Feb  4 10:02:28 2009 --backup-takeover   backup-takeover
+Wed Feb  4 19:25:12 2009 --backup-takeover   backup-takeover
+Thu Feb  5 11:15:44 2009 --backup-takeover   backup-takeover
+Thu Feb  5 19:20:45 2009 --backup-takeover   backup-takeover
+Thu Feb  5 22:38:14 2009 --backup-takeover   backup-takeover
+Thu Feb  5 23:50:50 2009 --backup-takeover   backup-takeover
+Fri Feb  6 07:28:23 2009 --backup-takeover   backup-takeover
+Fri Feb  6 19:21:50 2009 --backup-takeover   backup-takeover
+Sat Feb  7 06:56:52 2009 --backup-takeover   backup-takeover
+Sat Feb  7 09:08:01 2009     --tick * paging #321 to prime
+Sat Feb  7 09:17:46 2009  --respond   pager disabled for 0.25 hours; reables at Sat Feb  7 09:32:46 2009
+Sat Feb  7 09:38:01 2009     --tick   auto-emable (disable time period over)
+Sat Feb  7 12:53:02 2009     --tick * paging #322 to prime
+Sat Feb  7 13:08:02 2009     --tick * paging #323 to prime
+Sat Feb  7 13:11:30 2009  --respond   pager disabled for 0.25 hours; reables at Sat Feb  7 13:26:30 2009
+Sat Feb  7 13:27:58 2009  --disable   pager disabled for 4 hours; reables at Sat Feb  7 17:27:58 2009
+Sat Feb  7 17:38:01 2009     --tick   auto-emable (disable time period over)
+Sat Feb  7 23:12:38 2009 --backup-takeover   backup-takeover
+Sun Feb  8 11:16:18 2009 --backup-takeover   backup-takeover
+Sun Feb  8 20:17:03 2009 --backup-takeover   backup-takeover
+Mon Feb  9 10:00:33 2009 --backup-takeover   backup-takeover
+Mon Feb  9 14:09:02 2009     --tick * paging #324 to prime
+Mon Feb  9 14:13:59 2009  --respond   pager disabled for 0.25 hours; reables at Mon Feb  9 14:28:59 2009
+Mon Feb  9 20:23:02 2009     --tick * paging #325 to prime
+Mon Feb  9 20:25:54 2009 --backup-takeover   backup-takeover
+Mon Feb  9 20:26:27 2009  --respond   pager disabled for 0.25 hours; reables at Mon Feb  9 20:41:27 2009
+Mon Feb  9 20:32:06 2009  --disable   pager disabled for 1 hours; reables at Mon Feb  9 21:32:06 2009
+Mon Feb  9 21:02:22 2009  --disable   pager disabled for 1 hours; reables at Mon Feb  9 22:02:22 2009
+Mon Feb  9 22:08:01 2009     --tick   auto-emable (disable time period over)
+Tue Feb 10 11:40:15 2009 --backup-takeover   backup-takeover
+Tue Feb 10 14:08:02 2009     --tick * paging #326 to prime
+Tue Feb 10 14:11:13 2009  --respond   pager disabled for 0.25 hours; reables at Tue Feb 10 14:26:13 2009
+Tue Feb 10 14:23:01 2009     --tick * paging #327 to prime
+Tue Feb 10 14:38:01 2009     --tick   auto-emable (disable time period over)
+Tue Feb 10 16:08:02 2009     --tick * paging #328 to prime
+Tue Feb 10 16:23:06 2009     --tick * paging #329 to prime
+Tue Feb 10 16:38:05 2009     --tick * paging #330 to both
+Tue Feb 10 16:41:19 2009  --respond   pager disabled for 0.25 hours; reables at Tue Feb 10 16:56:19 2009
+Tue Feb 10 17:08:01 2009     --tick   auto-emable (disable time period over)
+Tue Feb 10 22:27:17 2009 --backup-takeover   backup-takeover
+Wed Feb 11 00:02:49 2009 --backup-takeover   backup-takeover
+Wed Feb 11 00:03:51 2009 --backup-takeover   backup-takeover
+Wed Feb 11 07:06:06 2009 --backup-takeover   backup-takeover
+Wed Feb 11 11:08:25 2009     --tick * paging #331 to prime
+Wed Feb 11 11:18:06 2009  --respond   pager disabled for 0.25 hours; reables at Wed Feb 11 11:33:06 2009
+Wed Feb 11 11:18:19 2009  --disable   pager disabled for 4 hours; reables at Wed Feb 11 15:18:19 2009
+Wed Feb 11 14:53:01 2009     --tick * paging #332 to prime
+Wed Feb 11 15:23:01 2009     --tick   auto-emable (disable time period over)
+Wed Feb 11 15:23:01 2009     --tick * paging #333 to prime
+Wed Feb 11 15:26:30 2009  --respond   pager disabled for 0.25 hours; reables at Wed Feb 11 15:41:30 2009
+Wed Feb 11 19:23:58 2009 --backup-takeover   backup-takeover
+Wed Feb 11 20:53:02 2009     --tick * paging #334 to prime
+Wed Feb 11 21:00:51 2009  --respond   pager disabled for 0.25 hours; reables at Wed Feb 11 21:15:51 2009
+Wed Feb 11 21:02:13 2009  --disable   pager disabled for 1 hours; reables at Wed Feb 11 22:02:13 2009
+Wed Feb 11 22:08:01 2009     --tick   auto-emable (disable time period over)
+Wed Feb 11 22:08:02 2009     --tick * paging #335 to prime
+Wed Feb 11 22:13:13 2009  --respond   pager disabled for 0.25 hours; reables at Wed Feb 11 22:28:13 2009
+Wed Feb 11 22:13:14 2009  --disable   pager disabled for 1 hours; reables at Wed Feb 11 23:13:14 2009
+Wed Feb 11 23:23:01 2009     --tick   auto-emable (disable time period over)
+Thu Feb 12 00:53:01 2009     --tick * paging #336 to prime
+Thu Feb 12 01:00:43 2009  --respond   pager disabled for 0.25 hours; reables at Thu Feb 12 01:15:43 2009
+Thu Feb 12 01:04:12 2009  --disable   pager disabled for 1 hours; reables at Thu Feb 12 02:04:12 2009
+Thu Feb 12 01:38:01 2009     --tick * paging #337 to prime
+Thu Feb 12 02:08:01 2009     --tick   auto-emable (disable time period over)
+Thu Feb 12 10:12:09 2009 --backup-takeover   backup-takeover
+Thu Feb 12 19:36:35 2009 --backup-takeover   backup-takeover
+Fri Feb 13 09:06:01 2009 --backup-takeover   backup-takeover
+Fri Feb 13 19:08:58 2009 --backup-takeover   backup-takeover
+Sat Feb 14 08:58:12 2009 --backup-takeover   backup-takeover
+Sun Feb 15 19:53:02 2009     --tick * paging #338 to prime
+Mon Feb 16 00:33:49 2009 --backup-takeover   backup-takeover
+Fri Feb 20 03:53:01 2009     --tick * paging #339 to prime
+Fri Feb 20 04:08:01 2009     --tick * paging #340 to prime
+Fri Feb 20 04:17:51 2009  --respond   pager disabled for 0.25 hours; reables at Fri Feb 20 04:32:51 2009
+Fri Feb 20 04:38:01 2009     --tick   auto-emable (disable time period over)
+Sun Feb 22 11:08:02 2009     --tick * paging #341 to prime
+Sun Feb 22 11:23:02 2009     --tick * paging #342 to prime
+Sun Feb 22 11:38:01 2009     --tick * paging #343 to both
+Sun Feb 22 11:53:01 2009     --tick * paging #344 to both
+Sun Feb 22 12:06:18 2009  --respond   pager disabled for 0.25 hours; reables at Sun Feb 22 12:21:18 2009
+Sun Feb 22 12:23:01 2009     --tick   auto-emable (disable time period over)
+Sun Feb 22 12:23:01 2009     --tick * paging #345 to prime
+Sun Feb 22 12:30:53 2009  --respond   pager disabled for 0.25 hours; reables at Sun Feb 22 12:45:53 2009
+Sun Feb 22 18:53:01 2009     --tick * paging #346 to prime
+Sun Feb 22 19:03:00 2009  --respond   pager disabled for 0.25 hours; reables at Sun Feb 22 19:18:00 2009
+Sun Feb 22 19:23:02 2009     --tick   auto-emable (disable time period over)
+Mon Feb 23 03:13:05 2009 --backup-takeover   backup-takeover
+Mon Feb 23 03:23:02 2009     --tick * paging #347 to prime
+Mon Feb 23 03:27:46 2009  --respond   pager disabled for 0.25 hours; reables at Mon Feb 23 03:42:46 2009
+Mon Feb 23 03:38:02 2009     --tick * paging #348 to prime
+Mon Feb 23 03:53:01 2009     --tick   auto-emable (disable time period over)
+Mon Feb 23 03:53:01 2009     --tick * paging #349 to prime
+Mon Feb 23 03:57:49 2009  --respond   pager disabled for 0.25 hours; reables at Mon Feb 23 04:12:49 2009
+Mon Feb 23 03:58:05 2009  --disable   pager disabled for 1 hours; reables at Mon Feb 23 04:58:05 2009
+Mon Feb 23 04:23:01 2009     --tick * paging #350 to prime
+Mon Feb 23 04:38:01 2009     --tick * paging #351 to prime
+Mon Feb 23 04:38:20 2009  --respond   pager disabled for 0.25 hours; reables at Mon Feb 23 04:53:20 2009
+Tue Feb 24 08:23:01 2009     --tick * paging #352 to prime
+Wed Feb 25 10:08:01 2009     --tick * paging #353 to prime
+Wed Feb 25 10:23:02 2009     --tick * paging #354 to prime
+Wed Feb 25 10:25:00 2009  --disable   pager disabled for 8 hours; reables at Wed Feb 25 18:25:00 2009
+Wed Feb 25 10:29:18 2009  --disable   pager disabled for 8 hours; reables at Wed Feb 25 18:29:18 2009
+Wed Feb 25 11:08:02 2009     --tick * paging #355 to prime
+Wed Feb 25 18:38:01 2009     --tick   auto-emable (disable time period over)
+Wed Feb 25 21:23:01 2009     --tick * paging #356 to prime
+Wed Feb 25 21:38:01 2009     --tick * paging #357 to prime
+Wed Feb 25 21:53:02 2009     --tick * paging #358 to both
+Thu Feb 26 08:23:01 2009     --tick * paging #359 to prime
+Thu Feb 26 08:27:35 2009  --respond   pager disabled for 0.25 hours; reables at Thu Feb 26 08:42:35 2009
+Thu Feb 26 08:27:43 2009  --disable   pager disabled for 2 hours; reables at Thu Feb 26 10:27:43 2009
+Thu Feb 26 09:38:02 2009     --tick * paging #360 to prime
+Thu Feb 26 10:38:01 2009     --tick   auto-emable (disable time period over)
+Thu Feb 26 21:38:01 2009     --tick * paging #361 to prime
+Fri Feb 27 18:38:01 2009     --tick * paging #362 to prime
+Fri Feb 27 18:53:01 2009     --tick * paging #363 to prime
+Fri Feb 27 19:08:02 2009     --tick * paging #364 to both
+Fri Feb 27 19:23:02 2009     --tick * paging #365 to both
+Fri Feb 27 19:38:01 2009     --tick * paging #366 to both
+Fri Feb 27 19:53:01 2009     --tick * paging #367 to both
+Fri Feb 27 20:08:02 2009     --tick * paging #368 to both
+Fri Feb 27 20:18:27 2009  --respond   pager disabled for 0.25 hours; reables at Fri Feb 27 20:33:27 2009
+Sun Mar  1 23:15:42 2009 --backup-takeover   backup-takeover
+Wed Mar  4 21:53:01 2009     --tick * paging #369 to prime
+Mon Mar  9 05:08:03 2009     --tick * paging #370 to prime
+Mon Mar  9 05:11:03 2009  --respond   pager disabled for 0.25 hours; reables at Mon Mar  9 05:26:03 2009
+Mon Mar  9 05:32:16 2009 --backup-takeover   backup-takeover
+Mon Mar  9 05:38:01 2009     --tick   auto-emable (disable time period over)
+Tue Mar 10 10:08:01 2009     --tick * paging #371 to prime
+Tue Mar 10 10:10:58 2009  --respond   pager disabled for 0.25 hours; reables at Tue Mar 10 10:25:58 2009
+Tue Mar 10 10:38:01 2009     --tick   auto-emable (disable time period over)
+Tue Mar 10 13:08:01 2009     --tick * paging #372 to prime
+Tue Mar 10 13:23:01 2009     --tick * paging #373 to prime
+Tue Mar 10 13:38:01 2009     --tick * paging #374 to both
+Tue Mar 10 13:42:09 2009  --respond   pager disabled for 0.25 hours; reables at Tue Mar 10 13:57:09 2009
+Tue Mar 10 13:42:23 2009  --disable   pager disabled for 4 hours; reables at Tue Mar 10 17:42:23 2009
+Tue Mar 10 17:53:01 2009     --tick   auto-emable (disable time period over)
+Thu Mar 12 15:38:01 2009     --tick * paging #375 to prime
+Thu Mar 12 15:42:58 2009  --respond   pager disabled for 0.25 hours; reables at Thu Mar 12 15:57:58 2009
+Thu Mar 12 16:08:01 2009     --tick   auto-emable (disable time period over)
+Thu Mar 12 16:08:02 2009     --tick * paging #376 to prime
+Thu Mar 12 16:15:03 2009  --respond   pager disabled for 0.25 hours; reables at Thu Mar 12 16:30:03 2009
+Thu Mar 12 16:15:09 2009  --disable   pager disabled for 2 hours; reables at Thu Mar 12 18:15:09 2009
+Thu Mar 12 18:23:01 2009     --tick   auto-emable (disable time period over)
+Sat Mar 14 05:53:02 2009     --tick * paging #377 to prime
+Sat Mar 14 06:01:16 2009  --respond   pager disabled for 0.25 hours; reables at Sat Mar 14 06:16:16 2009
+Sat Mar 14 06:23:01 2009     --tick   auto-emable (disable time period over)
+Mon Mar 16 01:38:01 2009     --tick * paging #378 to prime
+Mon Mar 16 02:09:41 2009 --backup-takeover   backup-takeover
+Mon Mar 16 09:23:02 2009     --tick * paging #379 to prime
+Mon Mar 16 09:25:49 2009  --respond   pager disabled for 0.25 hours; reables at Mon Mar 16 09:40:49 2009
+Mon Mar 16 09:26:35 2009  --disable   pager disabled for 6 hours; reables at Mon Mar 16 15:26:35 2009
+Mon Mar 16 15:38:01 2009     --tick   auto-emable (disable time period over)
+Fri Mar 20 09:23:01 2009     --tick * paging #380 to prime
+Fri Mar 20 09:34:51 2009  --respond   pager disabled for 0.25 hours; reables at Fri Mar 20 09:49:51 2009
+Fri Mar 20 09:53:01 2009     --tick   auto-emable (disable time period over)
+Sat Mar 21 07:38:02 2009     --tick * paging #381 to prime
+Sat Mar 21 07:46:05 2009  --respond   pager disabled for 0.25 hours; reables at Sat Mar 21 08:01:05 2009
+Sat Mar 21 08:08:01 2009     --tick   auto-emable (disable time period over)
+Sat Mar 21 15:38:14 2009     --tick * paging #382 to prime
+Sat Mar 21 15:39:29 2009  --respond   pager disabled for 0.25 hours; reables at Sat Mar 21 15:54:29 2009
+Sat Mar 21 16:08:01 2009     --tick   auto-emable (disable time period over)
+Mon Mar 23 02:00:13 2009 --backup-takeover   backup-takeover
+Mon Mar 23 09:08:01 2009     --tick * paging #383 to prime
+Mon Mar 23 09:10:03 2009  --respond   pager disabled for 0.25 hours; reables at Mon Mar 23 09:25:03 2009
+Mon Mar 23 09:10:15 2009  --disable   pager disabled for 2 hours; reables at Mon Mar 23 11:10:15 2009
+Mon Mar 23 11:23:01 2009     --tick   auto-emable (disable time period over)
+Tue Mar 24 08:38:02 2009     --tick * paging #384 to prime
+Tue Mar 24 08:44:43 2009  --respond   pager disabled for 0.25 hours; reables at Tue Mar 24 08:59:43 2009
+Tue Mar 24 09:08:01 2009     --tick   auto-emable (disable time period over)
+Tue Mar 24 09:23:01 2009     --tick * paging #385 to prime
+Tue Mar 24 09:23:31 2009  --respond   pager disabled for 0.25 hours; reables at Tue Mar 24 09:38:31 2009
+Tue Mar 24 09:23:38 2009  --disable   pager disabled for 1 hours; reables at Tue Mar 24 10:23:38 2009
+Tue Mar 24 10:23:01 2009     --tick * paging #386 to prime
+Tue Mar 24 10:27:50 2009  --disable   pager disabled for 6 hours; reables at Tue Mar 24 16:27:50 2009
+Tue Mar 24 16:38:01 2009     --tick   auto-emable (disable time period over)
+Wed Mar 25 00:08:02 2009     --tick * paging #387 to prime
+Wed Mar 25 00:23:01 2009     --tick * paging #388 to prime
+Wed Mar 25 00:38:01 2009     --tick * paging #389 to both
+Wed Mar 25 00:53:01 2009     --tick * paging #390 to both
+Wed Mar 25 01:08:01 2009     --tick * paging #391 to both
+Wed Mar 25 01:20:17 2009  --respond   pager disabled for 0.25 hours; reables at Wed Mar 25 01:35:17 2009
+Wed Mar 25 01:38:01 2009     --tick   auto-emable (disable time period over)
+Wed Mar 25 01:38:01 2009     --tick * paging #392 to prime
+Wed Mar 25 01:53:02 2009     --tick * paging #393 to prime
+Wed Mar 25 02:06:52 2009  --respond   pager disabled for 0.25 hours; reables at Wed Mar 25 02:21:52 2009
+Wed Mar 25 02:08:01 2009     --tick * paging #394 to prime
+Wed Mar 25 02:23:01 2009     --tick   auto-emable (disable time period over)
+Wed Mar 25 02:23:01 2009     --tick * paging #395 to prime
+Wed Mar 25 02:53:01 2009     --tick * paging #396 to prime
+Wed Mar 25 02:54:45 2009  --respond   pager disabled for 0.25 hours; reables at Wed Mar 25 03:09:45 2009
+Wed Mar 25 02:54:57 2009  --disable   pager disabled for 2 hours; reables at Wed Mar 25 04:54:57 2009
+Wed Mar 25 03:08:01 2009     --tick * paging #397 to prime
+Wed Mar 25 03:23:02 2009     --tick * paging #398 to prime
+Wed Mar 25 05:08:01 2009     --tick   auto-emable (disable time period over)
+Wed Mar 25 08:38:02 2009     --tick * paging #399 to prime
+Wed Mar 25 08:53:01 2009     --tick * paging #400 to prime
+Wed Mar 25 09:02:04 2009  --respond   pager disabled for 0.25 hours; reables at Wed Mar 25 09:17:04 2009
+Wed Mar 25 09:23:01 2009     --tick   auto-emable (disable time period over)
+Wed Mar 25 10:20:11 2009 --backup-takeover   backup-takeover
+Thu Mar 26 02:53:01 2009     --tick * paging #401 to prime
+Thu Mar 26 03:08:01 2009     --tick * paging #402 to prime
+Thu Mar 26 03:15:49 2009  --respond   pager disabled for 0.25 hours; reables at Thu Mar 26 03:30:49 2009
+Thu Mar 26 03:38:01 2009     --tick   auto-emable (disable time period over)
+Fri Mar 27 00:00:20 2009 --backup-takeover   backup-takeover
+Fri Mar 27 05:23:02 2009     --tick * paging #403 to prime
+Fri Mar 27 05:38:02 2009     --tick * paging #404 to prime
+Fri Mar 27 05:42:01 2009  --respond   pager disabled for 0.25 hours; reables at Fri Mar 27 05:57:01 2009
+Fri Mar 27 06:08:02 2009     --tick   auto-emable (disable time period over)
+Sat Mar 28 05:23:03 2009     --tick * paging #405 to prime
+Mon Mar 30 01:46:22 2009 --backup-takeover   backup-takeover
+Mon Mar 30 22:53:01 2009     --tick * paging #406 to prime
+Mon Mar 30 23:08:01 2009     --tick * paging #407 to prime
+Mon Mar 30 23:23:01 2009     --tick * paging #408 to both
+Mon Mar 30 23:33:24 2009  --respond   pager disabled for 0.25 hours; reables at Mon Mar 30 23:48:24 2009
+Mon Mar 30 23:53:01 2009     --tick   auto-emable (disable time period over)
+Mon Mar 30 23:53:01 2009     --tick * paging #409 to prime
+Tue Mar 31 00:01:59 2009  --respond   pager disabled for 0.25 hours; reables at Tue Mar 31 00:16:59 2009
+Tue Mar 31 00:02:12 2009  --disable   pager disabled for 1 hours; reables at Tue Mar 31 01:02:12 2009
+Tue Mar 31 00:38:01 2009     --tick * paging #410 to prime
+Tue Mar 31 01:08:01 2009     --tick   auto-emable (disable time period over)
+Tue Mar 31 07:23:02 2009     --tick * paging #411 to prime
+Tue Mar 31 07:31:57 2009  --respond   pager disabled for 0.25 hours; reables at Tue Mar 31 07:46:57 2009
+Tue Mar 31 07:53:01 2009     --tick   auto-emable (disable time period over)
+Wed Apr  1 07:53:01 2009     --tick * paging #412 to prime
+Wed Apr  1 08:00:52 2009  --respond   pager disabled for 0.25 hours; reables at Wed Apr  1 08:15:52 2009
+Wed Apr  1 08:23:01 2009     --tick   auto-emable (disable time period over)
+Wed Apr  1 08:23:01 2009     --tick * paging #413 to prime
+Wed Apr  1 08:33:36 2009  --respond   pager disabled for 0.25 hours; reables at Wed Apr  1 08:48:36 2009
+Wed Apr  1 08:53:01 2009     --tick   auto-emable (disable time period over)
+Wed Apr  1 08:53:02 2009     --tick * paging #414 to prime
+Wed Apr  1 08:57:33 2009  --disable   pager disabled for 1 hours; reables at Wed Apr  1 09:57:33 2009
+Wed Apr  1 09:08:02 2009     --tick * paging #415 to prime
+Wed Apr  1 09:23:02 2009     --tick * paging #416 to prime
+Wed Apr  1 09:23:27 2009  --disable   pager disabled for 1 hours; reables at Wed Apr  1 10:23:27 2009
+Wed Apr  1 09:55:54 2009  --disable   pager disabled for 1 hours; reables at Wed Apr  1 10:55:54 2009
+Wed Apr  1 11:08:01 2009     --tick   auto-emable (disable time period over)
+Thu Apr  2 02:38:01 2009     --tick * paging #417 to prime
+Thu Apr  2 02:38:46 2009  --respond   pager disabled for 0.25 hours; reables at Thu Apr  2 02:53:46 2009
+Thu Apr  2 03:08:01 2009     --tick   auto-emable (disable time period over)
+Thu Apr  2 03:53:01 2009     --tick * paging #418 to prime
+Thu Apr  2 03:53:30 2009  --respond   pager disabled for 0.25 hours; reables at Thu Apr  2 04:08:30 2009
+Thu Apr  2 04:23:01 2009     --tick   auto-emable (disable time period over)
+Sat Apr  4 08:08:01 2009     --tick * paging #419 to prime
+Sat Apr  4 08:11:34 2009  --respond   pager disabled for 0.25 hours; reables at Sat Apr  4 08:26:34 2009
+Sat Apr  4 08:38:01 2009     --tick   auto-emable (disable time period over)
+Sat Apr  4 08:38:02 2009     --tick * paging #420 to prime
+Sat Apr  4 08:47:27 2009  --respond   pager disabled for 0.25 hours; reables at Sat Apr  4 09:02:27 2009
+Sat Apr  4 08:47:39 2009  --disable   pager disabled for 1 hours; reables at Sat Apr  4 09:47:39 2009
+Sat Apr  4 08:53:01 2009     --tick * paging #421 to prime
+Sat Apr  4 09:08:02 2009     --tick * paging #422 to prime
+Sat Apr  4 09:25:48 2009  --disable   pager disabled for 1 hours; reables at Sat Apr  4 10:25:48 2009
+Sat Apr  4 09:53:01 2009     --tick * paging #423 to prime
+Sat Apr  4 10:08:02 2009     --tick * paging #424 to prime
+Sat Apr  4 10:38:01 2009     --tick   auto-emable (disable time period over)
+Mon Apr  6 01:20:10 2009 --backup-takeover   backup-takeover
+Tue Apr  7 07:38:01 2009     --tick * paging #425 to prime
+Tue Apr  7 07:42:37 2009  --respond   pager disabled for 0.25 hours; reables at Tue Apr  7 07:57:37 2009
+Tue Apr  7 07:42:47 2009  --disable   pager disabled for 1 hours; reables at Tue Apr  7 08:42:47 2009
+Wed Apr  8 05:38:02 2009     --tick * paging #426 to prime
+Wed Apr  8 05:39:10 2009  --respond   pager disabled for 0.25 hours; reables at Wed Apr  8 05:54:10 2009
+Wed Apr  8 06:08:01 2009     --tick   auto-emable (disable time period over)
+Wed Apr  8 06:08:01 2009     --tick * paging #427 to prime
+Thu Apr  9 21:21:06 2009 --backup-takeover   backup-takeover
+Fri Apr 10 01:05:01 2009 --backup-takeover   backup-takeover
+Fri Apr 10 11:53:01 2009     --tick * paging #428 to prime
+Fri Apr 10 12:08:01 2009     --tick * paging #429 to prime
+Fri Apr 10 12:16:20 2009  --respond   pager disabled for 0.25 hours; reables at Fri Apr 10 12:31:20 2009
+Fri Apr 10 12:38:01 2009     --tick   auto-emable (disable time period over)
+Sun Apr 12 08:38:02 2009     --tick * paging #430 to prime
+Sun Apr 12 08:42:18 2009  --respond   pager disabled for 0.25 hours; reables at Sun Apr 12 08:57:18 2009
+Sun Apr 12 08:53:01 2009     --tick * paging #431 to prime
+Sun Apr 12 09:08:02 2009     --tick   auto-emable (disable time period over)
+Sun Apr 12 09:08:02 2009     --tick * paging #432 to prime
+Sun Apr 12 09:23:01 2009     --tick * paging #433 to prime
+Sun Apr 12 09:38:02 2009     --tick * paging #434 to both
+Sun Apr 12 09:46:36 2009  --respond   pager disabled for 0.25 hours; reables at Sun Apr 12 10:01:36 2009
+Sun Apr 12 09:46:41 2009  --disable   pager disabled for 1 hours; reables at Sun Apr 12 10:46:41 2009
+Sun Apr 12 09:53:01 2009     --tick * paging #435 to prime
+Sun Apr 12 10:08:02 2009     --tick * paging #436 to prime
+Sun Apr 12 10:23:02 2009     --tick * paging #437 to prime
+Sun Apr 12 10:24:54 2009  --disable   pager disabled for 2 hours; reables at Sun Apr 12 12:24:54 2009
+Sun Apr 12 12:38:01 2009     --tick   auto-emable (disable time period over)
+Sun Apr 12 12:38:01 2009     --tick * paging #438 to prime
+Sun Apr 12 12:53:02 2009     --tick * paging #439 to prime
+Sun Apr 12 13:08:02 2009     --tick * paging #440 to prime
+Sun Apr 12 13:23:01 2009     --tick * paging #441 to prime
+Sun Apr 12 13:38:01 2009     --tick * paging #442 to prime
+Sun Apr 12 13:40:35 2009  --disable   pager disabled for 10 hours; reables at Sun Apr 12 23:40:35 2009
+Sun Apr 12 23:53:01 2009     --tick   auto-emable (disable time period over)
+Mon Apr 13 01:53:01 2009     --tick * paging #443 to prime
+Mon Apr 13 01:54:06 2009  --respond   pager disabled for 0.25 hours; reables at Mon Apr 13 02:09:06 2009
+Mon Apr 13 01:58:35 2009 --backup-takeover   backup-takeover
+Mon Apr 13 02:23:01 2009     --tick   auto-emable (disable time period over)
+Tue Apr 14 14:53:01 2009     --tick * paging #444 to prime
+Tue Apr 14 14:58:20 2009  --respond   pager disabled for 0.25 hours; reables at Tue Apr 14 15:13:20 2009
+Tue Apr 14 15:23:01 2009     --tick   auto-emable (disable time period over)
+Fri Apr 17 14:08:02 2009     --tick * paging #445 to prime
+Fri Apr 17 14:18:40 2009  --respond   pager disabled for 0.25 hours; reables at Fri Apr 17 14:33:40 2009
+Fri Apr 17 14:38:01 2009     --tick   auto-emable (disable time period over)
+Mon Apr 20 01:33:16 2009 --backup-takeover   backup-takeover
+Mon Apr 20 04:38:01 2009     --tick * paging #446 to prime
+Tue Apr 21 16:13:06 2009 --backup-takeover   backup-takeover
+Tue Apr 21 22:53:02 2009     --tick * paging #447 to prime
+Tue Apr 21 22:56:25 2009  --respond   pager disabled for 0.25 hours; reables at Tue Apr 21 23:11:25 2009
+Tue Apr 21 23:23:01 2009     --tick   auto-emable (disable time period over)
+Wed Apr 22 00:51:24 2009 --backup-takeover   backup-takeover
+Wed Apr 22 06:53:02 2009     --tick * paging #448 to prime
+Wed Apr 22 06:57:33 2009  --respond   pager disabled for 0.25 hours; reables at Wed Apr 22 07:12:33 2009
+Wed Apr 22 07:23:01 2009     --tick   auto-emable (disable time period over)
+Wed Apr 22 08:38:01 2009     --tick * paging #449 to prime
+Wed Apr 22 08:53:01 2009     --tick * paging #450 to prime
+Wed Apr 22 08:56:13 2009  --respond   pager disabled for 0.25 hours; reables at Wed Apr 22 09:11:13 2009
+Wed Apr 22 09:23:02 2009     --tick   auto-emable (disable time period over)
+Wed Apr 22 09:53:02 2009     --tick * paging #451 to prime
+Wed Apr 22 09:58:50 2009  --respond   pager disabled for 0.25 hours; reables at Wed Apr 22 10:13:50 2009
+Wed Apr 22 10:08:01 2009     --tick * paging #452 to prime
+Wed Apr 22 10:23:01 2009     --tick   auto-emable (disable time period over)
+Wed Apr 22 10:23:01 2009     --tick * paging #453 to prime
+Wed Apr 22 10:25:48 2009  --disable   pager disabled for 2 hours; reables at Wed Apr 22 12:25:48 2009
+Wed Apr 22 12:38:02 2009     --tick   auto-emable (disable time period over)
+Sun Apr 26 17:38:02 2009     --tick * paging #454 to prime
+Sun Apr 26 17:53:01 2009     --tick * paging #455 to prime
+Sun Apr 26 18:08:01 2009     --tick * paging #456 to both
+Sun Apr 26 18:13:59 2009  --respond   pager disabled for 0.25 hours; reables at Sun Apr 26 18:28:59 2009
+Sun Apr 26 18:38:01 2009     --tick   auto-emable (disable time period over)
+Mon Apr 27 01:36:17 2009 --backup-takeover   backup-takeover
+Mon Apr 27 06:23:01 2009     --tick * paging #457 to prime
+Mon Apr 27 06:28:35 2009  --respond   pager disabled for 0.25 hours; reables at Mon Apr 27 06:43:35 2009
+Mon Apr 27 06:43:59 2009  --disable   pager disabled for 2 hours; reables at Mon Apr 27 08:43:59 2009
+Mon Apr 27 07:53:01 2009     --tick * paging #458 to prime
+Mon Apr 27 08:08:01 2009     --tick * paging #459 to prime
+Mon Apr 27 08:53:01 2009     --tick   auto-emable (disable time period over)
+Thu Apr 30 21:38:36 2009 --backup-takeover   backup-takeover
+Fri May  1 09:09:48 2009 --backup-takeover   backup-takeover
+Sat May  2 04:23:01 2009     --tick * paging #460 to prime
+Sat May  2 04:28:43 2009  --respond   pager disabled for 0.25 hours; reables at Sat May  2 04:43:43 2009
+Sat May  2 04:53:01 2009     --tick   auto-emable (disable time period over)
+Sat May  2 05:30:56 2009 --backup-takeover   backup-takeover
+Sat May  2 05:53:02 2009     --tick * paging #461 to prime
+Sat May  2 06:08:01 2009     --tick * paging #462 to prime
+Sat May  2 06:18:58 2009  --respond   pager disabled for 0.25 hours; reables at Sat May  2 06:33:58 2009
+Sat May  2 06:19:06 2009  --disable   pager disabled for 2 hours; reables at Sat May  2 08:19:06 2009
+Sat May  2 07:04:48 2009 --backup-takeover   backup-takeover
+Sat May  2 07:08:02 2009     --tick * paging #463 to prime
+Sat May  2 08:23:01 2009     --tick   auto-emable (disable time period over)
+Sat May  2 11:08:02 2009     --tick * paging #464 to prime
+Sat May  2 11:14:24 2009  --respond   pager disabled for 0.25 hours; reables at Sat May  2 11:29:24 2009
+Sat May  2 11:37:20 2009  --disable   pager disabled for 1 hours; reables at Sat May  2 12:37:20 2009
+Sat May  2 12:38:01 2009     --tick   auto-emable (disable time period over)
+Sun May  3 15:23:01 2009     --tick * paging #465 to prime
+Sun May  3 15:38:01 2009     --tick * paging #466 to prime
+Sun May  3 15:53:02 2009     --tick * paging #467 to both
+Sun May  3 16:08:02 2009     --tick * paging #468 to both
+Sun May  3 16:23:01 2009     --tick * paging #469 to both
+Sun May  3 16:23:47 2009  --respond   pager disabled for 0.25 hours; reables at Sun May  3 16:38:47 2009
+Sun May  3 16:53:01 2009     --tick   auto-emable (disable time period over)
+Mon May  4 00:54:02 2009 --backup-takeover   backup-takeover
+Mon May  4 21:08:03 2009     --tick * paging #470 to prime
+Mon May  4 21:13:07 2009  --respond   pager disabled for 0.25 hours; reables at Mon May  4 21:28:07 2009
+Mon May  4 21:20:10 2009  --disable   pager disabled for 4 hours; reables at Tue May  5 01:20:10 2009
+Tue May  5 01:23:01 2009     --tick   auto-emable (disable time period over)
+Wed May  6 11:08:02 2009     --tick * paging #471 to prime
+Wed May  6 11:15:36 2009  --respond   pager disabled for 0.25 hours; reables at Wed May  6 11:30:36 2009
+Wed May  6 11:38:01 2009     --tick   auto-emable (disable time period over)
+Thu May  7 06:38:02 2009     --tick * paging #472 to prime
+Thu May  7 06:53:01 2009     --tick * paging #473 to prime
+Thu May  7 06:53:29 2009  --respond   pager disabled for 0.25 hours; reables at Thu May  7 07:08:29 2009
+Thu May  7 07:23:01 2009     --tick   auto-emable (disable time period over)
+Thu May  7 13:23:01 2009     --tick * paging #474 to prime
+Thu May  7 13:23:25 2009  --respond   pager disabled for 0.25 hours; reables at Thu May  7 13:38:25 2009
+Thu May  7 13:53:01 2009     --tick   auto-emable (disable time period over)
+Thu May  7 23:38:02 2009     --tick * paging #475 to prime
+Sat May  9 02:28:41 2009 --backup-takeover   backup-takeover
+Sat May  9 11:43:05 2009 --backup-takeover   backup-takeover
+Sun May 10 03:23:02 2009     --tick * paging #476 to prime
+Sun May 10 03:38:02 2009     --tick * paging #477 to prime
+Sun May 10 03:43:50 2009  --disable   pager disabled for 1 hours; reables at Sun May 10 04:43:50 2009
+Sun May 10 04:53:01 2009     --tick   auto-emable (disable time period over)
+Sun May 10 17:53:01 2009     --tick * paging #478 to prime
+Sun May 10 18:01:38 2009  --respond   pager disabled for 0.25 hours; reables at Sun May 10 18:16:38 2009
+Sun May 10 18:23:01 2009     --tick   auto-emable (disable time period over)
+Mon May 11 00:57:33 2009 --backup-takeover   backup-takeover
+Tue May 12 00:23:02 2009     --tick * paging #479 to prime
+Tue May 12 00:38:02 2009     --tick * paging #480 to prime
+Tue May 12 00:38:36 2009  --respond   pager disabled for 0.25 hours; reables at Tue May 12 00:53:36 2009
+Tue May 12 00:53:01 2009     --tick * paging #481 to prime
+Tue May 12 01:04:29 2009  --disable   pager disabled for 1 hours; reables at Tue May 12 02:04:29 2009
+Tue May 12 01:08:01 2009     --tick * paging #482 to prime
+Tue May 12 02:08:01 2009     --tick   auto-emable (disable time period over)
+Tue May 12 02:38:02 2009     --tick * paging #483 to prime
+Tue May 12 02:53:02 2009     --tick * paging #484 to prime
+Tue May 12 02:55:28 2009  --respond   pager disabled for 0.25 hours; reables at Tue May 12 03:10:28 2009
+Tue May 12 03:23:01 2009     --tick   auto-emable (disable time period over)
+Tue May 12 20:23:01 2009     --tick * paging #485 to prime
+Tue May 12 20:38:01 2009     --tick * paging #486 to prime
+Tue May 12 20:53:02 2009     --tick * paging #487 to both
+Tue May 12 21:08:02 2009     --tick * paging #488 to both
+Tue May 12 21:23:01 2009     --tick * paging #489 to both
+Thu May 14 03:08:02 2009     --tick * paging #490 to prime
+Thu May 14 03:18:04 2009  --respond   pager disabled for 0.25 hours; reables at Thu May 14 03:33:04 2009
+Thu May 14 03:38:01 2009     --tick   auto-emable (disable time period over)
+Thu May 14 09:38:02 2009     --tick * paging #491 to prime
+Thu May 14 09:39:28 2009  --respond   pager disabled for 0.25 hours; reables at Thu May 14 09:54:28 2009
+Thu May 14 10:08:01 2009     --tick   auto-emable (disable time period over)
+Mon May 18 01:43:22 2009 --backup-takeover   backup-takeover
+Mon May 18 15:23:01 2009     --tick * paging #492 to prime
+Mon May 18 15:31:19 2009  --respond   pager disabled for 0.25 hours; reables at Mon May 18 15:46:19 2009
+Mon May 18 15:38:01 2009     --tick * paging #493 to prime
+Mon May 18 15:53:01 2009     --tick   auto-emable (disable time period over)
+Mon May 18 15:53:02 2009     --tick * paging #494 to prime
+Mon May 18 15:55:02 2009  --respond   pager disabled for 0.25 hours; reables at Mon May 18 16:10:02 2009
+Mon May 18 15:55:09 2009  --disable   pager disabled for 2 hours; reables at Mon May 18 17:55:09 2009
+Mon May 18 16:23:01 2009     --tick * paging #495 to prime
+Mon May 18 18:08:01 2009     --tick   auto-emable (disable time period over)
+Mon May 18 23:05:23 2009 --backup-takeover   backup-takeover
+Tue May 19 00:40:59 2009 --backup-takeover   backup-takeover
+Wed May 20 05:38:02 2009     --tick * paging #496 to prime
+Wed May 20 05:53:02 2009     --tick * paging #497 to prime
+Wed May 20 05:53:09 2009  --respond   pager disabled for 0.25 hours; reables at Wed May 20 06:08:09 2009
+Wed May 20 06:23:01 2009     --tick   auto-emable (disable time period over)
+Thu May 21 22:08:01 2009     --tick * paging #498 to prime
+Thu May 21 22:23:02 2009     --tick * paging #499 to prime
+Thu May 21 22:32:31 2009  --respond   pager disabled for 0.25 hours; reables at Thu May 21 22:47:31 2009
+Thu May 21 22:53:01 2009     --tick   auto-emable (disable time period over)
+Thu May 21 22:53:02 2009     --tick * paging #500 to prime
+Fri May 22 09:23:02 2009     --tick * paging #501 to prime
+Fri May 22 09:23:25 2009  --respond   pager disabled for 0.25 hours; reables at Fri May 22 09:38:25 2009
+Fri May 22 09:23:29 2009  --disable   pager disabled for  hours; reables at Fri May 22 09:23:29 2009
+Fri May 22 09:23:44 2009  --disable   pager disabled for 2 hours; reables at Fri May 22 11:23:44 2009
+Fri May 22 09:38:02 2009     --tick * paging #502 to prime
+Fri May 22 09:53:02 2009     --tick * paging #503 to prime
+Fri May 22 09:56:03 2009  --disable   pager disabled for 1 hours; reables at Fri May 22 10:56:03 2009
+Fri May 22 10:08:02 2009     --tick * paging #504 to prime
+Fri May 22 10:33:36 2009  --disable   pager disabled for 2 hours; reables at Fri May 22 12:33:36 2009
+Fri May 22 10:38:02 2009     --tick * paging #505 to prime
+Fri May 22 10:53:01 2009     --tick * paging #506 to prime
+Fri May 22 11:08:01 2009     --tick * paging #507 to prime
+Fri May 22 11:23:02 2009     --tick * paging #508 to prime
+Fri May 22 12:38:01 2009     --tick   auto-emable (disable time period over)
+Fri May 22 19:53:01 2009     --tick * paging #509 to prime
+Fri May 22 20:01:31 2009  --respond   pager disabled for 0.25 hours; reables at Fri May 22 20:16:31 2009
+Fri May 22 20:23:01 2009     --tick   auto-emable (disable time period over)
+Fri May 22 20:23:01 2009     --tick * paging #510 to prime
+Fri May 22 21:34:38 2009  --disable   pager disabled for  hours; reables at Fri May 22 21:34:38 2009
+Fri May 22 21:34:44 2009  --disable   pager disabled for 1 hours; reables at Fri May 22 22:34:44 2009
+Fri May 22 21:38:02 2009     --tick * paging #511 to prime
+Fri May 22 22:38:01 2009     --tick   auto-emable (disable time period over)
+Fri May 22 22:42:52 2009 --backup-takeover   backup-takeover
+Sat May 23 02:48:09 2009 --backup-takeover   backup-takeover
+Sat May 23 05:23:01 2009     --tick * paging #512 to prime
+Sat May 23 05:29:03 2009  --respond   pager disabled for 0.25 hours; reables at Sat May 23 05:44:03 2009
+Sat May 23 05:29:14 2009  --disable   pager disabled for 2 hours; reables at Sat May 23 07:29:14 2009
+Sat May 23 05:38:02 2009     --tick * paging #513 to prime
+Sat May 23 06:23:01 2009     --tick * paging #514 to prime
+Sat May 23 06:53:02 2009     --tick * paging #515 to prime
+Sat May 23 07:38:01 2009     --tick   auto-emable (disable time period over)
+Mon May 25 00:09:44 2009 --backup-takeover   backup-takeover
+Tue May 26 14:08:01 2009     --tick * paging #516 to prime
+Tue May 26 14:23:01 2009     --tick * paging #517 to prime
+Tue May 26 14:38:01 2009     --tick * paging #518 to both
+Tue May 26 14:53:02 2009     --tick * paging #519 to both
+Tue May 26 14:58:54 2009  --respond   pager disabled for 0.25 hours; reables at Tue May 26 15:13:54 2009
+Tue May 26 15:23:01 2009     --tick   auto-emable (disable time period over)
+Tue May 26 15:23:01 2009     --tick * paging #520 to prime
+Tue May 26 15:26:08 2009  --respond   pager disabled for 0.25 hours; reables at Tue May 26 15:41:08 2009
+Wed May 27 02:23:02 2009     --tick * paging #521 to prime
+Wed May 27 02:26:39 2009  --respond   pager disabled for 0.25 hours; reables at Wed May 27 02:41:39 2009
+Wed May 27 02:38:01 2009     --tick * paging #522 to prime
+Wed May 27 02:53:01 2009     --tick   auto-emable (disable time period over)
+Wed May 27 09:53:01 2009     --tick * paging #523 to prime
+Wed May 27 09:55:27 2009  --respond   pager disabled for 0.25 hours; reables at Wed May 27 10:10:27 2009
+Wed May 27 10:23:01 2009     --tick   auto-emable (disable time period over)
+Fri May 29 11:38:01 2009     --tick * paging #524 to prime
+Fri May 29 11:42:05 2009  --respond   pager disabled for 0.25 hours; reables at Fri May 29 11:57:05 2009
+Fri May 29 11:42:15 2009  --disable   pager disabled for 1 hours; reables at Fri May 29 12:42:15 2009
+Fri May 29 12:21:41 2009  --disable   pager disabled for 1 hours; reables at Fri May 29 13:21:41 2009
+Fri May 29 12:23:02 2009     --tick * paging #525 to prime
+Fri May 29 12:38:02 2009     --tick * paging #526 to prime
+Fri May 29 12:53:01 2009     --tick * paging #527 to prime
+Fri May 29 13:23:01 2009     --tick   auto-emable (disable time period over)
+Sat May 30 18:38:01 2009     --tick * paging #528 to prime
+Sat May 30 18:53:01 2009     --tick * paging #529 to prime
+Sat May 30 19:08:01 2009     --tick * paging #530 to both
+Sat May 30 19:13:50 2009  --respond   pager disabled for 0.25 hours; reables at Sat May 30 19:28:50 2009
+Sat May 30 19:38:01 2009     --tick   auto-emable (disable time period over)
+Sun May 31 03:08:01 2009     --tick * paging #531 to prime
+Sun May 31 03:23:02 2009     --tick * paging #532 to prime
+Sun May 31 03:24:08 2009  --respond   pager disabled for 0.25 hours; reables at Sun May 31 03:39:08 2009
+Sun May 31 03:24:16 2009  --disable   pager disabled for 2 hours; reables at Sun May 31 05:24:16 2009
+Sun May 31 04:38:02 2009     --tick * paging #533 to prime
+Sun May 31 05:38:01 2009     --tick   auto-emable (disable time period over)
+Mon Jun  1 00:10:20 2009 --backup-takeover   backup-takeover
+Mon Jun  1 01:53:01 2009     --tick * paging #534 to prime
+Mon Jun  1 02:08:02 2009     --tick * paging #535 to prime
+Mon Jun  1 02:23:02 2009     --tick * paging #536 to both
+Mon Jun  1 02:26:46 2009  --respond   pager disabled for 0.25 hours; reables at Mon Jun  1 02:41:46 2009
+Mon Jun  1 02:26:52 2009  --disable   pager disabled for 2 hours; reables at Mon Jun  1 04:26:52 2009
+Mon Jun  1 02:53:02 2009     --tick * paging #537 to prime
+Mon Jun  1 03:57:12 2009  --disable   pager disabled for 1 hours; reables at Mon Jun  1 04:57:12 2009
+Mon Jun  1 05:08:01 2009     --tick   auto-emable (disable time period over)
+Mon Jun  1 07:38:01 2009     --tick * paging #538 to prime
+Mon Jun  1 07:53:02 2009     --tick * paging #539 to prime
+Mon Jun  1 07:54:51 2009  --respond   pager disabled for 0.25 hours; reables at Mon Jun  1 08:09:51 2009
+Mon Jun  1 08:23:01 2009     --tick   auto-emable (disable time period over)
+Mon Jun  8 03:55:56 2009 --backup-takeover   backup-takeover
+Wed Jun 10 02:08:02 2009     --tick * paging #540 to prime
+Wed Jun 10 02:12:26 2009  --respond   pager disabled for 0.25 hours; reables at Wed Jun 10 02:27:26 2009
+Wed Jun 10 02:23:01 2009     --tick * paging #541 to prime
+Wed Jun 10 02:38:02 2009     --tick   auto-emable (disable time period over)
+Wed Jun 10 03:53:02 2009     --tick * paging #542 to prime
+Wed Jun 10 04:01:59 2009  --respond   pager disabled for 0.25 hours; reables at Wed Jun 10 04:16:59 2009
+Wed Jun 10 04:23:01 2009     --tick   auto-emable (disable time period over)
+Sat Jun 13 12:53:01 2009     --tick * paging #543 to prime
+Sat Jun 13 13:08:01 2009     --tick * paging #544 to prime
+Sat Jun 13 13:16:19 2009  --respond   pager disabled for 0.25 hours; reables at Sat Jun 13 13:31:19 2009
+Sat Jun 13 13:23:02 2009     --tick * paging #545 to prime
+Sat Jun 13 13:25:17 2009  --disable   pager disabled for 2 hours; reables at Sat Jun 13 15:25:17 2009
+Sat Jun 13 15:38:01 2009     --tick   auto-emable (disable time period over)
+Mon Jun 15 01:01:35 2009 --backup-takeover   backup-takeover
+Wed Jun 17 12:08:02 2009     --tick * paging #546 to prime
+Wed Jun 17 12:08:22 2009  --respond   pager disabled for 0.25 hours; reables at Wed Jun 17 12:23:22 2009
+Wed Jun 17 12:08:27 2009  --disable   pager disabled for  hours; reables at Wed Jun 17 12:08:27 2009
+Wed Jun 17 12:08:30 2009  --disable   pager disabled for 2 hours; reables at Wed Jun 17 14:08:30 2009
+Wed Jun 17 14:23:01 2009     --tick   auto-emable (disable time period over)
+Wed Jun 17 16:38:02 2009     --tick * paging #547 to prime
+Wed Jun 17 16:53:02 2009     --tick * paging #548 to prime
+Wed Jun 17 17:08:01 2009     --tick * paging #549 to both
+Wed Jun 17 17:16:32 2009  --respond   pager disabled for 0.25 hours; reables at Wed Jun 17 17:31:32 2009
+Wed Jun 17 17:18:03 2009  --disable   pager disabled for 2 hours; reables at Wed Jun 17 19:18:03 2009
+Wed Jun 17 19:23:01 2009     --tick   auto-emable (disable time period over)
+Thu Jun 18 23:08:02 2009     --tick * paging #550 to prime
+Thu Jun 18 23:08:33 2009  --respond   pager disabled for 0.25 hours; reables at Thu Jun 18 23:23:33 2009
+Thu Jun 18 23:10:47 2009  --disable   pager disabled for 1 hours; reables at Fri Jun 19 00:10:47 2009
+Thu Jun 18 23:23:01 2009     --tick * paging #551 to prime
+Fri Jun 19 00:23:02 2009     --tick   auto-emable (disable time period over)
+Mon Jun 22 08:20:03 2009 --backup-takeover   backup-takeover
+Tue Jun 23 07:08:01 2009     --tick * paging #552 to prime
+Tue Jun 23 07:12:24 2009  --respond   pager disabled for 0.25 hours; reables at Tue Jun 23 07:27:24 2009
+Tue Jun 23 07:38:01 2009     --tick   auto-emable (disable time period over)
+Tue Jun 23 15:23:01 2009     --tick * paging #553 to prime
+Tue Jun 23 15:33:35 2009  --respond   pager disabled for 0.25 hours; reables at Tue Jun 23 15:48:35 2009
+Tue Jun 23 15:53:02 2009     --tick   auto-emable (disable time period over)
+Mon Jun 29 06:07:04 2009 --backup-takeover   backup-takeover
+Mon Jun 29 22:53:02 2009     --tick * paging #554 to prime
+Mon Jun 29 22:53:37 2009  --respond   pager disabled for 0.25 hours; reables at Mon Jun 29 23:08:37 2009
+Mon Jun 29 23:23:01 2009     --tick   auto-emable (disable time period over)
+Mon Jun 29 23:53:02 2009     --tick * paging #555 to prime
+Mon Jun 29 23:59:44 2009  --respond   pager disabled for 0.25 hours; reables at Tue Jun 30 00:14:44 2009
+Tue Jun 30 00:23:01 2009     --tick   auto-emable (disable time period over)
+Thu Jul  2 07:38:01 2009     --tick * paging #556 to prime
+Thu Jul  2 07:41:17 2009  --respond   pager disabled for 0.25 hours; reables at Thu Jul  2 07:56:17 2009
+Thu Jul  2 07:41:23 2009  --disable   pager disabled for 2 hours; reables at Thu Jul  2 09:41:23 2009
+Thu Jul  2 09:53:01 2009     --tick   auto-emable (disable time period over)
+Sun Jul  5 23:34:13 2009 --backup-takeover   backup-takeover
+Mon Jul 13 01:13:12 2009 --backup-takeover   backup-takeover
+Tue Jul 14 13:08:01 2009     --tick * paging #557 to prime
+Tue Jul 14 13:23:02 2009     --tick * paging #558 to prime
+Tue Jul 14 13:38:02 2009     --tick * paging #559 to both
+Tue Jul 14 13:53:02 2009     --tick * paging #560 to both
+Tue Jul 14 14:08:02 2009     --tick * paging #561 to both
+Tue Jul 14 14:23:01 2009     --tick * paging #562 to both
+Tue Jul 14 14:38:01 2009     --tick * paging #563 to both
+Tue Jul 14 14:53:02 2009     --tick * paging #564 to both
+Tue Jul 14 15:08:02 2009     --tick * paging #565 to both
+Tue Jul 14 15:23:01 2009     --tick * paging #566 to both
+Tue Jul 14 15:35:39 2009  --respond   pager disabled for 0.25 hours; reables at Tue Jul 14 15:50:39 2009
+Tue Jul 14 15:53:01 2009     --tick   auto-emable (disable time period over)
+Tue Jul 14 15:53:02 2009     --tick * paging #567 to prime
+Tue Jul 14 16:00:04 2009  --disable   pager disabled for 2 hours; reables at Tue Jul 14 18:00:04 2009
+Tue Jul 14 18:08:01 2009     --tick   auto-emable (disable time period over)
+Mon Jul 20 04:28:39 2009 --backup-takeover   backup-takeover
+Mon Jul 20 23:53:01 2009     --tick * paging #568 to prime
+Mon Jul 20 23:53:14 2009  --respond   pager disabled for 0.25 hours; reables at Tue Jul 21 00:08:14 2009
+Mon Jul 20 23:53:25 2009  --disable   pager disabled for  hours; reables at Mon Jul 20 23:53:25 2009
+Mon Jul 20 23:53:30 2009  --disable   pager disabled for 2 hours; reables at Tue Jul 21 01:53:30 2009
+Tue Jul 21 02:08:01 2009     --tick   auto-emable (disable time period over)
+Tue Jul 21 10:31:37 2009 --backup-takeover   backup-takeover
+Tue Jul 21 15:20:37 2009 --backup-takeover   backup-takeover
+Sat Jul 25 16:08:02 2009     --tick * paging #569 to prime
+Sat Jul 25 16:23:01 2009     --tick * paging #570 to prime
+Sat Jul 25 16:38:01 2009     --tick * paging #571 to both
+Sat Jul 25 16:42:38 2009  --respond   pager disabled for 0.25 hours; reables at Sat Jul 25 16:57:38 2009
+Sat Jul 25 16:53:02 2009     --tick * paging #572 to prime
+Sat Jul 25 16:57:49 2009  --disable   pager disabled for 2 hours; reables at Sat Jul 25 18:57:49 2009
+Sat Jul 25 17:08:01 2009     --tick * paging #573 to prime
+Sat Jul 25 17:08:42 2009  --disable   pager disabled for 2 hours; reables at Sat Jul 25 19:08:42 2009
+Sat Jul 25 17:23:01 2009     --tick * paging #574 to prime
+Sat Jul 25 17:38:02 2009     --tick * paging #575 to prime
+Sat Jul 25 17:53:02 2009     --tick * paging #576 to both
+Sun Jul 26 09:08:01 2009     --tick * paging #577 to prime
+Sun Jul 26 09:11:41 2009  --respond   pager disabled for 0.25 hours; reables at Sun Jul 26 09:26:41 2009
+Sun Jul 26 09:38:01 2009     --tick   auto-emable (disable time period over)
+Mon Jul 27 00:09:23 2009 --backup-takeover   backup-takeover
+Tue Jul 28 01:08:02 2009     --tick * paging #578 to prime
+Tue Jul 28 01:14:10 2009  --respond   pager disabled for 0.25 hours; reables at Tue Jul 28 01:29:10 2009
+Tue Jul 28 01:18:22 2009  --disable   pager disabled for 1 hours; reables at Tue Jul 28 02:18:22 2009
+Tue Jul 28 02:23:01 2009     --tick   auto-emable (disable time period over)
+Thu Jul 30 01:53:02 2009     --tick * paging #579 to prime
+Thu Jul 30 01:53:51 2009  --respond   pager disabled for 0.25 hours; reables at Thu Jul 30 02:08:51 2009
+Thu Jul 30 01:54:20 2009  --disable   pager disabled for 2 hours; reables at Thu Jul 30 03:54:20 2009
+Thu Jul 30 02:08:01 2009     --tick * paging #580 to prime
+Thu Jul 30 02:11:41 2009  --disable   pager disabled for 2 hours; reables at Thu Jul 30 04:11:41 2009
+Thu Jul 30 02:23:02 2009     --tick * paging #581 to prime
+Thu Jul 30 02:38:02 2009     --tick * paging #582 to prime
+Thu Jul 30 03:38:02 2009     --tick * paging #583 to prime
+Thu Jul 30 04:23:01 2009     --tick   auto-emable (disable time period over)
+Sun Aug  2 23:46:27 2009 --backup-takeover   backup-takeover
+Mon Aug  3 03:53:01 2009     --tick * paging #584 to prime
+Mon Aug  3 04:00:37 2009  --respond   pager disabled for 0.25 hours; reables at Mon Aug  3 04:15:37 2009
+Mon Aug  3 04:23:01 2009     --tick   auto-emable (disable time period over)
+Fri Aug  7 09:23:02 2009     --tick * paging #585 to prime
+Fri Aug  7 09:27:22 2009  --respond   pager disabled for 0.25 hours; reables at Fri Aug  7 09:42:22 2009
+Fri Aug  7 09:35:31 2009  --disable   pager disabled for 2 hours; reables at Fri Aug  7 11:35:31 2009
+Fri Aug  7 10:38:07 2009     --tick * paging #586 to prime
+Fri Aug  7 10:53:12 2009     --tick * paging #587 to prime
+Fri Aug  7 11:08:05 2009     --tick * paging #588 to prime
+Fri Aug  7 11:23:01 2009     --tick * paging #589 to prime
+Fri Aug  7 11:38:02 2009     --tick   auto-emable (disable time period over)
+Fri Aug  7 11:38:03 2009     --tick * paging #590 to prime
+Fri Aug  7 22:38:01 2009     --tick * paging #591 to prime
+Fri Aug  7 22:40:10 2009  --respond   pager disabled for 0.25 hours; reables at Fri Aug  7 22:55:10 2009
+Fri Aug  7 23:08:02 2009     --tick   auto-emable (disable time period over)
+Sun Aug  9 23:37:55 2009 --backup-takeover   backup-takeover
+Thu Aug 13 00:08:02 2009     --tick * paging #592 to prime
+Thu Aug 13 00:23:01 2009     --tick * paging #593 to prime
+Thu Aug 13 00:24:24 2009  --respond   pager disabled for 0.25 hours; reables at Thu Aug 13 00:39:24 2009
+Thu Aug 13 00:53:01 2009     --tick   auto-emable (disable time period over)
+Thu Aug 13 00:53:01 2009     --tick * paging #594 to prime
+Mon Aug 17 00:29:01 2009 --backup-takeover   backup-takeover
+Wed Aug 19 02:53:01 2009     --tick * paging #595 to prime
+Wed Aug 19 03:01:04 2009  --disable   pager disabled for 1 hours; reables at Wed Aug 19 04:01:04 2009
+Wed Aug 19 03:13:51 2009  --disable   pager disabled for 1 hours; reables at Wed Aug 19 04:13:51 2009
+Wed Aug 19 04:23:01 2009     --tick   auto-emable (disable time period over)
+Sun Aug 23 23:58:45 2009 --backup-takeover   backup-takeover
+Sat Aug 29 05:38:01 2009     --tick * paging #596 to prime
+Sat Aug 29 05:53:01 2009     --tick * paging #597 to prime
+Sat Aug 29 05:55:12 2009  --respond   pager disabled for 0.25 hours; reables at Sat Aug 29 06:10:12 2009
+Sat Aug 29 06:06:56 2009  --disable   pager disabled for 10 hours; reables at Sat Aug 29 16:06:56 2009
+Sat Aug 29 06:38:01 2009     --tick * paging #598 to prime
+Sat Aug 29 08:55:48 2009 --backup-takeover   backup-takeover
+Sat Aug 29 16:08:01 2009     --tick   auto-emable (disable time period over)
+Sat Aug 29 16:08:01 2009     --tick * paging #599 to prime
+Sat Aug 29 16:23:01 2009     --tick * paging #600 to prime
+Sat Aug 29 16:38:02 2009     --tick * paging #601 to both
+Sat Aug 29 16:53:01 2009     --tick * paging #602 to both
+Sat Aug 29 17:06:10 2009  --respond   pager disabled for 0.25 hours; reables at Sat Aug 29 17:21:10 2009
+Sat Aug 29 17:06:21 2009  --disable   pager disabled for 10 hours; reables at Sun Aug 30 03:06:21 2009
+Sun Aug 30 03:08:01 2009     --tick   auto-emable (disable time period over)
+Sun Aug 30 03:08:01 2009     --tick * paging #603 to prime
+Sun Aug 30 03:23:02 2009     --tick * paging #604 to prime
+Sun Aug 30 03:38:02 2009     --tick * paging #605 to both
+Sun Aug 30 03:53:01 2009     --tick * paging #606 to both
+Sun Aug 30 04:08:01 2009     --tick * paging #607 to both
+Sun Aug 30 04:23:02 2009     --tick * paging #608 to both
+Sun Aug 30 04:38:02 2009     --tick * paging #609 to both
+Sun Aug 30 04:53:02 2009     --tick * paging #610 to both
+Sun Aug 30 10:42:13 2009 --backup-takeover   backup-takeover
+Mon Aug 31 01:36:50 2009 --backup-takeover   backup-takeover
+Mon Aug 31 23:38:01 2009     --tick * paging #611 to prime
+Mon Aug 31 23:50:48 2009  --respond   pager disabled for 0.25 hours; reables at Tue Sep  1 00:05:48 2009
+Tue Sep  1 00:08:01 2009     --tick   auto-emable (disable time period over)
+Thu Sep  3 11:53:02 2009     --tick * paging #612 to prime
+Thu Sep  3 11:53:45 2009  --respond   pager disabled for 0.25 hours; reables at Thu Sep  3 12:08:45 2009
+Thu Sep  3 12:03:21 2009  --disable   pager disabled for 1 hours; reables at Thu Sep  3 13:03:21 2009
+Thu Sep  3 13:08:01 2009     --tick   auto-emable (disable time period over)
+Fri Sep  4 07:05:38 2009  --disable   pager disabled for  hours; reables at Fri Sep  4 07:05:38 2009
+Fri Sep  4 07:08:01 2009     --tick   auto-emable (disable time period over)
+Fri Sep  4 07:09:08 2009  --disable   pager disabled for 1 hours; reables at Fri Sep  4 08:09:08 2009
+Fri Sep  4 08:08:02 2009     --tick * paging #613 to prime
+Fri Sep  4 08:12:31 2009  --disable   pager disabled for  hours; reables at Fri Sep  4 08:12:31 2009
+Fri Sep  4 08:12:34 2009  --disable   pager disabled for 1 hours; reables at Fri Sep  4 09:12:34 2009
+Fri Sep  4 08:33:27 2009   --enable   manual enable
+Mon Sep  7 00:20:09 2009 --backup-takeover   backup-takeover
+Tue Sep  8 23:38:01 2009     --tick * paging #614 to prime
+Tue Sep  8 23:38:44 2009  --respond   pager disabled for 0.25 hours; reables at Tue Sep  8 23:53:44 2009
+Tue Sep  8 23:53:01 2009     --tick * paging #615 to prime
+Wed Sep  9 00:08:01 2009     --tick   auto-emable (disable time period over)
+Wed Sep  9 00:08:02 2009     --tick * paging #616 to prime
+Wed Sep  9 00:23:01 2009     --tick * paging #617 to prime
+Wed Sep  9 00:33:54 2009  --respond   pager disabled for 0.25 hours; reables at Wed Sep  9 00:48:54 2009
+Wed Sep  9 00:33:58 2009  --disable   pager disabled for 2 hours; reables at Wed Sep  9 02:33:58 2009
+Wed Sep  9 02:38:01 2009     --tick   auto-emable (disable time period over)
+Sat Sep 12 03:38:02 2009     --tick * paging #618 to prime
+Sun Sep 13 23:43:39 2009 --backup-takeover   backup-takeover
+Mon Sep 14 06:53:02 2009     --tick * paging #619 to prime
+Mon Sep 14 06:55:17 2009  --respond   pager disabled for 0.25 hours; reables at Mon Sep 14 07:10:17 2009
+Mon Sep 14 07:23:01 2009     --tick   auto-emable (disable time period over)
+Wed Sep 16 20:53:02 2009     --tick * paging #620 to prime
+Wed Sep 16 21:08:01 2009     --tick * paging #621 to prime
+Wed Sep 16 21:23:01 2009     --tick * paging #622 to both
+Wed Sep 16 21:33:08 2009  --respond   pager disabled for 0.25 hours; reables at Wed Sep 16 21:48:08 2009
+Wed Sep 16 21:38:02 2009     --tick * paging #623 to prime
+Wed Sep 16 21:53:01 2009     --tick   auto-emable (disable time period over)
+Wed Sep 16 21:53:02 2009     --tick * paging #624 to prime
+Wed Sep 16 21:55:35 2009  --respond   pager disabled for 0.25 hours; reables at Wed Sep 16 22:10:35 2009
+Wed Sep 16 21:55:40 2009  --disable   pager disabled for 1 hours; reables at Wed Sep 16 22:55:40 2009
+Wed Sep 16 23:08:01 2009     --tick   auto-emable (disable time period over)
+Thu Sep 17 05:08:01 2009     --tick * paging #625 to prime
+Thu Sep 17 05:10:36 2009  --respond   pager disabled for 0.25 hours; reables at Thu Sep 17 05:25:36 2009
+Thu Sep 17 05:38:01 2009     --tick   auto-emable (disable time period over)
+Sun Sep 20 08:38:02 2009     --tick * paging #626 to prime
+Sun Sep 20 08:43:38 2009  --respond   pager disabled for 0.25 hours; reables at Sun Sep 20 08:58:38 2009
+Sun Sep 20 09:08:01 2009     --tick   auto-emable (disable time period over)
+Mon Sep 21 00:18:08 2009 --backup-takeover   backup-takeover
+Mon Sep 28 02:43:57 2009 --backup-takeover   backup-takeover
+Sat Oct  3 14:23:01 2009     --tick * paging #627 to prime
+Sat Oct  3 14:38:01 2009     --tick * paging #628 to prime
+Sat Oct  3 14:53:01 2009     --tick * paging #629 to both
+Sat Oct  3 15:01:51 2009  --respond   pager disabled for 0.25 hours; reables at Sat Oct  3 15:16:51 2009
+Sat Oct  3 15:02:14 2009  --disable   pager disabled for 2 hours; reables at Sat Oct  3 17:02:14 2009
+Sat Oct  3 15:08:01 2009     --tick * paging #630 to prime
+Sat Oct  3 15:23:01 2009     --tick * paging #631 to prime
+Sat Oct  3 15:28:41 2009  --disable   pager disabled for 2 hours; reables at Sat Oct  3 17:28:41 2009
+Sat Oct  3 17:38:01 2009     --tick   auto-emable (disable time period over)
+Sun Oct  4 23:27:37 2009 --backup-takeover   backup-takeover
+Thu Oct  8 18:51:12 2009 --backup-takeover   backup-takeover
+Thu Oct  8 23:38:01 2009     --tick * paging #632 to prime
+Thu Oct  8 23:44:04 2009  --respond   pager disabled for 0.25 hours; reables at Thu Oct  8 23:59:04 2009
+Thu Oct  8 23:44:10 2009  --disable   pager disabled for 1 hours; reables at Fri Oct  9 00:44:10 2009
+Fri Oct  9 00:53:01 2009     --tick   auto-emable (disable time period over)
+Fri Oct  9 02:56:23 2009 --backup-takeover   backup-takeover
+Mon Oct 12 00:21:15 2009 --backup-takeover   backup-takeover
+Sun Oct 18 23:05:39 2009 --backup-takeover   backup-takeover
+Wed Oct 21 05:23:02 2009     --tick * paging #633 to prime
+Wed Oct 21 05:32:31 2009  --respond   pager disabled for 0.25 hours; reables at Wed Oct 21 05:47:31 2009
+Wed Oct 21 05:32:38 2009  --disable   pager disabled for 2 hours; reables at Wed Oct 21 07:32:38 2009
+Wed Oct 21 07:38:01 2009     --tick   auto-emable (disable time period over)
+Fri Oct 23 06:42:16 2009 --backup-takeover   backup-takeover
+Fri Oct 23 22:39:10 2009 --backup-takeover   backup-takeover
+Sat Oct 24 04:54:57 2009 --backup-takeover   backup-takeover
+Sat Oct 31 01:23:02 2009 --backup-takeover   backup-takeover
+Sat Oct 31 07:21:09 2009 --backup-takeover   backup-takeover
+Sat Oct 31 14:08:40 2009 --backup-takeover   backup-takeover
+Sun Nov  1 19:38:02 2009     --tick * paging #634 to prime
+Sun Nov  1 19:43:41 2009  --respond   pager disabled for 0.25 hours; reables at Sun Nov  1 19:58:41 2009
+Sun Nov  1 19:43:45 2009  --disable   pager disabled for  hours; reables at Sun Nov  1 19:43:45 2009
+Sun Nov  1 19:43:48 2009  --disable   pager disabled for 2 hours; reables at Sun Nov  1 21:43:48 2009
+Sun Nov  1 21:53:02 2009     --tick   auto-emable (disable time period over)
+Mon Nov  2 13:23:01 2009     --tick * paging #635 to prime
+Mon Nov  2 13:38:01 2009     --tick * paging #636 to prime
+Mon Nov  2 13:53:02 2009     --tick * paging #637 to both
+Mon Nov  2 14:08:02 2009     --tick * paging #638 to both
+Mon Nov  2 14:23:02 2009     --tick * paging #639 to both
+Mon Nov  2 14:38:02 2009     --tick * paging #640 to both
+Mon Nov  2 14:53:02 2009     --tick * paging #641 to both
+Mon Nov  2 14:58:32 2009  --respond   pager disabled for 0.25 hours; reables at Mon Nov  2 15:13:32 2009
+Mon Nov  2 14:58:48 2009  --disable   pager disabled for 2 hours; reables at Mon Nov  2 16:58:48 2009
+Mon Nov  2 15:08:02 2009     --tick * paging #642 to prime
+Mon Nov  2 17:08:01 2009     --tick   auto-emable (disable time period over)
+Mon Nov  2 21:36:46 2009 --backup-takeover   backup-takeover
+Mon Nov  2 21:37:10 2009 --backup-takeover   backup-takeover
+Mon Nov  2 21:37:41 2009  --disable   pager disabled for  hours; reables at Mon Nov  2 21:37:41 2009
+Mon Nov  2 21:38:02 2009     --tick   auto-emable (disable time period over)
+Sat Nov  7 08:53:02 2009     --tick * paging #643 to prime
+Sat Nov  7 09:08:02 2009     --tick * paging #644 to prime
+Sat Nov  7 09:13:09 2009  --respond   pager disabled for 0.25 hours; reables at Sat Nov  7 09:28:09 2009
+Sat Nov  7 09:18:29 2009  --disable   pager disabled for 1 hours; reables at Sat Nov  7 10:18:29 2009
+Sat Nov  7 10:23:01 2009     --tick   auto-emable (disable time period over)
+Sun Nov  8 01:53:01 2009     --tick * paging #645 to prime
+Sun Nov  8 02:03:51 2009  --respond   pager disabled for 0.25 hours; reables at Sun Nov  8 02:18:51 2009
+Sun Nov  8 02:04:00 2009  --disable   pager disabled for 2 hours; reables at Sun Nov  8 04:04:00 2009
+Sun Nov  8 04:08:01 2009     --tick   auto-emable (disable time period over)
+Sun Nov  8 10:38:02 2009     --tick * paging #646 to prime
+Sun Nov  8 10:50:15 2009  --respond   pager disabled for 0.25 hours; reables at Sun Nov  8 11:05:15 2009
+Sun Nov  8 11:08:01 2009     --tick   auto-emable (disable time period over)
+Sun Nov  8 11:08:01 2009     --tick * paging #647 to prime
+Sun Nov  8 11:16:24 2009  --respond   pager disabled for 0.25 hours; reables at Sun Nov  8 11:31:24 2009
+Sun Nov  8 11:16:34 2009  --disable   pager disabled for 2 hours; reables at Sun Nov  8 13:16:34 2009
+Sun Nov  8 12:08:02 2009     --tick * paging #648 to prime
+Sun Nov  8 13:23:01 2009     --tick   auto-emable (disable time period over)
+Sun Nov  8 13:23:02 2009     --tick * paging #649 to prime
+Sun Nov  8 13:38:01 2009     --tick * paging #650 to prime
+Sun Nov  8 13:49:21 2009  --respond   pager disabled for 0.25 hours; reables at Sun Nov  8 14:04:21 2009
+Sun Nov  8 13:49:26 2009  --disable   pager disabled for 2 hours; reables at Sun Nov  8 15:49:26 2009
+Sun Nov  8 15:53:01 2009     --tick   auto-emable (disable time period over)
+Sun Nov  8 15:59:17 2009 --backup-takeover   backup-takeover
+Mon Nov  9 23:08:03 2009     --tick * paging #651 to prime
+Mon Nov  9 23:11:00 2009  --respond   pager disabled for 0.25 hours; reables at Mon Nov  9 23:26:00 2009
+Mon Nov  9 23:38:01 2009     --tick   auto-emable (disable time period over)
+Thu Nov 12 20:23:01 2009     --tick * paging #652 to prime
+Thu Nov 12 20:28:31 2009  --respond   pager disabled for 0.25 hours; reables at Thu Nov 12 20:43:31 2009
+Thu Nov 12 20:35:04 2009  --disable   pager disabled for 1 hours; reables at Thu Nov 12 21:35:04 2009
+Thu Nov 12 20:53:01 2009     --tick * paging #653 to prime
+Thu Nov 12 21:38:02 2009     --tick   auto-emable (disable time period over)
+Thu Nov 12 21:39:20 2009  --disable   pager disabled for 1 hours; reables at Thu Nov 12 22:39:20 2009
+Thu Nov 12 22:53:02 2009     --tick   auto-emable (disable time period over)
+Fri Nov 13 17:53:02 2009     --tick * paging #654 to prime
+Fri Nov 13 18:08:02 2009     --tick * paging #655 to prime
+Fri Nov 13 18:22:12 2009  --respond   pager disabled for 0.25 hours; reables at Fri Nov 13 18:37:12 2009
+Fri Nov 13 18:22:29 2009  --disable   pager disabled for 2 hours; reables at Fri Nov 13 20:22:29 2009
+Fri Nov 13 18:38:02 2009     --tick * paging #656 to prime
+Fri Nov 13 18:41:49 2009  --disable   pager disabled for 2 hours; reables at Fri Nov 13 20:41:49 2009
+Fri Nov 13 20:53:01 2009     --tick   auto-emable (disable time period over)
+Fri Nov 13 21:53:01 2009     --tick * paging #657 to prime
+Fri Nov 13 22:06:19 2009  --respond   pager disabled for 0.25 hours; reables at Fri Nov 13 22:21:19 2009
+Fri Nov 13 22:06:36 2009  --disable   pager disabled for 1 hours; reables at Fri Nov 13 23:06:36 2009
+Fri Nov 13 22:38:01 2009     --tick * paging #658 to prime
+Fri Nov 13 22:53:02 2009     --tick * paging #659 to prime
+Fri Nov 13 23:08:01 2009     --tick   auto-emable (disable time period over)
+Fri Nov 13 23:08:01 2009     --tick * paging #660 to prime
+Fri Nov 13 23:23:02 2009     --tick * paging #661 to prime
+Fri Nov 13 23:25:26 2009  --respond   pager disabled for 0.25 hours; reables at Fri Nov 13 23:40:26 2009
+Fri Nov 13 23:25:30 2009  --disable   pager disabled for 1 hours; reables at Sat Nov 14 00:25:30 2009
+Sat Nov 14 00:38:01 2009     --tick   auto-emable (disable time period over)
+Sun Nov 15 22:00:27 2009 --backup-takeover   backup-takeover
+Mon Nov 16 06:08:02 2009     --tick * paging #662 to prime
+Mon Nov 16 06:23:02 2009     --tick * paging #663 to prime
+Mon Nov 16 06:25:48 2009  --respond   pager disabled for 0.25 hours; reables at Mon Nov 16 06:40:48 2009
+Mon Nov 16 06:25:55 2009  --disable   pager disabled for 1 hours; reables at Mon Nov 16 07:25:55 2009
+Mon Nov 16 07:08:01 2009     --tick * paging #664 to prime
+Mon Nov 16 07:23:01 2009     --tick * paging #665 to prime
+Mon Nov 16 07:24:14 2009  --disable   pager disabled for 2 hours; reables at Mon Nov 16 09:24:14 2009
+Mon Nov 16 07:38:02 2009     --tick * paging #666 to prime
+Mon Nov 16 08:17:25 2009   --enable   manual enable
+Sun Nov 22 23:45:40 2009 --backup-takeover   backup-takeover
+Mon Nov 23 20:06:19 2009 --backup-takeover   backup-takeover
+Mon Nov 23 22:46:21 2009 --backup-takeover   backup-takeover
+Sun Nov 29 23:06:56 2009 --backup-takeover   backup-takeover
+Mon Nov 30 21:08:11 2009     --tick * paging #667 to prime
+Mon Nov 30 21:13:34 2009  --respond   pager disabled for 0.25 hours; reables at Mon Nov 30 21:28:34 2009
+Mon Nov 30 21:23:07 2009     --tick * paging #668 to prime
+Mon Nov 30 21:38:01 2009     --tick   auto-emable (disable time period over)
+Mon Nov 30 21:38:22 2009     --tick * paging #669 to prime
+Mon Nov 30 21:39:06 2009  --respond   pager disabled for 0.25 hours; reables at Mon Nov 30 21:54:06 2009
+Mon Nov 30 21:53:02 2009     --tick * paging #670 to prime
+Mon Nov 30 22:08:01 2009     --tick   auto-emable (disable time period over)
+Mon Nov 30 22:08:02 2009     --tick * paging #671 to prime
+Mon Nov 30 22:11:13 2009  --respond   pager disabled for 0.25 hours; reables at Mon Nov 30 22:26:13 2009
+Mon Nov 30 22:23:02 2009     --tick * paging #672 to prime
+Mon Nov 30 22:38:01 2009     --tick   auto-emable (disable time period over)
+Tue Dec  1 02:53:01 2009     --tick * paging #673 to prime
+Tue Dec  1 03:08:01 2009     --tick * paging #674 to prime
+Tue Dec  1 03:18:20 2009  --respond   pager disabled for 0.25 hours; reables at Tue Dec  1 03:33:20 2009
+Tue Dec  1 03:38:01 2009     --tick   auto-emable (disable time period over)
+Wed Dec  2 03:08:02 2009     --tick * paging #675 to prime
+Wed Dec  2 03:08:28 2009  --respond   pager disabled for 0.25 hours; reables at Wed Dec  2 03:23:28 2009
+Wed Dec  2 03:38:01 2009     --tick   auto-emable (disable time period over)
+Thu Dec  3 19:23:05 2009     --tick * paging #676 to prime
+Thu Dec  3 19:31:41 2009  --respond   pager disabled for 0.25 hours; reables at Thu Dec  3 19:46:41 2009
+Thu Dec  3 19:53:01 2009     --tick   auto-emable (disable time period over)
+Fri Dec  4 00:38:01 2009     --tick * paging #677 to prime
+Fri Dec  4 00:38:27 2009  --respond   pager disabled for 0.25 hours; reables at Fri Dec  4 00:53:27 2009
+Fri Dec  4 00:38:54 2009  --disable   pager disabled for 8 hours; reables at Fri Dec  4 08:38:54 2009
+Fri Dec  4 08:53:02 2009     --tick   auto-emable (disable time period over)
+Sat Dec  5 12:53:01 2009     --tick * paging #678 to prime
+Sat Dec  5 13:08:02 2009     --tick * paging #679 to prime
+Sat Dec  5 13:23:01 2009     --tick * paging #680 to both
+Sat Dec  5 13:27:35 2009  --respond   pager disabled for 0.25 hours; reables at Sat Dec  5 13:42:35 2009
+Sat Dec  5 13:46:05 2009  --disable   pager disabled for 10 hours; reables at Sat Dec  5 23:46:05 2009
+Sat Dec  5 23:53:01 2009     --tick   auto-emable (disable time period over)
+Sun Dec  6 19:38:01 2009     --tick * paging #681 to prime
+Sun Dec  6 19:39:49 2009  --respond   pager disabled for 0.25 hours; reables at Sun Dec  6 19:54:49 2009
+Sun Dec  6 20:08:01 2009     --tick   auto-emable (disable time period over)
+Mon Dec  7 00:08:02 2009     --tick * paging #682 to prime
+Mon Dec  7 00:09:54 2009  --respond   pager disabled for 0.25 hours; reables at Mon Dec  7 00:24:54 2009
+Mon Dec  7 00:38:01 2009     --tick   auto-emable (disable time period over)
+Mon Dec  7 05:27:57 2009 --backup-takeover   backup-takeover
+Mon Dec  7 18:23:02 2009     --tick * paging #683 to prime
+Mon Dec  7 18:33:29 2009  --respond   pager disabled for 0.25 hours; reables at Mon Dec  7 18:48:29 2009
+Mon Dec  7 18:38:01 2009     --tick * paging #684 to prime
+Mon Dec  7 18:53:01 2009     --tick   auto-emable (disable time period over)
+Mon Dec  7 18:53:01 2009     --tick * paging #685 to prime
+Mon Dec  7 18:59:37 2009  --respond   pager disabled for 0.25 hours; reables at Mon Dec  7 19:14:37 2009
+Mon Dec  7 19:07:10 2009  --disable   pager disabled for 2 hours; reables at Mon Dec  7 21:07:10 2009
+Mon Dec  7 19:53:02 2009     --tick * paging #686 to prime
+Mon Dec  7 20:23:01 2009     --tick * paging #687 to prime
+Mon Dec  7 21:08:02 2009     --tick   auto-emable (disable time period over)
+Sun Dec 13 19:18:55 2009 --backup-takeover   backup-takeover
+Mon Dec 14 00:53:01 2009     --tick * paging #688 to prime
+Mon Dec 14 00:58:19 2009  --respond   pager disabled for 0.25 hours; reables at Mon Dec 14 01:13:19 2009
+Mon Dec 14 01:23:01 2009     --tick   auto-emable (disable time period over)
+Mon Dec 14 01:23:02 2009     --tick * paging #689 to prime
+Mon Dec 14 01:24:03 2009  --respond   pager disabled for 0.25 hours; reables at Mon Dec 14 01:39:03 2009
+Mon Dec 14 01:53:01 2009     --tick   auto-emable (disable time period over)
+Mon Dec 14 20:53:01 2009     --tick * paging #690 to prime
+Mon Dec 14 20:56:11 2009  --respond   pager disabled for 0.25 hours; reables at Mon Dec 14 21:11:11 2009
+Mon Dec 14 21:05:21 2009  --disable   pager disabled for 1 hours; reables at Mon Dec 14 22:05:21 2009
+Mon Dec 14 22:08:01 2009     --tick   auto-emable (disable time period over)
+Mon Dec 14 23:23:01 2009     --tick * paging #691 to prime
+Mon Dec 14 23:23:15 2009  --respond   pager disabled for 0.25 hours; reables at Mon Dec 14 23:38:15 2009
+Mon Dec 14 23:43:32 2009  --disable   pager disabled for 2 hours; reables at Tue Dec 15 01:43:32 2009
+Mon Dec 14 23:53:01 2009     --tick * paging #692 to prime
+Tue Dec 15 00:53:02 2009     --tick * paging #693 to prime
+Tue Dec 15 01:53:01 2009     --tick   auto-emable (disable time period over)
+Wed Dec 16 02:23:01 2009     --tick * paging #694 to prime
+Wed Dec 16 02:27:20 2009  --respond   pager disabled for 0.25 hours; reables at Wed Dec 16 02:42:20 2009
+Wed Dec 16 02:53:01 2009     --tick   auto-emable (disable time period over)
+Wed Dec 16 19:08:02 2009     --tick * paging #695 to prime
+Wed Dec 16 19:08:55 2009  --respond   pager disabled for 0.25 hours; reables at Wed Dec 16 19:23:55 2009
+Wed Dec 16 19:23:02 2009     --tick * paging #696 to prime
+Wed Dec 16 19:23:15 2009  --disable   pager disabled for 1 hours; reables at Wed Dec 16 20:23:15 2009
+Wed Dec 16 20:38:01 2009     --tick   auto-emable (disable time period over)
+Thu Dec 17 03:08:06 2009     --tick * paging #697 to prime
+Thu Dec 17 03:08:20 2009  --respond   pager disabled for 0.25 hours; reables at Thu Dec 17 03:23:20 2009
+Thu Dec 17 03:23:02 2009     --tick * paging #698 to prime
+Thu Dec 17 03:25:43 2009  --disable   pager disabled for  hours; reables at Thu Dec 17 03:25:43 2009
+Thu Dec 17 03:25:47 2009  --disable   pager disabled for 1 hours; reables at Thu Dec 17 04:25:47 2009
+Thu Dec 17 03:38:02 2009     --tick * paging #699 to prime
+Thu Dec 17 04:08:01 2009     --tick * paging #700 to prime
+Thu Dec 17 04:23:02 2009     --tick * paging #701 to prime
+Thu Dec 17 04:38:01 2009     --tick   auto-emable (disable time period over)
+Thu Dec 17 04:53:02 2009     --tick * paging #702 to prime
+Thu Dec 17 04:53:58 2009  --respond   pager disabled for 0.25 hours; reables at Thu Dec 17 05:08:58 2009
+Thu Dec 17 05:23:01 2009     --tick   auto-emable (disable time period over)
+Thu Dec 17 07:08:02 2009     --tick * paging #703 to prime
+Thu Dec 17 07:13:05 2009  --respond   pager disabled for 0.25 hours; reables at Thu Dec 17 07:28:05 2009
+Thu Dec 17 07:38:01 2009     --tick   auto-emable (disable time period over)
+Thu Dec 17 07:43:55 2009  --disable   pager disabled for 1 hours; reables at Thu Dec 17 08:43:55 2009
+Thu Dec 17 07:53:01 2009     --tick * paging #704 to prime
+Thu Dec 17 08:04:55 2009   --enable   manual enable
+Thu Dec 17 08:23:02 2009     --tick * paging #705 to prime
+Thu Dec 17 13:08:01 2009     --tick * paging #706 to prime
+Thu Dec 17 13:09:19 2009  --respond   pager disabled for 0.25 hours; reables at Thu Dec 17 13:24:19 2009
+Thu Dec 17 13:10:09 2009  --disable   pager disabled for 8 hours; reables at Thu Dec 17 21:10:09 2009
+Thu Dec 17 21:23:01 2009     --tick   auto-emable (disable time period over)
+Thu Dec 17 23:53:01 2009     --tick * paging #707 to prime
+Fri Dec 18 00:08:02 2009     --tick * paging #708 to prime
+Fri Dec 18 00:12:45 2009  --respond   pager disabled for 0.25 hours; reables at Fri Dec 18 00:27:45 2009
+Fri Dec 18 00:15:24 2009  --disable   pager disabled for 100 hours; reables at Tue Dec 22 04:15:24 2009
+Fri Dec 18 01:20:22 2009   --enable   manual enable
+Sat Dec 19 01:08:02 2009     --tick * paging #709 to prime
+Sat Dec 19 01:08:42 2009  --respond   pager disabled for 0.25 hours; reables at Sat Dec 19 01:23:42 2009
+Sat Dec 19 01:24:26 2009  --disable   pager disabled for 1.5 hours; reables at Sat Dec 19 02:54:26 2009
+Sat Dec 19 02:44:40 2009  --disable   pager disabled for 3.1415927 hours; reables at Sat Dec 19 05:53:09 2009
+Sat Dec 19 06:08:01 2009     --tick   auto-emable (disable time period over)
+Sat Dec 19 06:17:14 2009  --disable   pager disabled for 2 hours; reables at Sat Dec 19 08:17:14 2009
+Sat Dec 19 06:45:46 2009   --enable   manual enable
+Sat Dec 19 12:08:05 2009     --tick * paging #710 to prime
+Sat Dec 19 12:22:18 2009  --respond   pager disabled for 0.25 hours; reables at Sat Dec 19 12:37:18 2009
+Sat Dec 19 12:28:33 2009  --disable   pager disabled for sqrt hours; reables at Sat Dec 19 12:28:33 2009
+Sat Dec 19 12:29:07 2009  --disable   pager disabled for 4^2 hours; reables at Sat Dec 19 16:29:07 2009
+Sat Dec 19 12:29:23 2009  --disable   pager disabled for 16 hours; reables at Sun Dec 20 04:29:23 2009
+Sun Dec 20 04:38:01 2009     --tick   auto-emable (disable time period over)
+Mon Dec 21 11:51:26 2009 --backup-takeover   backup-takeover
+Mon Dec 21 21:08:01 2009     --tick * paging #711 to prime
+Mon Dec 21 21:08:11 2009  --respond   pager disabled for 0.25 hours; reables at Mon Dec 21 21:23:11 2009
+Mon Dec 21 21:38:02 2009     --tick   auto-emable (disable time period over)
+Mon Dec 21 21:38:04 2009     --tick * paging #712 to prime
+Mon Dec 21 21:38:31 2009  --respond   pager disabled for 0.25 hours; reables at Mon Dec 21 21:53:31 2009
+Mon Dec 21 22:08:01 2009     --tick   auto-emable (disable time period over)
+Tue Dec 22 06:06:24 2009 --backup-takeover   backup-takeover
+Tue Dec 22 10:34:59 2009 --backup-takeover   backup-takeover
+Thu Dec 24 03:53:01 2009     --tick * paging #713 to prime
+Thu Dec 24 03:55:52 2009  --respond   pager disabled for 0.25 hours; reables at Thu Dec 24 04:10:52 2009
+Thu Dec 24 04:08:01 2009     --tick * paging #714 to prime
+Thu Dec 24 04:23:01 2009     --tick   auto-emable (disable time period over)
+Thu Dec 24 14:23:01 2009     --tick * paging #715 to prime
+Thu Dec 24 14:38:01 2009     --tick * paging #716 to prime
+Thu Dec 24 22:53:01 2009     --tick * paging #717 to prime
+Thu Dec 24 22:58:30 2009  --respond   pager disabled for 0.25 hours; reables at Thu Dec 24 23:13:30 2009
+Thu Dec 24 23:23:01 2009     --tick   auto-emable (disable time period over)
+Thu Dec 24 23:38:02 2009     --tick * paging #718 to prime
+Thu Dec 24 23:42:19 2009  --respond   pager disabled for 0.25 hours; reables at Thu Dec 24 23:57:19 2009
+Fri Dec 25 00:08:01 2009     --tick   auto-emable (disable time period over)
+Sat Dec 26 23:08:02 2009     --tick * paging #719 to prime
+Sat Dec 26 23:09:48 2009  --respond   pager disabled for 0.25 hours; reables at Sat Dec 26 23:24:48 2009
+Sat Dec 26 23:38:01 2009     --tick   auto-emable (disable time period over)
+Sun Dec 27 01:23:01 2009     --tick * paging #720 to prime
+Sun Dec 27 01:23:39 2009  --respond   pager disabled for 0.25 hours; reables at Sun Dec 27 01:38:39 2009
+Sun Dec 27 01:53:02 2009     --tick   auto-emable (disable time period over)
+Sun Dec 27 17:38:01 2009     --tick * paging #721 to prime
+Sun Dec 27 17:41:26 2009  --respond   pager disabled for 0.25 hours; reables at Sun Dec 27 17:56:26 2009
+Sun Dec 27 17:42:26 2009  --disable   pager disabled for 1 hours; reables at Sun Dec 27 18:42:26 2009
+Sun Dec 27 18:53:01 2009     --tick   auto-emable (disable time period over)
+Sun Dec 27 18:59:15 2009  --disable   pager disabled for 2 hours; reables at Sun Dec 27 20:59:15 2009
+Sun Dec 27 21:08:01 2009     --tick   auto-emable (disable time period over)
+Mon Dec 28 11:11:01 2009 --backup-takeover   backup-takeover
+Fri Jan  1 03:38:06 2010     --tick * paging #722 to prime
+Fri Jan  1 03:40:58 2010  --respond   pager disabled for 0.25 hours; reables at Fri Jan  1 03:55:58 2010
+Fri Jan  1 04:08:01 2010     --tick   auto-emable (disable time period over)
+Sun Jan  3 15:53:02 2010     --tick * paging #723 to prime
+Sun Jan  3 16:02:53 2010  --respond   pager disabled for 0.25 hours; reables at Sun Jan  3 16:17:53 2010
+Sun Jan  3 16:23:01 2010     --tick   auto-emable (disable time period over)
+Sun Jan  3 20:41:19 2010 --backup-takeover   backup-takeover
+Thu Jan  7 04:38:01 2010     --tick * paging #724 to prime
+Thu Jan  7 04:41:04 2010  --respond   pager disabled for 0.25 hours; reables at Thu Jan  7 04:56:04 2010
+Thu Jan  7 05:08:01 2010     --tick   auto-emable (disable time period over)
+Thu Jan  7 05:08:01 2010     --tick * paging #725 to prime
+Thu Jan  7 10:24:34 2010 --backup-takeover   backup-takeover
+Thu Jan  7 15:37:50 2010 --backup-takeover   backup-takeover
+Thu Jan  7 18:23:01 2010     --tick * paging #726 to prime
+Thu Jan  7 18:24:41 2010  --respond   pager disabled for 0.25 hours; reables at Thu Jan  7 18:39:41 2010
+Thu Jan  7 18:53:01 2010     --tick   auto-emable (disable time period over)
+Fri Jan  8 08:42:24 2010 --backup-takeover   backup-takeover
+Fri Jan  8 19:52:09 2010 --backup-takeover   backup-takeover
+Sat Jan  9 07:07:01 2010 --backup-takeover   backup-takeover
+Sat Jan  9 21:48:11 2010 --backup-takeover   backup-takeover
+Sun Jan 10 06:53:02 2010     --tick * paging #727 to prime
+Sun Jan 10 07:02:29 2010  --respond   pager disabled for 0.25 hours; reables at Sun Jan 10 07:17:29 2010
+Sun Jan 10 07:02:41 2010  --disable   pager disabled for 16 hours; reables at Sun Jan 10 23:02:41 2010
+Sun Jan 10 09:35:52 2010 --backup-takeover   backup-takeover
+Sun Jan 10 22:08:02 2010     --tick * paging #728 to prime
+Sun Jan 10 22:13:36 2010 --backup-takeover   backup-takeover
+Sun Jan 10 23:08:02 2010     --tick   auto-emable (disable time period over)
+Mon Jan 11 07:07:37 2010 --backup-takeover   backup-takeover
+Mon Jan 11 22:23:02 2010     --tick * paging #729 to prime
+Mon Jan 11 22:38:02 2010     --tick * paging #730 to prime
+Mon Jan 11 22:53:02 2010     --tick * paging #731 to both
+Mon Jan 11 23:08:02 2010     --tick * paging #732 to both
+Mon Jan 11 23:15:25 2010  --disable   pager disabled for 3 hours; reables at Tue Jan 12 02:15:25 2010
+Mon Jan 11 23:23:01 2010     --tick * paging #733 to prime
+Mon Jan 11 23:38:02 2010     --tick * paging #734 to prime
+Mon Jan 11 23:53:01 2010     --tick * paging #735 to prime
+Tue Jan 12 01:53:01 2010     --tick * paging #736 to prime
+Tue Jan 12 01:55:43 2010  --disable   pager disabled for 3 hours; reables at Tue Jan 12 04:55:43 2010
+Tue Jan 12 05:08:01 2010     --tick   auto-emable (disable time period over)
+Tue Jan 12 19:53:23 2010 --backup-takeover   backup-takeover
+Thu Jan 14 09:48:25 2010 --backup-takeover   backup-takeover
+Thu Jan 14 16:38:02 2010     --tick * paging #737 to prime
+Fri Jan 15 03:45:36 2010 --backup-takeover   backup-takeover
+Fri Jan 15 12:16:47 2010 --backup-takeover   backup-takeover
+Fri Jan 15 19:30:44 2010 --backup-takeover   backup-takeover
+Sat Jan 16 11:09:51 2010 --backup-takeover   backup-takeover
+Sat Jan 16 21:08:02 2010     --tick * paging #738 to prime
+Sat Jan 16 21:13:53 2010  --respond   pager disabled for 0.25 hours; reables at Sat Jan 16 21:28:53 2010
+Sat Jan 16 21:38:01 2010     --tick   auto-emable (disable time period over)
+Sat Jan 16 22:16:28 2010 --backup-takeover   backup-takeover
+Sun Jan 17 06:23:02 2010     --tick * paging #739 to prime
+Sun Jan 17 09:03:19 2010 --backup-takeover   backup-takeover
+Sun Jan 17 22:30:41 2010 --backup-takeover   backup-takeover
+Sun Jan 17 22:38:02 2010     --tick * paging #740 to prime
+Sun Jan 17 22:53:01 2010     --tick * paging #741 to prime
+Sun Jan 17 23:08:01 2010     --tick * paging #742 to both
+Sun Jan 17 23:23:02 2010     --tick * paging #743 to both
+Sun Jan 17 23:23:22 2010  --respond   pager disabled for 0.25 hours; reables at Sun Jan 17 23:38:22 2010
+Sun Jan 17 23:53:01 2010     --tick   auto-emable (disable time period over)
+Mon Jan 18 06:14:00 2010 --backup-takeover   backup-takeover
+Sat Jan 23 03:23:02 2010     --tick * paging #744 to prime
+Sat Jan 23 15:08:02 2010     --tick * paging #745 to prime
+Sun Jan 24 02:53:02 2010     --tick * paging #746 to prime
+Sun Jan 24 03:08:02 2010     --tick * paging #747 to prime
+Sun Jan 24 03:23:01 2010     --tick * paging #748 to both
+Sun Jan 24 03:38:02 2010     --tick * paging #749 to both
+Sun Jan 24 03:53:01 2010     --tick * paging #750 to both
+Sun Jan 24 04:08:02 2010     --tick * paging #751 to both
+Sun Jan 24 04:23:02 2010     --tick * paging #752 to both
+Sun Jan 24 04:27:33 2010  --respond   pager disabled for 0.25 hours; reables at Sun Jan 24 04:42:33 2010
+Sun Jan 24 04:53:01 2010     --tick   auto-emable (disable time period over)
+Sun Jan 24 22:52:18 2010 --backup-takeover   backup-takeover
+Tue Jan 26 10:08:02 2010     --tick * paging #753 to prime
+Tue Jan 26 10:23:01 2010     --tick * paging #754 to prime
+Tue Jan 26 10:38:02 2010     --tick * paging #755 to both
+Tue Jan 26 10:53:01 2010     --tick * paging #756 to both
+Tue Jan 26 11:08:01 2010     --tick * paging #757 to both
+Tue Jan 26 11:23:02 2010     --tick * paging #758 to both
+Tue Jan 26 11:38:01 2010     --tick * paging #759 to both
+Tue Jan 26 11:53:01 2010     --tick * paging #760 to both
+Tue Jan 26 12:08:01 2010     --tick * paging #761 to both
+Tue Jan 26 12:23:02 2010     --tick * paging #762 to both
+Tue Jan 26 12:38:02 2010     --tick * paging #763 to both
+Tue Jan 26 12:53:01 2010     --tick * paging #764 to both
+Tue Jan 26 13:08:01 2010     --tick * paging #765 to both
+Tue Jan 26 13:23:02 2010     --tick * paging #766 to both
+Tue Jan 26 13:38:02 2010     --tick * paging #767 to both
+Tue Jan 26 13:53:01 2010     --tick * paging #768 to both
+Tue Jan 26 14:08:02 2010     --tick * paging #769 to both
+Tue Jan 26 14:23:01 2010     --tick * paging #770 to both
+Tue Jan 26 14:38:01 2010     --tick * paging #771 to both
+Tue Jan 26 14:53:01 2010     --tick * paging #772 to both
+Tue Jan 26 15:08:07 2010     --tick * paging #773 to both
+Tue Jan 26 15:23:02 2010     --tick * paging #774 to both
+Tue Jan 26 15:38:01 2010     --tick * paging #775 to both
+Tue Jan 26 15:53:02 2010     --tick * paging #776 to both
+Tue Jan 26 16:07:49 2010  --respond   pager disabled for 0.25 hours; reables at Tue Jan 26 16:22:49 2010
+Tue Jan 26 16:23:01 2010     --tick   auto-emable (disable time period over)
+Tue Jan 26 16:23:01 2010     --tick * paging #777 to prime
+Tue Jan 26 16:38:02 2010     --tick * paging #778 to prime
+Tue Jan 26 16:38:32 2010  --respond   pager disabled for 0.25 hours; reables at Tue Jan 26 16:53:32 2010
+Tue Jan 26 16:38:35 2010  --disable   pager disabled for 2 hours; reables at Tue Jan 26 18:38:35 2010
+Tue Jan 26 18:53:02 2010     --tick   auto-emable (disable time period over)
+Tue Jan 26 18:53:02 2010     --tick * paging #779 to prime
+Tue Jan 26 19:08:02 2010     --tick * paging #780 to prime
+Tue Jan 26 19:23:01 2010     --tick * paging #781 to both
+Tue Jan 26 19:25:34 2010  --respond   pager disabled for 0.25 hours; reables at Tue Jan 26 19:40:34 2010
+Tue Jan 26 19:25:40 2010  --disable   pager disabled for 2 hours; reables at Tue Jan 26 21:25:40 2010
+Tue Jan 26 20:38:02 2010     --tick * paging #782 to prime
+Tue Jan 26 20:53:02 2010     --tick * paging #783 to prime
+Tue Jan 26 21:23:02 2010     --tick * paging #784 to prime
+Tue Jan 26 21:38:01 2010     --tick   auto-emable (disable time period over)
+Tue Jan 26 21:38:02 2010     --tick * paging #785 to prime
+Tue Jan 26 21:53:01 2010     --tick * paging #786 to prime
+Tue Jan 26 22:08:02 2010     --tick * paging #787 to both
+Tue Jan 26 22:11:48 2010  --respond   pager disabled for 0.25 hours; reables at Tue Jan 26 22:26:48 2010
+Tue Jan 26 22:11:54 2010  --disable   pager disabled for 10 hours; reables at Wed Jan 27 08:11:54 2010
+Wed Jan 27 08:23:01 2010     --tick   auto-emable (disable time period over)
+Wed Jan 27 08:23:01 2010     --tick * paging #788 to prime
+Wed Jan 27 08:38:02 2010     --tick * paging #789 to prime
+Wed Jan 27 08:53:02 2010     --tick * paging #790 to both
+Wed Jan 27 08:56:29 2010  --respond   pager disabled for 0.25 hours; reables at Wed Jan 27 09:11:29 2010
+Wed Jan 27 08:56:39 2010  --disable   pager disabled for 250 hours; reables at Sat Feb  6 18:56:39 2010
+Fri Jan 29 03:56:44 2010   --enable   manual enable
+Mon Feb  1 04:53:05 2010     --tick * paging #791 to prime
+Mon Feb  1 05:08:01 2010     --tick * paging #792 to prime
+Mon Feb  1 05:23:01 2010     --tick * paging #793 to both
+Mon Feb  1 05:38:01 2010     --tick * paging #794 to both
+Mon Feb  1 05:53:01 2010     --tick * paging #795 to both
+Mon Feb  1 06:08:01 2010     --tick * paging #796 to both
+Mon Feb  1 06:23:02 2010     --tick * paging #797 to both
+Mon Feb  1 06:27:28 2010  --respond   pager disabled for 0.25 hours; reables at Mon Feb  1 06:42:28 2010
+Mon Feb  1 06:52:53 2010   --enable   manual enable
+Mon Feb  1 06:53:09 2010 --backup-takeover   backup-takeover
+Mon Feb  1 06:53:13 2010 --backup-takeover   backup-takeover
+Mon Feb  1 21:53:02 2010     --tick * paging #798 to prime
+Mon Feb  1 22:08:01 2010     --tick * paging #799 to prime
+Mon Feb  1 22:14:41 2010  --respond   pager disabled for 0.25 hours; reables at Mon Feb  1 22:29:41 2010
+Mon Feb  1 22:14:46 2010  --disable   pager disabled for 2 hours; reables at Tue Feb  2 00:14:46 2010
+Mon Feb  1 22:23:02 2010     --tick * paging #800 to prime
+Mon Feb  1 22:31:06 2010  --disable   pager disabled for 2 hours; reables at Tue Feb  2 00:31:06 2010
+Mon Feb  1 22:38:02 2010     --tick * paging #801 to prime
+Tue Feb  2 00:38:01 2010     --tick   auto-emable (disable time period over)
+Tue Feb  2 16:38:02 2010     --tick * paging #802 to prime
+Tue Feb  2 18:23:01 2010     --tick * paging #803 to prime
+Tue Feb  2 18:38:02 2010     --tick * paging #804 to prime
+Tue Feb  2 18:41:49 2010  --respond   pager disabled for 0.25 hours; reables at Tue Feb  2 18:56:49 2010
+Tue Feb  2 18:41:53 2010  --disable   pager disabled for 2 hours; reables at Tue Feb  2 20:41:53 2010
+Tue Feb  2 18:53:01 2010     --tick * paging #805 to prime
+Tue Feb  2 18:53:38 2010  --disable   pager disabled for 2 hours; reables at Tue Feb  2 20:53:38 2010
+Tue Feb  2 19:53:01 2010     --tick * paging #806 to prime
+Tue Feb  2 21:08:01 2010     --tick   auto-emable (disable time period over)
+Wed Feb  3 04:23:02 2010     --tick * paging #807 to prime
+Wed Feb  3 04:38:02 2010     --tick * paging #808 to prime
+Wed Feb  3 08:53:01 2010     --tick * paging #809 to prime
+Wed Feb  3 08:53:25 2010  --respond   pager disabled for 0.25 hours; reables at Wed Feb  3 09:08:25 2010
+Wed Feb  3 08:53:32 2010  --disable   pager disabled for 2 hours; reables at Wed Feb  3 10:53:32 2010
+Wed Feb  3 11:08:01 2010     --tick   auto-emable (disable time period over)
+Thu Feb  4 06:53:02 2010     --tick * paging #810 to prime
+Thu Feb  4 06:57:29 2010  --respond   pager disabled for 0.25 hours; reables at Thu Feb  4 07:12:29 2010
+Thu Feb  4 06:57:33 2010  --disable   pager disabled for 2 hours; reables at Thu Feb  4 08:57:33 2010
+Thu Feb  4 09:08:01 2010     --tick   auto-emable (disable time period over)
+Sat Feb  6 11:53:01 2010     --tick * paging #811 to prime
+Sat Feb  6 12:08:02 2010     --tick * paging #812 to prime
+Sat Feb  6 12:23:02 2010     --tick * paging #813 to both
+Sat Feb  6 12:29:49 2010  --respond   pager disabled for 0.25 hours; reables at Sat Feb  6 12:44:49 2010
+Sat Feb  6 12:29:54 2010  --disable   pager disabled for 2 hours; reables at Sat Feb  6 14:29:54 2010
+Sat Feb  6 14:38:01 2010     --tick   auto-emable (disable time period over)
+Sat Feb  6 20:53:02 2010     --tick * paging #814 to prime
+Sat Feb  6 21:08:02 2010     --tick * paging #815 to prime
+Sat Feb  6 21:23:01 2010     --tick * paging #816 to both
+Sat Feb  6 21:38:01 2010     --tick * paging #817 to both
+Sat Feb  6 21:53:02 2010     --tick * paging #818 to both
+Sat Feb  6 22:08:02 2010     --tick * paging #819 to both
+Sat Feb  6 22:23:01 2010     --tick * paging #820 to both
+Sat Feb  6 22:38:01 2010     --tick * paging #821 to both
+Sat Feb  6 22:53:02 2010     --tick * paging #822 to both
+Sat Feb  6 23:08:01 2010     --tick * paging #823 to both
+Sat Feb  6 23:16:14 2010  --respond   pager disabled for 0.25 hours; reables at Sat Feb  6 23:31:14 2010
+Sat Feb  6 23:16:18 2010  --disable   pager disabled for 2 hours; reables at Sun Feb  7 01:16:18 2010
+Sun Feb  7 01:23:01 2010     --tick   auto-emable (disable time period over)
+Sun Feb  7 04:08:02 2010     --tick * paging #824 to prime
+Sun Feb  7 04:16:29 2010  --respond   pager disabled for 0.25 hours; reables at Sun Feb  7 04:31:29 2010
+Sun Feb  7 04:17:57 2010  --disable   pager disabled for 2 hours; reables at Sun Feb  7 06:17:57 2010
+Sun Feb  7 04:38:01 2010     --tick * paging #825 to prime
+Sun Feb  7 04:46:23 2010  --disable   pager disabled for 2 hours; reables at Sun Feb  7 06:46:23 2010
+Sun Feb  7 05:08:01 2010     --tick * paging #826 to prime
+Sun Feb  7 05:38:01 2010     --tick * paging #827 to prime
+Sun Feb  7 06:53:02 2010     --tick   auto-emable (disable time period over)
+Sun Feb  7 14:38:03 2010     --tick * paging #828 to prime
+Sun Feb  7 14:48:37 2010  --respond   pager disabled for 0.25 hours; reables at Sun Feb  7 15:03:37 2010
+Sun Feb  7 15:08:02 2010     --tick   auto-emable (disable time period over)
+Sun Feb  7 15:38:02 2010     --tick * paging #829 to prime
+Sun Feb  7 19:38:01 2010     --tick * paging #830 to prime
+Sun Feb  7 19:53:01 2010     --tick * paging #831 to prime
+Sun Feb  7 20:08:01 2010     --tick * paging #832 to both
+Sun Feb  7 20:23:01 2010     --tick * paging #833 to both
+Sun Feb  7 20:38:02 2010     --tick * paging #834 to both
+Sun Feb  7 21:23:02 2010     --tick * paging #835 to prime
+Sun Feb  7 21:38:01 2010     --tick * paging #836 to prime
+Sun Feb  7 21:39:39 2010  --respond   pager disabled for 0.25 hours; reables at Sun Feb  7 21:54:39 2010
+Sun Feb  7 21:39:44 2010  --disable   pager disabled for 2 hours; reables at Sun Feb  7 23:39:44 2010
+Sun Feb  7 23:44:42 2010 --backup-takeover   backup-takeover
+Sun Feb  7 23:53:01 2010     --tick   auto-emable (disable time period over)
+Mon Feb  8 01:08:01 2010     --tick * paging #837 to prime
+Mon Feb  8 01:10:11 2010  --respond   pager disabled for 0.25 hours; reables at Mon Feb  8 01:25:11 2010
+Mon Feb  8 01:10:15 2010  --disable   pager disabled for 10 hours; reables at Mon Feb  8 11:10:15 2010
+Mon Feb  8 04:53:02 2010     --tick * paging #838 to prime
+Mon Feb  8 08:08:02 2010     --tick * paging #839 to prime
+Mon Feb  8 11:23:03 2010     --tick   auto-emable (disable time period over)
+Tue Feb  9 00:23:08 2010     --tick * paging #840 to prime
+Tue Feb  9 00:38:01 2010     --tick * paging #841 to prime
+Tue Feb  9 00:52:33 2010  --respond   pager disabled for 0.25 hours; reables at Tue Feb  9 01:07:33 2010
+Tue Feb  9 01:08:01 2010     --tick   auto-emable (disable time period over)
+Tue Feb  9 20:38:01 2010     --tick * paging #842 to prime
+Tue Feb  9 20:53:02 2010     --tick * paging #843 to prime
+Tue Feb  9 21:08:02 2010     --tick * paging #844 to both
+Tue Feb  9 21:23:01 2010     --tick * paging #845 to both
+Tue Feb  9 21:38:02 2010     --tick * paging #846 to both
+Tue Feb  9 21:53:01 2010     --tick * paging #847 to both
+Tue Feb  9 22:08:02 2010     --tick * paging #848 to both
+Tue Feb  9 22:23:01 2010     --tick * paging #849 to both
+Tue Feb  9 22:38:01 2010     --tick * paging #850 to both
+Tue Feb  9 22:53:01 2010     --tick * paging #851 to both
+Tue Feb  9 23:08:01 2010     --tick * paging #852 to both
+Tue Feb  9 23:23:01 2010     --tick * paging #853 to both
+Tue Feb  9 23:38:02 2010     --tick * paging #854 to both
+Tue Feb  9 23:53:02 2010     --tick * paging #855 to both
+Wed Feb 10 00:08:01 2010     --tick * paging #856 to both
+Wed Feb 10 00:23:02 2010     --tick * paging #857 to both
+Wed Feb 10 00:38:01 2010     --tick * paging #858 to both
+Wed Feb 10 00:53:02 2010     --tick * paging #859 to both
+Wed Feb 10 01:08:01 2010     --tick * paging #860 to both
+Wed Feb 10 01:23:01 2010     --tick * paging #861 to both
+Wed Feb 10 01:38:01 2010     --tick * paging #862 to both
+Wed Feb 10 01:53:02 2010     --tick * paging #863 to both
+Wed Feb 10 02:08:01 2010     --tick * paging #864 to both
+Wed Feb 10 04:38:02 2010     --tick * paging #865 to prime
+Wed Feb 10 04:53:02 2010     --tick * paging #866 to prime
+Wed Feb 10 05:08:01 2010     --tick * paging #867 to both
+Thu Feb 11 01:53:02 2010     --tick * paging #868 to prime
+Thu Feb 11 01:53:31 2010  --respond   pager disabled for 0.25 hours; reables at Thu Feb 11 02:08:31 2010
+Thu Feb 11 02:23:01 2010     --tick   auto-emable (disable time period over)
+Fri Feb 12 06:38:02 2010     --tick * paging #869 to prime
+Fri Feb 12 06:47:27 2010  --respond   pager disabled for 0.25 hours; reables at Fri Feb 12 07:02:27 2010
+Fri Feb 12 06:47:32 2010  --disable   pager disabled for 2 hours; reables at Fri Feb 12 08:47:32 2010
+Fri Feb 12 06:59:45 2010   --enable   manual enable
+Sun Feb 14 22:54:55 2010 --backup-takeover   backup-takeover
+Tue Feb 16 02:53:02 2010     --tick * paging #870 to prime
+Tue Feb 16 02:53:44 2010  --respond   pager disabled for 0.25 hours; reables at Tue Feb 16 03:08:44 2010
+Tue Feb 16 03:23:01 2010     --tick   auto-emable (disable time period over)
+Thu Feb 18 19:38:01 2010     --tick * paging #871 to prime
+Thu Feb 18 19:53:01 2010     --tick * paging #872 to prime
+Thu Feb 18 20:08:01 2010     --tick * paging #873 to both
+Sun Feb 21 22:22:28 2010 --backup-takeover   backup-takeover
+Wed Feb 24 22:38:02 2010     --tick * paging #874 to prime
+Wed Feb 24 22:43:30 2010  --respond   pager disabled for 0.25 hours; reables at Wed Feb 24 22:58:30 2010
+Wed Feb 24 22:43:34 2010  --disable   pager disabled for 2 hours; reables at Thu Feb 25 00:43:34 2010
+Wed Feb 24 22:58:42 2010   --enable   manual enable
+Sat Feb 27 05:38:01 2010     --tick * paging #875 to prime
+Sat Feb 27 05:39:56 2010  --respond   pager disabled for 0.25 hours; reables at Sat Feb 27 05:54:56 2010
+Sat Feb 27 06:08:01 2010     --tick   auto-emable (disable time period over)
+Mon Mar  1 04:44:35 2010 --backup-takeover   backup-takeover
+Thu Mar  4 01:53:02 2010     --tick * paging #876 to prime
+Thu Mar  4 01:53:19 2010  --respond   pager disabled for 0.25 hours; reables at Thu Mar  4 02:08:19 2010
+Thu Mar  4 02:23:01 2010     --tick   auto-emable (disable time period over)
+Thu Mar  4 19:08:02 2010     --tick * paging #877 to prime
+Thu Mar  4 19:11:21 2010  --respond   pager disabled for 0.25 hours; reables at Thu Mar  4 19:26:21 2010
+Thu Mar  4 19:37:28 2010   --enable   manual enable
+Thu Mar  4 23:53:02 2010     --tick * paging #878 to prime
+Fri Mar  5 00:08:01 2010     --tick * paging #879 to prime
+Fri Mar  5 00:23:01 2010     --tick * paging #880 to both
+Fri Mar  5 00:27:04 2010  --respond   pager disabled for 0.25 hours; reables at Fri Mar  5 00:42:04 2010
+Fri Mar  5 00:53:01 2010     --tick   auto-emable (disable time period over)
+Mon Mar  8 00:46:25 2010 --backup-takeover   backup-takeover
+Tue Mar  9 01:38:01 2010     --tick * paging #881 to prime
+Tue Mar  9 01:49:03 2010  --respond   pager disabled for 0.25 hours; reables at Tue Mar  9 02:04:03 2010
+Tue Mar  9 02:08:01 2010     --tick   auto-emable (disable time period over)
+Tue Mar  9 16:53:02 2010     --tick * paging #882 to prime
+Sat Mar 13 04:38:02 2010     --tick * paging #883 to prime
+Sat Mar 13 04:38:17 2010  --respond   pager disabled for 0.25 hours; reables at Sat Mar 13 04:53:17 2010
+Sat Mar 13 05:08:01 2010     --tick   auto-emable (disable time period over)
+Mon Mar 15 00:53:01 2010     --tick * paging #884 to prime
+Mon Mar 15 00:53:23 2010  --respond   pager disabled for 0.25 hours; reables at Mon Mar 15 01:08:23 2010
+Mon Mar 15 01:23:02 2010     --tick   auto-emable (disable time period over)
+Mon Mar 15 03:23:02 2010     --tick * paging #885 to prime
+Mon Mar 15 03:26:42 2010  --respond   pager disabled for 0.25 hours; reables at Mon Mar 15 03:41:42 2010
+Mon Mar 15 03:53:01 2010     --tick   auto-emable (disable time period over)
+Mon Mar 15 08:49:16 2010 --backup-takeover   backup-takeover
+Tue Mar 16 19:38:01 2010     --tick * paging #886 to prime
+Tue Mar 16 19:49:03 2010  --respond   pager disabled for 0.25 hours; reables at Tue Mar 16 20:04:03 2010
+Tue Mar 16 19:49:15 2010  --disable   pager disabled for 1 hours; reables at Tue Mar 16 20:49:15 2010
+Tue Mar 16 20:53:01 2010     --tick   auto-emable (disable time period over)
+Wed Mar 17 02:08:02 2010     --tick * paging #887 to prime
+Wed Mar 17 02:09:53 2010  --respond   pager disabled for 0.25 hours; reables at Wed Mar 17 02:24:53 2010
+Wed Mar 17 02:10:26 2010  --disable   pager disabled for 1 hours; reables at Wed Mar 17 03:10:26 2010
+Wed Mar 17 02:21:58 2010   --enable   manual enable
+Thu Mar 18 23:38:02 2010     --tick * paging #888 to prime
+Thu Mar 18 23:53:02 2010     --tick * paging #889 to prime
+Fri Mar 19 00:00:20 2010  --respond   pager disabled for 0.25 hours; reables at Fri Mar 19 00:15:20 2010
+Fri Mar 19 00:02:25 2010  --disable   pager disabled for 2 hours; reables at Fri Mar 19 02:02:25 2010
+Fri Mar 19 01:08:02 2010     --tick * paging #890 to prime
+Fri Mar 19 01:16:36 2010  --disable   pager disabled for 2 hours; reables at Fri Mar 19 03:16:36 2010
+Fri Mar 19 01:23:47 2010   --enable   manual enable
+Sun Mar 21 22:32:41 2010 --backup-takeover   backup-takeover
+Wed Mar 24 16:38:01 2010     --tick * paging #891 to prime
+Wed Mar 24 16:53:02 2010     --tick * paging #892 to prime
+Wed Mar 24 16:53:53 2010  --respond   pager disabled for 0.25 hours; reables at Wed Mar 24 17:08:53 2010
+Wed Mar 24 17:23:01 2010     --tick   auto-emable (disable time period over)
+Mon Mar 29 00:37:48 2010 --backup-takeover   backup-takeover
+Sun Apr  4 14:38:01 2010     --tick * paging #893 to prime
+Sun Apr  4 14:38:41 2010  --respond   pager disabled for 0.25 hours; reables at Sun Apr  4 14:53:41 2010
+Sun Apr  4 14:38:48 2010   --enable   manual enable
+Mon Apr  5 00:09:11 2010 --backup-takeover   backup-takeover
+Mon Apr  5 05:08:01 2010     --tick * paging #894 to prime
+Mon Apr  5 05:17:32 2010  --respond   pager disabled for 0.25 hours; reables at Mon Apr  5 05:32:32 2010
+Mon Apr  5 05:38:01 2010     --tick   auto-emable (disable time period over)
+Wed Apr  7 19:08:01 2010     --tick * paging #895 to prime
+Wed Apr  7 19:10:22 2010  --respond   pager disabled for 0.25 hours; reables at Wed Apr  7 19:25:22 2010
+Wed Apr  7 19:10:35 2010  --disable   pager disabled for 2 hours; reables at Wed Apr  7 21:10:35 2010
+Wed Apr  7 21:23:02 2010     --tick   auto-emable (disable time period over)
+Sun Apr 11 22:19:54 2010 --backup-takeover   backup-takeover
+Mon Apr 12 10:08:04 2010     --tick * paging #896 to prime
+Mon Apr 12 10:08:29 2010  --respond   pager disabled for 0.25 hours; reables at Mon Apr 12 10:23:29 2010
+Mon Apr 12 10:38:01 2010     --tick   auto-emable (disable time period over)
+Sat Apr 17 11:08:02 2010     --tick * paging #897 to prime
+Sat Apr 17 11:10:49 2010  --respond   pager disabled for 0.25 hours; reables at Sat Apr 17 11:25:49 2010
+Sat Apr 17 11:38:01 2010     --tick   auto-emable (disable time period over)
+Mon Apr 19 09:49:16 2010 --backup-takeover   backup-takeover
+Fri Apr 23 05:23:02 2010     --tick * paging #898 to prime
+Fri Apr 23 05:23:11 2010  --respond   pager disabled for 0.25 hours; reables at Fri Apr 23 05:38:11 2010
+Fri Apr 23 05:53:01 2010     --tick   auto-emable (disable time period over)
+Fri Apr 23 10:08:02 2010     --tick * paging #899 to prime
+Fri Apr 23 10:11:45 2010  --respond   pager disabled for 0.25 hours; reables at Fri Apr 23 10:26:45 2010
+Fri Apr 23 10:11:50 2010  --disable   pager disabled for 2 hours; reables at Fri Apr 23 12:11:50 2010
+Fri Apr 23 12:23:01 2010     --tick   auto-emable (disable time period over)
+Fri Apr 23 12:23:02 2010     --tick * paging #900 to prime
+Fri Apr 23 12:38:01 2010     --tick * paging #901 to prime
+Fri Apr 23 12:40:05 2010  --respond   pager disabled for 0.25 hours; reables at Fri Apr 23 12:55:05 2010
+Fri Apr 23 13:08:01 2010     --tick   auto-emable (disable time period over)
+Sun Apr 25 23:32:44 2010 --backup-takeover   backup-takeover
+Tue Apr 27 01:53:01 2010     --tick * paging #902 to prime
+Tue Apr 27 01:55:16 2010  --respond   pager disabled for 0.25 hours; reables at Tue Apr 27 02:10:16 2010
+Tue Apr 27 01:55:20 2010  --disable   pager disabled for 2 hours; reables at Tue Apr 27 03:55:20 2010
+Tue Apr 27 02:23:02 2010     --tick * paging #903 to prime
+Tue Apr 27 02:38:02 2010     --tick * paging #904 to prime
+Tue Apr 27 03:18:47 2010  --disable   pager disabled for 3 hours; reables at Tue Apr 27 06:18:47 2010
+Tue Apr 27 04:06:09 2010   --enable   manual enable
+Tue Apr 27 04:38:01 2010     --tick * paging #905 to prime
+Tue Apr 27 04:38:17 2010  --respond   pager disabled for 0.25 hours; reables at Tue Apr 27 04:53:17 2010
+Tue Apr 27 04:38:24 2010   --enable   manual enable
+Fri Apr 30 21:23:02 2010     --tick * paging #906 to prime
+Fri Apr 30 21:36:21 2010  --respond   pager disabled for 0.25 hours; reables at Fri Apr 30 21:51:21 2010
+Fri Apr 30 21:36:26 2010  --disable   pager disabled for 1 hours; reables at Fri Apr 30 22:36:26 2010
+Fri Apr 30 22:38:01 2010     --tick   auto-emable (disable time period over)
+Sat May  1 07:23:02 2010     --tick * paging #907 to prime
+Sat May  1 07:24:12 2010  --respond   pager disabled for 0.25 hours; reables at Sat May  1 07:39:12 2010
+Sat May  1 07:53:01 2010     --tick   auto-emable (disable time period over)
+Sat May  1 07:53:02 2010     --tick * paging #908 to prime
+Sat May  1 08:53:02 2010     --tick * paging #909 to prime
+Mon May  3 01:19:33 2010 --backup-takeover   backup-takeover
+Mon May 10 07:37:09 2010 --backup-takeover   backup-takeover
+Mon May 17 04:40:43 2010 --backup-takeover   backup-takeover
+Fri May 21 05:23:02 2010     --tick * paging #910 to prime
+Fri May 21 05:29:33 2010  --respond   pager disabled for 0.25 hours; reables at Fri May 21 05:44:33 2010
+Fri May 21 05:53:01 2010     --tick   auto-emable (disable time period over)
+Mon May 24 00:28:17 2010 --backup-takeover   backup-takeover
+Mon May 24 02:08:02 2010     --tick * paging #911 to prime
+Mon May 24 02:23:01 2010     --tick * paging #912 to prime
+Mon May 24 02:37:31 2010  --respond   pager disabled for 0.25 hours; reables at Mon May 24 02:52:31 2010
+Mon May 24 02:53:01 2010     --tick   auto-emable (disable time period over)
+Wed May 26 02:53:02 2010     --tick * paging #913 to prime
+Wed May 26 03:03:14 2010  --respond   pager disabled for 0.25 hours; reables at Wed May 26 03:18:14 2010
+Wed May 26 03:23:01 2010     --tick   auto-emable (disable time period over)
+Wed May 26 05:23:02 2010     --tick * paging #914 to prime
+Wed May 26 05:23:54 2010  --respond   pager disabled for 0.25 hours; reables at Wed May 26 05:38:54 2010
+Wed May 26 05:53:01 2010     --tick   auto-emable (disable time period over)
+Wed May 26 18:38:01 2010     --tick * paging #915 to prime
+Wed May 26 18:53:02 2010     --tick * paging #916 to prime
+Wed May 26 19:08:02 2010     --tick * paging #917 to both
+Wed May 26 19:23:02 2010     --tick * paging #918 to both
+Wed May 26 19:38:02 2010     --tick * paging #919 to both
+Wed May 26 19:53:01 2010     --tick * paging #920 to both
+Wed May 26 20:03:25 2010  --respond   pager disabled for 0.25 hours; reables at Wed May 26 20:18:25 2010
+Wed May 26 20:13:39 2010  --disable   pager disabled for 2 hours; reables at Wed May 26 22:13:39 2010
+Wed May 26 22:23:01 2010     --tick   auto-emable (disable time period over)
+Wed May 26 22:23:01 2010     --tick * paging #921 to prime
+Wed May 26 22:38:01 2010     --tick * paging #922 to prime
+Wed May 26 22:42:13 2010  --respond   pager disabled for 0.25 hours; reables at Wed May 26 22:57:13 2010
+Wed May 26 22:42:16 2010  --disable   pager disabled for 6 hours; reables at Thu May 27 04:42:16 2010
+Thu May 27 01:37:27 2010   --enable   manual enable
+Thu May 27 01:38:02 2010     --tick * paging #923 to prime
+Thu May 27 01:38:30 2010  --respond   pager disabled for 0.25 hours; reables at Thu May 27 01:53:30 2010
+Thu May 27 02:08:02 2010     --tick   auto-emable (disable time period over)
+Fri May 28 19:53:02 2010     --tick * paging #924 to prime
+Fri May 28 20:08:02 2010     --tick * paging #925 to prime
+Fri May 28 20:11:13 2010  --respond   pager disabled for 0.25 hours; reables at Fri May 28 20:26:13 2010
+Fri May 28 20:11:18 2010  --disable   pager disabled for 2 hours; reables at Fri May 28 22:11:18 2010
+Fri May 28 20:38:02 2010     --tick * paging #926 to prime
+Fri May 28 22:23:02 2010     --tick   auto-emable (disable time period over)
+Mon May 31 00:29:44 2010 --backup-takeover   backup-takeover
+Tue Jun  1 17:38:02 2010     --tick * paging #927 to prime
+Tue Jun  1 17:39:27 2010  --respond   pager disabled for 0.25 hours; reables at Tue Jun  1 17:54:27 2010
+Tue Jun  1 18:08:01 2010     --tick   auto-emable (disable time period over)
+Thu Jun  3 15:23:01 2010     --tick * paging #928 to prime
+Thu Jun  3 15:38:01 2010     --tick * paging #929 to prime
+Thu Jun  3 15:53:01 2010     --tick * paging #930 to both
+Thu Jun  3 17:23:02 2010     --tick * paging #931 to prime
+Thu Jun  3 17:23:40 2010  --respond   pager disabled for 0.25 hours; reables at Thu Jun  3 17:38:40 2010
+Thu Jun  3 17:53:01 2010     --tick   auto-emable (disable time period over)
+Thu Jun  3 17:53:01 2010     --tick * paging #932 to prime
+Thu Jun  3 17:54:13 2010  --respond   pager disabled for 0.25 hours; reables at Thu Jun  3 18:09:13 2010
+Thu Jun  3 18:23:01 2010     --tick   auto-emable (disable time period over)
+Fri Jun  4 02:08:02 2010     --tick * paging #933 to prime
+Fri Jun  4 02:09:59 2010  --respond   pager disabled for 0.25 hours; reables at Fri Jun  4 02:24:59 2010
+Fri Jun  4 02:10:14 2010  --disable   pager disabled for 6 hours; reables at Fri Jun  4 08:10:14 2010
+Fri Jun  4 02:23:01 2010     --tick * paging #934 to prime
+Fri Jun  4 02:38:01 2010     --tick * paging #935 to prime
+Fri Jun  4 08:23:01 2010     --tick   auto-emable (disable time period over)
+Fri Jun  4 14:38:02 2010     --tick * paging #936 to prime
+Fri Jun  4 14:38:22 2010  --respond   pager disabled for 0.25 hours; reables at Fri Jun  4 14:53:22 2010
+Fri Jun  4 14:38:31 2010  --disable   pager disabled for 6 hours; reables at Fri Jun  4 20:38:31 2010
+Fri Jun  4 16:38:02 2010     --tick * paging #937 to prime
+Fri Jun  4 20:53:01 2010     --tick   auto-emable (disable time period over)
+Fri Jun  4 22:38:02 2010     --tick * paging #938 to prime
+Fri Jun  4 22:41:42 2010  --respond   pager disabled for 0.25 hours; reables at Fri Jun  4 22:56:42 2010
+Fri Jun  4 23:08:01 2010     --tick   auto-emable (disable time period over)
+Sat Jun  5 14:08:02 2010     --tick * paging #939 to prime
+Sat Jun  5 14:12:38 2010  --respond   pager disabled for 0.25 hours; reables at Sat Jun  5 14:27:38 2010
+Sat Jun  5 14:38:01 2010     --tick   auto-emable (disable time period over)
+Sat Jun  5 18:08:02 2010     --tick * paging #940 to prime
+Sat Jun  5 18:14:06 2010  --respond   pager disabled for 0.25 hours; reables at Sat Jun  5 18:29:06 2010
+Sat Jun  5 18:16:15 2010  --disable   pager disabled for 2 hours; reables at Sat Jun  5 20:16:15 2010
+Sat Jun  5 19:42:30 2010   --enable   manual enable
+Mon Jun  7 02:37:17 2010 --backup-takeover   backup-takeover
+Tue Jun  8 05:23:01 2010     --tick * paging #941 to prime
+Tue Jun  8 05:38:02 2010     --tick * paging #942 to prime
+Tue Jun  8 05:51:41 2010  --respond   pager disabled for 0.25 hours; reables at Tue Jun  8 06:06:41 2010
+Tue Jun  8 06:08:01 2010     --tick   auto-emable (disable time period over)
+Tue Jun  8 06:08:01 2010     --tick * paging #943 to prime
+Tue Jun  8 06:08:49 2010  --respond   pager disabled for 0.25 hours; reables at Tue Jun  8 06:23:49 2010
+Tue Jun  8 06:08:56 2010  --disable   pager disabled for 1 hours; reables at Tue Jun  8 07:08:56 2010
+Tue Jun  8 07:23:01 2010     --tick   auto-emable (disable time period over)
+Tue Jun  8 11:23:01 2010     --tick * paging #944 to prime
+Tue Jun  8 11:24:21 2010  --respond   pager disabled for 0.25 hours; reables at Tue Jun  8 11:39:21 2010
+Tue Jun  8 11:24:27 2010  --disable   pager disabled for 417 hours; reables at Fri Jun 25 20:24:27 2010
+Wed Jun  9 12:53:02 2010     --tick * paging #945 to prime
+Wed Jun  9 12:53:41 2010  --disable   pager disabled for 13837983429 hours; reables at Wed Feb  5 09:53:41 1580640
+Wed Jun  9 16:53:02 2010     --tick * paging #946 to prime
+Wed Jun  9 17:26:13 2010  --disable   pager disabled for 10^3 hours; reables at Thu Jun 10 03:26:13 2010
+Wed Jun  9 20:16:41 2010   --enable   manual enable
+Wed Jun  9 22:38:01 2010     --tick * paging #947 to prime
+Wed Jun  9 22:38:20 2010  --respond   pager disabled for 0.25 hours; reables at Wed Jun  9 22:53:20 2010
+Wed Jun  9 22:53:01 2010     --tick * paging #948 to prime
+Wed Jun  9 23:08:01 2010     --tick   auto-emable (disable time period over)
+Fri Jun 11 06:08:01 2010     --tick * paging #949 to prime
+Fri Jun 11 06:17:19 2010  --respond   pager disabled for 0.25 hours; reables at Fri Jun 11 06:32:19 2010
+Fri Jun 11 06:23:01 2010     --tick * paging #950 to prime
+Fri Jun 11 06:29:51 2010  --disable   pager disabled for 2 hours; reables at Fri Jun 11 08:29:51 2010
+Fri Jun 11 07:08:01 2010     --tick * paging #951 to prime
+Fri Jun 11 08:38:01 2010     --tick   auto-emable (disable time period over)
+Fri Jun 11 08:38:03 2010     --tick * paging #952 to prime
+Fri Jun 11 08:41:33 2010  --respond   pager disabled for 0.25 hours; reables at Fri Jun 11 08:56:33 2010
+Fri Jun 11 08:41:54 2010  --disable   pager disabled for 2 hours; reables at Fri Jun 11 10:41:54 2010
+Fri Jun 11 10:53:01 2010     --tick   auto-emable (disable time period over)
+Mon Jun 14 03:57:11 2010 --backup-takeover   backup-takeover
+Tue Jun 15 14:38:02 2010     --tick * paging #953 to prime
+Tue Jun 15 14:52:39 2010  --respond   pager disabled for 0.25 hours; reables at Tue Jun 15 15:07:39 2010
+Tue Jun 15 14:53:01 2010     --tick * paging #954 to prime
+Tue Jun 15 15:08:01 2010     --tick   auto-emable (disable time period over)
+Mon Jun 21 15:59:43 2010 --backup-takeover   backup-takeover
+Fri Jun 25 18:23:01 2010     --tick * paging #955 to prime
+Fri Jun 25 18:24:36 2010  --respond   pager disabled for 0.25 hours; reables at Fri Jun 25 18:39:36 2010
+Fri Jun 25 18:32:13 2010  --disable   pager disabled for 2 hours; reables at Fri Jun 25 20:32:13 2010
+Fri Jun 25 18:55:51 2010  --disable   pager disabled for 8 hours; reables at Sat Jun 26 02:55:51 2010
+Fri Jun 25 18:57:07 2010   --enable   manual enable
+Sat Jun 26 22:08:02 2010     --tick * paging #956 to prime
+Sat Jun 26 22:09:49 2010  --respond   pager disabled for 0.25 hours; reables at Sat Jun 26 22:24:49 2010
+Sat Jun 26 22:09:57 2010  --disable   pager disabled for 8 hours; reables at Sun Jun 27 06:09:57 2010
+Sun Jun 27 06:23:01 2010     --tick   auto-emable (disable time period over)
+Sun Jun 27 06:23:01 2010     --tick * paging #957 to prime
+Sun Jun 27 06:38:01 2010     --tick * paging #958 to prime
+Sun Jun 27 06:53:01 2010     --tick * paging #959 to both
+Sun Jun 27 06:55:16 2010  --respond   pager disabled for 0.25 hours; reables at Sun Jun 27 07:10:16 2010
+Sun Jun 27 06:55:22 2010  --disable   pager disabled for 8 hours; reables at Sun Jun 27 14:55:22 2010
+Sun Jun 27 08:23:01 2010     --tick * paging #960 to prime
+Sun Jun 27 15:08:01 2010     --tick   auto-emable (disable time period over)
+Mon Jun 28 11:20:49 2010 --backup-takeover   backup-takeover
+Thu Jul  1 17:23:01 2010     --tick * paging #961 to prime
+Thu Jul  1 17:25:47 2010  --respond   pager disabled for 0.25 hours; reables at Thu Jul  1 17:40:47 2010
+Thu Jul  1 17:53:01 2010     --tick   auto-emable (disable time period over)
+Sun Jul  4 22:42:29 2010 --backup-takeover   backup-takeover
+Thu Jul  8 05:08:02 2010     --tick * paging #962 to prime
+Thu Jul  8 05:10:22 2010  --respond   pager disabled for 0.25 hours; reables at Thu Jul  8 05:25:22 2010
+Thu Jul  8 05:10:29 2010  --disable   pager disabled for 2 hours; reables at Thu Jul  8 07:10:29 2010
+Thu Jul  8 06:53:02 2010     --tick * paging #963 to prime
+Thu Jul  8 07:23:01 2010     --tick   auto-emable (disable time period over)
+Sun Jul 11 02:53:02 2010     --tick * paging #964 to prime
+Sun Jul 11 04:23:01 2010     --tick * paging #965 to prime
+Sun Jul 11 04:38:01 2010     --tick * paging #966 to prime
+Mon Jul 12 08:27:51 2010 --backup-takeover   backup-takeover
+Wed Jul 14 11:08:01 2010     --tick * paging #967 to prime
+Wed Jul 14 11:08:37 2010  --respond   pager disabled for 0.25 hours; reables at Wed Jul 14 11:23:37 2010
+Wed Jul 14 11:08:44 2010  --disable   pager disabled for 2 hours; reables at Wed Jul 14 13:08:44 2010
+Wed Jul 14 13:23:01 2010     --tick   auto-emable (disable time period over)
+Fri Jul 16 08:23:02 2010     --tick * paging #968 to prime
+Fri Jul 16 08:31:30 2010  --respond   pager disabled for 0.25 hours; reables at Fri Jul 16 08:46:30 2010
+Fri Jul 16 08:37:06 2010  --disable   pager disabled for 4 hours; reables at Fri Jul 16 12:37:06 2010
+Fri Jul 16 12:38:01 2010     --tick   auto-emable (disable time period over)
+Fri Jul 16 12:38:02 2010     --tick * paging #969 to prime
+Fri Jul 16 12:53:03 2010     --tick * paging #970 to prime
+Fri Jul 16 13:08:02 2010     --tick * paging #971 to both
+Fri Jul 16 13:23:01 2010     --tick * paging #972 to both
+Fri Jul 16 13:38:01 2010     --tick * paging #973 to both
+Fri Jul 16 13:41:17 2010  --disable   pager disabled for 8 hours; reables at Fri Jul 16 21:41:17 2010
+Fri Jul 16 21:53:01 2010     --tick   auto-emable (disable time period over)
+Mon Jul 19 02:07:07 2010 --backup-takeover   backup-takeover
+Mon Jul 19 22:08:02 2010     --tick * paging #974 to prime
+Mon Jul 19 22:23:04 2010     --tick * paging #975 to prime
+Mon Jul 19 22:38:02 2010     --tick * paging #976 to both
+Mon Jul 19 22:48:00 2010  --respond   pager disabled for 0.25 hours; reables at Mon Jul 19 23:03:00 2010
+Mon Jul 19 22:48:11 2010  --disable   pager disabled for 3 hours; reables at Tue Jul 20 01:48:11 2010
+Mon Jul 19 22:53:02 2010     --tick * paging #977 to prime
+Tue Jul 20 01:08:01 2010     --tick * paging #978 to prime
+Tue Jul 20 01:53:02 2010     --tick   auto-emable (disable time period over)
+Thu Jul 22 04:08:01 2010     --tick * paging #979 to prime
+Thu Jul 22 04:18:54 2010  --respond   pager disabled for 0.25 hours; reables at Thu Jul 22 04:33:54 2010
+Thu Jul 22 04:19:02 2010  --disable   pager disabled for 13456789 hours; reables at Wed Sep 12 17:19:02 3545
+Fri Jul 23 11:08:01 2010     --tick * paging #980 to prime
+Fri Jul 23 11:17:53 2010  --disable   pager disabled for 34576890- hours; reables at Thu Jan 27 05:17:53 5955
+Fri Jul 23 11:18:03 2010  --disable   pager disabled for 3 hours; reables at Fri Jul 23 14:18:03 2010
+Fri Jul 23 14:23:01 2010     --tick   auto-emable (disable time period over)
+Mon Jul 26 08:52:39 2010 --backup-takeover   backup-takeover
+Tue Aug  3 22:08:01 2010     --tick * paging #981 to prime
+Tue Aug  3 22:22:48 2010  --respond   pager disabled for 0.25 hours; reables at Tue Aug  3 22:37:48 2010
+Tue Aug  3 22:38:01 2010     --tick   auto-emable (disable time period over)
+Wed Aug  4 04:30:50 2010 --backup-takeover   backup-takeover
+Sun Aug  8 07:08:01 2010     --tick * paging #982 to prime
+Sun Aug  8 07:23:01 2010     --tick * paging #983 to prime
+Sun Aug  8 07:38:01 2010     --tick * paging #984 to both
+Sun Aug  8 07:53:02 2010     --tick * paging #985 to both
+Sun Aug  8 07:56:29 2010  --respond   pager disabled for 0.25 hours; reables at Sun Aug  8 08:11:29 2010
+Sun Aug  8 07:56:33 2010  --disable   pager disabled for 2 hours; reables at Sun Aug  8 09:56:33 2010
+Sun Aug  8 08:11:51 2010   --enable   manual enable
+Mon Aug  9 04:01:40 2010 --backup-takeover   backup-takeover
+Mon Aug  9 18:08:02 2010     --tick * paging #986 to prime
+Mon Aug  9 18:08:14 2010  --respond   pager disabled for 0.25 hours; reables at Mon Aug  9 18:23:14 2010
+Mon Aug  9 18:08:23 2010  --disable   pager disabled for 2000 hours; reables at Mon Nov  1 02:08:23 2010
+Mon Aug  9 19:53:01 2010     --tick * paging #987 to prime
+Tue Aug 10 23:38:02 2010     --tick * paging #988 to prime
+Tue Aug 10 23:38:30 2010   --enable   manual enable
+Sun Aug 15 10:23:01 2010     --tick * paging #989 to prime
+Sun Aug 15 10:28:36 2010  --respond   pager disabled for 0.25 hours; reables at Sun Aug 15 10:43:36 2010
+Sun Aug 15 10:28:40 2010  --disable   pager disabled for 2 hours; reables at Sun Aug 15 12:28:40 2010
+Sun Aug 15 10:38:02 2010     --tick * paging #990 to prime
+Sun Aug 15 12:38:01 2010     --tick   auto-emable (disable time period over)
+Mon Aug 16 03:52:39 2010 --backup-takeover   backup-takeover
+Tue Aug 17 09:08:02 2010     --tick * paging #991 to prime
+Tue Aug 17 09:11:54 2010  --respond   pager disabled for 0.25 hours; reables at Tue Aug 17 09:26:54 2010
+Tue Aug 17 09:38:01 2010     --tick   auto-emable (disable time period over)
+Mon Aug 23 09:39:50 2010 --backup-takeover   backup-takeover
+Sun Aug 29 23:50:24 2010 --backup-takeover   backup-takeover
+Fri Sep  3 07:38:01 2010     --tick * paging #992 to prime
+Fri Sep  3 07:53:01 2010     --tick * paging #993 to prime
+Fri Sep  3 08:08:02 2010     --tick * paging #994 to both
+Mon Sep  6 08:17:06 2010 --backup-takeover   backup-takeover
+Tue Sep  7 00:08:01 2010     --tick * paging #995 to prime
+Tue Sep  7 00:23:01 2010     --tick * paging #996 to prime
+Tue Sep  7 00:29:09 2010  --respond   pager disabled for 0.25 hours; reables at Tue Sep  7 00:44:09 2010
+Tue Sep  7 00:29:14 2010  --disable   pager disabled for 10 hours; reables at Tue Sep  7 10:29:14 2010
+Tue Sep  7 10:38:01 2010     --tick   auto-emable (disable time period over)
+Wed Sep  8 03:38:01 2010     --tick * paging #997 to prime
+Wed Sep  8 03:40:56 2010  --respond   pager disabled for 0.25 hours; reables at Wed Sep  8 03:55:56 2010
+Wed Sep  8 04:08:01 2010     --tick   auto-emable (disable time period over)
+Mon Sep 13 00:26:18 2010 --backup-takeover   backup-takeover
+Mon Sep 20 04:21:00 2010 --backup-takeover   backup-takeover
+Mon Sep 27 01:09:11 2010 --backup-takeover   backup-takeover
+Mon Sep 27 14:38:02 2010     --tick * paging #998 to prime
+Mon Sep 27 14:51:22 2010  --respond   pager disabled for 0.25 hours; reables at Mon Sep 27 15:06:22 2010
+Mon Sep 27 14:51:25 2010  --disable   pager disabled for 2 hours; reables at Mon Sep 27 16:51:25 2010
+Mon Sep 27 15:07:07 2010   --enable   manual enable
+Tue Sep 28 19:53:01 2010     --tick * paging #999 to prime
+Tue Sep 28 19:55:20 2010  --respond   pager disabled for 0.25 hours; reables at Tue Sep 28 20:10:20 2010
+Tue Sep 28 19:55:26 2010  --disable   pager disabled for 2 hours; reables at Tue Sep 28 21:55:26 2010
+Tue Sep 28 20:08:02 2010     --tick * paging #1000 to prime
+Tue Sep 28 22:08:01 2010     --tick   auto-emable (disable time period over)
+Wed Sep 29 09:08:02 2010     --tick * paging #1001 to prime
+Thu Sep 30 18:53:03 2010     --tick * paging #1002 to prime
+Thu Sep 30 18:56:33 2010  --respond   pager disabled for 0.25 hours; reables at Thu Sep 30 19:11:33 2010
+Thu Sep 30 18:56:36 2010  --disable   pager disabled for 5 hours; reables at Thu Sep 30 23:56:36 2010
+Thu Sep 30 20:23:01 2010     --tick * paging #1003 to prime
+Thu Sep 30 20:23:38 2010  --disable   pager disabled for 2345678987654323456 hours; reables at Wed Dec 31 23:59:59 1969
+Thu Sep 30 20:38:01 2010     --tick * paging #1004 to prime
+Thu Sep 30 21:08:41 2010   --enable   manual enable
+Sun Oct  3 11:08:02 2010     --tick * paging #1005 to prime
+Sun Oct  3 11:21:46 2010  --respond   pager disabled for 0.25 hours; reables at Sun Oct  3 11:36:46 2010
+Sun Oct  3 11:38:01 2010     --tick   auto-emable (disable time period over)
+Mon Oct  4 02:02:29 2010 --backup-takeover   backup-takeover
+Thu Oct  7 16:53:01 2010     --tick * paging #1006 to prime
+Thu Oct  7 17:07:20 2010  --respond   pager disabled for 0.25 hours; reables at Thu Oct  7 17:22:20 2010
+Thu Oct  7 17:20:53 2010  --disable   pager disabled for 2 hours; reables at Thu Oct  7 19:20:53 2010
+Thu Oct  7 17:23:01 2010     --tick * paging #1007 to prime
+Thu Oct  7 19:23:01 2010     --tick   auto-emable (disable time period over)
+Fri Oct 15 08:53:01 2010     --tick * paging #1008 to prime
+Fri Oct 15 08:53:27 2010  --respond   pager disabled for 0.25 hours; reables at Fri Oct 15 09:08:27 2010
+Fri Oct 15 09:23:01 2010     --tick   auto-emable (disable time period over)
+Sun Oct 17 22:51:18 2010 --backup-takeover   backup-takeover
+Sun Oct 17 23:55:17 2010 --backup-takeover   backup-takeover
+Mon Oct 18 19:23:02 2010     --tick * paging #1009 to prime
+Mon Oct 18 19:29:22 2010  --respond   pager disabled for 0.25 hours; reables at Mon Oct 18 19:44:22 2010
+Mon Oct 18 19:33:48 2010  --disable   pager disabled for 2 hours; reables at Mon Oct 18 21:33:48 2010
+Mon Oct 18 19:38:02 2010     --tick * paging #1010 to prime
+Mon Oct 18 19:53:01 2010     --tick * paging #1011 to prime
+Mon Oct 18 20:08:02 2010     --tick * paging #1012 to prime
+Mon Oct 18 20:38:01 2010     --tick * paging #1013 to prime
+Mon Oct 18 21:38:01 2010     --tick   auto-emable (disable time period over)
+Thu Oct 21 07:23:01 2010     --tick * paging #1014 to prime
+Thu Oct 21 07:24:32 2010  --respond   pager disabled for 0.25 hours; reables at Thu Oct 21 07:39:32 2010
+Thu Oct 21 07:24:44 2010  --disable   pager disabled for this hours; reables at Thu Oct 21 07:24:44 2010
+Thu Oct 21 07:25:08 2010   --enable   manual enable
+Mon Oct 25 01:24:18 2010 --backup-takeover   backup-takeover
+Mon Oct 25 18:23:01 2010     --tick * paging #1015 to prime
+Mon Nov  1 01:58:01 2010 --backup-takeover   backup-takeover
+Sat Nov  6 17:23:01 2010     --tick * paging #1016 to prime
+Sat Nov  6 17:32:19 2010  --respond   pager disabled for 0.25 hours; reables at Sat Nov  6 17:47:19 2010
+Sat Nov  6 17:32:35 2010  --disable   pager disabled for 2 hours; reables at Sat Nov  6 19:32:35 2010
+Sat Nov  6 19:38:01 2010     --tick   auto-emable (disable time period over)
+Mon Nov  8 01:43:28 2010 --backup-takeover   backup-takeover
+Mon Nov  8 05:53:02 2010     --tick * paging #1017 to prime
+Mon Nov  8 07:38:02 2010     --tick * paging #1018 to prime
+Mon Nov  8 07:38:51 2010  --respond   pager disabled for 0.25 hours; reables at Mon Nov  8 07:53:51 2010
+Mon Nov  8 08:08:02 2010     --tick   auto-emable (disable time period over)
+Mon Nov  8 14:08:02 2010     --tick * paging #1019 to prime
+Mon Nov  8 14:19:40 2010  --respond   pager disabled for 0.25 hours; reables at Mon Nov  8 14:34:40 2010
+Mon Nov  8 14:38:01 2010     --tick   auto-emable (disable time period over)
+Fri Nov 12 02:53:01 2010     --tick * paging #1020 to prime
+Fri Nov 12 03:03:43 2010  --respond   pager disabled for 0.25 hours; reables at Fri Nov 12 03:18:43 2010
+Fri Nov 12 03:08:02 2010     --tick * paging #1021 to prime
+Fri Nov 12 03:23:01 2010     --tick   auto-emable (disable time period over)
+Fri Nov 12 03:23:02 2010     --tick * paging #1022 to prime
+Fri Nov 12 03:38:01 2010     --tick * paging #1023 to prime
+Sat Nov 13 02:38:01 2010     --tick * paging #1024 to prime
+Sat Nov 13 02:42:30 2010  --respond   pager disabled for 0.25 hours; reables at Sat Nov 13 02:57:30 2010
+Sat Nov 13 02:53:01 2010     --tick * paging #1025 to prime
+Sat Nov 13 03:08:01 2010     --tick   auto-emable (disable time period over)
+Sat Nov 13 03:08:01 2010     --tick * paging #1026 to prime
+Sat Nov 13 03:11:00 2010  --respond   pager disabled for 0.25 hours; reables at Sat Nov 13 03:26:00 2010
+Sat Nov 13 03:11:30 2010  --disable   pager disabled for 1 hours; reables at Sat Nov 13 04:11:30 2010
+Sat Nov 13 04:08:01 2010     --tick * paging #1027 to prime
+Sat Nov 13 04:23:01 2010     --tick   auto-emable (disable time period over)
+Mon Nov 15 00:35:26 2010 --backup-takeover   backup-takeover
+Tue Nov 16 03:08:01 2010     --tick * paging #1028 to prime
+Tue Nov 16 03:15:55 2010  --respond   pager disabled for 0.25 hours; reables at Tue Nov 16 03:30:55 2010
+Tue Nov 16 03:38:01 2010     --tick   auto-emable (disable time period over)
+Wed Nov 17 22:23:01 2010     --tick * paging #1029 to prime
+Wed Nov 17 22:36:21 2010  --respond   pager disabled for 0.25 hours; reables at Wed Nov 17 22:51:21 2010
+Wed Nov 17 22:48:39 2010  --disable   pager disabled for 1 hours; reables at Wed Nov 17 23:48:39 2010
+Wed Nov 17 23:53:01 2010     --tick   auto-emable (disable time period over)
+Thu Nov 18 00:16:48 2010  --disable   pager disabled for 1 hours; reables at Thu Nov 18 01:16:48 2010
+Thu Nov 18 01:23:01 2010     --tick   auto-emable (disable time period over)
+Thu Nov 18 20:08:04 2010     --tick * paging #1030 to prime
+Thu Nov 18 20:23:04 2010     --tick * paging #1031 to prime
+Thu Nov 18 21:09:29 2010     --tick * paging #1032 to both
+Thu Nov 18 21:23:02 2010     --tick * paging #1033 to both
+Thu Nov 18 21:38:13 2010     --tick * paging #1034 to both
+Thu Nov 18 21:53:21 2010     --tick * paging #1035 to both
+Thu Nov 18 22:08:43 2010     --tick * paging #1036 to both
+Thu Nov 18 22:23:26 2010     --tick * paging #1037 to both
+Thu Nov 18 22:34:45 2010  --disable   pager disabled for 2 hours; reables at Fri Nov 19 00:34:45 2010
+Thu Nov 18 22:38:02 2010     --tick * paging #1038 to prime
+Thu Nov 18 22:53:01 2010     --tick * paging #1039 to prime
+Thu Nov 18 23:08:02 2010     --tick * paging #1040 to prime
+Thu Nov 18 23:23:48 2010     --tick * paging #1041 to prime
+Thu Nov 18 23:38:02 2010     --tick * paging #1042 to prime
+Thu Nov 18 23:53:02 2010     --tick * paging #1043 to prime
+Fri Nov 19 00:08:02 2010     --tick * paging #1044 to prime
+Fri Nov 19 00:38:01 2010     --tick   auto-emable (disable time period over)
+Fri Nov 19 00:38:01 2010     --tick * paging #1045 to prime
+Fri Nov 19 00:53:01 2010     --tick * paging #1046 to prime
+Fri Nov 19 01:09:14 2010     --tick * paging #1047 to both
+Fri Nov 19 01:23:11 2010     --tick * paging #1048 to both
+Fri Nov 19 01:38:02 2010     --tick * paging #1049 to both
+Fri Nov 19 01:53:01 2010     --tick * paging #1050 to both
+Fri Nov 19 02:08:01 2010     --tick * paging #1051 to both
+Fri Nov 19 02:23:02 2010     --tick * paging #1052 to both
+Fri Nov 19 02:38:01 2010     --tick * paging #1053 to both
+Fri Nov 19 02:53:02 2010     --tick * paging #1054 to both
+Fri Nov 19 03:08:02 2010     --tick * paging #1055 to both
+Fri Nov 19 03:23:02 2010     --tick * paging #1056 to both
+Fri Nov 19 03:38:02 2010     --tick * paging #1057 to both
+Fri Nov 19 03:53:01 2010     --tick * paging #1058 to both
+Fri Nov 19 04:08:01 2010     --tick * paging #1059 to both
+Fri Nov 19 04:23:02 2010     --tick * paging #1060 to both
+Fri Nov 19 04:38:02 2010     --tick * paging #1061 to both
+Sun Nov 21 00:53:02 2010     --tick * paging #1062 to prime
+Sun Nov 21 01:08:02 2010     --tick * paging #1063 to prime
+Mon Nov 22 01:48:13 2010 --backup-takeover   backup-takeover
+Tue Nov 23 01:51:27 2010  --disable   pager disabled for 2 hours; reables at Tue Nov 23 03:51:27 2010
+Tue Nov 23 03:50:16 2010   --enable   manual enable
+Wed Nov 24 00:53:52 2010  --disable   pager disabled for 2 hours; reables at Wed Nov 24 02:53:52 2010
+Wed Nov 24 01:38:01 2010     --tick * paging #1064 to prime
+Wed Nov 24 01:53:02 2010     --tick * paging #1065 to prime
+Wed Nov 24 02:08:01 2010     --tick * paging #1066 to prime
+Wed Nov 24 02:23:01 2010     --tick * paging #1067 to prime
+Wed Nov 24 02:38:03 2010     --tick * paging #1068 to prime
+Wed Nov 24 02:53:03 2010     --tick * paging #1069 to prime
+Wed Nov 24 03:08:07 2010     --tick   auto-emable (disable time period over)
+Wed Nov 24 03:08:08 2010     --tick * paging #1070 to prime
+Wed Nov 24 03:23:01 2010     --tick * paging #1071 to prime
+Wed Nov 24 03:29:50 2010  --disable   pager disabled for 2 hours; reables at Wed Nov 24 05:29:50 2010
+Wed Nov 24 04:23:09 2010     --tick * paging #1072 to prime
+Wed Nov 24 04:53:07 2010     --tick * paging #1073 to prime
+Wed Nov 24 05:38:01 2010     --tick   auto-emable (disable time period over)
+Thu Nov 25 02:53:07 2010     --tick * paging #1074 to prime
+Thu Nov 25 03:01:19 2010  --respond   pager disabled for 0.25 hours; reables at Thu Nov 25 03:16:19 2010
+Thu Nov 25 03:01:34 2010  --disable   pager disabled for 1 hours; reables at Thu Nov 25 04:01:34 2010
+Thu Nov 25 03:08:06 2010     --tick * paging #1075 to prime
+Thu Nov 25 04:08:01 2010     --tick   auto-emable (disable time period over)
+Thu Nov 25 19:18:36 2010  --disable   pager disabled for 5 hours; reables at Fri Nov 26 00:18:36 2010
+Thu Nov 25 21:08:06 2010     --tick * paging #1076 to prime
+Fri Nov 26 00:05:07 2010   --enable   manual enable
+Fri Nov 26 01:23:07 2010     --tick * paging #1077 to prime
+Fri Nov 26 01:31:20 2010  --respond   pager disabled for 0.25 hours; reables at Fri Nov 26 01:46:20 2010
+Fri Nov 26 01:31:54 2010  --disable   pager disabled for 1 hours; reables at Fri Nov 26 02:31:54 2010
+Fri Nov 26 01:38:06 2010     --tick * paging #1078 to prime
+Fri Nov 26 02:18:45 2010  --disable   pager disabled for 1 hours; reables at Fri Nov 26 03:18:45 2010
+Fri Nov 26 02:23:06 2010     --tick * paging #1079 to prime
+Fri Nov 26 02:38:06 2010     --tick * paging #1080 to prime
+Fri Nov 26 03:23:01 2010     --tick   auto-emable (disable time period over)
+Fri Nov 26 13:38:07 2010     --tick * paging #1081 to prime
+Fri Nov 26 13:39:12 2010  --respond   pager disabled for 0.25 hours; reables at Fri Nov 26 13:54:12 2010
+Fri Nov 26 14:08:01 2010     --tick   auto-emable (disable time period over)
+Sat Nov 27 00:54:26 2010  --disable   pager disabled for 2 hours; reables at Sat Nov 27 02:54:26 2010
+Sat Nov 27 03:08:01 2010     --tick   auto-emable (disable time period over)
+Mon Nov 29 01:51:28 2010  --disable   pager disabled for 2 hours; reables at Mon Nov 29 03:51:28 2010
+Mon Nov 29 01:54:28 2010 --shiftChange   shift change
+Tue Nov 30 13:10:53 2010  --disable   pager disabled for 1 hours; reables at Tue Nov 30 14:10:53 2010
+Tue Nov 30 13:11:04 2010   --enable   manual enable
+Tue Nov 30 22:38:02 2010     --tick * paging #1082 to prime
+Tue Nov 30 22:43:59 2010  --respond   pager disabled for 0.25 hours; reables at Tue Nov 30 22:58:59 2010
+Tue Nov 30 22:53:01 2010     --tick * paging #1083 to prime
+Tue Nov 30 23:08:01 2010     --tick   auto-emable (disable time period over)
+Tue Nov 30 23:08:02 2010     --tick * paging #1084 to prime
+Tue Nov 30 23:15:29 2010  --respond   pager disabled for 0.25 hours; reables at Tue Nov 30 23:30:29 2010
+Tue Nov 30 23:38:01 2010     --tick   auto-emable (disable time period over)
+Tue Nov 30 23:38:02 2010     --tick * paging #1085 to prime
+Tue Nov 30 23:44:41 2010  --respond   pager disabled for 0.25 hours; reables at Tue Nov 30 23:59:41 2010
+Tue Nov 30 23:44:54 2010  --disable   pager disabled for 2 hours; reables at Wed Dec  1 01:44:54 2010
+Wed Dec  1 00:08:01 2010     --tick * paging #1086 to prime
+Wed Dec  1 00:38:01 2010     --tick * paging #1087 to prime
+Wed Dec  1 01:38:02 2010     --tick * paging #1088 to prime
+Wed Dec  1 01:53:01 2010     --tick   auto-emable (disable time period over)
+Wed Dec  1 01:53:02 2010     --tick * paging #1089 to prime
+Wed Dec  1 02:08:02 2010     --tick * paging #1090 to prime
+Wed Dec  1 02:23:01 2010     --tick * paging #1091 to both
+Wed Dec  1 02:23:59 2010  --respond   pager disabled for 0.25 hours; reables at Wed Dec  1 02:38:59 2010
+Wed Dec  1 02:24:18 2010  --disable   pager disabled for 2 hours; reables at Wed Dec  1 04:24:18 2010
+Wed Dec  1 02:53:01 2010     --tick * paging #1092 to prime
+Wed Dec  1 03:08:02 2010     --tick * paging #1093 to prime
+Wed Dec  1 04:38:01 2010     --tick   auto-emable (disable time period over)
+Thu Dec  2 01:08:02 2010     --tick * paging #1094 to prime
+Thu Dec  2 01:23:05 2010     --tick * paging #1095 to prime
+Fri Dec  3 21:53:01 2010     --tick * paging #1096 to prime
+Fri Dec  3 22:08:02 2010     --tick * paging #1097 to prime
+Fri Dec  3 22:23:01 2010     --tick * paging #1098 to both
+Fri Dec  3 22:38:02 2010     --tick * paging #1099 to both
+Sat Dec  4 01:53:02 2010     --tick * paging #1100 to prime
+Sat Dec  4 02:08:02 2010     --tick * paging #1101 to prime
+Sat Dec  4 02:23:02 2010     --tick * paging #1102 to both
+Sat Dec  4 02:41:11 2010     --tick * paging #1103 to both
+Sat Dec  4 02:56:10 2010     --tick * paging #1104 to both
+Sat Dec  4 03:11:10 2010     --tick * paging #1105 to both
+Sat Dec  4 03:23:02 2010     --tick * paging #1106 to both
+Sat Dec  4 03:38:01 2010     --tick * paging #1107 to both
+Sat Dec  4 03:53:01 2010     --tick * paging #1108 to both
+Sun Dec  5 06:08:01 2010     --tick * paging #1109 to prime
+Sun Dec  5 06:23:02 2010     --tick * paging #1110 to prime
+Sun Dec  5 06:38:01 2010     --tick * paging #1111 to both
+Sun Dec  5 06:53:01 2010     --tick * paging #1112 to both
+Sun Dec  5 07:08:01 2010     --tick * paging #1113 to both
+Sun Dec  5 07:23:01 2010     --tick * paging #1114 to both
+Sun Dec  5 21:47:42 2010 --shiftChange   shift change
+Tue Dec  7 02:38:01 2010     --tick * paging #1115 to prime
+Tue Dec  7 04:23:01 2010     --tick * paging #1116 to prime
+Tue Dec  7 19:38:01 2010     --tick * paging #1117 to prime
+Tue Dec  7 19:53:01 2010     --tick * paging #1118 to prime
+Tue Dec  7 19:58:20 2010  --respond   pager disabled for 0.25 hours; reables at Tue Dec  7 20:13:20 2010
+Tue Dec  7 19:58:27 2010  --disable   pager disabled for 2 hours; reables at Tue Dec  7 21:58:27 2010
+Tue Dec  7 22:08:01 2010     --tick   auto-emable (disable time period over)
+Wed Dec  8 04:23:01 2010     --tick * paging #1119 to prime
+Thu Dec  9 04:23:04 2010     --tick * paging #1120 to prime
+Thu Dec  9 20:38:01 2010     --tick * paging #1121 to prime
+Thu Dec  9 20:41:10 2010  --respond   pager disabled for 0.25 hours; reables at Thu Dec  9 20:56:10 2010
+Thu Dec  9 21:08:01 2010     --tick   auto-emable (disable time period over)
+Thu Dec  9 21:23:01 2010     --tick * paging #1122 to prime
+Thu Dec  9 21:26:07 2010  --respond   pager disabled for 0.25 hours; reables at Thu Dec  9 21:41:07 2010
+Thu Dec  9 21:38:02 2010     --tick * paging #1123 to prime
+Thu Dec  9 21:53:01 2010     --tick   auto-emable (disable time period over)
+Fri Dec 10 01:53:02 2010     --tick * paging #1124 to prime
+Fri Dec 10 02:08:01 2010     --tick * paging #1125 to prime
+Fri Dec 10 02:23:01 2010     --tick * paging #1126 to both
+Fri Dec 10 02:38:01 2010     --tick * paging #1127 to both
+Fri Dec 10 02:53:01 2010     --tick * paging #1128 to both
+Fri Dec 10 03:08:01 2010     --tick * paging #1129 to both
+Fri Dec 10 03:23:01 2010     --tick * paging #1130 to both
+Fri Dec 10 03:38:01 2010     --tick * paging #1131 to both
+Fri Dec 10 03:53:01 2010     --tick * paging #1132 to both
+Fri Dec 10 04:23:01 2010     --tick * paging #1133 to prime
+Sat Dec 11 04:23:02 2010     --tick * paging #1134 to prime
+Sun Dec 12 04:23:01 2010     --tick * paging #1135 to prime
+Mon Dec 13 00:01:13 2010 --shiftChange   shift change
+Mon Dec 13 04:23:01 2010     --tick * paging #1136 to prime
+Mon Dec 13 04:38:01 2010     --tick * paging #1137 to prime
+Mon Dec 13 04:44:21 2010  --respond   pager disabled for 0.25 hours; reables at Mon Dec 13 04:59:21 2010
+Mon Dec 13 05:08:01 2010     --tick   auto-emable (disable time period over)
+Tue Dec 14 04:23:01 2010     --tick * paging #1138 to prime
+Wed Dec 15 00:23:01 2010     --tick * paging #1139 to prime
+Wed Dec 15 00:38:01 2010     --tick * paging #1140 to prime
+Wed Dec 15 00:53:01 2010     --tick * paging #1141 to both
+Wed Dec 15 00:54:34 2010  --respond   pager disabled for 0.25 hours; reables at Wed Dec 15 01:09:34 2010
+Wed Dec 15 01:23:01 2010     --tick   auto-emable (disable time period over)
+Wed Dec 15 01:23:01 2010     --tick * paging #1142 to prime
+Wed Dec 15 01:24:18 2010  --respond   pager disabled for 0.25 hours; reables at Wed Dec 15 01:39:18 2010
+Wed Dec 15 01:53:01 2010     --tick   auto-emable (disable time period over)
+Wed Dec 15 04:23:01 2010     --tick * paging #1143 to prime
+Wed Dec 15 04:27:24 2010  --respond   pager disabled for 0.25 hours; reables at Wed Dec 15 04:42:24 2010
+Wed Dec 15 04:53:02 2010     --tick   auto-emable (disable time period over)
+Thu Dec 16 04:23:01 2010     --tick * paging #1144 to prime
+Fri Dec 17 22:08:01 2010     --tick * paging #1145 to prime
+Fri Dec 17 22:13:19 2010  --respond   pager disabled for 0.25 hours; reables at Fri Dec 17 22:28:19 2010
+Fri Dec 17 22:38:01 2010     --tick   auto-emable (disable time period over)
+Fri Dec 17 22:38:01 2010     --tick * paging #1146 to prime
+Fri Dec 17 22:43:50 2010  --respond   pager disabled for 0.25 hours; reables at Fri Dec 17 22:58:50 2010
+Fri Dec 17 22:44:10 2010  --disable   pager disabled for 5 hours; reables at Sat Dec 18 03:44:10 2010
+Sat Dec 18 03:53:01 2010     --tick   auto-emable (disable time period over)
+Sat Dec 18 04:53:01 2010     --tick * paging #1147 to prime
+Sat Dec 18 04:59:00 2010  --respond   pager disabled for 0.25 hours; reables at Sat Dec 18 05:14:00 2010
+Sat Dec 18 04:59:11 2010  --disable   pager disabled for 4 hours; reables at Sat Dec 18 08:59:11 2010
+Sat Dec 18 05:08:02 2010     --tick * paging #1148 to prime
+Sat Dec 18 05:23:01 2010     --tick * paging #1149 to prime
+Sat Dec 18 09:08:01 2010     --tick   auto-emable (disable time period over)
+Mon Dec 20 02:53:01 2010     --tick * paging #1150 to prime
+Tue Dec 21 00:23:02 2010     --tick * paging #1151 to prime
+Tue Dec 21 00:25:12 2010  --respond   pager disabled for 0.25 hours; reables at Tue Dec 21 00:40:12 2010
+Tue Dec 21 00:53:02 2010     --tick   auto-emable (disable time period over)
+Tue Dec 21 23:38:01 2010     --tick * paging #1152 to prime
+Tue Dec 21 23:53:01 2010     --tick * paging #1153 to prime
+Wed Dec 22 00:08:01 2010     --tick * paging #1154 to both
+Wed Dec 22 00:23:02 2010     --tick * paging #1155 to both
+Wed Dec 22 00:38:01 2010     --tick * paging #1156 to both
+Thu Dec 23 02:08:01 2010     --tick * paging #1157 to prime
+Thu Dec 23 02:23:01 2010     --tick * paging #1158 to prime
+Thu Dec 23 07:53:01 2010     --tick * paging #1159 to prime
+Thu Dec 23 23:53:01 2010     --tick * paging #1160 to prime
+Fri Dec 24 02:23:02 2010     --tick * paging #1161 to prime
+Fri Dec 24 02:23:48 2010  --respond   pager disabled for 0.25 hours; reables at Fri Dec 24 02:38:48 2010
+Fri Dec 24 02:23:56 2010  --disable   pager disabled for 1 hours; reables at Fri Dec 24 03:23:56 2010
+Fri Dec 24 02:38:02 2010     --tick * paging #1162 to prime
+Fri Dec 24 03:38:01 2010     --tick   auto-emable (disable time period over)
+Sat Dec 25 02:08:02 2010     --tick * paging #1163 to prime
+Mon Dec 27 02:53:01 2010     --tick * paging #1164 to prime
+Tue Dec 28 02:23:02 2010     --tick * paging #1165 to prime
+Tue Dec 28 02:31:03 2010  --respond   pager disabled for 0.25 hours; reables at Tue Dec 28 02:46:03 2010
+Tue Dec 28 02:53:01 2010     --tick   auto-emable (disable time period over)
+Sat Jan  1 04:08:01 2011     --tick * paging #1166 to prime
+Sat Jan  1 04:22:51 2011  --respond   pager disabled for 0.25 hours; reables at Sat Jan  1 04:37:51 2011
+Sat Jan  1 04:38:01 2011     --tick   auto-emable (disable time period over)
+Sat Jan  1 04:38:01 2011     --tick * paging #1167 to prime
+Sat Jan  1 04:53:01 2011     --tick * paging #1168 to prime
+Sat Jan  1 05:08:01 2011     --tick * paging #1169 to both
+Sun Jan  2 06:38:02 2011     --tick * paging #1170 to prime
+Sun Jan  2 06:44:38 2011  --disable   pager disabled for 1 hours; reables at Sun Jan  2 07:44:38 2011
+Sun Jan  2 07:01:20 2011   --enable   manual enable
+Mon Jan  3 07:00:49 2011  --disable   pager disabled for 2 hours; reables at Mon Jan  3 09:00:49 2011
+Mon Jan  3 08:20:00 2011   --enable   manual enable
+Tue Jan  4 01:03:16 2011  --disable   pager disabled for 1 hours; reables at Tue Jan  4 02:03:16 2011
+Tue Jan  4 02:08:01 2011     --tick   auto-emable (disable time period over)
+Wed Jan  5 02:53:01 2011     --tick * paging #1171 to prime
+Wed Jan  5 03:02:53 2011  --respond   pager disabled for 0.25 hours; reables at Wed Jan  5 03:17:53 2011
+Wed Jan  5 03:23:01 2011     --tick   auto-emable (disable time period over)
+Thu Jan  6 21:38:01 2011     --tick * paging #1172 to prime
+Fri Jan  7 03:08:02 2011     --tick * paging #1173 to prime
+Sat Jan  8 06:53:02 2011     --tick * paging #1174 to prime
+Sun Jan  9 02:08:01 2011     --tick * paging #1175 to prime
+Sun Jan  9 02:23:01 2011     --tick * paging #1176 to prime
+Sun Jan  9 02:32:42 2011  --respond   pager disabled for 0.25 hours; reables at Sun Jan  9 02:47:42 2011
+Sun Jan  9 02:32:50 2011  --disable   pager disabled for 5 hours; reables at Sun Jan  9 07:32:50 2011
+Sun Jan  9 02:38:03 2011     --tick * paging #1177 to prime
+Sun Jan  9 02:53:02 2011     --tick * paging #1178 to prime
+Sun Jan  9 03:08:02 2011     --tick * paging #1179 to prime
+Sun Jan  9 03:23:02 2011     --tick * paging #1180 to prime
+Sun Jan  9 03:38:01 2011     --tick * paging #1181 to prime
+Sun Jan  9 03:53:01 2011     --tick * paging #1182 to prime
+Sun Jan  9 04:08:02 2011     --tick * paging #1183 to prime
+Sun Jan  9 04:23:01 2011     --tick * paging #1184 to prime
+Sun Jan  9 04:38:01 2011     --tick * paging #1185 to prime
+Sun Jan  9 04:53:01 2011     --tick * paging #1186 to prime
+Sun Jan  9 05:08:01 2011     --tick * paging #1187 to prime
+Sun Jan  9 07:38:01 2011     --tick   auto-emable (disable time period over)

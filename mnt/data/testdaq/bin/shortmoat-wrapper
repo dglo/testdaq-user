@@ -1,0 +1,9 @@
+#!/bin/bash
+
+
+
+mkdir -p /mnt/data/testdaq/Results/CommsTests/shortmoat/
+cd /mnt/data/testdaq/Results/CommsTests/shortmoat/
+
+nohup runshortmoat &
+

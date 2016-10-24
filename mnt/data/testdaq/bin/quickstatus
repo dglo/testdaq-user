@@ -1,0 +1,4 @@
+#!/usr/bin/perl
+use File::Basename;
+my $dirname = dirname(__FILE__);
+system("$dirname/status -quick @ARGV");

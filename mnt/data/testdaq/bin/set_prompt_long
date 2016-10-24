@@ -1,0 +1,4 @@
+#
+# 30=black 31=red 32=green 33=orange 34=blue 35=purple 36=torquoise 37=grey
+#
+export PS1="\[\033[0;32m\]\h \[\033[0;34m\]\u \[\033[0;29m\]\$PWD/ "

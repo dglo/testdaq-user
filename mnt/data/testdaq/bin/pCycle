@@ -1,0 +1,11 @@
+#!/usr/bin/perl
+# 
+# Cycles the power! um.. turns the given
+# card/pairs off then back on.
+# coded by Victor Bittorf
+# ... not one of my bigger programs
+my $str = join (" ", @ARGV);
+if (! defined ($ARGV[0]) ) {
+	$str = "all";
+}
+system ("power cycle $str");

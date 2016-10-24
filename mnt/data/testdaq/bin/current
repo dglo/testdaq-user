@@ -1,0 +1,25 @@
+#!/usr/bin/perl
+
+#
+# coded by Victor Bittorf
+#
+
+my $currents = `cat /proc/driver/domhub/card*/pair*/current`;
+my $volts = `cat /proc/driver/domhub/card*/pair*/voltage`;
+
+my @lines = split ("\n", $currents);
+
+
+
+foreach (@lines) {
+   if (/Card (\d) Pair (\d) (curr.+)\./) {
+	my $current = $3;
+	my $crd = $1; my $pr = $2;
+	if ($volts =~ /Card $1 Pair $2 (.+)/) {
+	   print "Card $crd Pair $pr: $current; " .  $1, "\n";
+	} else {
+	   print $_, "\n";
+	}
+   }
+}
+

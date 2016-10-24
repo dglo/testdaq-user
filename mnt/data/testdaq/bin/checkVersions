@@ -1,0 +1,195 @@
+#!/usr/bin/perl
+
+use strict;
+
+#
+
+#
+
+my $VERSION = 1.0;
+
+
+my $doms_in_iceboot;
+my $HOME = $ENV{HOME};
+
+# Assumes a config file exists.
+my $CONFIG_FILE = "$HOME/hubConfig.dat";
+
+# Full name: note that the full name is capital letters
+my $FULL_NAME = `hostname -s | awk '{print toupper(\$1)}'`;
+chomp $FULL_NAME;
+
+# $cmd is the first of the args
+
+# expected icebot doms will be filled by upadteExpectations.
+my %EXPECTED_ICEBOOT_DOMS = ();
+
+$FULL_NAME =~ /(.+)/;
+my $lc_name = lc($1);
+
+
+my $NAME = $ARGV[0];
+
+# Do something based on the given command ($cmd)
+if ( defined( $ARGV[0] ) ) {
+	checkVersions($NAME);
+	printWarnings();
+}
+else {
+
+	# the usage statement & examples
+	print "usage: checkVersions [(card# [pair#]) | all]\n";
+	print "\tex. `checkVersions all`\n";
+	exit(0);
+}
+print "\nEnter the command `status' to see the status of the DOMs.\n";
+exit(0);
+
+# power up the dor card (and/or pairs...)
+sub checkVersions {
+
+	# update exp (how many DOR cards & iceboot DOMs we expect)
+	updateExpectations();
+
+	# dorcard & pair to power up.
+	# note: dor card could actually be a quad or undef
+	my ( $dor, $pair ) = @_;
+
+
+	print "\n";
+	print "checkVersions $NAME DOMs on hub: $lc_name ...\n";
+
+#	if ( not defined($dor) ) {
+		
+
+		
+		#
+		#	Assume ALL
+		#
+		# if given no args, then we assume they wanted all the
+#		# DOMs turned on.
+#		my $cat            = `versions all`;
+#		my @lines          = split( "\n", $cat );
+#		my $comm_num       = 0;
+##
+#		foreach (@lines) {
+#				$comm_num++;
+#		}
+#		print "Found $comm_num communicating DOMs.\n";
+
+		my ( $total_versions, $moved_versions ) = versions_keepBuild("all");
+
+	
+#	}
+}
+
+#
+# updateExpectations
+# Reads in the ~/hubConfig.dat file and updates the Hash
+# EXPCETED_ICEBOOT_DOMS, so we know how many DOMs to expect to have in IceBoot.
+sub updateExpectations {
+	if ( -e $CONFIG_FILE ) {
+		open( CONFIG, "$CONFIG_FILE" );
+		my @page = (<CONFIG>);
+		close(CONFIG);
+		foreach (@page) {
+			if (/(\S+)\s+\d+\s+\d+\s+\d+\s+(\d+)\s*[\d\d,]*/) {
+				$EXPECTED_ICEBOOT_DOMS{$1} = $2;
+			}
+		}
+	}
+	else {
+	}
+}
+
+# prints a horizontal bar....
+sub printHoriz {
+	print "-\t-\t-\t-\t-\n";
+}
+
+#
+# Prints out hwo many DOMs have which build versions, and warns if
+# there are multiple versions!
+#
+sub versions_keepBuild {
+	my $arg      = shift;
+	my $versions_ib = 0;
+	$doms_in_iceboot = 0;
+
+	# verbose iceboot just has more information that normal iceboot
+	my $versions_info       = `versions $arg`;
+	my @versions_info_lines = split( "\n", $versions_info );
+
+	# this maps (version => # of doms that have that version)
+	# so an entry like (432 => 5) means 5 DOMs have build 432.
+	my %ib_builds = ();
+	foreach (@versions_info_lines) {
+		my $line = $_;
+                chop $line;
+                $doms_in_iceboot++;
+
+		(my $cwd,my $fw,my $build,my $pld,my $fpga,my $dordriver) = split(" ",$line);
+#		$1 = $build;
+		if ( defined( $ib_builds{$build} ) ) {
+
+			# ++ the entry, another DOM has that build.
+			$ib_builds{$build}++;
+		}
+		else {
+
+			# make a new entry for that build #
+			$ib_builds{$build} = 1;
+		}
+		
+	}
+
+	# keys are a list of build versions
+	my @keys = keys %ib_builds;
+	print "\n";
+	foreach (@keys) {
+		print "[ Moved $ib_builds{$_} DOMs into iceboot build version $_ ]\n";
+	}
+	if ( $#keys > 0 ) {
+
+		# we have more than 1 build version!
+		print
+"\n>>> $lc_name : Not all DOMs were moved into the same iceboot build version.\n\n";
+	}
+
+	print "There are $doms_in_iceboot DOMs in iceboot.\n";
+	return ( $doms_in_iceboot, $doms_in_iceboot );
+}
+
+# prints out warnings such as
+# >>>hub: too many dor cards
+# or
+# >>>hub: too few communicating doms
+sub printWarnings {
+        my $warnings      = "";
+        my $status_report = `status -warn`;
+        my @lines         = split( "\n", $status_report );
+        foreach (@lines) {
+                if (/>>>/) {
+                        $warnings = $warnings . "$_\n";
+                }
+        }
+        if ( $warnings ne "" ) {
+                print "\n";
+                if ( defined($doms_in_iceboot)
+                        && $doms_in_iceboot ne $EXPECTED_ICEBOOT_DOMS{$lc_name} )
+                {
+                        print 
+">>> $lc_name : Unexpected # of DOMs in IceBoot: expected $EXPECTED_ICEBOOT_DOMS{$lc_name}; found: $doms_in_iceboot\n";
+
+                } elsif (not defined($EXPECTED_ICEBOOT_DOMS{$lc_name})) {
+                        warn ">>> $lc_name : Number of expected iceboot DOMs not found in config file.\n";
+                }
+                print "$warnings\n";
+        }
+}
+
+
+#
+# The End.
+#
+

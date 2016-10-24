@@ -1,0 +1,68 @@
+#!/bin/bash
+
+if [ $# -gt 1 ]
+then
+    echo "runquadtool all or runquadtool card# or runquadtool half1 or runquadtool half2"; exit 1
+fi
+if [ $# -lt 1 ]
+then
+    echo "runquadtool all or runquadtool card# or runquadtool half1 or runquadtool half2"; exit 1
+fi
+
+
+mkdir -p /mnt/data/testdaq/Results/CommsTests/quadtool/
+cd /mnt/data/testdaq/Results/CommsTests/quadtool/
+
+year=$(date +%Y)
+month=$(date +%m)
+day=$(date +%d)
+hour=$(date +%H)
+minute=$(date +%M)
+second=$(date +%S)
+
+mkdir $year$month$day-$hour$minute$second
+cd $year$month$day-$hour$minute$second
+
+
+if [ $1 == "all" ]
+ then
+  quadtool 0 01 -t
+  quadtool 0 23 -t
+  quadtool 1 01 -t
+  quadtool 1 23 -t
+  quadtool 2 01 -t
+  quadtool 2 23 -t
+  quadtool 3 01 -t
+  quadtool 3 23 -t
+  quadtool 4 01 -t
+  quadtool 4 23 -t
+  quadtool 5 01 -t
+  quadtool 5 23 -t
+  quadtool 6 01 -t
+  quadtool 6 23 -t
+  quadtool 7 01 -t
+  quadtool 7 23 -t
+elif [ $1 == "half1" ]
+ then
+  quadtool 0 01 -t
+  quadtool 0 23 -t
+  quadtool 1 01 -t
+  quadtool 1 23 -t
+  quadtool 2 01 -t
+  quadtool 2 23 -t
+  quadtool 3 01 -t
+  quadtool 3 23 -t
+elif [ $1 == "half2" ]
+ then
+  quadtool 4 01 -t
+  quadtool 4 23 -t
+  quadtool 5 01 -t
+  quadtool 5 23 -t
+  quadtool 6 01 -t
+  quadtool 6 23 -t
+  quadtool 7 01 -t
+  quadtool 7 23 -t
+ else
+  quadtool $1 01 -t 
+  quadtool $1 23 -t
+fi

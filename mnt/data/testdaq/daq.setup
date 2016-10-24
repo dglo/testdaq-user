@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# standard pDAQ variables:
+PDAQ_HOME=/usr/local/pdaq/pDAQ_current ; export PDAQ_HOME
+PDAQ_CONFIG=${HOME}/config ; export PDAQ_CONFIG
+PATH=$PATH:${PDAQ_HOME}/dash:${PDAQ_HOME}/cluster-config ; export PATH
+PYTHONPATH=${PDAQ_HOME}/PyDOM ; export PYTHONPATH
+alias tailrun='ls --color=never -tr ${PDAQ_HOME}/log/*/dash.log | tail -2 | xargs tail -300f'
+
+# additional stuff for Omicron:
+for jar in $PDAQ_HOME/target/*/lib/*.jar;
+do
+	CLASSPATH=$CLASSPATH:$jar
+done

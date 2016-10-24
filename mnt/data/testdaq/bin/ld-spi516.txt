@@ -1,0 +1,13 @@
+send '"99427 read-bin\r"'
+send '"^A"'
+expect '"^domterm> "'
+send "dd if=stf-spi-516.sbi.gz\n"
+expect '"^domterm> "'
+send '"\n"'
+sleep 1
+send '"\r"'
+expect '"^> "'
+send '"gunzip fpga\r"'
+expect '"^> "'
+send '"fpga-versions\r"'
+expect '"^> "'

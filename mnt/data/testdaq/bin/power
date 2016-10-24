@@ -1,0 +1,695 @@
+#!/usr/bin/perl
+
+use strict;
+
+#print
+#"Note: this program is in development; functionality is subject change without warning.\n\n";
+# I think it is O.K. for now.... but you never know!!!!
+
+#
+# Coded by Victor Bittorf
+# vbittorf@icecube.wisc.edu
+# August 2007
+#
+
+#
+# power
+# This is a program to power on and off the DOMs from a DOMHub.
+# It also has additional functionality to power cycle the doms,
+# which turns the DOMs off and then on.
+#
+
+#
+# This program's arguments should be one of the following:
+# $ARGV[0] = card number
+# $ARGV[0] = card number; $ARGV[1] = pair number
+# $ARGV[0] = quad number
+#
+
+# a quad is for DOMs, and a quad number is Q2 or Q_2 (ex. 2nd quad)
+# A card number should just be a number, (i.e. 0, 1, 2, 3 ...);
+# and a pair should be 0, 1, 2, or 3.
+#
+
+#
+# This program depends on the following programs:
+# on, off, verbose_iceboot, reset-comstat,
+# getcurrents.pl, ~testdaq/bin/icehelp status-output,
+# status,
+#
+
+my $VERSION = 2.1;
+my $doms_in_iceboot;
+my $HOME = $ENV{HOME};
+
+if ( not -e "$HOME/bin/verbose_iceboot" ) {
+	die
+"ERROR: Missing program dependency; cannot find the program `verbose_iceboot' in ~/bin/\n";
+}
+
+
+# Assumes a config file exists.
+my $CONFIG_FILE = "$HOME/hubConfig.dat";
+
+# Full name: note that the full name is capital letters
+my $FULL_NAME = `hostname -s | awk '{print toupper(\$1)}'`;
+chomp $FULL_NAME;
+
+# $cmd is the first of the args
+my $cmd      = shift @ARGV;
+my $override = 0;
+if ( $ARGV[0] eq "-force" ) {
+	$override = 1;
+	shift @ARGV;
+}
+
+# expected icebot doms will be filled by upadteExpectations.
+my %EXPECTED_ICEBOOT_DOMS = ();
+
+# get the lower case name (and exclude a \n in the name)
+$FULL_NAME =~ /(.+)/;
+my $lc_name = lc($1);
+
+# check argv to make sure it contains usable data.
+if ( defined( $ARGV[0] ) ) {
+	my $arg0_OK = $ARGV[0] =~ /Q_?\d+/
+	  || $ARGV[0] =~ /^\d+$/
+	  || $ARGV[0] =~ /all/;
+	if ( not $arg0_OK ) {
+		die
+"power $cmd: invalid arguments, expected `Q_#' or `Q#' or `#' or `all' as first argument. Found: $ARGV[0]\n\n";
+	}
+	if ( defined( $ARGV[1] ) && not $ARGV[0] =~ /Q/ ) {
+		my $arg1_OK = $ARGV[1] =~ /^\d+$/;
+		die
+"power $cmd: invalid arguments, expected `#' as second argument since card # was given as first. Found: $ARGV[1]\n\n"
+		  if not $arg1_OK;
+	}
+}
+my $NAME = getFormal(@ARGV);
+
+# Do something based on the given command ($cmd)
+if ( $cmd eq "up" && defined( $ARGV[0] ) ) {
+	if ( $ARGV[0] eq "all" ) {
+		shift @ARGV;
+	}
+	if (checkDeviceFilesOpen(@ARGV)) {
+	    if (not $override) {
+		print "ERROR: found open DOM device files; can't power on.  Use -force to override.\n";
+		exit(1);
+	    }
+	    else {
+		print "WARNING: forced power-on even with device files open!\n";
+		print "DOMs will be left in configboot!!!\n";
+	    }
+	}
+	Power_Up(@ARGV);
+	printWarnings();
+}
+elsif ( $cmd eq "down" && defined( $ARGV[0] ) ) {
+	if ( $ARGV[0] eq "all" ) {
+		shift @ARGV;
+	}
+	Power_Down(@ARGV);
+	exit(0);
+}
+elsif ( $cmd eq "cycle" && defined( $ARGV[0] ) ) {
+	if ( $ARGV[0] eq "all" ) {
+		shift @ARGV;
+	}
+	if (checkDeviceFilesOpen(@ARGV)) {
+	    if (not $override) {
+
+		print "ERROR: found open DOM device files; can't power cycle.  Use -force to override.\n";
+		exit(1);
+	    }
+	    else {
+		print "WARNING: forced power-cycling even with device files open!\n";
+		print "DOMs will be left in configboot!!!\n";
+	    }
+	}
+	Power_Cycle(@ARGV);
+	printWarnings();
+}
+else {
+
+	# the usage statement & examples
+	print "usage: power [up | down | cycle] [(card# [pair#]) | quad]\n";
+	print "\tex. `power up 0`\tpowers up card 0\n";
+	print "\tex. `power down 0 1`\tpowers down card 0 pair 1\n";
+	print "\tex. `power cycle Q2`\tcycles power on quad #2\n\n";
+	exit(0);
+}
+print "\nEnter the command `status' to see that status of the DOMs.\n";
+exit(0);
+
+# Check to see if anything has the relevant device files open
+sub checkDeviceFilesOpen {
+
+    # List of devices we are operating on
+    my @devices = convertToDeviceFiles(@_);
+
+    foreach my $d (@devices) {
+	if ( -e $d ) {
+	    my $lsof = `lsof $d`;
+	    if ($lsof) {
+		return 1;
+	    }
+	}
+    }
+    return 0;
+}
+
+# Convert arguments, including undef or quads, to a list of 
+# DOM device files
+sub convertToDeviceFiles {
+    
+    my ( $dor, $pair ) = @_;
+    my @devices = ();
+
+    # This means all of them
+    if ( not defined($dor) ) {
+	foreach my $c (0..7) {
+	    foreach my $w (0..3) {
+		push @devices, "/dev/dhc${c}w${w}dA";
+		push @devices, "/dev/dhc${c}w${w}dB";
+	    }
+	}
+    }
+    else {
+	# convert the args to just pairs... (this includes Quad to pairs)
+	my @pairs = convertToWirePairs( $dor, $pair );
+	foreach my $p (@pairs) {
+	    my ($c, $w) = split(' ', $p);
+	    push @devices, "/dev/dhc${c}w${w}dA";
+	    push @devices, "/dev/dhc${c}w${w}dB";
+	}
+    }
+    return @devices;
+}
+
+# power up the dor card (and/or pairs...)
+sub Power_Up {
+
+	# update exp (how many DOR cards & iceboot DOMs we expect)
+	updateExpectations();
+
+	# dorcard & pair to power up.
+	# note: dor card could actually be a quad or undef
+	my ( $dor, $pair ) = @_;
+	my $iceboot_doms = 0;    # keep track of how many DOMs are in IceBoot
+	                         # Not sure what this part is for.... (Legacy Code)
+	`reset-comstat`;
+	# system("echo 0 > /proc/driver/domhub/blocking");
+	# system("echo 1 > /proc/driver/domhub/verbose");
+	print "\n";
+	print "Powering up $NAME DOMs on hub: $lc_name ...\n";
+
+	if ( not defined($dor) ) {
+		if ( not $override ) {
+			my @bad_software =
+			  qw(dtsx domcals moat14s shortmoats quadtools stfs multimons automates omicrons);
+			my @badguys   = ();
+			my $quickstat = `quickstatus`;
+			$quickstat =~ /software:(.+)/;
+			my $software = $1;
+			foreach (@bad_software) {
+				if ( $software =~ /$_/ ) {
+					push( @badguys, $_ );
+				}
+			}
+			if ( $#badguys > -1 ) {
+				my $str = join( ", ", @badguys );
+				my $msg =
+">>> $lc_name : power $cmd : Failure; interactive software is running: $str.\n"
+				  . ">>> $lc_name : to power $cmd this hub, use the command `power $cmd -force'\n";
+				die $msg;
+			}
+		}
+
+		
+		#
+		#	Assume ALL
+		#
+		# if given no args, then we assume they wanted all the
+		# DOMs turned on.
+		`killall -q dtsx`;
+		warnRedundant( "on", "all" );
+
+		# send the ON command...
+		my $cat;
+		if ($override) {
+		    $cat = `on -f all`;
+		}
+		else {
+		    $cat = `on all`;
+		}
+		my @lines          = split( "\n", $cat );
+		my $doms_turned_on = 0;
+		my $comm_num       = 0;
+        my $err_str        = "";
+
+		foreach (@lines) {
+			if (/\d \d [AB]: NOT communicating/) {
+				$doms_turned_on++;
+			}
+			elsif (/\d \d [AB]: communicating/) {
+				$doms_turned_on++;
+			}
+			elsif (/(\d+) DOMs are/) {
+				$comm_num = int($1);
+			}
+            elsif (/ERROR/) {
+                $err_str = $_;
+            }
+		}
+        if ($err_str ne "") {
+            print "$err_str\n";
+        }
+		print "Found $comm_num communicating DOMs.\n";
+
+		# record currents
+		`getcurrents.pl pUpOn`;
+		print "Turned on $NAME ($doms_turned_on) DOMs.\n";
+		printHoriz();
+		print "Moving $NAME ($comm_num) DOMs into iceboot...\n";
+
+		# move to ice boot - keeping the build #
+		my ( $total_ib, $moved_ib ) = iceboot_keepBuild("all");
+
+		# record the currents again
+		`getcurrents.pl pUpIce`;
+
+		# print any warnings
+		my $quickstat = `status -iceboot`;
+		my @hiwarns = grep { />>>/ } split( "\n", $quickstat );
+		if ( $#hiwarns >= 0 ) {
+			print "\n";
+			foreach (@hiwarns) {
+				print "$_\n";
+			}
+			print "\n";
+		}
+		my $doms_no_iceboot = $doms_turned_on - $total_ib;
+		my $comm_no_ib      = $comm_num - $total_ib;
+		format STDOUT =
+
+@|||||||||||||||||||||||||||||||||||||||||||||||||
+"*  *  *  *  *  *"
+@|||||||||||||||||||||||||||||||||||||||||||||||||
+"Full Power Up Report; $FULL_NAME"
+
+@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>    @<<<<<<<<<
+"DOMs turned on :", $doms_turned_on
+@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>    @<<<<<<<<<
+"Communicating DOMs :", $comm_num
+@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>    @<<<<<<<<<
+"DOMs moved into iceboot :", $moved_ib
+@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>    @<<<<<<<<<
+"Total DOMs in iceboot :", $total_ib
+@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>    @<<<<<<<<<
+"DOMs NOT in iceboot :", $doms_no_iceboot
+@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>    @<<<<<<<<<
+"Communicating DOMs NOT in iceboot :", $comm_no_ib
+@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>    @<<<<<<<<<
+"Expected # of DOMs in iceboot :", $EXPECTED_ICEBOOT_DOMS{$lc_name}
+
+
+.
+		write;
+	}
+	else {
+
+		# convert the args to just pairs... (this includes Quad to pairs)
+		my @pairs = convertToWirePairs( $dor, $pair );
+
+		# warn if your turning on any DOMs that are already on...
+		warnRedundant( "on", @pairs );
+
+		# turn on the DOMs and keep the comm doms
+		my @comm_doms = turnon(@pairs);
+		printHoriz();
+		my $comm_num = $#comm_doms + 1;
+		print "Moving $NAME ($comm_num) DOMs into iceboot...\n";
+
+		# join the communicate doms with " "
+		# this makes them the format for iceboot
+		my $str = join( " ", @comm_doms );
+
+		# move to ice boot...
+		iceboot_keepBuild($str);
+
+		# record currents again
+		`getcurrents.pl pUpsp`;
+		my $quickstat = `status -iceboot`;
+		my @hiwarns = grep { />>>/ } split( "\n", $quickstat );
+		if ( $#hiwarns >= 0 ) {
+			foreach (@hiwarns) {
+				my $warn = $_;
+				foreach (@pairs) {
+					$_ =~ /(\d)(\d)/;
+					my ( $crd, $pr ) = ( $1, $2 );
+					if ( $warn =~ /Card $crd Pair $pr/ ) {
+						print "$warn\n";
+					}
+				}
+			}
+		}
+	}
+	print "Powered up $NAME DOMs.\n";
+}
+
+#
+# Power_Down
+# Takes Nothing, a Quad, a Card, or a Card and a Pair
+# Turns what ever it is given (or not given) off.
+sub Power_Down {
+	my ( $card, $pair ) = @_;
+
+	# record currents prior to power down
+	print "\n";
+	print "Powering down $NAME DOMs...\n";
+	printWarnings();
+	if ( not defined($card) ) {
+		
+	`getcurrents.pl pDown`;
+		# if given no args, assume they wanted it all turned off...
+
+		`killall -q dtsx`;
+		`killall -q multimon.py`;
+		`off all`;
+	}
+	else {
+
+		# convert to pairs from Quad/card
+		my @pairs = convertToWirePairs( $card, $pair );
+	
+	`getcurrents.pl pDownsp`;
+		# print any warnings;
+
+		# join the pairs to make them fit format for off
+		my $str = join( " ", @pairs );
+		my $result = `off $str`;
+	}
+	print "Powered down $NAME DOMs.\n";
+}
+
+sub configboot_currentWarnings() {
+	my $status   = `status`;
+	my @lines    = split( "\n", $status );
+	my @warnings = grep { />>>/ } @lines;
+	if ( $#warnings >= 0 ) {
+		print "\n";
+		foreach (@warnings) {
+			print "$_\n";
+		}
+		print "\n";
+	}
+}
+
+#
+#
+# Takes nothing, a Quad, a DOR, or a DOR & pair then cycles power to it.
+#
+sub Power_Cycle {
+	my ( $dor, $pair ) = @_;
+	print "Power cycle $NAME ...\n";
+
+	# a power "cycle" is defined as turning them off, then turning them on.
+	# turn them off
+	Power_Down( $dor, $pair );
+	printHoriz();
+
+	# turn them on
+	Power_Up( $dor, $pair );
+}
+
+#
+# Takes a list of card-pairs, i.e. ("0 0", "0 1", "0 2", "1 0", "1 1", ...)
+# The first number is the card, the second number is the pair.
+# Of the pairs turned on, it returns a list of the DOMs that are now
+# communicating. (A dom is a string like "12A", that is card 1 pair 2 domA)
+#
+sub turnon {
+	my @card_pairs = @_;
+
+	# list of comm doms
+	my @comm_doms = ();
+
+	# join the args to format them for 'on'
+	my $str = join( " ", @card_pairs );
+
+	# record currents!
+	`getcurrents.pl pUpsp`;
+
+	# turn them on, the return will list
+	# which DOMs are communicating.
+	my $dom_list;
+	if ($override) {
+	    $dom_list = `on -f $str`;	    
+	}
+	else {
+	    $dom_list = `on $str`;
+	}
+	my $total_turned_on = 0;
+	my $err_str         = "";
+
+	# process each like of the return
+	foreach ( split( "\n", $dom_list ) ) {
+		if (/(\d).+(\d).+([AB]).+is comm/) {
+
+			# if it fits the patter /(number)(number)(A or B) ... is comm/
+			# then we assume that dom is communicating!
+			# add it to the list.
+			$total_turned_on++;
+			push( @comm_doms, "$1$2$3" );
+		}
+		elsif (/(\d).+(\d).+([AB])/) {
+			$total_turned_on++;
+		}
+        elsif (/ERROR/) {
+            $err_str = $_;
+        }
+	}
+    if ($err_str ne "") {
+        print "$err_str\n";
+        exit(-1);
+    }
+	print "Turned on $NAME ($total_turned_on) DOMs.\n";
+	return @comm_doms;
+}
+
+# warns the user if he is trying
+# to turn a dom off that is already off
+# of vice-versa for on...
+sub warnRedundant {
+	my ( $state, @card_pairs ) = @_;
+	if ( $card_pairs[0] eq "all" ) {
+		for ( 0 .. 18 ) {
+			warnRedundant( $state, convertToWirePairs("Q$_") );
+		}
+	}
+	foreach (@card_pairs) {
+		my ( $card, $pair ) = $_ =~ /(\d) (\d)/;
+		if ( not -d "/proc/driver/domhub/card$card/pair$pair/" ) {
+			next;
+		}
+		my $pwr = `cat /proc/driver/domhub/card$card/pair$pair/pwr`;
+		chomp $pwr;
+		if ( $pwr =~ /$state/ ) {
+			print "$pwr Turning $state anyways...\n";
+		}
+	}
+}
+
+# converts teh assortment of args to a meaningful name....
+sub getFormal {
+	my ( $arg, $pair ) = @_;
+	if ( !defined($arg) ) {
+		return "< ALL >";
+	}
+	if ( $arg eq "all" ) {
+		return "< ALL >";
+	}
+	if ( $arg =~ /Q[0_]?(\d+)/ ) {
+		return "< Quad $1 >";
+	}
+	if ( defined($pair) ) {
+		return "< Card $arg Pair $pair >";
+	}
+	return "< Card $arg >";
+}
+
+# takes random args and returns
+# dorcard-wirepairs....
+# takes: CARD PAIR
+# if given no pair, returns all the pairs
+# for that card. if given a card pair,
+# then it returns that card-pair.
+# if given a quad (ex. Q1 Q_3 Q02)
+# it returns all the card-wire-pairs for
+# that quad
+# the return is like:
+# "CARD# PAIR# CARD# PAIR# CARD# PAIR# ..."
+# so it fits the args for on or off
+sub convertToWirePairs {
+	my ( $arg, $pair ) = @_;
+
+	# if we're given a pair, return a pair
+	if ( defined($pair) ) {
+		return ("$arg $pair");
+	}
+	elsif ( $arg =~ /Q[_0]?(\d+)/ ) {
+
+		# Given a Quad
+		# use icehelp to figure out what DOMs are on that quad...
+		my $status_out = `$HOME/bin/icehelp status-output`;
+		my @lines      = split( "\n", $status_out );
+
+		# A hash of unique keys, such as "1 0" for card 1 pair 0
+		my %unique_hash = ();
+
+		# record the quad #
+		my $Q_ = $1;
+		foreach (@lines) {
+			if (/(\d)(\d)[AB].+Q[0_]?$Q_/) {
+				$unique_hash{"$1 $2"} = 1;
+			}
+		}
+
+		# keep the DOMs that it found...
+		# we use the list so duplicate DOMs (i.e. 2 per pair)
+		# don't cause duplicate entries for pairs
+		my @card_pairs = keys(%unique_hash);
+		return @card_pairs;
+	}
+	else {
+
+		# we were given a card, so return a list of pairs...
+		return ( "$arg 0", "$arg 1", "$arg 2", "$arg 3" );
+	}
+}
+
+# prints out warnings such as
+# >>>hub: too many dor cards
+# or
+# >>>hub: too few communicating doms
+sub printWarnings {
+	my $warnings      = "";
+	my $status_report = `status -warn`;
+	my @lines         = split( "\n", $status_report );
+	foreach (@lines) {
+		if (/>>>/) {
+			$warnings = $warnings . "$_\n";
+		}
+	}
+	if ( $warnings ne "" ) {
+		print "\n";
+		if ( defined($doms_in_iceboot)
+			&& $doms_in_iceboot ne $EXPECTED_ICEBOOT_DOMS{$lc_name} )
+		{
+			print
+">>> $lc_name : Unexpected # of DOMs in IceBoot: expected $EXPECTED_ICEBOOT_DOMS{$lc_name}; found: $doms_in_iceboot\n";
+		} elsif (not defined($EXPECTED_ICEBOOT_DOMS{$lc_name})) {
+			warn ">>> $lc_name : Number of expected iceboot DOMs not found in config file.\n";
+		}
+		print "$warnings\n";
+	}
+}
+
+#
+# updateExpectations
+# Reads in the ~/hubConfig.dat file and updates the Hash
+# EXPCETED_ICEBOOT_DOMS, so we know how many DOMs to expect to have in IceBoot.
+sub updateExpectations {
+	if ( -e $CONFIG_FILE ) {
+		open( CONFIG, "$CONFIG_FILE" );
+		my @page = (<CONFIG>);
+		close(CONFIG);
+		foreach (@page) {
+			if (/(\S+)\s+\d+\s+\d+\s+\d+\s+(\d+)\s*[\d\d,]*/) {
+				$EXPECTED_ICEBOOT_DOMS{$1} = $2;
+			}
+		}
+	}
+	else {
+	}
+}
+
+# prints a horizontal bar....
+sub printHoriz {
+	print "-\t-\t-\t-\t-\n";
+}
+
+#
+# iceboot_keepBuild
+# Expects as Args: A list of DOMs
+# e.g. ("00A", "00B", "01A", "01B", "10A", ...)
+# (dom = card+pair+(A or B))
+#
+# This attempts to move each of those DOMs into IceBoot,
+# and at the same time it records how many DOMs made it into ice boot,
+# and it tracks how many doms have waht build version.
+#
+# Prints out hwo many DOMs have which build versions, and warns if
+# there are multiple versions!
+#
+sub iceboot_keepBuild {
+	my $arg      = shift;
+	my $moved_ib = 0;
+	$doms_in_iceboot = 0;
+
+	# verbose iceboot just has more information that normal iceboot
+	my $iceboot_info       = `verbose_iceboot $arg`;
+	my @iceboot_info_lines = split( "\n", $iceboot_info );
+
+	# this maps (version => # of doms that have that version)
+	# so an entry like (432 => 5) means 5 DOMs have build 432.
+	my %ib_builds = ();
+	foreach (@iceboot_info_lines) {
+
+		# go through the iceboot line-by-line
+		if (/build ([\d\w]+)/) {
+			$moved_ib++;
+
+			# $1 is now a build #
+			if ( defined( $ib_builds{$1} ) ) {
+
+				# ++ the entry, another DOM has that build.
+				$ib_builds{$1}++;
+			}
+			else {
+
+				# make a new entry for that build #
+				$ib_builds{$1} = 1;
+			}
+		}
+		if (/(\d\d[AB] in iceboot)/) {
+
+			# we have a DOM in icebot!
+			$doms_in_iceboot++;
+		}
+	}
+
+	# keys are a list of build versions
+	my @keys = keys %ib_builds;
+	print "\n";
+	foreach (@keys) {
+		print "[ Moved $ib_builds{$_} DOMs into iceboot build version $_ ]\n";
+	}
+	if ( $#keys > 0 ) {
+
+		# we have more than 1 build version!
+		print
+"\n>>> $lc_name : Not all DOMs were moved into the same iceboot build version.\n\n";
+	}
+
+	print "Moved a total of $moved_ib DOMs into iceboot.\n";
+	print "There are $doms_in_iceboot DOMs in iceboot.\n";
+	return ( $doms_in_iceboot, $moved_ib );
+}
+
+#
+# The End.
+#
+

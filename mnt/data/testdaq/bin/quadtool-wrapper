@@ -1,0 +1,18 @@
+#!/bin/bash
+
+
+if [ $# -gt 1 ]
+then
+    echo "'runquadtool all' or 'runquadtool card#'"; exit 1
+fi
+if [ $# -lt 1 ]
+then
+    echo "'runquadtool all' or 'runquadtool card#'"; exit 1
+fi
+
+
+mkdir -p /mnt/data/testdaq/Results/CommsTests/quadtool/
+cd /mnt/data/testdaq/Results/CommsTests/quadtool/
+
+nohup runquadtool $1 &
+

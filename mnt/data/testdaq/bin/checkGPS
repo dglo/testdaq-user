@@ -1,0 +1,199 @@
+#!/usr/bin/perl
+use Thread;
+use strict;
+if ($ARGV[0] ne "noconf") {
+	confirm();
+}
+# # #
+#        CONFIG FILE
+# # # 
+my $HOME = $ENV{HOME};
+my $CONFIG_FILE = "$HOME/hubConfig.dat";
+# coded by Victor Bittorf
+# not documented at this time; sorry.
+my @cards;
+opendir( DIR, "/proc/driver/domhub/" )
+  || die "Cannot do that! Open /proc/driver/domhub/...\n\n";
+my @contents = readdir(DIR);
+closedir(DIR);
+foreach (@contents) {
+	if (/card/) {    # we have a card?
+		push( @cards, "/proc/driver/domhub/$_" );
+	}
+}
+
+# check to see if we have 8 cards...
+if ( $#cards eq 7 ) {
+
+	# we have 8 cards (last card index is 7)
+	# um... do nothing?
+}
+else {
+}
+
+# label all the cards,
+# i for internal, e for external, u for NO ONE KNOWS?!
+my @labeledCards = ();
+foreach (@cards) {
+	if (/card(\d+)/) {
+		my $type = `cat $_/clksel`;
+		my $num  = $1;
+		if ( $type =~ /internal/ ) {
+			push( @labeledCards, "i$num" );
+		}
+		elsif ( $type =~ /external/ ) {
+			push( @labeledCards, "e$num" );
+		}
+		else {
+			push( @labeledCards, "u$num" );
+		}
+	}
+}
+
+# Ask the user to comfirm...
+sub confirm {
+	print "\n\n\t\tCheck GPS\nChecking GPS may conflict with processes\n";
+	print "currently running on the DOMs.\n";
+	print "Do you with to continue? (yes/no) ";
+	my $answer = <STDIN>;
+	if ( $answer =~ /yes/ ) {
+		print "Check GPS: confirmed.\n";
+	}
+	else {
+		print "Check GPS exiting.\n";
+		exit(0);
+	}
+}
+
+# thread a readgps onto the dom thing.
+sub readGPS {
+	my ( $card ) = @_;
+	my $id = Thread->self()->tid();
+	#print "<readGPS> initiated on card: $card @ hub: $domhub.\n";
+	if ( $card eq " " ) {
+		return " ";
+	}
+	$card =~ /(\w)(\d+)/;
+	my $cardnum  = $2;
+	my $cardType = $1;
+	if ( !defined($cardnum) || $cardnum eq "" ) {
+		return "#?";
+	}
+	my $GPS_score = 0;
+	
+	my $tempFile = "/tmp/readgps$id$card.temp";
+	
+	system("readgps $cardnum -d >$tempFile");
+	
+	my $page = `cat $tempFile`;
+	my @page = split ("\n", $page);
+	@page = reverse @page;
+	for (0 .. 2) {
+		if ($page[$_] =~ /dt=(\d+)/) {
+			my $dt = $1;
+			if ($dt ne 20000000) {
+				return "dt";
+			}
+		} else {
+			$GPS_score = -1;
+		}
+	}
+	
+	if ( $cardType eq "i" && $GPS_score < 0 ) {
+		return "DOR ";
+	}
+	elsif ( $cardType eq "e" && $GPS_score < 0 ) {
+		return "BAD ";
+	}
+	elsif ( $cardType eq "i" ) {
+		return "INT ";
+	}
+	elsif ( $cardType eq "e" ) {
+		return ".";
+	}
+	else {
+		return "*?*$cardType";
+	}
+}
+
+my @sortedNums  = sort(@labeledCards);
+my $cardFlag;
+my @workingColumn = ();
+for ( 0 .. 7 ) {
+	$sortedNums[0] =~ /[ei](\d+)/;
+	if ( int($1) eq $_ ) {
+		$cardFlag = shift(@sortedNums);
+	} else {
+		$cardFlag = " ";
+	}
+	my $thr = Thread->new( \&readGPS, $cardFlag );
+	push( @workingColumn, $thr );
+}
+sleep(5);
+my $ps = `ps -ef`;
+my @lines = split("\n", $ps);
+foreach (@lines) {
+	if (/.+?(\d+).+gps/) {
+		system("kill $1");
+	}
+}
+my @list = ();
+foreach ( @workingColumn ) {
+	my $var = $_->join();
+	push (@list, "$var");
+}
+if ($ARGV[1] eq "nodisp") {
+	my $str = join("-", @list);
+	print $str, "\n";
+	printWarnings();
+} else {
+	my $temp;
+	my $TEXT = `hostname -s`;
+	chomp $TEXT;
+	$TEXT =~ /(.+)/;
+	my $FULL_NAME = $1;
+	# extract a DOMHUB name
+	if ( $FULL_NAME =~ /hub(\d{2})/i || $FULL_NAME =~ /-(..)/ ) {
+			$temp = $1;
+	}
+	print "\n\nKey:\n";
+	print "\t.\t- External & GPS, all looks good\n";
+	print "\tBAD\t- External & No GPS\n";
+	print "\tINT\t- Internal & GPS\n";
+	print "\tDOR\t- Internal & No GPS\n";
+	print "\tdt\t - delta-t between GPS pulses is wrong, use 'readgps # -d' for further info\n";
+	print "\t\" \"\t- No DOR card detected\n";
+	print "\t*?*\t- Program Error: type from clksel unkown.\n";
+	print "\t\#?\t- Program Error: unexpected dir structure.\n";
+	print "\n";
+	print "-----------\n";
+	my $num = 0;
+	print "Hub: $FULL_NAME\n";
+	foreach ( @list ) {
+		print "crd$num\t$_\n";
+		$num++;
+	}
+	print "-----------\n";
+	printWarnings();
+}
+
+sub printWarnings {
+	my $warnings      = "";
+	my $status_report = `status -warn`;
+	my @lines         = split( "\n", $status_report );
+
+	foreach (@lines) {
+		if (/>>>/) {
+			$warnings = $warnings . "$_\n";
+		}
+	}
+	if ( $warnings ne "" ) {
+		print "\n$warnings\n";
+	}
+}
+
+
+sub sys {
+	my $args = shift;
+	system($args);
+}

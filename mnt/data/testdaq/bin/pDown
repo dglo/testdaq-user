@@ -1,0 +1,8 @@
+#!/usr/bin/perl
+use strict;
+# coded by Victor Bittorf
+my $str = join (" ", @ARGV);
+if (! defined ($ARGV[0]) ) {
+	$str = "all";
+}
+system ("power down $str");

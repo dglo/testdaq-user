@@ -1,0 +1,4 @@
+#!/usr/bin/perl
+system "/mnt/data/testdaq/bin/makequickstatus";
+
+

@@ -1,0 +1,99 @@
+#!/bin/csh
+
+if ($#argv > 1) then
+	echo "Usage: $0 A - for only As"
+	echo "       $0 B - for only Bs"
+	echo "Usage: $0   - for all"
+	exit
+endif
+if ( $#argv == 1) then
+	if ($argv[1] != A && $argv[1] != B ) then
+	echo "Usage: $0 A - for only As"
+	echo "       $0 B - for only Bs"
+	echo "Usage: $0   - for all"
+	exit
+ endif
+endif
+if ($#argv == 0 ) then
+	set mode = "All"
+endif
+if ($#argv == 1) then
+	if ($argv[1] == A ) then
+	 set mode=A
+	 echo "starting only A' pairs..."
+	endif
+	if ( $argv[1] == B ) then
+	 set mode=B
+	 echo "starting only B' pairs..."
+	endif
+endif
+echo mode=$mode
+
+if ( ($mode == B) || ($mode == All) )  then	
+ $HOME/hutil/dtsx -p 5001 /dev/dhc0w0dB &
+ $HOME/hutil/dtsx -p 5003 /dev/dhc0w1dB &
+ $HOME/hutil/dtsx -p 5005 /dev/dhc0w2dB &
+ $HOME/hutil/dtsx -p 5007 /dev/dhc0w3dB &
+ $HOME/hutil/dtsx -p 5009 /dev/dhc1w0dB &
+ $HOME/hutil/dtsx -p 5011 /dev/dhc1w1dB &
+ $HOME/hutil/dtsx -p 5013 /dev/dhc1w2dB &
+ $HOME/hutil/dtsx -p 5015 /dev/dhc1w3dB &
+ $HOME/hutil/dtsx -p 5017 /dev/dhc2w0dB &
+ $HOME/hutil/dtsx -p 5019 /dev/dhc2w1dB &
+ $HOME/hutil/dtsx -p 5021 /dev/dhc2w2dB &
+ $HOME/hutil/dtsx -p 5023 /dev/dhc2w3dB &
+ $HOME/hutil/dtsx -p 5025 /dev/dhc3w0dB &
+ $HOME/hutil/dtsx -p 5027 /dev/dhc3w1dB &
+ $HOME/hutil/dtsx -p 5029 /dev/dhc3w2dB &
+ $HOME/hutil/dtsx -p 5031 /dev/dhc3w3dB &
+ $HOME/hutil/dtsx -p 5033 /dev/dhc4w0dB &
+ $HOME/hutil/dtsx -p 5035 /dev/dhc4w1dB &
+ $HOME/hutil/dtsx -p 5037 /dev/dhc4w2dB &
+ $HOME/hutil/dtsx -p 5039 /dev/dhc4w3dB &
+ $HOME/hutil/dtsx -p 5041 /dev/dhc5w0dB &
+ $HOME/hutil/dtsx -p 5043 /dev/dhc5w1dB &
+ $HOME/hutil/dtsx -p 5045 /dev/dhc5w2dB &
+ $HOME/hutil/dtsx -p 5047 /dev/dhc5w3dB &
+ $HOME/hutil/dtsx -p 5049 /dev/dhc6w0dB &
+ $HOME/hutil/dtsx -p 5051 /dev/dhc6w1dB &
+ $HOME/hutil/dtsx -p 5053 /dev/dhc6w2dB &
+ $HOME/hutil/dtsx -p 5055 /dev/dhc6w3dB &
+ $HOME/hutil/dtsx -p 5057 /dev/dhc7w0dB &
+ $HOME/hutil/dtsx -p 5059 /dev/dhc7w1dB &
+ $HOME/hutil/dtsx -p 5061 /dev/dhc7w2dB &
+ $HOME/hutil/dtsx -p 5063 /dev/dhc7w3dB &
+endif
+if ( ($mode == A) || ($mode == All) )  then	
+ $HOME/hutil/dtsx -p 5002 /dev/dhc0w0dA &
+ $HOME/hutil/dtsx -p 5004 /dev/dhc0w1dA &
+ $HOME/hutil/dtsx -p 5006 /dev/dhc0w2dA &
+ $HOME/hutil/dtsx -p 5008 /dev/dhc0w3dA &
+ $HOME/hutil/dtsx -p 5010 /dev/dhc1w0dA &
+ $HOME/hutil/dtsx -p 5012 /dev/dhc1w1dA &
+ $HOME/hutil/dtsx -p 5014 /dev/dhc1w2dA &
+ $HOME/hutil/dtsx -p 5016 /dev/dhc1w3dA &
+ $HOME/hutil/dtsx -p 5018 /dev/dhc2w0dA &
+ $HOME/hutil/dtsx -p 5020 /dev/dhc2w1dA &
+ $HOME/hutil/dtsx -p 5022 /dev/dhc2w2dA &
+ $HOME/hutil/dtsx -p 5024 /dev/dhc2w3dA &
+ $HOME/hutil/dtsx -p 5026 /dev/dhc3w0dA &
+ $HOME/hutil/dtsx -p 5028 /dev/dhc3w1dA &
+ $HOME/hutil/dtsx -p 5030 /dev/dhc3w2dA &
+ $HOME/hutil/dtsx -p 5032 /dev/dhc3w3dA &
+ $HOME/hutil/dtsx -p 5034 /dev/dhc4w0dA &
+ $HOME/hutil/dtsx -p 5036 /dev/dhc4w1dA &
+ $HOME/hutil/dtsx -p 5038 /dev/dhc4w2dA &
+ $HOME/hutil/dtsx -p 5040 /dev/dhc4w3dA &
+ $HOME/hutil/dtsx -p 5042 /dev/dhc5w0dA &
+ $HOME/hutil/dtsx -p 5044 /dev/dhc5w1dA &
+ $HOME/hutil/dtsx -p 5046 /dev/dhc5w2dA &
+ $HOME/hutil/dtsx -p 5048 /dev/dhc5w3dA &
+ $HOME/hutil/dtsx -p 5050 /dev/dhc6w0dA &
+ $HOME/hutil/dtsx -p 5052 /dev/dhc6w1dA &
+ $HOME/hutil/dtsx -p 5054 /dev/dhc6w2dA &
+ $HOME/hutil/dtsx -p 5056 /dev/dhc6w3dA &
+ $HOME/hutil/dtsx -p 5058 /dev/dhc7w0dA &
+ $HOME/hutil/dtsx -p 5060 /dev/dhc7w1dA &
+ $HOME/hutil/dtsx -p 5062 /dev/dhc7w2dA &
+ $HOME/hutil/dtsx -p 5064 /dev/dhc7w3dA &
+endif

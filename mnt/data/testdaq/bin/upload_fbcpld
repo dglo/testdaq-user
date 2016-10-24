@@ -1,0 +1,18 @@
+image=`basename $1`
+port=5001
+while [ $port -lt 5065 ]; do
+	num=`expr $port - 5001`
+	card=`expr $num / 8`
+	pair=`expr $num % 8`
+	pair=`expr $pair / 2`
+	dom=`expr $num % 2` 
+	if [ $dom -eq 0 ]; then
+		dom=B
+	elif [ $dom -eq 1 ]; then
+		dom=A
+	fi
+        echo uploading for dhc${card}w${pair}d${dom} port $port
+	xymodem /dev/dhc${card}w${pair}d${dom} $1 $image >& /dev/null
+	program_fbcpld.py $port $image
+	port=`expr $port + 1`
+done

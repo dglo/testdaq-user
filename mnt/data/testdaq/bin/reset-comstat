@@ -1,0 +1,90 @@
+#!/bin/bash
+# m krasberg
+if [ -e /proc/driver/domhub/card0/pair0/domA/comstat ]
+then
+ echo reset > /proc/driver/domhub/card0/pair0/domA/comstat
+ echo reset > /proc/driver/domhub/card0/pair0/domB/comstat
+ echo reset > /proc/driver/domhub/card0/pair1/domA/comstat
+ echo reset > /proc/driver/domhub/card0/pair1/domB/comstat
+ echo reset > /proc/driver/domhub/card0/pair2/domA/comstat
+ echo reset > /proc/driver/domhub/card0/pair2/domB/comstat
+ echo reset > /proc/driver/domhub/card0/pair3/domA/comstat
+ echo reset > /proc/driver/domhub/card0/pair3/domB/comstat
+fi
+if [ -e /proc/driver/domhub/card1/pair0/domA/comstat ]
+then
+ echo reset > /proc/driver/domhub/card1/pair0/domA/comstat
+ echo reset > /proc/driver/domhub/card1/pair0/domB/comstat
+ echo reset > /proc/driver/domhub/card1/pair1/domA/comstat
+ echo reset > /proc/driver/domhub/card1/pair1/domB/comstat
+ echo reset > /proc/driver/domhub/card1/pair2/domA/comstat
+ echo reset > /proc/driver/domhub/card1/pair2/domB/comstat
+ echo reset > /proc/driver/domhub/card1/pair3/domA/comstat
+ echo reset > /proc/driver/domhub/card1/pair3/domB/comstat
+fi
+if [ -e /proc/driver/domhub/card2/pair0/domA/comstat ]
+then
+ echo reset > /proc/driver/domhub/card2/pair0/domA/comstat
+ echo reset > /proc/driver/domhub/card2/pair0/domB/comstat
+ echo reset > /proc/driver/domhub/card2/pair1/domA/comstat
+ echo reset > /proc/driver/domhub/card2/pair1/domB/comstat
+ echo reset > /proc/driver/domhub/card2/pair2/domA/comstat
+ echo reset > /proc/driver/domhub/card2/pair2/domB/comstat
+ echo reset > /proc/driver/domhub/card2/pair3/domA/comstat
+ echo reset > /proc/driver/domhub/card2/pair3/domB/comstat
+fi
+if [ -e /proc/driver/domhub/card3/pair0/domA/comstat ]
+then
+ echo reset > /proc/driver/domhub/card3/pair0/domA/comstat
+ echo reset > /proc/driver/domhub/card3/pair0/domB/comstat
+ echo reset > /proc/driver/domhub/card3/pair1/domA/comstat
+ echo reset > /proc/driver/domhub/card3/pair1/domB/comstat
+ echo reset > /proc/driver/domhub/card3/pair2/domA/comstat
+ echo reset > /proc/driver/domhub/card3/pair2/domB/comstat
+ echo reset > /proc/driver/domhub/card3/pair3/domA/comstat
+ echo reset > /proc/driver/domhub/card3/pair3/domB/comstat
+fi
+if [ -e /proc/driver/domhub/card4/pair0/domA/comstat ]
+then
+ echo reset > /proc/driver/domhub/card4/pair0/domA/comstat
+ echo reset > /proc/driver/domhub/card4/pair0/domB/comstat
+ echo reset > /proc/driver/domhub/card4/pair1/domA/comstat
+ echo reset > /proc/driver/domhub/card4/pair1/domB/comstat
+ echo reset > /proc/driver/domhub/card4/pair2/domA/comstat
+ echo reset > /proc/driver/domhub/card4/pair2/domB/comstat
+ echo reset > /proc/driver/domhub/card4/pair3/domA/comstat
+ echo reset > /proc/driver/domhub/card4/pair3/domB/comstat
+fi
+if [ -e /proc/driver/domhub/card5/pair0/domA/comstat ]
+then
+ echo reset > /proc/driver/domhub/card5/pair0/domA/comstat
+ echo reset > /proc/driver/domhub/card5/pair0/domB/comstat
+ echo reset > /proc/driver/domhub/card5/pair1/domA/comstat
+ echo reset > /proc/driver/domhub/card5/pair1/domB/comstat
+ echo reset > /proc/driver/domhub/card5/pair2/domA/comstat
+ echo reset > /proc/driver/domhub/card5/pair2/domB/comstat
+ echo reset > /proc/driver/domhub/card5/pair3/domA/comstat
+ echo reset > /proc/driver/domhub/card5/pair3/domB/comstat
+fi
+if [ -e /proc/driver/domhub/card6/pair0/domA/comstat ]
+then
+ echo reset > /proc/driver/domhub/card6/pair0/domA/comstat
+ echo reset > /proc/driver/domhub/card6/pair0/domB/comstat
+ echo reset > /proc/driver/domhub/card6/pair1/domA/comstat
+ echo reset > /proc/driver/domhub/card6/pair1/domB/comstat
+ echo reset > /proc/driver/domhub/card6/pair2/domA/comstat
+ echo reset > /proc/driver/domhub/card6/pair2/domB/comstat
+ echo reset > /proc/driver/domhub/card6/pair3/domA/comstat
+ echo reset > /proc/driver/domhub/card6/pair3/domB/comstat
+fi
+if [ -e /proc/driver/domhub/card7/pair0/domA/comstat ]
+then
+ echo reset > /proc/driver/domhub/card7/pair0/domA/comstat
+ echo reset > /proc/driver/domhub/card7/pair0/domB/comstat
+ echo reset > /proc/driver/domhub/card7/pair1/domA/comstat
+ echo reset > /proc/driver/domhub/card7/pair1/domB/comstat
+ echo reset > /proc/driver/domhub/card7/pair2/domA/comstat
+ echo reset > /proc/driver/domhub/card7/pair2/domB/comstat
+ echo reset > /proc/driver/domhub/card7/pair3/domA/comstat
+ echo reset > /proc/driver/domhub/card7/pair3/domB/comstat
+fi

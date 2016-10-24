@@ -1,0 +1,967 @@
+#!/usr/bin/perl
+#
+##############################################################################
+#                      Icecube System Software
+# This software is intended for use on the icecube systems.
+# http://www.icecube.wisc.edu/
+#
+##############################################################################
+#
+# Coded by Victor Bittorf & Mark Krasberg
+# vbittorf@icecube.wisc.edu
+# krasberg@icecube.wisc.edu
+#
+# SVN Manged Source Code
+# $LastChangedRevision: 4223 $
+# $LastChangedDate: 2009-06-01 10:39:43 -0500 (Mon, 01 Jun 2009) $
+# $HeadURL: http://code.icecube.wisc.edu/daq/sandbox/SystemMonitoring/trunk/pager.pl $
+#
+# Last Updated by;
+# $LastChangedBy: vbittorf $
+#
+# provides an automatic paging untility for
+# paging about problems found by a monitor script.
+#
+#
+our $VERSION = '$LastChangedRevision: 4223 $';
+$VERSION =~ s/[^\d]//g;
+
+=preamble
+
+	Page script... hacked together to provide a working program;
+	Documentation is being added later....
+
+=cut
+
+=kown bugs
+
+	- Possible problem with checkFiles (the ls keep an eye on)
+	          (may trigger IFs when it shouldn't...)
+
+	- Not all files are checked before reading
+	- No user check, or dependency check
+	- No check for mail processes
+	- No library version check
+	- Lacking checks in general
+	- Auto-generates state file if missing (no warning)
+	- leans on DAQM.pm -- see the lack documentation there.
+
+=cut
+
+require 5.008_001;
+use strict;
+
+# add bin to the @INC, so it can find daqm.pm
+BEGIN { push( @INC, "$ENV{HOME}/bin/" ) }
+
+# load up daqm w/ required subs
+use daqm qw(
+  getShortTime
+  email loadconfig strip $HOST
+  ARGVGrep verbose %DASH_HASH sendemail
+  $DAQM_PATH $HOSTNAME humantime
+);
+
+# have DAQM extract anything with a `-' into the
+# '%DASH_HASH'
+ARGVGrep( \@ARGV );
+
+#
+# Declare Variables
+#
+my @WATCH_FILES = ();    # page files to look for
+my @CC_LIST     = ();    # the CC-email list when we page
+my %STATE       = ();    # the state hash
+my $temp_cc_text;        # temp variable for CC-emails
+our $REPORT        = "";                        # String to hold information...
+our $RUNTIME       = time;
+our $RUNTIME_STAMP = localtime $RUNTIME;
+our $DIR           = "$DAQM_PATH/pager";        # The pager directory
+our $PAGER_LOG     = "$DIR/pager.$HOST.log";    # The pager log file
+our $IN_ERROR      = 0;                         # boolean: are there errors?
+our %Emailed = ();    # keep track of who we have emaield
+
+# the file that holds the pager emails
+our $PAGER_FILE = "$DAQM_PATH/pagers.info";
+
+# The primary and backup pager emails
+our ( $PRIMARY_PAGER, $BACKUP_PAGER );
+
+# declare misc constants
+our ( $CONFIG_TEXT, $LOG_FILE, $MAX_DIS, $STATE_FILE );
+
+# Boolean: do winters need to respond?
+our $RESPOND_REQUIRED = 0;
+our $TEMPLATE         = '(N/a*)*';                    # Pack & unpack template
+our $CONFIG_FILE      = "$DAQM_PATH/pager.config";    # config file
+our $state_file       = "$DIR/pager.$HOST.state";     # staet file
+our %PAGERS;
+our $USER = $ENV{USER};
+
+
+# state variables
+our ( $_new, $_state, $_disable, $_pagenum );
+
+# _new       Has anything changed?
+#
+# _state     the current 'state' (the # of pages in a row)
+#            -1 means pager is disabled.
+#            0 means there are no errors.
+#            >0 means we have been paging
+#
+# _disable   time - in seconds - that the pager is disabled UNTIL
+#            <= 0 if pager is enabled
+#            pager is disabled until $_disable <= time()
+#
+# _pagenum   The current page number... (++ every time we page)
+#
+$_new = 0;    # default "new" to be false
+
+# Hook string args to sub-refs
+my %ARG_HASH = (
+	'--enable'    => \&enable,
+	'--disable'   => \&disable_hook,
+	'--tick'      => \&tick,
+	'--respond'   => \&respond,
+	'--info'    => \&report,
+	'--help'      => \&help,
+	'--shiftChange' => \&hardSwap,
+	'--backup-takeover' => \&softSwap,
+	'--clear' => \&clear,
+);
+
+# Make the page directory, if needed....
+`mkdir $DIR` unless -e $DIR;
+
+# Help! basic arg info.
+my %HELP_HASH = (
+	'--enable'  => [ '*',  'enables the pager to start paging again' ],
+	'--disable' => [ '*',  'disables the pager for a given number of hours' ],
+	'--tick'    => [ '**', 'checks for problems & pages if it finds any' ],
+	'--respond' => [ '*',  'respond to a page, let them know you got it!' ],
+	'--info'     => [ '', 'report on current state & problems' ],
+	'--shiftChange'   => ['*', 'Swaps on/off shifts people ONLY.'],
+	'--backup-takeover' => ['*', 'Backup assumse primary role (with backup pager).'],
+	'--clear' => ['*', 'Deprecated! (only use if you know why its here)'],
+);
+##########################
+#                        #
+#   LOAD CONFIG & etc.   #
+#                        #
+##########################
+loadpagers();    # load the pagers (from pagers.info)
+my @CONFIG_LIST =
+  ( 'log_file', 'max_disable', 'cc', 'backup_delay', 'broadcast' );
+my @op = %DASH_HASH;
+my $op = shift @op;    # extract the first --thing
+
+# if we don't have an -- argument, print help & exit.
+if ( not defined $op ) {
+	printusage();
+	exit(0);
+}
+
+# Check for existance of config
+die "Config file ($CONFIG_FILE) does not exist.\n" if ( not -e $CONFIG_FILE );
+#
+# Read in config file & setup variables
+#
+verbose( 1, "About to read config file...\n" );
+$CONFIG_TEXT = `cat $CONFIG_FILE`;
+
+# load the config variables (see @CONFIG_LIST above)
+my %CONFIG = loadconfig( $CONFIG_TEXT, @CONFIG_LIST );
+
+# extract
+my $temp = $1 if $CONFIG_TEXT =~ /WATCH_FILES(.+)/s;
+@WATCH_FILES = split( /[\n\r]+/, $temp );
+@WATCH_FILES = grep { /\w/ } @WATCH_FILES;
+@CC_LIST = split( /\s/, $CONFIG{'cc'} );
+
+#
+#
+#     LOAD THE STATE FILE
+#
+#
+if ( -e $state_file ) {
+	open( STATE, $state_file )
+	  || die "Cannot open state file: $state_file\n $! ";
+
+	# unpack the data
+	my @arr = unpack $TEMPLATE, join( "", (<STATE>) );
+	close(STATE);
+	$_state   = shift @arr;
+	$_pagenum = shift @arr;
+	$_disable = shift @arr;
+	%STATE    = @arr;         # the rest of the array is the state
+} else {
+
+	# default to 0s
+	$_state   = 0;
+	$_pagenum = 0;
+	$_disable = 0;
+	%STATE    = ();
+}
+
+# If there si anything in %STATE, then we have errors.
+$IN_ERROR = keys %STATE;
+
+#
+#
+#    CALL SUB HOOK
+#       - or die
+#
+#
+if ( $ARG_HASH{$op} ) {
+	my $ref = $ARG_HASH{$op};
+
+	# call the sub-ref to drive the rest of the
+	# script.
+	&$ref(@ARGV);
+} else {
+	print "$op not a valid COMMAND.\n";
+	print "use `$0 --help' for more information.\n";
+}
+###############
+#  END SCRIPT
+exit(0);    #
+            #  ALL DONE!
+###############
+#############################################################################
+#
+#               SUBS
+#
+#############################################################################
+
+=saveState
+    Save the current state - 
+    
+    $_state, $_pagenum, $_disable, %STATE
+=cut
+
+sub saveState {
+	my $packed = pack $TEMPLATE, $_state, $_pagenum, $_disable, %STATE;
+	open( OUT, ">$state_file" )
+	  || die "Cannot open state file: $state_file\n $! ";
+	print OUT $packed;
+	close OUT;
+}
+
+=checkFiles
+	Checks all of the files we should be watching for,
+	
+	Any files we find will be put into %STATE mapped as:
+	
+	( "FILE NAME" => "FILE TEXT" )
+	
+	If a file does not exist, but it is in %STATE, then
+	that file is deleted from %STATE.
+	
+	If a file is removed or added to %STATE -- or a file's contents
+	does not match what is in %STATE, then the $_new variable
+	is set to true; showing that we have a NEW state!
+	
+	After a call, %STATE will reflect the current .page files,
+	
+=cut
+
+sub checkFiles {
+	foreach (@WATCH_FILES) {
+		my @arr = split( /\s/, $_ );
+		verbose( 1, "checkFiles:: $_ ; about to LS.\n" );
+		my $ls;    # hold the cat text (it moves from ls back to cat...)
+		if ( $arr[0] eq $HOST ) {
+
+			# use the local host machine if we're there.
+			verbose( 2, "checkfiles:: @arr :: using local host\n" );
+			$ls = `grep '>>>' '$arr[1]' 2>/dev/null`;
+		} else {
+
+			# else ssh & cat
+			$ls = `ssh $arr[0] "grep \\">>>\\" $arr[1]" 2>/dev/null`;
+		}
+
+		# NOTE: There is no way to tell an EMPTY file from one that
+		# doesn't exist.... so an empty file is assumed to not exist.
+		$ls = strip($ls);
+		verbose( 1, "checkFiles:: $_ => $ls" );
+
+		# if tehre is text in the cat, then we have a file!
+		if ( $ls =~ /[a-zA-Z]/ ) {
+			if ( ( not defined $STATE{$_} ) || $STATE{$_} ne $ls ) {
+				$_new = 1;
+				if (/trip/) {
+					# this is a special override for trip
+					# pages. The trip page should page
+					# both winter over right away.
+					# This hack will make the system think
+					# the problem has existed for longer than
+					# it really has, meaning we page both
+					# WOs right away, instead of prime first.
+					$_state = $CONFIG{'backup_delay'};
+				}
+			} else {
+				verbose(1, "CheckFiles:: $STATE{$_} eq $ls");
+			}
+			$STATE{$_} = $ls;
+		} else {
+			if ( defined $STATE{$_} ) {
+				$_new = 1;
+				verbose( 1, " << ENTERING NEW STATE\n" );
+				delete $STATE{$_};
+			}
+		}
+	}
+}
+
+sub clear {
+	print "Clearing pager...\n";
+	$_disable = 0;
+	$_state = 0;
+	%STATE = ();
+	# Save the new, empty state!
+	saveState();
+	print "Deleting watch files..\n";
+	
+	foreach (@WATCH_FILES) {
+		my @arr = split( /\s/, $_ );
+		if ( $arr[0] eq $HOST ) {
+		if (-e $arr[1]) {
+			print "deleting $arr[1]\n";
+			`rm -f $arr[1]`;
+		}
+		}
+	}
+	print "Pager cleared! (No existing problems, enabled, state=0)\n";
+}
+
+=tick
+
+   The 'crontab' thingie....
+   
+   It will auto-enable the system if disable time is up,
+   it will also check for any .page files, and page if appropriate.
+
+=cut
+
+sub tick {
+
+	# check if our disable time is up...
+	if ( $_disable > 0 ) {
+		if ( $_disable < time ) {
+			autoEnable();
+		}
+	}
+	checkFiles();    # check for page files in error...
+	my @keys = keys %STATE;    # get the keys (.page files that exist)
+	my $errs = $#keys + 1;     # count them
+
+	# if we are entering a NEW & have no errors,
+	# the we let people know we're all clear.
+	if ( $_new && not $errs ) {
+		verbose( 1, "ALL CLEAR" );
+
+		# ALL CLEAR
+#		page('ALL CLEAR');
+		$_state = 0 unless $_state eq -1;
+	}
+
+	# if we have errors and their new, let people
+	# know there is a new error state.
+	if ( $errs && $_new ) {
+		verbose( 1, "NEW ERRORS FOUND" );
+
+		# NEW ERRORS
+		$_state++ unless $_state eq -1;
+		$RESPOND_REQUIRED = 1 unless $_state eq -1;
+		page("New error state");
+	}
+
+	# if we have errors and they're not new,
+	# then we let them know that!
+	if ( $errs && not $_new ) {
+		verbose( 1, "SAME ERRORS FOUND" );
+
+		# SAME ERRORS
+		if ( $_state ne -1 ) {
+			$_state++;
+			$RESPOND_REQUIRED = 1;
+			page('same errors');
+		} else {
+			verbose( 1, "SKIPPING EMAIL:: DISABLED" );
+		}
+	}
+
+	# No matter what happens, we save the new state
+	saveState();
+
+	# >> Return nothing: Program exits.
+}
+
+=disable_hook
+
+	The hook for disabling...
+	Checks to see if --disable is being used in place
+	of --respond. If this is so, then it defaults to
+	use --respond.
+	otherwise it just disables the pager for more time.
+
+=cut
+
+sub disable_hook {
+	my $hours = shift;
+
+	#	if ( $_state > 0 ) {
+	#
+	#		# they used --disable instead of --respond
+	#		respond();
+	#		return;
+	#	}
+	if (   not defined($hours)
+		|| $hours > $CONFIG{'max_disable'}
+		|| $hours <= 0 )
+	{
+
+		# die - invalid time
+		print "usage:  $0 --disable <NUMBER>\n\n",
+"invalid Number ($hours). Must be 0 < NUMBER < $CONFIG{'max_disable'}\n";
+		exit(0);
+	}
+
+	# call disable: store the next start time (to be _dsiable...)
+	my $start_time = disable($hours);
+	my $message    =
+	    "The pager system has been DISABLED for $hours hours.\n"
+	  . "Any previous disable period is over-ridden; pager system will start again at $start_time.";
+	print $message, "\n";
+
+	# Email the north pole!
+	sys_email( "'pager --disable $hours' at ", $message, \@CC_LIST );
+#	broadcast( "'pager --disable $hours' at ", $message );
+}
+
+=string_errors
+	
+	String the error files that exist (i.e. .page files)
+	
+	Return "No Problems Found" if there are no .page files...
+
+=cut
+
+sub string_errors {
+	my $str = "No Problems Found\n";
+	if ( keys %STATE ) {
+		$str = "Current Errors:\n";
+		foreach ( keys %STATE ) {
+			my $file    = $_;
+			my $text    = $STATE{$file};
+			my $prt_to  = 1;
+			my @lines   = split /\n/, $text;
+			my $maxline = @lines;
+			$str = $str . "$file\n";
+			for ( 0 .. ( ( $prt_to > $#lines ) ? $#lines : $prt_to ) ) {
+				my $n = $_ + 1;
+				$str = $str . "line $n/$maxline  $lines[$_]\n";
+			}
+			$str = $str . "\n";
+		}
+	}
+	return $str;
+}
+
+=disable
+
+	Disables the paging system for a given amount fo time (no checked)
+	
+	update $_disable timer
+	and set the _state to -1 (showing we're disabled)
+	
+	returns the time (seconds) we will re-enable
+
+	also creates the file "pager.disable" which is used to determine if the system is disabled by the new paging system
+	
+=cut
+
+sub disable {
+	system("touch /mnt/data/testdaq/pager.disable");
+	my $hours          = shift;
+	my $time           = time;
+	my $sec_to_disable = toseconds($hours);
+	$_disable = $time + $sec_to_disable;
+	$_state   = -1;
+	my $start_time = localtime( $time + $sec_to_disable );
+	#logpage("pager disabled for $hours hours; re-enables at $start_time");
+	saveState();
+	return $start_time;
+}
+
+=enable
+
+	Enables the pager, logs and emails.
+	
+	Also resets the state to 0 (and clears %STATE).
+	We start over with a clean slate...
+	
+	(if we're not disabled, we return with no action taken.)
+
+	Also deletes "pager.disable"
+
+=cut
+
+sub enable {
+	if ( $_state == -1 ) {
+		system ("rm /mnt/data/testdaq/pager.disable");
+		print "Pager now enabled.\n";
+		$_disable = -1;
+		$_state   = 0;
+		%STATE    = ();
+		saveState();
+		#logpage("manual enable");
+		sys_email( "'pager --enable' at",
+			"The pager has been manually re-enabled at $RUNTIME_STAMP.\n",
+			\@CC_LIST );
+	} else {
+		print "Pager already enabled. no action taken.\n";
+	}
+}
+
+# convert hours to seconds...
+sub toseconds {
+	return shift(@_) * 60 * 60;
+}
+
+=autoEnable
+
+	Auto-enable the paging system... (meanign the disable time is up)
+	
+	Sets the _disable to -1, state to 0, etc.
+	Logs auto-enable, and emails north pole.
+
+	Also removes "pager.disable"
+
+=cut
+
+sub autoEnable {
+	$_disable = -1;
+	$_state   = 0;
+	%STATE    = ();
+	system ("rm /mnt/data/testdaq/pager.disable");
+	logpage("auto-enable (disable time period over)");
+
+	#	print "Pager auto-enabled\n";
+	sys_email(
+		'Pager auto enable',
+"this pager has re-enabled its self because the disable period has elapsed.",
+		\@CC_LIST
+	);
+}
+
+=page
+	
+	The argument can be a format string 
+	(the first %s will be replaced with problem list...)
+
+	Send a page to the winters, send a message to
+	some people, and broadcast the page to more people...
+	
+	This will ALWAYS page.
+	
+	Decides who page, uses $RESPONSE_REQUIRED variable.
+
+=cut
+
+sub page {
+	my $msg = shift;
+
+	# list the .page files
+	my $probs = join( "; ", keys %STATE );
+	my $who   = 'prime';                      # default to paging primary
+	my @to    = ( $PAGERS{'prime-email'} );
+
+	# check if we page backup
+	if ( $_state >= $CONFIG{'backup_delay'} ) {
+		$who = 'both';                        # update $who
+		push( @to, $PAGERS{'backup-email'} ); # add backup to the page list.
+	}
+
+	# set response string:
+	my $respond       = 'No Response Required';
+	my $short_respond = 'No Response Required';
+	if ($RESPOND_REQUIRED) {
+		$short_respond = 'Response Required';
+		$respond       = "*RESPONSE REQUIRED* (`pager --respond' to respond)";
+	}
+
+	# format the page string
+	my $str = sprintf( "[#%3d] %s > %s {from %s} %s %s",
+		$_pagenum, getShortTime(), $who, $HOST, $respond, $msg );
+	verbose( 1, "Sending Page!" );
+
+	# Log the page and to whom
+	logpage( "paging #$_pagenum to $who", 1 );
+	$_pagenum++;    # ++ page number
+	                # SEND PAGE EMAIL (only to the pagers)
+	sendemail( "$HOST PAGE", $str, \@to );
+
+	# SEND more verbose email to the CC list
+	sys_email( "PAGING $msg $who $short_respond",
+		"Page String:\n$str\n", \@CC_LIST );
+#	if (not $msg =~ /clear/i) {
+		# SEND the broadcast email to a bigger email (less versbose though)
+#		broadcast( "PAGING $msg $who $short_respond", "Page String:\n$str\n" );
+#	}
+}
+
+# print basic usage statement.
+sub printusage {
+	print "usage:  $0 <COMMAND> [ARGS ...]\n";
+	print "use $0 --help for more information.\n";
+}
+
+=loadpagers
+
+	Read in the PAGER INFO file (that has the pager emails)
+	Fatal error if we can't read in it (i.e. DNE)
+	
+	update global fields $PRIMARY_PAGER & $BACKUP_PAGER
+
+=cut
+
+sub loadpagers {
+	if ( not -e $PAGER_FILE ) {
+		print
+		  ">>> $HOST : *** WARNING *** No pager file exists! ($PAGER_FILE)\n";
+		die ">>> $HOST : *** WARNING *** No pager file exists! ($PAGER_FILE)\n";
+	}
+	my $cat = `cat $PAGER_FILE`;
+	my ( $ppager, $bpager ) = split( /\n/, $cat );
+
+	# Add the names & emails to the hash
+	@PAGERS{ 'prime',  'prime-email' }  = split /\s+/, $ppager;
+	@PAGERS{ 'backup', 'backup-email' } = split /\s+/, $bpager;
+}
+
+=strPagers
+
+	A 'toString' sub for the pagers.
+
+=cut
+
+sub strPagers {
+	return "The pagers are:\n"
+	  . sprintf( "on-shift   %7s  %s\n", @PAGERS{ 'prime',  'prime-email' } )
+	  . sprintf( "off-shift  %7s  %s\n", @PAGERS{ 'backup', 'backup-email' } );
+}
+
+=printPagers
+
+	Print the pagers & who they are!
+
+=cut
+
+sub printPagers {
+	print strPagers();
+}
+
+=pagersSwap
+
+	Swap the pagers between the prime & backup
+	Save the information and print it.
+
+=cut
+
+sub softSwap {
+	print "Backup Takeover\n";
+	printPagers();
+	print "\n";
+	print "\n" . "@" x 70, "\n";
+	print "You (most likely) do NOT want to run this if you are 'on shift'\n";
+	print "@" x 70, "\n";
+	print "A backup takeover will make the backup ($PAGERS{'backup'}) the on-shift.\n";
+	print "The on shift person ($PAGERS{'prime'}) will become the off-shift person.\n";
+	print "Any new pages will go to $PAGERS{'backup'}.\n";
+	print "(The winter-overs should NOT exchange pagers - keep your pager!)\n";
+	print "\n";
+	print "If you continue, an email will be sent out saying the pagers have been chagned.\n";
+	exit(0) unless reqconf("Continue?");
+	setPagers(
+		$PAGERS{'backup'},  $PAGERS{'backup-email'},
+		$PAGERS{'prime'}, $PAGERS{'prime-email'}
+	);
+	logpage("backup-takeover");
+	loadpagers();
+	sys_email( "Backup-Takeover", "The backup is now on-shift.", \@CC_LIST );
+	print "\n";
+	printPagers();
+}
+
+sub hardSwap {
+	print "Shift Change!\n";
+	printPagers();
+	print "\n";
+	print "Give your pager to the person to your right...\n";
+	print "on-shift $PAGERS{'backup'} \n         will be taking pages via $PAGERS{'prime-email'}\n";
+	print "off-shift $PAGERS{'prime'} \n         will be taking pages via $PAGERS{'backup-email'}\n";
+	print "The ON shift person ($PAGERS{'prime'}) will become the OFF-shift person.\n";
+	print "Any new pages will go to $PAGERS{'backup'}.\n";
+	print "If you continue, an email will be sent out saying the pagers have been chagned.\n";
+	exit(0) unless reqconf("Continue?");
+	setPagers(
+		$PAGERS{'backup'}, $PAGERS{'prime-email'},
+		$PAGERS{'prime'},  $PAGERS{'backup-email'}
+	);
+	logpage("shift change");
+	loadpagers();
+	sys_email( "Shift Change", "The pagers have been (hard) swapped (Shift Change)", \@CC_LIST );
+	print "\n";
+	printPagers();
+}
+
+=setPagers
+
+	Set the pagers to be the given args --
+	save them to the pager file.
+
+=cut
+
+sub setPagers {
+	my ( $pname, $pemail, $bname, $bemail ) = @_;
+	open( PAGERFILE, ">$PAGER_FILE" ) || die "Cannot open pager file! : $!";
+	print PAGERFILE "$pname $pemail\n$bname $bemail\n";
+	close PAGERFILE;
+}
+
+=respond
+
+	Hook for the --respond.
+	Respond to a page, we do the following things:
+	
+	- Disable the pager for 15 mins
+	- Tell the north pole
+	- Print out he problems (i.e. .page files)
+	- Print out whos what pager
+	- Remind the backup to become the primary
+	- Remind responder he/she may need to disable pager for longer.
+
+=cut
+
+sub respond {
+	if ( $_disable > 0 ) {
+		my $start = localtime($_disable);
+		print
+"The paging system has already been disabled. Nothing to respond to.\n";
+		print "The paging system will be enabled at $start\n";
+		print genreport();
+		exit(0);
+	} elsif ( not $IN_ERROR ) {
+		print "There are no known errors at this time.\n";
+		print "There is nothing to respond to.\n";
+		print genreport();
+		exit(0);
+	}
+	if ($USER !~ /testdaq/) {
+		if ($USER =~ /$PAGERS{'prime'}/) {
+			print "(You are responding as the on-shift)\n";
+		} elsif ($USER =~ /$PAGERS{'backup'}/) {
+			print "You are responding as the off-shift\n";
+			print "Do you want to take over for the on-shift?\n";
+			if (reqconf("Run Back-Up Takeover?")) {
+				softSwap();
+			}
+		} else {
+			print "Unkown user!\n";
+		}
+	}
+	my $current_errors = string_errors();
+	print "Responding to the page...\n";
+	my $start = disable(0.25);
+	print "Paging system disabled for 15 mins\n";
+	print "\nWill notify about response... ";
+	sys_email(
+		"'pager --respond' at", "There has been a respond to the page(s)!\n
+[Paging system disabled for 15 minutes]", \@CC_LIST
+	);
+	broadcast( "Response to Pages", "There has been a response to the pages." );
+	print "emailed.\n\n";
+	print
+"NOTE: It is assumed your are the primary! If you are the backup, run 'pager --swap' to make your self the primary.\n\n";
+	print "\nTo disable the pager for a longer period of time, use:\n";
+	print "'pager --disable <NUMBER>'
+where the <NUMBER> is the number of hours you want to disable it for.\n";
+	print $current_errors;
+}
+
+=broadcast
+
+	broadcast the message & subject to a large # of people
+	Remove the prime/backup emails from the email
+
+=cut
+
+sub broadcast {
+	my ( $sub, $msg ) = @_;
+	my $report = genreport();
+	my $report2 = $report . "$msg\n";
+	my $email_list = [ split( /,/, $CONFIG{'broadcast'} ) ];
+	# only send to people who are not in %EMAILED
+	# (i.e. we didn't send them an email yet)
+	my @arr = grep { not $Emailed{$_} } @$email_list;
+	$email_list = \@arr;
+	email( $sub, $report2, $email_list );
+}
+
+=report
+
+	Sub hook for --report
+	
+	Print out a summary of information (and problems with .page files).
+
+=cut
+
+sub report {
+	my $time = localtime;
+	print "PAGER REPORT AT $time\n";
+	my $stat = $_disable > 0 ? 'DISABLED' : 'ENABLED';
+	print "current status:       $stat\n";
+	my $enable = localtime($_disable);
+	print "re-enables at:        $enable\n" if $_disable > 0;
+	print "number of errors:     $IN_ERROR\n";
+	print "current page num:     $_pagenum\n";
+	print "current state:        $_state\n\n";
+	print "" . genreport() . "\n" . strPagers() . "\n";
+}
+
+=genreport
+
+	Generate a report on the current pager sate,
+	current .page files, # of pages sent out,
+	etc.
+	
+	Make it pretty and human reable ( not the code ;) )
+
+=cut
+
+sub genreport {
+	my $enable_ete = ( $_disable > 0 ) ? humantime( $_disable - time() ) : "-";
+	my $stat = ( $_disable > 0 ) ? 'DISABLED' : 'ENABLED';
+	my $report = "
+----------------------------------------\n";
+	$report =
+	  $report . string_errors() . "----------------------------------------";
+	my $enable = localtime($_disable);
+	$report = $report . sprintf( "
+system status:            %s
+", $stat );
+	if ( $_disable > 0 ) {
+		$report = $report . sprintf "re-enables at:            %s
+enables in:               %s\n", $enable, $enable_ete;
+	}
+	if ( $_state > 0 ) {
+		$report = $report . sprintf "consecutive prime pages:  %s
+consecutive backup pages: %s
+", $_state, (
+			( $_state >= $CONFIG{'backup_delay'} )     # if ?
+			? $_state + 1 - $CONFIG{'backup_delay'}    # if true
+			: 0                                        # if false
+		);
+	}
+	return $report;
+}
+
+=sys_email
+
+	Email sub wrapper for daqm email.
+	Just post-fix a report to the email...
+
+=cut
+
+sub sys_email {
+	my ( $sub, $msg, $who ) = @_;
+	verbose( 1, "Sending Email: '$sub' => $who" );
+	my $report = genreport() . strPagers() . "
+$msg
+";
+	@Emailed{@$who} = @$who;
+	# DISABLE ALL E_MAIL
+	#email( $sub, $report, $who );
+}
+
+=logpage
+
+	append a message (with time stamp) to the pager
+	log file. Use a * to note if a page was sent.
+
+=cut
+
+sub logpage {
+	my $msg   = shift;
+	my $paged = shift;
+	$paged = ( defined $paged ) ? "*" : "";
+	my $time = localtime;
+	my $line = sprintf( "%20s %10s %1s %s", $time, $op, $paged, $msg );
+	`echo '$line' >>$PAGER_LOG`;
+}
+
+=help
+
+	Print a basic help message...
+
+=cut
+
+sub help {
+	printusage();
+	print "\n";
+	printf "     %-13s %2s %s\n", "$_", @{ $HELP_HASH{$_} }
+	  foreach ( keys %HELP_HASH );
+	print "\n";
+	print " *  means an email may be sent out.\n";
+	print " ** means a page may be sent out.\n";
+	print <<MSG
+Swaps (explained)
+
+When to use 'pager --backup-takeover':
+	If you are the BACKUP (or 'OFF-shift') and you are responding to a page. For example, 
+	let us that say Bob was on-shift and Jack was off-shift. Lets also suppose that Bob had
+	a lot to drink last night, so, when his pager went off, Bob had a massive hang-over and
+	he ignored it. But, 30 minutes later Jack gets a page so Jack goes to respond. Jack
+	runs 'pager --respond', and begins to look at the problem. Jack wants to get all the
+	pages from now on, but can't find Bob to switch pagers with.
+	Jack can use 'pager --backup-takeover' !
+	All of the pages that would be sent to Bob's pager will now be sent to Jack's pager.
+	When Jack is done, he then runs 'pager --backup-takeover' again to reverse it,
+	putting Bob back 'on-shift'. 
+
+Effects of 'pager --shiftChange':
+			Before							AFTER
+shift   name    email       =>  shift   name    email
+on      Bob     A\@ic.com   =>  on      Jack    A\@ic.com
+off     Jack    B\@ic.com   =>  off     Bob     B\@ic.com
+
+	Jack & Bob switched BOTH shifts AND pagers. 
+
+
+General Pager Usage Notes:
+shift	name	email
+on		Bob		A\@ic.com
+off		Jack	B\@ic.com
+
+- Bob & Jack have an associated email (pager email).
+	The email after Bob's name must ALWAYS go to the pager
+	that Bob is carrying!
+The email & names must ALWAYS, ALWAYS, be correctly associated.
+(to correct problems, run 'pager --shiftChange' and/or 'pager --takeover',
+or edit /mnt/data/testdaq/daqm/pagers.info)
+
+MSG
+;
+}
+
+sub reqconf {
+	my $str = shift;
+	print "$str (yes/no) ";
+	while (<STDIN>) {
+		return 1 if /yes/i;
+		return 0 if /no/i;
+		print "$str (yes/no) ";
+	}
+}

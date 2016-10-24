@@ -1,0 +1,20 @@
+
+DOMHub testdaq user utility scripts
+
+This project is a gradual attempt to archive and clean up the ~testdaq
+directories on the IceCube DOMHubs.  A number of utility scripts
+(e.g. status, quickstatus, pUp, pCycle, pDown, etc.) are still in regular
+use, and these are in this SVN repository.  
+
+A small number of files are not in SVN, including some testing .jar files.
+These files are archived and are available via rsync:
+
+rsync code.icecube.wisc.edu::Offline/infrastructure-source/testdaq-misc-13.0.tar.gz .
+
+To build a testdaq RPM for installation on the DOMHubs, first check this
+project out.  Then rsync the misc tarball above, and unpack it from this
+directory.  Then, "make rpm". 
+
+J. Kelley, 4 May 2016
+jkelley@icecube.wisc.edu
+
