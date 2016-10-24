@@ -5,7 +5,7 @@
 
 Summary: DOMHub testdaq user scripts
 Name: testdaq
-Version: 13.1
+Version: 13.2
 Release: 1
 License: Copyright 2016 IceCube Collaboration
 Group: System Environment/Base
@@ -46,6 +46,8 @@ rm -rf %{buildroot}
 /mnt/data/testdaq 
 
 %changelog
+* Mon Oct 24 2016 John Kelley <jkelley@icecube.wisc.edu>
+- Update racks for domhub; add dye_icl; add ~/.local/bin to path
 * Wed May 4 2016 John Kelley <jkelley@icecube.wisc.edu>
 - Massive cleanup; removal of all TestDAQ DAQ-related scripts, jars, etc.
 * Thu Jan 14 2016 John Kelley <jkelley@icecube.wisc.edu>
