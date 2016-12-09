@@ -46,6 +46,8 @@ rm -rf %{buildroot}
 /mnt/data/testdaq 
 
 %changelog
+* Fri Dec 9 2016 John Kelley <jkelley@icecube.wisc.edu>
+- Added DM-ice mainboards to nicknames
 * Mon Oct 24 2016 John Kelley <jkelley@icecube.wisc.edu>
 - Update racks for domhub; add dye_icl; add ~/.local/bin to path
 * Wed May 4 2016 John Kelley <jkelley@icecube.wisc.edu>
