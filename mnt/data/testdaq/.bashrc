@@ -33,6 +33,11 @@ source ${HOME}/daq.setup
 # allow use of RunConfig packages and abscal packages
 export PYTHONPATH=$PYTHONPATH:$HOME/abscal/daq:$HOME/omicron-tools:$HOME/RunConfig 
 
+# DM-ice-specific tools
+if [ -f ${HOME}/dmice-env.sh ]; then
+    source ${HOME}/dmice-env.sh
+fi
+
 export JAVA_HOME
 export CLASSPATH
 
