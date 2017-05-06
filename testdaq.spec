@@ -5,9 +5,9 @@
 
 Summary: DOMHub testdaq user scripts
 Name: testdaq
-Version: 13.2
+Version: 13.3
 Release: 1
-License: Copyright 2016 IceCube Collaboration
+License: Copyright 2017 IceCube Collaboration
 Group: System Environment/Base
 SOURCE0 : %{name}-%{version}.tar.gz
 URL: http://icecube.wisc.edu
@@ -46,6 +46,10 @@ rm -rf %{buildroot}
 /mnt/data/testdaq 
 
 %changelog
+* Sat May 6 2017 John Kelley <jkelley@icecube.wisc.edu>
+- Source DM-ice env if it's there
+- Add mdfl2-hub1 DOMs to nicknames
+- Add pdaq public SSH key
 * Fri Dec 9 2016 John Kelley <jkelley@icecube.wisc.edu>
 - Added DM-ice mainboards to nicknames
 * Mon Oct 24 2016 John Kelley <jkelley@icecube.wisc.edu>
