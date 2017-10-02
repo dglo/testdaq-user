@@ -29,7 +29,9 @@ PATH=${PATH}:$HOME/omicron-tools
 PATH=${PATH}:$HOME/.local/bin
 
 # point to pdaq stuff for PATH, PYTHONPATH, CLASSPATH, also define pdaq environment variables
-source ${HOME}/daq.setup
+if [ -f ${HOME}/daq.setup ]; then
+    source ${HOME}/daq.setup
+fi
 # allow use of RunConfig packages and abscal packages
 export PYTHONPATH=$PYTHONPATH:$HOME/abscal/daq:$HOME/omicron-tools:$HOME/RunConfig 
 
