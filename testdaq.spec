@@ -5,7 +5,7 @@
 
 Summary: DOMHub testdaq user scripts
 Name: testdaq
-Version: 13.3
+Version: 13.4
 Release: 1
 License: Copyright 2017 IceCube Collaboration
 Group: System Environment/Base
@@ -46,6 +46,9 @@ rm -rf %{buildroot}
 /mnt/data/testdaq 
 
 %changelog
+* Mon Oct 2 2017 John Kelley <jkelley@icecube.wisc.edu>
+- Remove domhub and domhubConfig.dat
+- fix .bashrc daq.setup error
 * Sat May 6 2017 John Kelley <jkelley@icecube.wisc.edu>
 - Source DM-ice env if it's there
 - Add mdfl2-hub1 DOMs to nicknames
