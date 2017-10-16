@@ -5,8 +5,8 @@
 
 Summary: DOMHub testdaq user scripts
 Name: testdaq
-Version: 0.0
-Release: 1
+Version: 13.5
+Release: 2
 License: Copyright 2017 IceCube Collaboration
 Group: System Environment/Base
 SOURCE0 : %{name}-%{version}.tar.gz
@@ -47,7 +47,9 @@ rm -rf %{buildroot}
 
 %changelog
 * Mon Oct 16 2017 John Kelley <jkelley@icecube.wisc.edu>
+- Allow socket reuse by dtsx
 - Add DOM-MB-449 hex file
+- Fix quickstatus false alarms for DOMs with no OMKey
 * Thu Oct 5 2017 John Kelley <jkelley@icecube.wisc.edu>
 - Update nicknames.txt with non-deployed DOMs
 * Mon Oct 2 2017 John Kelley <jkelley@icecube.wisc.edu>
