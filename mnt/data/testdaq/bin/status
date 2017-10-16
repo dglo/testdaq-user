@@ -772,7 +772,7 @@ if ( -e "$QS_IB_txt" && $commdoms ne 0) {
 	my %qsice = ();    # Quick Status ICEboot = QSICE
 	for (<QSIB>) {
 		if (
-			/(\d\d\w)\s+\d+\s+(Q.?\d+)\s+[\w\d]+\s+COMM\s+(\S+\-\d+)\s+([\w\d]+)\s+([\w\d]+)/
+			/(\d\d\w)\s+\d+\s+(Q.?\d+)\s+[\w\d]+\s+COMM\s+(\S*\-\d*)\s+([\w\d]+)\s+([\w\d]+)/
 		  )
 		{
 			$qsice{$1} = [ $5, $2, $3, $4 ];
