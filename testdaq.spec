@@ -50,6 +50,7 @@ rm -rf %{buildroot}
 - Allow socket reuse by dtsx
 - Add DOM-MB-449 hex file
 - Fix quickstatus false alarms for DOMs with no OMKey
+- Add pcts-hub to hubConfig.dat
 * Thu Oct 5 2017 John Kelley <jkelley@icecube.wisc.edu>
 - Update nicknames.txt with non-deployed DOMs
 * Mon Oct 2 2017 John Kelley <jkelley@icecube.wisc.edu>
