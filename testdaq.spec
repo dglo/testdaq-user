@@ -6,7 +6,7 @@
 Summary: DOMHub testdaq user scripts
 Name: testdaq
 Version: 13.5
-Release: 2
+Release: 3
 License: Copyright 2017 IceCube Collaboration
 Group: System Environment/Base
 SOURCE0 : %{name}-%{version}.tar.gz
@@ -46,6 +46,8 @@ rm -rf %{buildroot}
 /mnt/data/testdaq 
 
 %changelog
+* Thu Oct 19 2017 John Kelley <jkelley@icecube.wisc.edu>
+- Remove two ichub13 DOMs from hubConfig.dat
 * Mon Oct 16 2017 John Kelley <jkelley@icecube.wisc.edu>
 - Allow socket reuse by dtsx
 - Add DOM-MB-449 hex file
