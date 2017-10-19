@@ -87,7 +87,7 @@ sps-ichub28	8	15	58	58     c5p0-p(u)-c(b,ok)-v(b,ok);c5p1-p(u)-c(ok,ok)-v(ok,ok)
 sps-ichub19	8	15	60	60
 #sps-ichub19	8	15	58	58     c7p1-p(ok)-c(b,ok)-v(ok,ok)
 sps-ichub20	8	15	60	60
-sps-ichub13     8       15      60      60
+sps-ichub13     8       15      58      58     c4p1-p(ok)-c(b,ok)-v(ok,ok)
 sps-ichub12     8       15      60      60
 sps-ichub11     8       15      58      58	c0p0-p(ok)-c(b,ok)-v(ok,ok)
 sps-ichub10     8       15      60      60
