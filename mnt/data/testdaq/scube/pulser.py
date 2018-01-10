@@ -63,7 +63,7 @@ import telnetlib
 from time import sleep
 from getopt import getopt
 
-def pulser_on(muon, noise, setdelta = False, host = "spts-lantronix",
+def pulser_on(muon, noise, setdelta = False, host = "scube-lantronix",
            port  = 2009):
 
         #muon  = 20.0
@@ -101,7 +101,7 @@ def pulser_on(muon, noise, setdelta = False, host = "spts-lantronix",
         print "Pulser Set!"
 
 
-def pulser_off(host = "spts-lantronix",
+def pulser_off(host = "scube-lantronix",
                port = 2009):
 
         tn = telnetlib.Telnet(host, port)
@@ -114,7 +114,7 @@ def pulser_off(host = "spts-lantronix",
         tn.close()
         print "Pulser Off"
 
-def pulser_display(host = "spts-lantronix",
+def pulser_display(host = "scube-lantronix",
                port = 2009):
 
         tn = telnetlib.Telnet(host, port)
@@ -127,7 +127,7 @@ def pulser_display(host = "spts-lantronix",
 if __name__=="__main__":
         parser = argparse.ArgumentParser(description='Auotmates control of the SCUBE pulser')
         parser.add_argument('action', help='Action [default=display]', nargs='?', choices=['on', 'off', 'interval', 'display' ], default="display")
-        parser.add_argument('-host','--host', help='Pulser host [default=spts-lantronix]', type=str, required=False, default="spts-lantronix", dest='host')
+        parser.add_argument('-host','--host', help='Pulser host [default=scube-lantronix]', type=str, required=False, default="scube-lantronix", dest='host')
         parser.add_argument('-port','--port', help='Pulser port [default=2009]', type=int, required=False, default=2009, dest='port')
         parser.add_argument('-nr','--noise-rate', help='Noise rate', type=int, required=False, default=1500, dest='noise')
         parser.add_argument('-mr','--muon-rate', help='Muon rate', type=int, required=False, default=20, dest='muon')
