@@ -5,7 +5,7 @@
 
 Summary: DOMHub testdaq user scripts
 Name: testdaq
-Version: 13.5
+Version: 13.6
 Release: 3
 License: Copyright 2017 IceCube Collaboration
 Group: System Environment/Base
@@ -46,6 +46,8 @@ rm -rf %{buildroot}
 /mnt/data/testdaq 
 
 %changelog
+* Wed Jan 10 2018 John Kelley <jkelley@icecube.wisc.edu>
+- Modify hostname of scube Lantronix device
 * Thu Oct 19 2017 John Kelley <jkelley@icecube.wisc.edu>
 - Remove two ichub13 DOMs from hubConfig.dat
 * Mon Oct 16 2017 John Kelley <jkelley@icecube.wisc.edu>
