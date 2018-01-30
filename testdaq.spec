@@ -46,7 +46,8 @@ rm -rf %{buildroot}
 /mnt/data/testdaq 
 
 %changelog
-* Wed Jan 10 2018 John Kelley <jkelley@icecube.wisc.edu>
+* Tue Jan 30 2018 John Kelley <jkelley@icecube.wisc.edu>
+- Update hubConfig.dat with reconnected DOMs
 - Modify hostname of scube Lantronix device
 * Thu Oct 19 2017 John Kelley <jkelley@icecube.wisc.edu>
 - Remove two ichub13 DOMs from hubConfig.dat
