@@ -1,2 +1,0 @@
-5,11,17,23,29,35,41,47,53,59 * * * * /mnt/data/testdaq/bin/monitor /mnt/data/testdaq/bin/domhub all quickstatus -p
-2,8,14,20,26,32,38,44,50,56 * * * * /mnt/data/testdaq/bin/pager --tick
