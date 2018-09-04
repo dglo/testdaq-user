@@ -79,7 +79,7 @@ mdfl3-hub1      8       16      64      64
 swe-fat-ultuna1 8       16      62      62
 desyfat         8       16      62      62
 sps-ithub07	8	16	32	32
-sps-ithub08	8	9	17	17	c4p1-p(ok)
+sps-ithub08	8	9	16	16	c4p1-p(ok);c3p3-p(ok)-c(ok,ok)-v(ok,ok)
 sps-ichub18     8       15      58      58	c5p2-p(ok)-c(b,ok)-v(ok,ok)
 sps-ichub27	8	15	58	58	c0p3-p(ok)-c(b,ok)-v(ok,ok)
 sps-ichub36	8	15	60	60
@@ -111,7 +111,7 @@ sps-ichub32	8	15	58	58      c7p0-p(ok)-c(b,ok)-v(ok,ok)
 sps-ichub33	8	15	60	60      
 sps-ichub34	8	15	53	53      c1p1-p(ok)-c(b,ok)-v(ok,ok);c1p2-p(ok)-c(b,ok)-v(ok,ok)
 sps-ichub35	8	15	60	60	
-sps-ichub51	8	15	58	58	c3p1-p(ok)-c(b,ok)-v(ok,ok);
+sps-ichub51	8	15	58	58	c3p1-p(ok)-c(b,ok)-v(ok,ok)
 sps-ichub79	8	15	58	58	c6p3-p(ok)-c(b,ok)-v(ok,ok)
 sps-ichub80	8	15	60	60	
 sps-ichub81	8	15	60	60
