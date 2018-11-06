@@ -12,7 +12,7 @@ sps-wczar2      8       3       0       0	c0p1-p(ok)-c(b,ok)-v(ok,ok);
 sps-amanda	1	2	2	2	c0p0-p(ok)-c(b,ok)-v(ok,ok);c0p2-p(ok)-c(b,ok)-v(ok,ok)
 sps-ichub21	8	15	60	60
 sps-ichub29	8	15	58	58	c7p1-p(ok)-c(b,ok)-v(ok,ok)
-sps-ichub30	8	15	58	58
+sps-ichub30	8	15	59	59
 sps-ichub38	8	15	60	60
 sps-ichub39	8	15	60	60
 sps-ichub40	8	15	56	56	c6p1-p(ok)-c(b,ok)-v(ok,ok);c4p0-p(ok)-c(b,ok)-v(b,ok)
