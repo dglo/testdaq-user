@@ -5,9 +5,9 @@
 
 Summary: DOMHub testdaq user scripts
 Name: testdaq
-Version: 13.6
-Release: 3
-License: Copyright 2017 IceCube Collaboration
+Version: 13.7
+Release: 1
+License: Copyright 2019 IceCube Collaboration
 Group: System Environment/Base
 SOURCE0 : %{name}-%{version}.tar.gz
 URL: http://icecube.wisc.edu
@@ -46,6 +46,9 @@ rm -rf %{buildroot}
 /mnt/data/testdaq 
 
 %changelog
+* Mon Jan 14 2019 John Kelley <jkelley@icecube.wisc.edu>
+- Update hubConfig.dat for ichub67 dead DOMs
+- Remove obsolete DOM-MB hex files
 * Tue Jan 30 2018 John Kelley <jkelley@icecube.wisc.edu>
 - Update hubConfig.dat with reconnected DOMs
 - Modify hostname of scube Lantronix device
