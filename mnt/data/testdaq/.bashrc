@@ -1,3 +1,10 @@
+# If it exists, activate pDAQ's Python virtual environment
+# This is temporary until the migration of most tools to the pdaq user
+ENVDIR="/usr/local/pdaq/env"
+if [ -d $ENVDIR -a -f $ENVDIR/bin/activate ]; then
+  source $ENVDIR/bin/activate
+fi
+
 # Set up JAVA 
 # Note that the directories should be listed from best to worst
 JAVA_HOME=
