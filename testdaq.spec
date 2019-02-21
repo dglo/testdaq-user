@@ -48,6 +48,7 @@ rm -rf %{buildroot}
 %changelog
 * Thu Feb 21 2019 John Kelley <jkelley@icecube.wisc.edu>
 - Source pdaq virtualenv if it exists in .bashrc
+- Remove legacy paging and monitoring code and daqm library
 - Restore DOM-MB-448 hex file
 * Mon Jan 14 2019 John Kelley <jkelley@icecube.wisc.edu>
 - Update hubConfig.dat for ichub67 dead DOMs
