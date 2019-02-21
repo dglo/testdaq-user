@@ -5,7 +5,7 @@
 
 Summary: DOMHub testdaq user scripts
 Name: testdaq
-Version: 13.7
+Version: 13.8
 Release: 1
 License: Copyright 2019 IceCube Collaboration
 Group: System Environment/Base
@@ -47,8 +47,11 @@ rm -rf %{buildroot}
 
 %changelog
 * Thu Feb 21 2019 John Kelley <jkelley@icecube.wisc.edu>
+- Source pdaq virtualenv if it exists in .bashrc
+- Restore DOM-MB-448 hex file
+* Mon Jan 14 2019 John Kelley <jkelley@icecube.wisc.edu>
 - Update hubConfig.dat for ichub67 dead DOMs
-- Source pdaq virtualenv if it exists
+- Remove obsolete DOM-MB hex files
 * Tue Jan 30 2018 John Kelley <jkelley@icecube.wisc.edu>
 - Update hubConfig.dat with reconnected DOMs
 - Modify hostname of scube Lantronix device
