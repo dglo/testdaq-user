@@ -46,9 +46,9 @@ rm -rf %{buildroot}
 /mnt/data/testdaq 
 
 %changelog
-* Mon Jan 14 2019 John Kelley <jkelley@icecube.wisc.edu>
+* Thu Feb 21 2019 John Kelley <jkelley@icecube.wisc.edu>
 - Update hubConfig.dat for ichub67 dead DOMs
-- Remove obsolete DOM-MB hex files
+- Source pdaq virtualenv if it exists
 * Tue Jan 30 2018 John Kelley <jkelley@icecube.wisc.edu>
 - Update hubConfig.dat with reconnected DOMs
 - Modify hostname of scube Lantronix device
