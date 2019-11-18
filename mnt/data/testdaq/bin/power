@@ -308,8 +308,6 @@ sub Power_Up {
 @>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>    @<<<<<<<<<
 "Total DOMs in iceboot :", $total_ib
 @>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>    @<<<<<<<<<
-"DOMs NOT in iceboot :", $doms_no_iceboot
-@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>    @<<<<<<<<<
 "Communicating DOMs NOT in iceboot :", $comm_no_ib
 @>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>    @<<<<<<<<<
 "Expected # of DOMs in iceboot :", $EXPECTED_ICEBOOT_DOMS{$lc_name}

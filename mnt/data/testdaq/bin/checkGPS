@@ -50,11 +50,11 @@ foreach (@cards) {
 	}
 }
 
-# Ask the user to comfirm...
+# Ask the user to confirm...
 sub confirm {
 	print "\n\n\t\tCheck GPS\nChecking GPS may conflict with processes\n";
 	print "currently running on the DOMs.\n";
-	print "Do you with to continue? (yes/no) ";
+	print "Do you wish to continue? (yes/no) ";
 	my $answer = <STDIN>;
 	if ( $answer =~ /yes/ ) {
 		print "Check GPS: confirmed.\n";

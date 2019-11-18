@@ -127,7 +127,7 @@ while ($card<$argcardmax) {
 #$yinc=system("yinc=$(echo 'send \"$0200 $90081090 ! 50000 usleep $0000 $90081090 ! 500 usleep $90081094 @ $3fff and . drop\r\" expect \"^>\"' | se $DOR )");
 
                     system("rm -f /tmp/iDOM.dat");
-                    system("vccDOM_new.sh $DOR > /tmp/iDOM.dat");
+                    system("vccDOM.sh $DOR > /tmp/iDOM.dat");
                     open(IN,"/tmp/iDOM.dat");
                     @page = (<IN>);
                     close(IN);
@@ -142,7 +142,7 @@ while ($card<$argcardmax) {
                     print "VCC = $vcc \n";
 
                     system("rm -f /tmp/iDOM.dat");
-                    system("tempDOM_new.sh $DOR > /tmp/iDOM.dat");
+                    system("tempDOM.sh $DOR > /tmp/iDOM.dat");
 
                     open(IN,"/tmp/iDOM.dat");
                     @page = (<IN>);
@@ -157,7 +157,7 @@ while ($card<$argcardmax) {
                     print "temp = $temp \n";
 
                     system("rm -f /tmp/iDOM.dat");
-                    system("xincDOM_new.sh $DOR > /tmp/iDOM.dat");
+                    system("xincDOM.sh $DOR > /tmp/iDOM.dat");
                     open(IN,"/tmp/iDOM.dat");
                     @page = (<IN>);
                     close(IN);
@@ -176,7 +176,7 @@ while ($card<$argcardmax) {
                     print "xinc = $xinc \n";
 
                     system("rm -f /tmp/iDOM.dat");
-                    system("yincDOM_new.sh $DOR > /tmp/iDOM.dat");
+                    system("yincDOM.sh $DOR > /tmp/iDOM.dat");
                     open(IN,"/tmp/iDOM.dat");
                     @page = (<IN>);
                     close(IN);

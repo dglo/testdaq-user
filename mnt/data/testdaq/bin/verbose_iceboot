@@ -54,7 +54,8 @@ fi
 hea
 for dom in ${cbdoms}; do 
         printf ${dom}
-    	( printf 'send "r"\nexpect "^ "\n' | se ${dom} ) & echo $!
+    	printf 'send "r"\nexpect "^ "\n' | se ${dom}
+    	echo $!
 done
 
 echo ${cbpids}

@@ -5,7 +5,8 @@
 
 Summary: DOMHub testdaq user scripts
 Name: testdaq
-Version: 13.8
+# Don't need to update this version, the Makefile will do it
+Version: 1
 Release: 1
 License: Copyright 2019 IceCube Collaboration
 Group: System Environment/Base
@@ -17,6 +18,12 @@ Requires: perl(DBD::mysql)
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
+%{summary}
+
+%package labhub
+Summary: Support files for laboratory (non-SPS) DOMHub installations
+Group: System Environment/Base
+%description labhub
 %{summary}
 
 %prep
@@ -44,8 +51,18 @@ rm -rf %{buildroot}
 %attr(777, -, -) %dir /mnt/data/testdaq/dropbox/tape
 %attr(777, -, -) %dir /mnt/data/testdaq/dropbox/satellite-only/high-priority
 /mnt/data/testdaq 
+%exclude /mnt/data/testdaq/labhub
+
+%files labhub
+/mnt/data/testdaq/labhub
 
 %changelog
+* Mon Nov 18 2019 John Kelley <jkelley@icecube.wisc.edu>
+- Finally? fix pUp/pCycle iceboot DOM accounting
+- Move domdisplay, mmdisplay etc. jar files to labhub subpackage
+- Fix typo in checkGPS prompt
+- Rename iDOM support shell scripts 
+- Remove dye_icl as it is in domhub package now
 * Thu Feb 21 2019 John Kelley <jkelley@icecube.wisc.edu>
 - Source pdaq virtualenv if it exists in .bashrc
 - Remove legacy paging and monitoring code and daqm library

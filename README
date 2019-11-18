@@ -9,7 +9,7 @@ use, and these are in this SVN repository.
 A small number of files are not in SVN, including some testing .jar files.
 These files are archived and are available via rsync:
 
-rsync code.icecube.wisc.edu::Offline/infrastructure-source/testdaq-misc-13.0.tar.gz .
+rsync code.icecube.wisc.edu::Offline/infrastructure-source/testdaq-misc-14.0.tar.gz .
 
 To build a testdaq RPM for installation on the DOMHubs, first check this
 project out.  Then rsync the misc tarball above, and unpack it from this
