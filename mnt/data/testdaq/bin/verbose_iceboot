@@ -9,10 +9,10 @@ exec 2> /dev/null
 #
 # cleanup...
 #
-function atexit () {
-    rm -f /tmp/ib.$$.* 
-}
-trap atexit EXIT
+#function atexit () {
+#    rm -f /tmp/ib.$$.* 
+#}
+#trap atexit EXIT
 
 
 
@@ -51,19 +51,22 @@ if [[ $2 == "-l" ]]; then
 	exit
 fi
 
-hea
+# send/expect for iceboot transition
+printf 'send "r"\nexpect "^ "\n' > /tmp/ib.$$.cmd
+
+i=0
 for dom in ${cbdoms}; do 
         printf ${dom}
-    	printf 'send "r"\nexpect "^ "\n' | se ${dom}
-    	echo $!
+	# Transition each DOM to iceboot and store the output
+	# that includes the build number
+	(se ${dom} < /tmp/ib.$$.cmd >> /tmp/ib.$$.${i}.out) &
+        # Keep track of the PID
+	cbpids="${cbpids} $!"
+	i+=1
 done
 
-echo ${cbpids}
-
-#echo $cbpids
-
 #
-# and now the rest...
+# For any DOM already in iceboot, softboot them
 #
 rdoms=`egrep -v ' configboot$' /tmp/ib.$$.state | \
     awk '{ print $1; }' | tr '\n' ' '`
@@ -75,6 +78,10 @@ wait-till-dead 10000 ${cbpids} ${rpids}
 
 # Give it a bit of time to transition out of busy
 sleep 2
+
+# Spew the iceboot transition output to extract
+# the build number
+cat /tmp/ib.$$.*.out
 
 # for compatibility...
 if (( ${quiet} == 0 )); then
