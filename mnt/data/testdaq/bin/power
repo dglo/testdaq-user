@@ -54,6 +54,8 @@ my $CONFIG_FILE = "$HOME/hubConfig.dat";
 # Full name: note that the full name is capital letters
 my $FULL_NAME = `hostname -s | awk '{print toupper(\$1)}'`;
 chomp $FULL_NAME;
+my $cluster = `hostname | cut -d. -f2`;
+chomp $cluster;
 
 # $cmd is the first of the args
 my $cmd      = shift @ARGV;
@@ -292,6 +294,14 @@ sub Power_Up {
 		}
 		my $doms_no_iceboot = $doms_turned_on - $total_ib;
 		my $comm_no_ib      = $comm_num - $total_ib;
+
+		my $expected_ib_doms = '?';
+		if ( defined($EXPECTED_ICEBOOT_DOMS{"$cluster-$lc_name"}) ) {
+		    $expected_ib_doms = $EXPECTED_ICEBOOT_DOMS{"$cluster-$lc_name"};
+		}
+		elsif ( defined($EXPECTED_ICEBOOT_DOMS{$lc_name}) ) {
+		    $expected_ib_doms = $EXPECTED_ICEBOOT_DOMS{$lc_name};
+		}
 		format STDOUT =
 
 @|||||||||||||||||||||||||||||||||||||||||||||||||
@@ -310,7 +320,7 @@ sub Power_Up {
 @>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>    @<<<<<<<<<
 "Communicating DOMs NOT in iceboot :", $comm_no_ib
 @>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>    @<<<<<<<<<
-"Expected # of DOMs in iceboot :", $EXPECTED_ICEBOOT_DOMS{$lc_name}
+"Expected # of DOMs in iceboot :", $expected_ib_doms
 
 
 .
@@ -605,7 +615,7 @@ sub updateExpectations {
 		my @page = (<CONFIG>);
 		close(CONFIG);
 		foreach (@page) {
-			if (/(\S+)\s+\d+\s+\d+\s+\d+\s+(\d+)\s*[\d\d,]*/) {
+			if (/^(\S+)\s+\d+\s+\d+\s+\d+\s+(\d+)\s*[\d\d,]*/) {
 				$EXPECTED_ICEBOOT_DOMS{$1} = $2;
 			}
 		}

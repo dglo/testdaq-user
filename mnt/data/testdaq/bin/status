@@ -51,8 +51,10 @@ my $ExpectedDOMsCut = 2; # # of doms to drop before page.
 # eg. 00A => [0000000 Q1 43-1 DomName]
 my %domhash = ();
 
-$domhub = `hostname -s | awk '{print toupper(\$1)}'`;
+my $domhub = `hostname -s | awk '{print toupper(\$1)}'`;
 chomp $domhub;
+my $cluster = `hostname | cut -d. -f2`;
+chomp $cluster;
 
 if ( $ARGV[1] eq "-watchCurrents" ) {
 
@@ -871,9 +873,13 @@ sub updateExpectations {
 		my @page = (<CONFIG>);
 		close(CONFIG);
 		foreach (@page) {
-			if ( not /$lc_name/ ) { next }
-			if (/^\s*\#/)         {
-				next;
+		        # Try both cluster-domhub and domhub name
+			if (( not /^$cluster-$lc_name/ ) and ( not /^$lc_name/ )) { 
+			    next;
+			}
+			# Skip comments
+			if (/^\s*\#/) {
+			    next;
 			}
 			$foundit = 1;
 

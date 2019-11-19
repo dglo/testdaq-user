@@ -57,6 +57,11 @@ rm -rf %{buildroot}
 /mnt/data/testdaq/labhub
 
 %changelog
+* Tue Nov 19 2019 John Kelley <jkelley@icecube.wisc.edu>
+- Really fix pUp/pCycle iceboot DOM accounting
+- Fix hubConfig.dat parsing in power script
+- Add cluster detection in hubConfig.dat parsing in power and status scripts
+- Clean up hubConfig.dat
 * Mon Nov 18 2019 John Kelley <jkelley@icecube.wisc.edu>
 - Finally? fix pUp/pCycle iceboot DOM accounting
 - Move domdisplay, mmdisplay etc. jar files to labhub subpackage
