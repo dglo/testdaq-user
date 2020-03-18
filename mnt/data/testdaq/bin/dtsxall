@@ -1,35 +1,35 @@
-#!/bin/csh
+#!/bin/bash
 
-if ($#argv > 1) then
+if [[ $# > 1 ]]; then
 	echo "Usage: $0 A - for only As"
 	echo "       $0 B - for only Bs"
 	echo "Usage: $0   - for all"
 	exit
-endif
-if ( $#argv == 1) then
-	if ($argv[1] != A && $argv[1] != B ) then
-	echo "Usage: $0 A - for only As"
-	echo "       $0 B - for only Bs"
-	echo "Usage: $0   - for all"
-	exit
- endif
-endif
-if ($#argv == 0 ) then
-	set mode = "All"
-endif
-if ($#argv == 1) then
-	if ($argv[1] == A ) then
-	 set mode=A
-	 echo "starting only A' pairs..."
-	endif
-	if ( $argv[1] == B ) then
-	 set mode=B
-	 echo "starting only B' pairs..."
-	endif
-endif
+fi
+if [[ $# == 1 ]]; then
+	if [[ $1 != A ]] && [[ $1 != B ]]; then
+	  echo "Usage: $0 A - for only As"
+	  echo "       $0 B - for only Bs"
+	  echo "Usage: $0   - for all"
+	  exit
+	fi
+fi
+if [[ $# == 0 ]]; then
+	mode="All"
+fi
+if [[ $# == 1 ]]; then
+	if [[ $1 == A ]]; then
+	 mode=A
+	 echo "starting only A pairs..."
+	fi
+	if [[ $1 == B ]]; then
+	 mode=B
+	 echo "starting only B pairs..."
+	fi
+fi
 echo mode=$mode
 
-if ( ($mode == B) || ($mode == All) )  then	
+if [[ $mode == B ]] || [[ $mode == All ]];  then	
  $HOME/hutil/dtsx -p 5001 /dev/dhc0w0dB &
  $HOME/hutil/dtsx -p 5003 /dev/dhc0w1dB &
  $HOME/hutil/dtsx -p 5005 /dev/dhc0w2dB &
@@ -62,8 +62,8 @@ if ( ($mode == B) || ($mode == All) )  then
  $HOME/hutil/dtsx -p 5059 /dev/dhc7w1dB &
  $HOME/hutil/dtsx -p 5061 /dev/dhc7w2dB &
  $HOME/hutil/dtsx -p 5063 /dev/dhc7w3dB &
-endif
-if ( ($mode == A) || ($mode == All) )  then	
+fi
+if [[ $mode == A ]] || [[ $mode == All ]];  then	
  $HOME/hutil/dtsx -p 5002 /dev/dhc0w0dA &
  $HOME/hutil/dtsx -p 5004 /dev/dhc0w1dA &
  $HOME/hutil/dtsx -p 5006 /dev/dhc0w2dA &
@@ -96,4 +96,4 @@ if ( ($mode == A) || ($mode == All) )  then
  $HOME/hutil/dtsx -p 5060 /dev/dhc7w1dA &
  $HOME/hutil/dtsx -p 5062 /dev/dhc7w2dA &
  $HOME/hutil/dtsx -p 5064 /dev/dhc7w3dA &
-endif
+fi

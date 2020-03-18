@@ -1,39 +1,4 @@
-#!/bin/csh
-
-if ($#argv > 2) then
-	echo "Usage: $0 A - for only As"
-	echo "       $0 B - for only Bs"
-	echo "Usage: $0   - for all 1 "
-	exit
-endif
-if ( $#argv > 0) then
-	if ($argv[1] != A && $argv[1] != B ) then
-	echo "Usage: $0 A - for only As "
-	echo "       $0 B - for only Bs"
-	echo "Usage: $0   - for all 2"
-	exit
- endif
-endif
-set mb="";
-if ($#argv == 2 ) then
-	set mb = "doms";
-endif
-
-if ($#argv == 0 ) then
-	set mode = ""
-endif
-if ($#argv > 0) then
-	if ($argv[1] == A ) then
-	 set mode="A"
-	 echo "starting only A' pairs..."
-	endif
-	if ( $argv[1] == B ) then
-	 set mode="B"
-	 echo "starting only B' pairs..."
-	endif
-endif
-echo mode=$mode
-
+#!/bin/sh
 echo 0 > /proc/driver/domhub/blocking
 echo 1 > /proc/driver/domhub/verbose
 killall dtsx

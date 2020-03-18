@@ -13,8 +13,6 @@ Group: System Environment/Base
 SOURCE0 : %{name}-%{version}.tar.gz
 URL: http://icecube.wisc.edu
 
-# Required DBD module for Perl not autodetected
-Requires: perl(DBD::mysql)
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
@@ -52,11 +50,22 @@ rm -rf %{buildroot}
 %attr(777, -, -) %dir /mnt/data/testdaq/dropbox/satellite-only/high-priority
 /mnt/data/testdaq 
 %exclude /mnt/data/testdaq/labhub
+%exclude /.svn
+%exclude /mnt/.svn
+%exclude /mnt/data/.svn
+%exclude /mnt/data/testdaq/bin/.svn
+%exclude /mnt/data/testdaq/scube/.svn
+%exclude /mnt/data/testdaq/.svn
 
 %files labhub
 /mnt/data/testdaq/labhub
+%exclude /mnt/data/testdaq/labhub/.svn
 
 %changelog
+* Tue Mar 17 2020 John Kelley <jkelley@icecube.wisc.edu>
+- Exclude .svn directories to fix EL8 build
+- Remove csh dependency by rewriting dtsx helper scripts
+- Remove sql interaction from status
 * Tue Nov 19 2019 John Kelley <jkelley@icecube.wisc.edu>
 - Really fix pUp/pCycle iceboot DOM accounting
 - Fix hubConfig.dat parsing in power script

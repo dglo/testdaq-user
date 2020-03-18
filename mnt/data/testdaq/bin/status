@@ -30,7 +30,6 @@ my $mode                  = $ARGV[0];
 my $HI_CURRENT_CONFIG     = 70;
 my %HIGH_CARDS            = ();
 my @Warnings              = ();
-my $dbflag                = 0;
 my $itflag                = 0;
 my $EXPECTED_COMM_DOMS    = ();
 my $EXPECTED_DOR_CARDS    = ();
@@ -205,14 +204,6 @@ printf(
 "-------------------------------------------------------------------------------\n"
 );
 printf("$domhub SUMMARY:\n\n");
-
-if ( ( $mode eq "DB" ) || ( $mode eq "db" ) ) {
-	$dbflag = 1;
-}
-if ( $dbflag == 1 ) {
-	open( OUT, ">$ENV{HOME}/dbinsertion.sql" );
-	print OUT "use fat;\n";
-}
 
 #print "\n";
 #print "DOR comm     id \n";
@@ -585,58 +576,13 @@ while ( $card < 8 ) {
 					$string = $domhub;
 					( $hubtype, $string ) = split( "HUB", $string );
 					$location = "$string" . "-" . "$position";
-					if ( $dbflag == 1 ) {
-						if ( $idstring ne "            " ) {
-							if ( $itflag == 0 ) {
-								print OUT
-"update domtune set string='$string' where mbid='$idstring';\n";
-								print OUT
-"update domtune set stringposition='$position' where mbid='$idstring';\n";
-								print OUT
-"update domtune set location='$location' where mbid='$idstring';\n";
-							}
-							print OUT
-"update domtune set card='$card' where mbid='$idstring';\n";
-							print OUT
-"update domtune set pair='$pair' where mbid='$idstring';\n";
-							print OUT
-"update domtune set ab='$DOM' where mbid='$idstring';\n";
-							print OUT
-"update domtune set domhub='$domhub' where mbid='$idstring';\n";
-							print OUT
-"update domtune set dor='$domhub.$card$pair$DOM' where mbid='$idstring';\n";
-							if ( $itflag == 0 ) {
-								if ( $position == 1 ) {
-									print OUT
-"update domtune set lcmode=3 where mbid='$idstring';\n";
-								}
-								if ( $position == 60 ) {
-									print OUT
-"update domtune set lcmode=2 where mbid='$idstring';\n";
-								}
-							}
-						}
-					}
 				}
-
 				$dom = $dom + 1;
 			}
 			$pair = $pair + 1;
 		}
 	}
 	$card = $card + 1;
-}
-
-if ( ( $hubtype eq "SPS-IC" ) && ( $dbflag == 1 ) ) {
-	print "\n performing the DB insertion !!! \n";
-	print
-	  "  doing: cat dbinsertion.sql | mysql -u tester -p -h testdaq01 \n";
-	system(
-"cat $ENV{HOME}/dbinsertion.sql | mysql -u tester -pSouthPoleUser -h testdaq01 "
-	);
-
-	#  system ("make-nicknames-file");
-	#  system ("make-domnames-file");
 }
 
 $dtsxs          = 0;
@@ -756,10 +702,6 @@ print "\n";
 
 if ( $message ne "" ) {
 	print "software: $message \n\n";
-}
-
-if ( $dbflag == 1 ) {
-	close(OUT);
 }
 
 @Warnings = ( @Warnings, split( "\n", `status -warn` ) );
