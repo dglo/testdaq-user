@@ -50,16 +50,9 @@ rm -rf %{buildroot}
 %attr(777, -, -) %dir /mnt/data/testdaq/dropbox/satellite-only/high-priority
 /mnt/data/testdaq 
 %exclude /mnt/data/testdaq/labhub
-%exclude /.svn
-%exclude /mnt/.svn
-%exclude /mnt/data/.svn
-%exclude /mnt/data/testdaq/bin/.svn
-%exclude /mnt/data/testdaq/scube/.svn
-%exclude /mnt/data/testdaq/.svn
 
 %files labhub
 /mnt/data/testdaq/labhub
-%exclude /mnt/data/testdaq/labhub/.svn
 
 %changelog
 * Wed Apr 8 2020 John Kelley <jkelley@icecube.wisc.edu>
