@@ -10,6 +10,9 @@
 # Mark Krasberg, 2004
 #
 #
+from __future__ import print_function
+from builtins import str
+from builtins import range
 import icecube.domtest.ibidaq as daq
 import os
 import sys
@@ -59,7 +62,7 @@ usage :: test.py <card> <pair> <domA/B 0/1>
 
 
 if (len(sys.argv) < 2):
-    print usage()
+    print(usage())
     sys.exit(1)
 
 opts, args = getopt(sys.argv[1:], 'v:l:h:s:')
@@ -100,9 +103,9 @@ port = 5000+(int(card)*8)+(int(pair)*2) + int(domAB)
 if (domAB == 0):
   port = port + 2
  
-print " "
-print "card = %d  pair = %d  domAB = %d   port is %d" % (card,pair,domAB,port)
-print " "
+print(" ")
+print("card = %d  pair = %d  domAB = %d   port is %d" % (card,pair,domAB,port))
+print(" ")
 
 q = daq.ibx("localhost", port)
 date = str(int(time.time()))
@@ -125,7 +128,7 @@ date = str(int(time.time()))
 # scan = q.discriminatorScan(disc0, disc1)
 
 
-print " "
+print(" ")
 
 domid = q.getId()
 domname = ""
@@ -152,11 +155,11 @@ for c in range(1,domnames):
 #if domid == '00133e0d6569': domname = "CAMEL"
 #if domid == '33c5ea037bf4': domname = "V4 28057 CAMEL"
 
-if domname == '': print "domid= ",domid,"   This DOM has no name"
+if domname == '': print("domid= ",domid,"   This DOM has no name")
 else: 
-   print "domid= ",domid,"    This DOM is called ",domname
+   print("domid= ",domid,"    This DOM is called ",domname)
 
-print " "
+print(" ")
 t = q.readTemperature()
 if t > 32767:
      t -= 65536
@@ -175,7 +178,7 @@ location = "%s%d%d%s" % (hub,card,pair,domTU)
 
 currents = q.send('prtCookedCurrents .')
 
-print "prtCookedCurrents = ",currents
+print("prtCookedCurrents = ",currents)
 
 flog=open('/mnt/data/testdaq/Results/prtCookedCurrents/prtCookedCurrents.dat', 'a')
 flog.write("%23s %-13.13s %4s %-20.20s %12s %.2f %-80.80s \n" % (time.strftime("%F %T %Z"), time.time(), location, domname,domid,temperature,currents))
@@ -189,4 +192,4 @@ flog.write("%23s %-13.13s %4s %-20.20s %12s %.2f %-80.80s \n" % (time.strftime("
 q.setHV(0)
 q.disableHV()
 
-print " "
+print(" ")

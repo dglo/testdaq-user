@@ -7,6 +7,8 @@
 #
 #----------------------------------------------------------------
 
+from __future__ import print_function
+from builtins import range
 import sys, os, re, subprocess, time
 
 #----------------------------------------------------------------
@@ -40,7 +42,7 @@ waitTime = 10
 
 # Does the iDOM script exist?
 if not os.path.exists(idomCmd):
-    print "ERROR: coudldn't find",idomCmd
+    print("ERROR: coudldn't find",idomCmd)
     sys.exit(-1)
     
 # Check what machine we're on
@@ -52,18 +54,18 @@ hostname = stdout[0:-1]
 hostname = hostname.replace('sps-', '')
 
 if hostname not in idomMap:
-    print "No iDOMs on",hostname,",exiting."
+    print("No iDOMs on",hostname,",exiting.")
     sys.exit(0)
 
 idoms = idomMap[hostname]
-print "DOMHub",hostname,"has",len(idoms),"iDOMs: ",idoms
+print("DOMHub",hostname,"has",len(idoms),"iDOMs: ",idoms)
 
 # Loop over the iDOMs
 for cwd in idoms:
     # Check that we're in iceboot
     stateCmd = "/usr/local/bin/domstate"
     if not os.path.exists(stateCmd):
-        print "ERROR: coudldn't find",stateCmd
+        print("ERROR: coudldn't find",stateCmd)
         sys.exit(-1)
         
     cmd = [stateCmd,cwd]
@@ -73,13 +75,13 @@ for cwd in idoms:
     state = stdout
     m = re.match("%s iceboot" % (cwd), state)
     if not m:
-        print "ERROR:",hostname,cwd,"is not in iceboot (",state[0:-1],"), skipping!"
+        print("ERROR:",hostname,cwd,"is not in iceboot (",state[0:-1],"), skipping!")
         continue
 
-    for i in xrange(nReadout):
+    for i in range(nReadout):
         # Execute iDOM.pl, which actually does all the work
         cwd_long = cwd[0]+" "+cwd[1]+" "+cwd[2]
-        print "Running",idomCmd,cwd_long,"..."
+        print("Running",idomCmd,cwd_long,"...")
         cmd = idomCmd+" "+cwd_long
         p = subprocess.call(cmd, shell=True)
         # Wait a bit

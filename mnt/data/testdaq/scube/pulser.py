@@ -57,6 +57,10 @@
 #
 # -----------------------------------------------------------------------------
 
+from __future__ import print_function
+from __future__ import division
+from builtins import range
+from past.utils import old_div
 import argparse
 import sys
 import telnetlib
@@ -68,13 +72,13 @@ def pulser_on(muon, noise, setdelta = False, host = "scube-lantronix",
 
         #muon  = 20.0
         #noise = 500
-        print "Setting pulser to %f/%f" % (muon, noise)
+        print("Setting pulser to %f/%f" % (muon, noise))
         tn = telnetlib.Telnet(host, port)
 
         iM = 6250000.0 / muon
-        iN = noise * 2**32 / 1E8
+        iN = old_div(noise * 2**32, 1E8)
 
-        print "RATE: ", iM, " LEVEL: ", iN
+        print("RATE: ", iM, " LEVEL: ", iN)
 
         tn.write("RATE %d\n" % iM)
 
@@ -94,11 +98,11 @@ def pulser_on(muon, noise, setdelta = False, host = "scube-lantronix",
                 sleep(0.1)
 
         sleep(0.5)
-        print "Starting..."
+        print("Starting...")
         tn.write("START\n")
         sleep(5)
         tn.close()
-        print "Pulser Set!"
+        print("Pulser Set!")
 
 
 def pulser_off(host = "scube-lantronix",
@@ -106,13 +110,13 @@ def pulser_off(host = "scube-lantronix",
 
         tn = telnetlib.Telnet(host, port)
 
-        print "Stopping..."
+        print("Stopping...")
         tn.write("STOP\n")
 
         sleep(5)
 
         tn.close()
-        print "Pulser Off"
+        print("Pulser Off")
 
 def pulser_display(host = "scube-lantronix",
                port = 2009):
@@ -121,7 +125,7 @@ def pulser_display(host = "scube-lantronix",
 
         tn.write("CFG ?\n")
         sleep(0.5)
-        print tn.read_very_eager()
+        print(tn.read_very_eager())
         tn.close()
 
 if __name__=="__main__":
@@ -143,7 +147,7 @@ if __name__=="__main__":
             pulser_off()
         elif args['action'] == "interval":
             pulser_on(args['muon'], args['noise'], args['delta'], args['host'], args['port'])
-            print "Running pulser for", args['interval'], "seconds..."
+            print("Running pulser for", args['interval'], "seconds...")
             sleep(args['interval'])
             pulser_off(args['host'], args['port'])
 
@@ -154,4 +158,4 @@ if __name__=="__main__":
         #pulser_on(1, 10)
         #sleep(10)
         #pulser_off()
-        print "Done"
+        print("Done")

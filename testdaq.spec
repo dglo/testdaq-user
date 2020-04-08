@@ -8,7 +8,7 @@ Name: testdaq
 # Don't need to update this version, the Makefile will do it
 Version: 1
 Release: 1
-License: Copyright 2019 IceCube Collaboration
+License: Copyright 2020 IceCube Collaboration
 Group: System Environment/Base
 SOURCE0 : %{name}-%{version}.tar.gz
 URL: http://icecube.wisc.edu
@@ -62,6 +62,8 @@ rm -rf %{buildroot}
 %exclude /mnt/data/testdaq/labhub/.svn
 
 %changelog
+* Wed Apr 8 2020 John Kelley <jkelley@icecube.wisc.edu>
+- Add Python3 compatibility
 * Tue Mar 17 2020 John Kelley <jkelley@icecube.wisc.edu>
 - Exclude .svn directories to fix EL8 build
 - Remove csh dependency by rewriting dtsx helper scripts
