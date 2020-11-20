@@ -55,6 +55,8 @@ rm -rf %{buildroot}
 /mnt/data/testdaq/labhub
 
 %changelog
+* Fri Nov 20 2020 John Kelley <jkelley@icecube.wisc.edu>
+- Rename scube mainboards due to DOM name conflicts
 * Wed Apr 8 2020 John Kelley <jkelley@icecube.wisc.edu>
 - Add Python3 compatibility
 * Tue Mar 17 2020 John Kelley <jkelley@icecube.wisc.edu>
