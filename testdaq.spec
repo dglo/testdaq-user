@@ -55,6 +55,9 @@ rm -rf %{buildroot}
 /mnt/data/testdaq/labhub
 
 %changelog
+* Fri Apr 2 2021 John Kelley <jkelley@icecube.wisc.edu>
+- Python2 to 3 compatibility changes.
+- Removed more unused / unsupported scripts.
 * Fri Nov 20 2020 John Kelley <jkelley@icecube.wisc.edu>
 - Rename scube mainboards due to DOM name conflicts
 * Wed Apr 8 2020 John Kelley <jkelley@icecube.wisc.edu>
