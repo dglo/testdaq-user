@@ -52,7 +52,7 @@ if not os.path.exists(idomCmd):
 cmd = ["hostname", "-s"]
 p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 stdout,stderr = p.communicate()
-hostname = stdout[0:-1]
+hostname = stdout[0:-1].decode('utf8')
 # Remove any sps- prefix
 hostname = hostname.replace('sps-', '')
 
