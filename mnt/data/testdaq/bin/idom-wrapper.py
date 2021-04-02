@@ -6,10 +6,13 @@
 # DOMs on a given string.
 #
 #----------------------------------------------------------------
-
 from __future__ import print_function
-from builtins import range
-import sys, os, re, subprocess, time
+
+import sys
+import os
+import re
+import subprocess
+import time
 
 #----------------------------------------------------------------
 # Map of card / pair / dom locations of deployed iDOMs given

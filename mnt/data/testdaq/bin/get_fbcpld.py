@@ -1,7 +1,7 @@
-#!/usr/bin/env python
-# Get the flasherboard firmware version
-
+#!/bin/env python
+# Get the flasherboard CPLD version
 from __future__ import print_function
+
 import sys
 from icecube.domtest.ibidaq import ibx
 

@@ -1,8 +1,6 @@
-#!/usr/bin/env python
-
+#!/bin/env python
 # This script burns an image on the DOM local
 # filesystem into the flasherboard CPLD
-
 from __future__ import print_function
 import sys
 from icecube.domtest.ibidaq import ibx
