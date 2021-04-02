@@ -67,7 +67,8 @@ fi
 case $- in
   *i*) : # interactive
      # commands for interactive shells go here
-     source set_prompt_long
+     # Set prompt
+     export PS1="\[\033[0;32m\]\h \[\033[0;34m\]\u \[\033[0;29m\]\$PWD/ "
     ;;
   *)  : # non interactive
      # commands for non-interactive shells go here
