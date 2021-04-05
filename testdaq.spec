@@ -7,8 +7,8 @@ Summary: DOMHub testdaq user scripts
 Name: testdaq
 # Don't need to update this version, the Makefile will do it
 Version: 1
-Release: 1
-License: Copyright 2020 IceCube Collaboration
+Release: 2
+License: Copyright 2021 IceCube Collaboration
 Group: System Environment/Base
 SOURCE0 : %{name}-%{version}.tar.gz
 URL: http://icecube.wisc.edu
@@ -55,6 +55,8 @@ rm -rf %{buildroot}
 /mnt/data/testdaq/labhub
 
 %changelog
+* Mon Apr 5 2021 John Kelley <jkelley@icecube.wisc.edu>
+- Add RSA pdaq keypair.
 * Fri Apr 2 2021 John Kelley <jkelley@icecube.wisc.edu>
 - Python2 to 3 compatibility changes.
 - Removed more unused / unsupported scripts.
