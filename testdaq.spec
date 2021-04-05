@@ -7,7 +7,7 @@ Summary: DOMHub testdaq user scripts
 Name: testdaq
 # Don't need to update this version, the Makefile will do it
 Version: 1
-Release: 2
+Release: 3
 License: Copyright 2021 IceCube Collaboration
 Group: System Environment/Base
 SOURCE0 : %{name}-%{version}.tar.gz
@@ -46,6 +46,7 @@ rm -rf %{buildroot}
 %attr(-, root, root) %dir /mnt/data
 %attr(700, -, -) %dir /mnt/data/testdaq/.ssh
 %attr(600, -, -) /mnt/data/testdaq/.ssh/id_dsa
+%attr(600, -, -) /mnt/data/testdaq/.ssh/id_rsa
 %attr(777, -, -) %dir /mnt/data/testdaq/dropbox/tape
 %attr(777, -, -) %dir /mnt/data/testdaq/dropbox/satellite-only/high-priority
 /mnt/data/testdaq 
